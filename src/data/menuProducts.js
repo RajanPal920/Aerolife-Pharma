@@ -1,0 +1,556 @@
+export const menuCategories = [
+  {
+    "id": "tablets",
+    "name": "Tablets",
+    "badge": "31 Formulations",
+    "desc": "Analgesics, antibiotics, NSAIDs & antipyretics",
+    "products": [
+      {
+        "name": "AEROMARK-SP TABLETS",
+        "pack": "10 x 10 TABLETS",
+        "composition": "Aceclofenac, Paracetamol & Serratiopeptidase Tablets",
+        "page": 2
+      },
+      {
+        "name": "AEROMARK-P TABLETS",
+        "pack": "20 x 10 TABLETS",
+        "composition": "Aceclofenac & Paracetamol Tablets IP",
+        "page": 2
+      },
+      {
+        "name": "CLAVAERO-CV 625 TABLETS (10 x 6)",
+        "pack": "10 x 6 TABLETS",
+        "composition": "Amoxycillin & Potassium Clavulanate Tablets I.P.",
+        "page": 3
+      },
+      {
+        "name": "CLAVAERO-CV 625 TABLETS (1 x 10)",
+        "pack": "1 x 10 TABLETS",
+        "composition": "Amoxycillin & Potassium Clavulanate Tablets I.P.",
+        "page": 3
+      },
+      {
+        "name": "Aeronim - P Tablets",
+        "pack": "20 x 10 TABLETS",
+        "composition": "Nimesulide & Paracetamol Tablets",
+        "page": 4
+      },
+      {
+        "name": "Aerocof - DX TABLETS",
+        "pack": "10 x 10 TABLETS",
+        "composition": "Dextromethorphan Hydrobromide, Phenylephrine Hydrochloride & Chlorpheniramine Maleate Tablets",
+        "page": 4
+      },
+      {
+        "name": "Aerocal - K2 7 Tablets",
+        "pack": "1 x 10 TABLETS",
+        "composition": "Calcium Citrate Malate, Magnesium Sulphate, Zinc Sulphate, Vitamin K2 7 & Vitamin D3 Tablets",
+        "page": 5
+      },
+      {
+        "name": "Coldaero Tablets",
+        "pack": "10 x 10 TABLETS",
+        "composition": "Aceclofenac, Paracetamol, Caffeine, Phenylephrine HCL & Cetirizine Dihydrochloride Tablets",
+        "page": 5
+      },
+      {
+        "name": "Gravogesic - MR Tablets",
+        "pack": "20 x 10 TABLETS",
+        "composition": "Diclofenac Potassium, Paracetamol & Chlorzoxazone Tablets",
+        "page": 6
+      },
+      {
+        "name": "SEFAERO-200 TABLETS",
+        "pack": "10 x 10 TABLETS",
+        "composition": "Cefixime Tablets I.P. 200 mg",
+        "page": 6
+      },
+      {
+        "name": "Levoflek - L Tablets",
+        "pack": "50 x 10 TABLETS",
+        "composition": "Levocetirizine Hydrochloride Tablets IP",
+        "page": 7
+      },
+      {
+        "name": "Levoflak - M Tablets",
+        "pack": "10 x 10 TABLETS",
+        "composition": "Levocetirizine Hydrochloride And Montelukast Sodium Tablets IP",
+        "page": 7
+      },
+      {
+        "name": "Zincaero Tablets",
+        "pack": "2 x 15 TABLETS",
+        "composition": "Multivitamin, Multiminerals & Antioxidant Tablets",
+        "page": 8
+      },
+      {
+        "name": "CYCLOAERO Tablets",
+        "pack": "20 x 10 Tablets",
+        "composition": "Paracetamol & Dicyclomine Hydrochloride Tablets",
+        "page": 8
+      },
+      {
+        "name": "Aerocal-D3 Tablet",
+        "pack": "10 x 1 x 15 TABLETS",
+        "composition": "Calcium Citrate Malate with Vitamin D3 Tablets",
+        "page": 9
+      },
+      {
+        "name": "Faero-XT Tablet",
+        "pack": "1 x 10 TABLETS",
+        "composition": "Ferrous Ascorbate, Folic Acid and Zinc Sulphate Tablets",
+        "page": 10
+      },
+      {
+        "name": "Aerolife Hair Tablet",
+        "pack": "1 x 10 TABLETS",
+        "composition": "Biotin, Calcium D-Pantothenate, Histidine, Cysteine, Copper Iron, Selenium, Niacinamide with Amino Acid Tablet",
+        "page": 10
+      },
+      {
+        "name": "Aerovit 9G Tablets",
+        "pack": "10 x 10 TABLETS",
+        "composition": "Ginseng, Green Tea Extract, Grape Seed Extract, Ginkgo Biloba, Garlic Powder, Guggul, Ginger Root Extract, Green Coffee Bean Extract, Glycyrrhiza Glabra Extract, Lycopene, Omega-3 Fatty Acids, Essential Amino Acids, Multivitamin, Multimineral, L-Carnitine L-Tartrate & Trace Elements Tablets",
+        "page": 11
+      },
+      {
+        "name": "FrutMax Tablets",
+        "pack": "10 x 10 TABLETS",
+        "composition": "Multivitamin, Multimineral and Antioxidant Tablets",
+        "page": 11
+      },
+      {
+        "name": "Lyaeroboost Tablets",
+        "pack": "1 x 10 Tablets",
+        "composition": "Lycopene, Vitamins, Minerals & Grape Seed Extract Tablets",
+        "page": 12
+      },
+      {
+        "name": "AERO Nor-TZ Tablets",
+        "pack": "6 x 5 x 6 Tablets",
+        "composition": "Norfloxacin & Tinidazole Tablets",
+        "page": 12
+      },
+      {
+        "name": "Doloaero-650 Tablets",
+        "pack": "15 x 10 Tablets",
+        "composition": "Paracetamol Tablets IP 650 mg",
+        "page": 13
+      },
+      {
+        "name": "Dicloaero - SP Tablets",
+        "pack": "20 x 10 TABLETS",
+        "composition": "Diclofenac Potassium, Paracetamol & Serratiopeptidase Tablets",
+        "page": 13
+      },
+      {
+        "name": "AZIAERO 250 Tablets",
+        "pack": "10 x 6 Tablets",
+        "composition": "Azithromycin Tablets IP 250 mg",
+        "page": 14
+      },
+      {
+        "name": "AZIAERO 500 Tablets",
+        "pack": "10 x 3 Tablets",
+        "composition": "Azithromycin Tablets IP 500mg",
+        "page": 14
+      },
+      {
+        "name": "MEFNAAERO SPAS Tablets",
+        "pack": "30 x 10 Tablets",
+        "composition": "Mefenamic Acid & Dicyclomine Tablets (250/20)",
+        "page": 15
+      },
+      {
+        "name": "Ketoaerol-DT Dispersible Tablets",
+        "pack": "10 x 15 Tablets",
+        "composition": "Ketorolac Tromethamine Dispersible Tablets",
+        "page": 15
+      },
+      {
+        "name": "KETOAEROL-DT TABLETS",
+        "pack": "10 x 15 TABLETS",
+        "composition": "Ketorolac Tromethamine Tablets IP 10mg",
+        "page": 41
+      },
+      {
+        "name": "AEROVITA C TABLETS",
+        "pack": "10 x 15 TABLETS",
+        "composition": "Vitamin C (Ascorbic Acid), Sodium Ascorbate & Zinc Chewable Tablets",
+        "page": 41
+      },
+      {
+        "name": "AEROMARK-MR TABLETS",
+        "pack": "10 x 10 TABLETS",
+        "composition": "Aceclofenac, Paracetamol & Chlorzoxazone Tablets",
+        "page": 42
+      },
+      {
+        "name": "AERO AtoZ TABLETS",
+        "pack": "10 x 15 TABLETS",
+        "composition": "Antioxidant, Multivitamin, Multimineral and Vitamin B12 Tablets",
+        "page": 42
+      }
+    ]
+  },
+  {
+    "id": "capsules",
+    "name": "Capsules & Softgels",
+    "badge": "10 Formulations",
+    "desc": "Hard gelatin, softgels & sustained release",
+    "products": [
+      {
+        "name": "ITRAAERO 100 Capsules",
+        "pack": "10 x 10 Capsules",
+        "composition": "Itraconazole Capsules 100 mg",
+        "page": 17
+      },
+      {
+        "name": "ITRAERO 200 Capsules",
+        "pack": "10 x 10 Capsules",
+        "composition": "Itraconazole Capsules 200 mg",
+        "page": 17
+      },
+      {
+        "name": "OMEFIST 20 Capsules",
+        "pack": "20 x 15 Capsules",
+        "composition": "Omeprazole Capsules IP 20 mg",
+        "page": 18
+      },
+      {
+        "name": "OMEFIST D Capsules",
+        "pack": "20 x 15 Capsules",
+        "composition": "Omeprazole Domperidone Capsules IP",
+        "page": 18
+      },
+      {
+        "name": "RAIKA - DSR Capsules",
+        "pack": "10 x 10 Capsules",
+        "composition": "Pantoprazole Gastro-resistant And Domperidone Prolonged-release Capsules IP",
+        "page": 19
+      },
+      {
+        "name": "AEROMOX - 500 CAPSULES",
+        "pack": "20 x 10 CAPSULES",
+        "composition": "Amoxycillin Capsules I.P.",
+        "page": 19
+      },
+      {
+        "name": "EVAERO - 400 Capsules",
+        "pack": "20 x 10 Capsules",
+        "composition": "Vitamin E Softgel Capsules (Health Supplement)",
+        "page": 20
+      },
+      {
+        "name": "Aerogut-Pro Capsule",
+        "pack": "1 x 10 Capsules",
+        "composition": "Pre and Probiotic Capsule",
+        "page": 20
+      },
+      {
+        "name": "Arshon Capsule",
+        "pack": "1 x 30 Capsules",
+        "composition": "Ayurvedic Prop. Medicine for Piles",
+        "page": 21
+      },
+      {
+        "name": "AEROFLEX-C CAPSULES",
+        "pack": "30 CAPSULES",
+        "composition": "Rosehip Extract, Boswellia Serrata & Vitamin C Capsules",
+        "page": 43
+      }
+    ]
+  },
+  {
+    "id": "syrups",
+    "name": "Syrups & Suspensions",
+    "badge": "23 Formulations",
+    "desc": "Oral liquids, suspensions & dry syrups",
+    "products": [
+      {
+        "name": "Aerocof Supar Syrup (Sugar Free)",
+        "pack": "100ML",
+        "composition": "Dextromethorphan Hydrobromide, Ambroxol Hydrochloride, Chlorpheniramine Maleate, Phenylephrine Hydrochloride & Menthol Syrup",
+        "page": 16
+      },
+      {
+        "name": "Clavaero-CV Dry Syrup",
+        "pack": "3.3gm / 30ml",
+        "composition": "Amoxycillin & Potassium Clavulanate Oral Suspension I.P.",
+        "page": 25
+      },
+      {
+        "name": "Clavaero-CV DDS Dry Syrup",
+        "pack": "6.6gm / 30ml",
+        "composition": "Amoxycillin & Potassium Clavulanate Oral Suspension I.P. (Double Strength)",
+        "page": 25
+      },
+      {
+        "name": "Mefnaaero - DS Suspension",
+        "pack": "60ml",
+        "composition": "Mefenamic Acid & Paracetamol Suspension",
+        "page": 26
+      },
+      {
+        "name": "OFLOAERO-OZ Suspension",
+        "pack": "60ml",
+        "composition": "Ofloxacin with Metronidazole Suspension",
+        "page": 26
+      },
+      {
+        "name": "Aerocof - DX PD Suspension",
+        "pack": "60 ml",
+        "composition": "Dextromethorphan Hydrobromide, Bromhexine Hydrochloride, Phenylephrine Hydrochloride & Menthol",
+        "page": 27
+      },
+      {
+        "name": "Aerocof - LS JUNIOR",
+        "pack": "60 ml",
+        "composition": "Levosalbutamol Sulphate, Ambroxol Hydrochloride, Guaiphenesin, Expectorant",
+        "page": 27
+      },
+      {
+        "name": "Aerofol - Z Dry Syrup",
+        "pack": "60 ml",
+        "composition": "Lactic Acid Bacillus, Niacinamide, Folic Acid, Pyridoxine & Zinc Dry Syrup",
+        "page": 28
+      },
+      {
+        "name": "Levoflak-M Syrup",
+        "pack": "60 ml",
+        "composition": "Levocetirizine DiHCL & Montelukast Sodium Syrup",
+        "page": 28
+      },
+      {
+        "name": "IBUTRAP Suspension",
+        "pack": "60 ml",
+        "composition": "Ibuprofen & Paracetamol Suspension",
+        "page": 29
+      },
+      {
+        "name": "OSOAERO Solution",
+        "pack": "100 ml",
+        "composition": "Solution of Lactulose & Licorice",
+        "page": 29
+      },
+      {
+        "name": "Aerocof - DX PLUS Cough Syrup",
+        "pack": "100 ml",
+        "composition": "Guaiphenesin, Dextromethorphan Hydrobromide, Phenylephrine Hydrochloride & Chlorpheniramine Maleate",
+        "page": 30
+      },
+      {
+        "name": "Aerocof - A Syrup EXPECTORANT",
+        "pack": "100 ml",
+        "composition": "Ambroxol Hydrochloride, Guaiphenesin, Terbutaline Sulphate and Menthol Syrup",
+        "page": 30
+      },
+      {
+        "name": "Aerocof-LS Cough Syrup",
+        "pack": "100ml",
+        "composition": "Levosalbutamol Sulphate, Ambroxol Hydrochloride, & Guaiphenesin Expectorant",
+        "page": 31
+      },
+      {
+        "name": "Aerocof-BD Couch Syrup SUGAR FREE",
+        "pack": "100 ml",
+        "composition": "Dextromethorphan Hydrobromide, Bromhexine Hydrochloride, Phenylephrine Hydrochloride & Menthol",
+        "page": 31
+      },
+      {
+        "name": "Aerocof-DX Dry Cough Syrup",
+        "pack": "100 ml",
+        "composition": "Dextromethorphan Hydrobromide, Phenylephrine hydrochloride & Chlorpheniramine Maleate",
+        "page": 32
+      },
+      {
+        "name": "AEROCAIN-O GEL (Anesthetic Antacid)",
+        "pack": "170ML",
+        "composition": "Oxetacaine, Dried Aluminium Hydroxide Gel, Magnesium Hydroxide, Simethicone, Deglycyrrhizinated Liquorice",
+        "page": 32
+      },
+      {
+        "name": "Aerovit Gold Syrup",
+        "pack": "200 ml",
+        "composition": "Multivitamin, Multimineral with Astaxanthin Syrup (Nutraceutical)",
+        "page": 33
+      },
+      {
+        "name": "AEROGRO Syrup",
+        "pack": "200 ml",
+        "composition": "Cyproheptadine Hydrochloride And Tricholine Citrate Syrup",
+        "page": 33
+      },
+      {
+        "name": "Aeroliv Syrup",
+        "pack": "200 ml",
+        "composition": "Silymarine, B - Complex with Enzyme (Nutritional Food Supplement)",
+        "page": 34
+      },
+      {
+        "name": "Aerozinc+ Syrup",
+        "pack": "200 ml",
+        "composition": "Multivitamin & Multiminerals Syrup",
+        "page": 34
+      },
+      {
+        "name": "MULTI VITAMIN Syrup (Immune Booster)",
+        "pack": "200 ml",
+        "composition": "Multivitamin, Multimineral with Lycopene, L-Lysine, Vitamin B12 & Antioxidant Syrup",
+        "page": 36
+      },
+      {
+        "name": "COLDAERO-DS Suspension",
+        "pack": "60 ml",
+        "composition": "Paracetamol, Chlorpheniramine Maleate & Phenylephrine HCL Suspension",
+        "page": 43
+      }
+    ]
+  },
+  {
+    "id": "creams",
+    "name": "Creams & Ointments",
+    "badge": "6 Formulations",
+    "desc": "Topical dermatologicals & healing ointments",
+    "products": [
+      {
+        "name": "AEROMAX-OC CREAM",
+        "pack": "Pack 20 X 15 gm",
+        "composition": "Ofloxacin, Ornidazole, Itraconazole & Clobetasol Propionate Cream",
+        "page": 35
+      },
+      {
+        "name": "Aeroford-K6 Cream",
+        "pack": "15 gm",
+        "composition": "Ketoconazole, Iodochlorhydroxyquinoline, Tolnaftate, Neomycin, Clobetasol Propionate & Dexpanthenol Cream",
+        "page": 35
+      },
+      {
+        "name": "AERODAINE Ointment",
+        "pack": "15 gm",
+        "composition": "Povidone-Iodine Ointment USP 5% w/w",
+        "page": 37
+      },
+      {
+        "name": "Clobiaero Plus Cream",
+        "pack": "15 gm",
+        "composition": "Ciprofloxacin HCl, Metronidazole, Terbinafine HCl & Clobetasol Propionate Cream",
+        "page": 37
+      },
+      {
+        "name": "RABBARI GEL",
+        "pack": "30 gm",
+        "composition": "Diclofenac Diethylamine, Linseed Oil, Methyl Salicylate & Menthol Gel",
+        "page": 38
+      },
+      {
+        "name": "Luliaero Cream",
+        "pack": "30 gm",
+        "composition": "Luliconazole Cream IP 1% w/w",
+        "page": 38
+      }
+    ]
+  },
+  {
+    "id": "powders",
+    "name": "Powders & Nutraceuticals",
+    "badge": "8 Formulations",
+    "desc": "Therapeutic dusting powders & protein blends",
+    "products": [
+      {
+        "name": "ELECTROAERO Oral Rehydration Salts 21.8 g",
+        "pack": "30 PCS",
+        "composition": "Oral Rehydration Salts 21.8 g (W.H.O. Recommended Formula)",
+        "page": 9
+      },
+      {
+        "name": "CLOTRIAERO Dusting Powder",
+        "pack": "100 g",
+        "composition": "Clotrimazole Dusting Powder",
+        "page": 21
+      },
+      {
+        "name": "Aero-PROTEIN Powder (Vanilla Flavour)",
+        "pack": "200 g",
+        "composition": "Complete Balanced Nutrition Protein Powder",
+        "page": 22
+      },
+      {
+        "name": "Aero Protein Plus DHA (Chocolate Flavour)",
+        "pack": "200 g",
+        "composition": "Protein Powder with Whey, Omega & DHA",
+        "page": 22
+      },
+      {
+        "name": "Aeropro Mom Powder",
+        "pack": "200 g",
+        "composition": "Maternal Nutritional Powder Fortified with Protein & Micronutrients",
+        "page": 23
+      },
+      {
+        "name": "AEROVIT KIDS Powder",
+        "pack": "200 g",
+        "composition": "Nutritional Support for Healthy Growing Kids",
+        "page": 23
+      },
+      {
+        "name": "Aerovita-Z Instant Energy Drink Booster",
+        "pack": "105 gm / 200 g",
+        "composition": "Dextrose with Vitamin C & Mineral Powder",
+        "page": 24
+      },
+      {
+        "name": "AEROVIT ORS Powder",
+        "pack": "10 x 35 gm / 200 g",
+        "composition": "Dextrose with Vitamin C, Zinc & Electrolyte Powder",
+        "page": 24
+      }
+    ]
+  },
+  {
+    "id": "personal-drops",
+    "name": "Drops & Healthcare",
+    "badge": "6 Formulations",
+    "desc": "Ophthalmic drops & personal wellness",
+    "products": [
+      {
+        "name": "Aerosilix Face Wash",
+        "pack": "75gm",
+        "composition": "Glycolic Acid, Salicylic Acid & Vitamin E Acetate Gel",
+        "page": 16
+      },
+      {
+        "name": "Cotton Crepe Bandage (With Fast Edges)",
+        "pack": "Length 4 Mtr.",
+        "composition": "Cotton Crepe Bandage B.P.C. Flesh Coloured Elastic",
+        "page": 36
+      },
+      {
+        "name": "Kesh Aero Ayurvedic Oil",
+        "pack": "100 ml",
+        "composition": "Ayurvedic Hair Oil (100% Natural Product)",
+        "page": 39
+      },
+      {
+        "name": "KETAERO Soap",
+        "pack": "75 gm",
+        "composition": "Ketoconazole 2% w/w Soap (Anti-Fungal Medicated Soap)",
+        "page": 39
+      },
+      {
+        "name": "Moxi Aero-D Eye Drops",
+        "pack": "5ml",
+        "composition": "Moxifloxacin & Dexamethasone Eye Drops",
+        "page": 40
+      },
+      {
+        "name": "Cefi Aero D Eye & Ear Drops",
+        "pack": "10 ml",
+        "composition": "Ciprofloxacin & Dexamethasone Eye/Ear Drops",
+        "page": 40
+      }
+    ]
+  }
+];
+
+export default menuCategories;
