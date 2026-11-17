@@ -3,21 +3,28 @@
 @tailwind utilities;
 
 @layer base {
-  html {
+  html, body {
     scroll-behavior: smooth;
     overflow-x: hidden;
     max-width: 100%;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
 
-  body {
-    overflow-x: hidden;
-    max-width: 100%;
+  h1, h2, h3, h4, h5, h6, p, a, button, input, label, span {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   }
+}
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-  }
+/* Hide scrollbar for marquee and specific containers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 /* Custom smooth transitions */
@@ -27,11 +34,37 @@
   transition-duration: 300ms;
 }
 
-/* Subtle dot pattern for corporate background */
+/* Very subtle technical grid pattern for the medium/deep corporate navy background */
 .bg-grid-pattern {
-  background-size: 32px 32px;
+  background-size: 36px 36px;
   background-image: 
-    linear-gradient(to right, rgba(0, 174, 239, 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 174, 239, 0.04) 1px, transparent 1px);
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
 }
 
+/* Diagonal cut for Hero Slider matching the reference layout */
+@media (min-width: 1024px) {
+  .hero-diagonal-clip {
+    clip-path: polygon(14% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+/* Smooth Infinite Marquee Horizontal Scroll */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}

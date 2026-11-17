@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {
   ChevronDown,
   ChevronRight,
@@ -14,7 +15,23 @@ import {
 } from 'lucide-react';
 import { menuCategories } from '../data/menuProducts';
 
-export default function Navbar({ onNavigate, activeTab = 'home' }) {
+export default function Navbar({ onNavigate }) {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const pathname = location.pathname;
+
+  // Derive active tab from location pathname
+  const currentTab = useMemo(() => {
+    if (pathname === '/') return 'home';
+    if (pathname.startsWith('/about')) return 'about';
+    if (pathname.startsWith('/products')) return 'products';
+    if (pathname.startsWith('/quality')) return 'quality';
+    if (pathname.startsWith('/certificates')) return 'certificates';
+    if (pathname.startsWith('/contact')) return 'contact';
+    if (pathname.startsWith('/quote')) return 'quote';
+    return '';
+  }, [pathname]);
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(() => {
     try {
       return new URLSearchParams(window.location.search).get('menu') === 'open';
@@ -46,6 +63,12 @@ export default function Navbar({ onNavigate, activeTab = 'home' }) {
 
   const dropdownRef = useRef(null);
 
+  // Close menus when route changes
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setIsProductsDropdownOpen(false);
+  }, [pathname, location.search]);
+
   // Total formulation count across all categories
   const totalFormulationsCount = useMemo(() => {
     return menuCategories.reduce((sum, cat) => sum + cat.products.length, 0);
@@ -56,11 +79,11 @@ export default function Navbar({ onNavigate, activeTab = 'home' }) {
     let list = [];
     if (activeCategoryTab === 'all') {
       list = menuCategories.flatMap(cat =>
-        cat.products.map(p => ({ ...p, categoryName: cat.name }))
+        cat.products.map(p => ({ ...p, categoryName: cat.name, categoryId: cat.id }))
       );
     } else {
       const selected = menuCategories.find(c => c.id === activeCategoryTab);
-      list = selected ? selected.products.map(p => ({ ...p, categoryName: selected.name })) : [];
+      list = selected ? selected.products.map(p => ({ ...p, categoryName: selected.name, categoryId: selected.id })) : [];
     }
 
     if (searchQuery.trim()) {
@@ -121,22 +144,20 @@ export default function Navbar({ onNavigate, activeTab = 'home' }) {
     }
   }, [isMobileMenuOpen]);
 
-  const handlePlaceholderClick = (e, item) => {
-    e.preventDefault();
-    if (onNavigate) {
-      onNavigate(item);
-    }
+  const handleProductSelect = (product) => {
     setIsProductsDropdownOpen(false);
     setIsMobileMenuOpen(false);
+    navigate(`/products?search=${encodeURIComponent(product.name)}`);
   };
 
-  const handleProductItemClick = (e, product) => {
-    e.preventDefault();
-    if (onNavigate) {
-      onNavigate(`product-${product.name}`);
-    }
+  const handleCategoryNavigate = (catId) => {
     setIsProductsDropdownOpen(false);
     setIsMobileMenuOpen(false);
+    if (catId === 'all') {
+      navigate('/products');
+    } else {
+      navigate(`/products?category=${catId}`);
+    }
   };
 
   return (
@@ -150,80 +171,84 @@ export default function Navbar({ onNavigate, activeTab = 'home' }) {
         ========================================================================
         DECORATIVE SIDE WINGS (LEFT & RIGHT EDGES)
         Angled geometric shapes using Aero Life Pharma's Cyan & Red brand colors.
-        Scaled proportionally to match the sleek ~90-94px desktop height.
+        Scaled proportionally to match the sleek desktop height.
         ========================================================================
       */}
 
       {/* LEFT EDGE: Angled geometric chevron (Cyan top, Red bottom) */}
-      <div 
+      <div
         className="absolute left-0 top-0 bottom-0 h-full w-5 sm:w-8 md:w-11 lg:w-14 xl:w-16 pointer-events-none z-10 overflow-hidden"
         aria-hidden="true"
       >
-        <svg 
-          viewBox="0 0 100 100" 
-          preserveAspectRatio="none" 
+        <svg
+          viewBox="0 0 70 100"
+          preserveAspectRatio="none"
           className="w-full h-full"
+          style={{ display: 'block' }}
         >
-          {/* Top polygon: Original Cyan / Light Blue (#00AEEF) */}
-          <polygon 
-            points="0,0 48,0 96,50 0,62" 
-            fill="#00AEEF" 
+          {/* Top polygon: Aero Cyan (#00AEEF) */}
+          <polygon
+            points="0,0 35,0 70,50 0,60"
+            fill="#00AEEF"
           />
-          {/* Bottom polygon: Original Red (#ED1C24) */}
-          <polygon 
-            points="0,62 96,50 48,100 0,100" 
-            fill="#ED1C24" 
+          {/* Bottom polygon: Aero Red (#ED1C24) */}
+          <polygon
+            points="0,60 70,50 35,100 0,100"
+            fill="#ED1C24"
           />
         </svg>
       </div>
 
-      {/* RIGHT EDGE: Matching angled geometric chevron (Red top, Cyan bottom) */}
-      <div 
+      {/* RIGHT EDGE: Mirrored angled geometric chevron (Red top, Cyan bottom) */}
+      <div
         className="absolute right-0 top-0 bottom-0 h-full w-5 sm:w-8 md:w-11 lg:w-14 xl:w-16 pointer-events-none z-10 overflow-hidden"
         aria-hidden="true"
       >
-        <svg 
-          viewBox="0 0 100 100" 
-          preserveAspectRatio="none" 
+        <svg
+          viewBox="0 0 70 100"
+          preserveAspectRatio="none"
           className="w-full h-full"
+          style={{ display: 'block' }}
         >
-          {/* Top polygon: Original Red (#ED1C24) */}
-          <polygon 
-            points="52,0 100,0 100,62 4,50" 
-            fill="#ED1C24" 
+          {/* Top polygon: Aero Red (#ED1C24) */}
+          <polygon
+            points="70,0 35,0 0,50 70,60"
+            fill="#ED1C24"
           />
-          {/* Bottom polygon: Original Cyan / Light Blue (#00AEEF) */}
-          <polygon 
-            points="4,50 100,62 100,100 52,100" 
-            fill="#00AEEF" 
+          {/* Bottom polygon: Aero Cyan (#00AEEF) */}
+          <polygon
+            points="70,60 0,50 35,100 70,100"
+            fill="#00AEEF"
           />
         </svg>
       </div>
 
       {/* 
         ========================================================================
-        MAIN NAVBAR CONTENT CONTAINER
-        - Height: Sleek ~84-88px consistent height across viewports.
-        - Balanced left & right padding to give clear breathing space from the wings.
-        - Perfectly aligned: Left Logo | Centered Navigation | Right CTA
+        MAIN NAVBAR CONTENT BAR
+        Height: h-20 sm:h-22 md:h-[96px] lg:h-[102px] xl:h-[106px]
+        Balanced breathing space for the prominent logo and centered nav items.
         ========================================================================
       */}
-      <div className="w-full h-20 md:h-[84px] lg:h-[88px] xl:h-[88px] px-3 sm:px-6 md:px-8 lg:px-10 relative flex items-center justify-between">
-        
-        {/* LEFT SECTION: Original Logo with generous clearance from left wing */}
-        <div className="flex-shrink-0 min-w-0 flex items-center pl-8 sm:pl-12 md:pl-16 lg:pl-20 xl:pl-24 z-20">
-          <a 
-            href="#" 
-            onClick={(e) => handlePlaceholderClick(e, 'home')}
+      <div className="w-full max-w-full overflow-hidden h-20 sm:h-22 md:h-[96px] lg:h-[102px] xl:h-[106px] px-2 sm:px-6 md:px-8 lg:px-10 relative flex items-center justify-between">
+
+        {/* LEFT SECTION: Noticeably larger original Logo (230-260px on desktop) vertically centered */}
+        <div className="flex-shrink-0 min-w-0 flex items-center pl-6 sm:pl-10 md:pl-14 lg:pl-18 xl:pl-20 z-20">
+          <Link
+            to="/"
             className="flex items-center justify-center group focus:outline-none focus:ring-2 focus:ring-[#00AEEF] focus:ring-offset-2 rounded transition-transform duration-200 hover:scale-[1.01]"
             aria-label="Aero Life Pharma Home"
           >
-            <img 
-              src="/assets/aerolife-logo.svg" 
-              alt="Aero Life Pharma - Original Logo" 
-              className="h-9 sm:h-10 md:h-11 lg:h-11 xl:h-11 w-auto max-w-[160px] sm:max-w-[180px] md:max-w-[200px] lg:max-w-[215px] xl:max-w-[225px] object-contain"
+            <img
+              src="/assets/aerolife-logo.svg"
+              alt="Aero Life Pharma - Original Logo"
+              className="h-9 sm:h-11 md:h-12 lg:h-[58px] xl:h-[62px] w-auto max-w-[170px] sm:max-w-[200px] md:max-w-[220px] lg:max-w-[250px] xl:max-w-[260px] object-contain transition-all duration-200"
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src = '/assets/aerolife-logo.png';
+              }}
             />
-          </a>
+          </Link>
         </div>
 
         {/* 
@@ -236,16 +261,15 @@ export default function Navbar({ onNavigate, activeTab = 'home' }) {
           aria-label="Main Navigation"
         >
           {/* Home */}
-          <a
-            href="#"
-            onClick={(e) => handlePlaceholderClick(e, 'home')}
-            className={`group relative py-1 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center ${activeTab === 'home'
+          <Link
+            to="/"
+            className={`group relative py-1 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center ${currentTab === 'home'
               ? 'text-[#00AEEF]'
               : 'text-slate-800 hover:text-[#00AEEF]'
               }`}
           >
             <span>Home</span>
-            {activeTab === 'home' ? (
+            {currentTab === 'home' ? (
               <span
                 className="w-6 h-[3px] bg-[#00AEEF] rounded-full mt-1 transition-all duration-200"
                 aria-hidden="true"
@@ -256,19 +280,18 @@ export default function Navbar({ onNavigate, activeTab = 'home' }) {
                 aria-hidden="true"
               />
             )}
-          </a>
+          </Link>
 
           {/* About */}
-          <a
-            href="#about"
-            onClick={(e) => handlePlaceholderClick(e, 'about')}
-            className={`group relative py-1 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center ${activeTab === 'about'
+          <Link
+            to="/about"
+            className={`group relative py-1 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center ${currentTab === 'about'
               ? 'text-[#00AEEF]'
               : 'text-slate-800 hover:text-[#00AEEF]'
               }`}
           >
             <span>About</span>
-            {activeTab === 'about' ? (
+            {currentTab === 'about' ? (
               <span
                 className="w-6 h-[3px] bg-[#00AEEF] rounded-full mt-1 transition-all duration-200"
                 aria-hidden="true"
@@ -279,7 +302,7 @@ export default function Navbar({ onNavigate, activeTab = 'home' }) {
                 aria-hidden="true"
               />
             )}
-          </a>
+          </Link>
 
           {/* Products with Full Catalogue Mega-Dropdown */}
           <div
@@ -288,10 +311,10 @@ export default function Navbar({ onNavigate, activeTab = 'home' }) {
             onMouseEnter={() => setIsProductsDropdownOpen(true)}
             onMouseLeave={() => setIsProductsDropdownOpen(false)}
           >
-            <button
-              type="button"
-              onClick={() => setIsProductsDropdownOpen(!isProductsDropdownOpen)}
-              className={`group relative py-1 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex items-center gap-1.5 focus:outline-none ${activeTab === 'products' || isProductsDropdownOpen
+            <Link
+              to="/products"
+              onClick={() => setIsProductsDropdownOpen(false)}
+              className={`group relative py-1 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex items-center gap-1.5 focus:outline-none ${currentTab === 'products' || isProductsDropdownOpen
                 ? 'text-[#00AEEF]'
                 : 'text-slate-800 hover:text-[#00AEEF]'
                 }`}
@@ -303,13 +326,13 @@ export default function Navbar({ onNavigate, activeTab = 'home' }) {
                 className={`w-4 h-4 transition-transform duration-200 ${isProductsDropdownOpen ? 'rotate-180 text-[#00AEEF]' : 'text-slate-400 group-hover:text-[#00AEEF]'
                   }`}
               />
-              {activeTab === 'products' && (
+              {currentTab === 'products' && (
                 <span
                   className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-[3px] bg-[#00AEEF] rounded-full transition-all duration-200"
                   aria-hidden="true"
                 />
               )}
-            </button>
+            </Link>
 
             {/* 
               ==================================================================
@@ -384,31 +407,29 @@ export default function Navbar({ onNavigate, activeTab = 'home' }) {
                           <Layers className={`w-4 h-4 ${activeCategoryTab === 'all' ? 'text-white' : 'text-slate-400 group-hover:text-[#00AEEF]'}`} />
                           <span>All Formulations</span>
                         </div>
-                        <span className={`text-[10px] px-1.5 py-0.5 rounded-md font-bold ${activeCategoryTab === 'all' ? 'bg-white/20 text-white' : 'bg-slate-200/70 text-slate-600'
-                          }`}>
+                        <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full ${activeCategoryTab === 'all' ? 'bg-white/20 text-white' : 'bg-slate-200/70 text-slate-600'}`}>
                           {totalFormulationsCount}
                         </span>
                       </button>
 
-                      {/* Individual Category Tabs */}
+                      {/* Category Specific Tabs */}
                       {menuCategories.map((cat) => {
-                        const isCurrent = activeCategoryTab === cat.id;
+                        const isSelected = activeCategoryTab === cat.id;
                         return (
                           <button
                             key={cat.id}
                             type="button"
                             onClick={() => setActiveCategoryTab(cat.id)}
-                            className={`w-full px-3 py-2 rounded-xl text-left text-xs font-semibold transition-all duration-150 flex items-center justify-between group ${isCurrent
+                            className={`w-full px-3 py-2 rounded-xl text-left text-xs font-semibold transition-all duration-150 flex items-center justify-between group ${isSelected
                               ? 'bg-[#00AEEF] text-white shadow-sm font-bold'
                               : 'text-slate-700 hover:bg-white hover:text-[#00AEEF]'
                               }`}
                           >
-                            <div className="flex items-center gap-2 min-w-0">
-                              <Pill className={`w-3.5 h-3.5 flex-shrink-0 ${isCurrent ? 'text-white' : 'text-slate-400 group-hover:text-[#00AEEF]'}`} />
+                            <div className="flex items-center gap-2 truncate pr-1">
+                              <span className={`w-1.5 h-1.5 rounded-full ${isSelected ? 'bg-white' : 'bg-[#00AEEF]'}`} />
                               <span className="truncate">{cat.name}</span>
                             </div>
-                            <span className={`text-[10px] px-1.5 py-0.5 rounded-md font-bold flex-shrink-0 ml-1.5 ${isCurrent ? 'bg-white/20 text-white' : 'bg-slate-200/70 text-slate-600'
-                              }`}>
+                            <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full flex-shrink-0 ${isSelected ? 'bg-white/20 text-white' : 'bg-slate-200/60 text-slate-500'}`}>
                               {cat.products.length}
                             </span>
                           </button>
@@ -416,44 +437,56 @@ export default function Navbar({ onNavigate, activeTab = 'home' }) {
                       })}
                     </div>
 
-                    {/* Catalogue Reference Card */}
-                    <div className="mt-3 p-2.5 rounded-xl bg-white border border-slate-200/80 shadow-xs">
-                      <div className="flex items-center gap-1.5 text-[11px] font-bold text-[#0C1B2A]">
-                        <FileText className="w-3.5 h-3.5 text-[#ED1C24]" />
-                        <span>CATLOP.pdf Verified</span>
-                      </div>
-                      <p className="text-[10px] text-slate-500 mt-0.5 leading-tight">
-                        84 formulations indexed directly with original brand packaging.
-                      </p>
+                    {/* Left Pane Footer: Direct Link to Products Page */}
+                    <div className="pt-2 mt-2 border-t border-slate-200/70">
+                      <button
+                        type="button"
+                        onClick={() => handleCategoryNavigate(activeCategoryTab)}
+                        className="w-full py-2 px-3 rounded-lg text-xs font-bold text-[#00AEEF] hover:bg-[#00AEEF]/10 transition-colors flex items-center justify-between"
+                      >
+                        <span>Open Complete Page</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </button>
                     </div>
                   </div>
 
-                  {/* RIGHT PANE: Scrollable Products Grid */}
-                  <div className="flex-1 p-4 bg-white flex flex-col justify-between overflow-hidden">
-                    <div className="flex items-center justify-between pb-2 mb-2 border-b border-slate-100">
-                      <span className="text-xs font-bold text-slate-700">
-                        Showing {displayedProducts.length} {displayedProducts.length === 1 ? 'Product' : 'Products'}
-                        {searchQuery && ` matching "${searchQuery}"`}
-                      </span>
-                      <span className="text-[11px] text-slate-400">
-                        Scroll to explore all
-                      </span>
-                    </div>
+                  {/* RIGHT PANE: Product Cards Grid */}
+                  <div className="flex-1 p-4 overflow-y-auto bg-white flex flex-col justify-between">
+                    <div>
+                      {/* Sub-header inside product pane */}
+                      <div className="flex items-center justify-between pb-2 mb-3 border-b border-slate-100">
+                        <div className="text-xs font-bold text-slate-700 flex items-center gap-2">
+                          <span>
+                            {activeCategoryTab === 'all'
+                              ? 'All Products'
+                              : menuCategories.find(c => c.id === activeCategoryTab)?.name}
+                          </span>
+                          <span className="text-[11px] font-normal text-slate-400">
+                            ({displayedProducts.length} formulations available)
+                          </span>
+                        </div>
+                        <span className="text-[10px] font-medium text-slate-400">
+                          Click any formulation to inspect
+                        </span>
+                      </div>
 
-                    {/* Product Cards Container */}
-                    <div className="flex-1 overflow-y-auto pr-2 space-y-2">
                       {displayedProducts.length === 0 ? (
-                        <div className="h-full flex flex-col items-center justify-center text-center p-8 text-slate-400">
-                          <Pill className="w-8 h-8 text-slate-300 mb-2" />
-                          <p className="text-sm font-semibold text-slate-600">No matching formulation found</p>
-                          <p className="text-xs text-slate-400 mt-1">Try searching by brand name or composition salt.</p>
+                        <div className="py-16 text-center text-slate-400">
+                          <p className="text-xs">No formulations found matching "{searchQuery}".</p>
+                          <button
+                            type="button"
+                            onClick={() => setSearchQuery('')}
+                            className="mt-2 text-xs font-bold text-[#00AEEF] hover:underline"
+                          >
+                            Clear search filter
+                          </button>
                         </div>
                       ) : (
                         <div className="grid grid-cols-2 xl:grid-cols-3 gap-2.5">
                           {displayedProducts.map((p, idx) => (
                             <div
                               key={`${p.name}-${idx}`}
-                              onClick={(e) => handleProductItemClick(e, p)}
+                              onClick={() => handleProductSelect(p)}
                               className="group p-2.5 rounded-xl border border-slate-150 hover:border-[#00AEEF] hover:bg-[#F0F9FF]/40 transition-all duration-150 cursor-pointer flex flex-col justify-between shadow-xs hover:shadow-sm"
                             >
                               <div>
@@ -486,14 +519,14 @@ export default function Navbar({ onNavigate, activeTab = 'home' }) {
                       <span className="text-[11px] text-slate-500">
                         Need wholesale or third-party manufacturing information?
                       </span>
-                      <a
-                        href="#enquire"
-                        onClick={(e) => handlePlaceholderClick(e, 'enquire')}
+                      <Link
+                        to="/quote"
+                        onClick={() => setIsProductsDropdownOpen(false)}
                         className="inline-flex items-center gap-1.5 text-xs font-bold text-[#00AEEF] hover:text-[#0097D1] group"
                       >
                         <span>Enquire for Catalogue Monograph</span>
                         <ArrowRight className="w-3.5 h-3.5 transition-transform duration-150 group-hover:translate-x-0.5" />
-                      </a>
+                      </Link>
                     </div>
                   </div>
 
@@ -503,16 +536,15 @@ export default function Navbar({ onNavigate, activeTab = 'home' }) {
           </div>
 
           {/* Quality */}
-          <a
-            href="#quality"
-            onClick={(e) => handlePlaceholderClick(e, 'quality')}
-            className={`group relative py-1 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center ${activeTab === 'quality'
+          <Link
+            to="/quality"
+            className={`group relative py-1 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center ${currentTab === 'quality'
               ? 'text-[#00AEEF]'
               : 'text-slate-800 hover:text-[#00AEEF]'
               }`}
           >
             <span>Quality</span>
-            {activeTab === 'quality' ? (
+            {currentTab === 'quality' ? (
               <span
                 className="w-6 h-[3px] bg-[#00AEEF] rounded-full mt-1 transition-all duration-200"
                 aria-hidden="true"
@@ -523,19 +555,40 @@ export default function Navbar({ onNavigate, activeTab = 'home' }) {
                 aria-hidden="true"
               />
             )}
-          </a>
+          </Link>
+
+          {/* Certificates */}
+          <Link
+            to="/certificates"
+            className={`group relative py-1 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center ${currentTab === 'certificates'
+              ? 'text-[#00AEEF]'
+              : 'text-slate-800 hover:text-[#00AEEF]'
+              }`}
+          >
+            <span>Certificates</span>
+            {currentTab === 'certificates' ? (
+              <span
+                className="w-6 h-[3px] bg-[#00AEEF] rounded-full mt-1 transition-all duration-200"
+                aria-hidden="true"
+              />
+            ) : (
+              <span
+                className="w-0 h-[3px] bg-[#00AEEF] rounded-full mt-1 transition-all duration-200 group-hover:w-6 opacity-0 group-hover:opacity-100"
+                aria-hidden="true"
+              />
+            )}
+          </Link>
 
           {/* Contact */}
-          <a
-            href="#contact"
-            onClick={(e) => handlePlaceholderClick(e, 'contact')}
-            className={`group relative py-1 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center ${activeTab === 'contact'
+          <Link
+            to="/contact"
+            className={`group relative py-1 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center ${currentTab === 'contact'
               ? 'text-[#00AEEF]'
               : 'text-slate-800 hover:text-[#00AEEF]'
               }`}
           >
             <span>Contact</span>
-            {activeTab === 'contact' ? (
+            {currentTab === 'contact' ? (
               <span
                 className="w-6 h-[3px] bg-[#00AEEF] rounded-full mt-1 transition-all duration-200"
                 aria-hidden="true"
@@ -546,23 +599,22 @@ export default function Navbar({ onNavigate, activeTab = 'home' }) {
                 aria-hidden="true"
               />
             )}
-          </a>
+          </Link>
         </nav>
 
         {/* 
           RIGHT SECTION: CTA Button & Mobile Hamburger
           Generous right-side padding so button has balanced breathing space from the right wing!
         */}
-        <div className="flex-shrink-0 flex items-center gap-2 sm:gap-3 pr-8 sm:pr-12 md:pr-16 lg:pr-20 xl:pr-24 z-20">
+        <div className="flex-shrink-0 flex items-center gap-2 sm:gap-3 pr-6 sm:pr-10 md:pr-14 lg:pr-18 xl:pr-20 z-20">
           {/* Prominent Rectangular CTA Button with slightly rounded corners */}
-          <a
-            href="#enquire"
-            onClick={(e) => handlePlaceholderClick(e, 'enquire')}
-            className="hidden sm:inline-flex items-center gap-2 px-5 lg:px-6 py-2.5 rounded-lg text-sm font-bold text-white bg-[#ED1C24] hover:bg-[#D9141B] shadow-sm hover:shadow transition-all duration-200 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#ED1C24] focus:ring-offset-2"
+          <Link
+            to="/quote"
+            className="hidden sm:inline-flex items-center gap-2 px-5 lg:px-6 py-2.5 rounded-lg text-sm font-bold text-white bg-[#00AEEF] hover:bg-[#0097D1] shadow-sm hover:shadow transition-all duration-200 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#00AEEF] focus:ring-offset-2"
           >
-            <span>Enquire Now</span>
+            <span>Get a Quote</span>
             <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-          </a>
+          </Link>
 
           {/* Mobile Hamburger Menu Toggle Button */}
           <button
@@ -611,46 +663,53 @@ export default function Navbar({ onNavigate, activeTab = 'home' }) {
 
               {/* Mobile Links */}
               <nav className="flex flex-col space-y-1">
-                <a
-                  href="#"
-                  onClick={(e) => handlePlaceholderClick(e, 'home')}
-                  className={`px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors flex items-center justify-between ${activeTab === 'home'
+                <Link
+                  to="/"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors flex items-center justify-between ${currentTab === 'home'
                     ? 'bg-[#F0F9FF] text-[#00AEEF]'
                     : 'text-slate-700 hover:bg-slate-50'
                     }`}
                 >
                   <span>Home</span>
-                  {activeTab === 'home' && <span className="w-2 h-2 rounded-full bg-[#00AEEF]" />}
-                </a>
+                  {currentTab === 'home' && <span className="w-2 h-2 rounded-full bg-[#00AEEF]" />}
+                </Link>
 
-                <a
-                  href="#about"
-                  onClick={(e) => handlePlaceholderClick(e, 'about')}
-                  className={`px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors flex items-center justify-between ${activeTab === 'about'
+                <Link
+                  to="/about"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors flex items-center justify-between ${currentTab === 'about'
                     ? 'bg-[#F0F9FF] text-[#00AEEF]'
                     : 'text-slate-700 hover:bg-slate-50'
                     }`}
                 >
                   <span>About</span>
-                  {activeTab === 'about' && <span className="w-2 h-2 rounded-full bg-[#00AEEF]" />}
-                </a>
+                  {currentTab === 'about' && <span className="w-2 h-2 rounded-full bg-[#00AEEF]" />}
+                </Link>
 
                 {/* Mobile Products Accordion */}
                 <div className="border border-slate-150 rounded-xl overflow-hidden my-1">
-                  <button
-                    type="button"
-                    onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
-                    className="w-full px-3 py-2.5 text-left text-sm font-semibold text-slate-700 hover:bg-slate-50 flex items-center justify-between transition-colors"
-                  >
-                    <div className="flex items-center gap-2">
+                  <div className="w-full px-3 py-2.5 text-left text-sm font-semibold text-slate-700 hover:bg-slate-50 flex items-center justify-between transition-colors">
+                    <Link
+                      to="/products"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="flex items-center gap-2 text-slate-800 hover:text-[#00AEEF]"
+                    >
                       <span>Products</span>
                       <span className="text-[10px] font-bold text-[#00AEEF] bg-[#00AEEF]/10 px-1.5 py-0.5 rounded-full">
                         84
                       </span>
-                    </div>
-                    <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${isMobileProductsOpen ? 'rotate-180 text-[#00AEEF]' : ''
-                      }`} />
-                  </button>
+                    </Link>
+                    <button
+                      type="button"
+                      onClick={() => setIsMobileProductsOpen(!isMobileProductsOpen)}
+                      className="p-1 hover:text-[#00AEEF]"
+                      aria-label="Toggle products categories"
+                    >
+                      <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${isMobileProductsOpen ? 'rotate-180 text-[#00AEEF]' : ''
+                        }`} />
+                    </button>
+                  </div>
 
                   {isMobileProductsOpen && (
                     <div className="bg-slate-50 p-2.5 space-y-2 border-t border-slate-100 max-h-72 overflow-y-auto">
@@ -672,10 +731,17 @@ export default function Navbar({ onNavigate, activeTab = 'home' }) {
 
                             {isOpen && (
                               <div className="px-3 py-2 border-t border-slate-100 bg-slate-50/50 space-y-1.5 max-h-48 overflow-y-auto">
+                                <button
+                                  type="button"
+                                  onClick={() => handleCategoryNavigate(cat.id)}
+                                  className="w-full py-1 text-left text-[11px] font-bold text-[#00AEEF] hover:underline"
+                                >
+                                  View all {cat.name} ({cat.products.length}) →
+                                </button>
                                 {cat.products.map((p, pIdx) => (
                                   <div
                                     key={pIdx}
-                                    onClick={(e) => handleProductItemClick(e, p)}
+                                    onClick={() => handleProductSelect(p)}
                                     className="py-1 cursor-pointer hover:text-[#00AEEF]"
                                   >
                                     <p className="text-[11px] font-bold text-slate-700 hover:text-[#00AEEF] leading-tight">
@@ -695,42 +761,54 @@ export default function Navbar({ onNavigate, activeTab = 'home' }) {
                   )}
                 </div>
 
-                <a
-                  href="#quality"
-                  onClick={(e) => handlePlaceholderClick(e, 'quality')}
-                  className={`px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors flex items-center justify-between ${activeTab === 'quality'
+                <Link
+                  to="/quality"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors flex items-center justify-between ${currentTab === 'quality'
                     ? 'bg-[#F0F9FF] text-[#00AEEF]'
                     : 'text-slate-700 hover:bg-slate-50'
                     }`}
                 >
                   <span>Quality</span>
-                  {activeTab === 'quality' && <span className="w-2 h-2 rounded-full bg-[#00AEEF]" />}
-                </a>
+                  {currentTab === 'quality' && <span className="w-2 h-2 rounded-full bg-[#00AEEF]" />}
+                </Link>
 
-                <a
-                  href="#contact"
-                  onClick={(e) => handlePlaceholderClick(e, 'contact')}
-                  className={`px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors flex items-center justify-between ${activeTab === 'contact'
+                <Link
+                  to="/certificates"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors flex items-center justify-between ${currentTab === 'certificates'
+                    ? 'bg-[#F0F9FF] text-[#00AEEF]'
+                    : 'text-slate-700 hover:bg-slate-50'
+                    }`}
+                >
+                  <span>Certificates</span>
+                  {currentTab === 'certificates' && <span className="w-2 h-2 rounded-full bg-[#00AEEF]" />}
+                </Link>
+
+                <Link
+                  to="/contact"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors flex items-center justify-between ${currentTab === 'contact'
                     ? 'bg-[#F0F9FF] text-[#00AEEF]'
                     : 'text-slate-700 hover:bg-slate-50'
                     }`}
                 >
                   <span>Contact</span>
-                  {activeTab === 'contact' && <span className="w-2 h-2 rounded-full bg-[#00AEEF]" />}
-                </a>
+                  {currentTab === 'contact' && <span className="w-2 h-2 rounded-full bg-[#00AEEF]" />}
+                </Link>
               </nav>
             </div>
 
             {/* Mobile Drawer Bottom Section */}
             <div className="pt-4 border-t border-slate-100 space-y-3">
-              <a
-                href="#enquire"
-                onClick={(e) => handlePlaceholderClick(e, 'enquire')}
-                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold text-white bg-[#ED1C24] hover:bg-[#D9141B] shadow-sm transition-all"
+              <Link
+                to="/quote"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg text-sm font-bold text-white bg-[#00AEEF] hover:bg-[#0097D1] shadow-sm transition-all"
               >
-                <span>Enquire Now</span>
+                <span>Get a Quote</span>
                 <ArrowRight className="w-4 h-4" />
-              </a>
+              </Link>
 
               <p className="text-[11px] text-center text-slate-400">
                 Aero Life Pharma Corporate Catalogue & Formulations
