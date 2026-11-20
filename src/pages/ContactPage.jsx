@@ -713,46 +713,81 @@ export default function ContactPage({ isQuoteMode = false }) {
 
       {/* 
         ========================================================================
-        4. COMMERCIAL TRADE FAQS
+        4. FREQUENTLY ASKED QUESTIONS (Exact Match to HomePage FaqSection)
         ========================================================================
       */}
-      <section className="py-16 sm:py-20 bg-white border-t border-slate-200/90">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        id="faq-section" 
+        className="py-16 sm:py-20 lg:py-24 bg-[#F4F9FD] border-b border-sky-100 relative overflow-hidden scroll-mt-24"
+        aria-label="Frequently Asked Questions"
+      >
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          {/* Header */}
+          <div className="text-center mb-12 sm:mb-14">
             <div className="inline-flex items-center gap-2 mb-3">
-              <span className="w-5 h-[2px] bg-[#00AEEF] rounded-full" />
-              <span className="text-xs font-bold text-[#00AEEF] tracking-widest uppercase">
-                Commercial Trade Questions
+              <span className="w-6 h-[2px] bg-[#00AEEF] rounded-full" />
+              <span className="text-xs sm:text-sm font-extrabold tracking-wider uppercase text-[#00AEEF]">
+                COMMON INQUIRIES & GUIDANCE
               </span>
-              <span className="w-5 h-[2px] bg-[#ED1C24] rounded-full" />
+              <span className="w-6 h-[2px] bg-[#00AEEF] rounded-full" />
             </div>
 
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-[#102D4B]">
-              Frequently Asked Trade & Franchise Questions
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#102D4B] tracking-tight uppercase leading-[1.18] mb-4">
+              FREQUENTLY ASKED <span className="text-[#00AEEF]">QUESTIONS</span>
             </h2>
-            <p className="mt-2 text-xs sm:text-sm text-slate-600">
-              Clear guidelines on batch MOQs, monopoly distribution agreements, delivery timelines, and regulatory compliance.
+
+            <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl mx-auto">
+              Essential information regarding our commercial formulations, monopoly PCD agreements, and trade compliance.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {faqs.map((faq, idx) => (
-              <div
-                key={idx}
-                className="bg-slate-50/70 rounded-2xl p-6 border border-slate-200 shadow-xs hover:shadow-sm transition-shadow"
-              >
-                <h3 className="text-sm sm:text-base font-bold text-[#102D4B] mb-2.5 flex items-start gap-2.5">
-                  <span className="w-6 h-6 rounded-lg bg-[#00AEEF]/10 text-[#00AEEF] text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5">
-                    Q
-                  </span>
-                  <span>{faq.q}</span>
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed pl-8">
-                  {faq.a}
-                </p>
-              </div>
-            ))}
+          {/* FAQ Accordion List */}
+          <div className="space-y-3.5 sm:space-y-4">
+            {faqs.map((faq, idx) => {
+              const isOpen = openFaq === idx;
+              return (
+                <div 
+                  key={idx}
+                  className="bg-white rounded-2xl border border-sky-100/90 shadow-sm overflow-hidden transition-all duration-200"
+                >
+                  <button
+                    type="button"
+                    onClick={() => setOpenFaq(openFaq === idx ? -1 : idx)}
+                    className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none"
+                    aria-expanded={isOpen}
+                  >
+                    <span className="text-sm sm:text-base font-extrabold text-[#102D4B] hover:text-[#00AEEF] transition-colors leading-snug">
+                      {faq.q}
+                    </span>
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-200 ${isOpen ? 'bg-[#00AEEF] text-white rotate-180' : 'bg-slate-100 text-slate-600'}`}>
+                      <ChevronDown className="w-4 h-4" />
+                    </div>
+                  </button>
+
+                  {isOpen && (
+                    <div className="px-5 sm:px-6 pb-5 sm:pb-6 pt-1 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-50">
+                      {faq.a}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Bottom Contact Help Strip */}
+          <div className="mt-10 p-5 rounded-2xl bg-white border border-sky-100 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+            <div>
+              <h4 className="text-sm font-bold text-[#102D4B]">Have more questions or need a custom price quotation?</h4>
+              <p className="text-xs text-slate-500 mt-0.5">Reach out to our executive support team directly via phone or WhatsApp.</p>
+            </div>
+            <a
+              href={`tel:+91${phone}`}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-bold text-white bg-[#00AEEF] hover:bg-[#0097D1] transition-all flex-shrink-0"
+            >
+              <span>CALL NOW</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
           </div>
 
         </div>

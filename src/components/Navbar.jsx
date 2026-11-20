@@ -300,7 +300,7 @@ export default function Navbar({ onNavigate }) {
           {/* Home */}
           <Link
             to="/"
-            className={`group relative py-1 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center ${currentTab === 'home'
+            className={`group relative h-11 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center justify-center ${currentTab === 'home'
               ? 'text-[#00AEEF]'
               : 'text-slate-800 hover:text-[#00AEEF]'
               }`}
@@ -322,7 +322,7 @@ export default function Navbar({ onNavigate }) {
           {/* About */}
           <Link
             to="/about"
-            className={`group relative py-1 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center ${currentTab === 'about'
+            className={`group relative h-11 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center justify-center ${currentTab === 'about'
               ? 'text-[#00AEEF]'
               : 'text-slate-800 hover:text-[#00AEEF]'
               }`}
@@ -341,9 +341,9 @@ export default function Navbar({ onNavigate }) {
             )}
           </Link>
 
-          {/* Products with Full Catalogue Mega-Dropdown */}
+          {/* Products with Full Catalogue Mega-Dropdown - Perfectly aligned on same horizontal baseline */}
           <div
-            className="relative"
+            className="relative h-11 flex flex-col items-center justify-center"
             ref={dropdownRef}
             onMouseEnter={handleOpenDropdown}
             onMouseLeave={handleCloseDropdown}
@@ -357,7 +357,7 @@ export default function Navbar({ onNavigate }) {
             <Link
               to="/products"
               onClick={() => setIsProductsDropdownOpen(false)}
-              className={`group relative py-1 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex items-center gap-1.5 focus:outline-none ${currentTab === 'products' || isProductsDropdownOpen
+              className={`group relative text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex items-center gap-1 focus:outline-none ${currentTab === 'products' || isProductsDropdownOpen
                 ? 'text-[#00AEEF]'
                 : 'text-slate-800 hover:text-[#00AEEF]'
                 }`}
@@ -369,13 +369,18 @@ export default function Navbar({ onNavigate }) {
                 className={`w-4 h-4 transition-transform duration-200 ${isProductsDropdownOpen ? 'rotate-180 text-[#00AEEF]' : 'text-slate-400 group-hover:text-[#00AEEF]'
                   }`}
               />
-              {currentTab === 'products' && (
-                <span
-                  className="absolute bottom-0 left-1/2 -translate-x-1/2 w-6 h-[3px] bg-[#00AEEF] rounded-full transition-all duration-200"
-                  aria-hidden="true"
-                />
-              )}
             </Link>
+            {currentTab === 'products' ? (
+              <span
+                className="w-6 h-[3px] bg-[#00AEEF] rounded-full mt-1 transition-all duration-200"
+                aria-hidden="true"
+              />
+            ) : (
+              <span
+                className="w-0 h-[3px] bg-[#00AEEF] rounded-full mt-1 transition-all duration-200 group-hover:w-6 opacity-0 group-hover:opacity-100"
+                aria-hidden="true"
+              />
+            )}
 
             {/* 
               ==================================================================
@@ -593,7 +598,7 @@ export default function Navbar({ onNavigate }) {
           {/* Quality */}
           <Link
             to="/quality"
-            className={`group relative py-1 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center ${currentTab === 'quality'
+            className={`group relative h-11 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center justify-center ${currentTab === 'quality'
               ? 'text-[#00AEEF]'
               : 'text-slate-800 hover:text-[#00AEEF]'
               }`}
@@ -615,7 +620,7 @@ export default function Navbar({ onNavigate }) {
           {/* Certificates */}
           <Link
             to="/certificates"
-            className={`group relative py-1 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center ${currentTab === 'certificates'
+            className={`group relative h-11 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center justify-center ${currentTab === 'certificates'
               ? 'text-[#00AEEF]'
               : 'text-slate-800 hover:text-[#00AEEF]'
               }`}
@@ -637,7 +642,7 @@ export default function Navbar({ onNavigate }) {
           {/* Contact */}
           <Link
             to="/contact"
-            className={`group relative py-1 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center ${currentTab === 'contact'
+            className={`group relative h-11 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center justify-center ${currentTab === 'contact'
               ? 'text-[#00AEEF]'
               : 'text-slate-800 hover:text-[#00AEEF]'
               }`}
