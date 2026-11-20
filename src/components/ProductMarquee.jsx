@@ -38,8 +38,8 @@ export default function ProductMarquee({ onProductClick }) {
   };
 
   return (
-    <div 
-      className="relative w-full max-w-full bg-[#8B0000] h-[72px] sm:h-[78px] lg:h-[82px] flex items-center overflow-hidden select-none z-20 no-scrollbar m-0 p-0 border-0"
+    <div
+      className="relative w-full max-w-full bg-red-600 h-[72px] sm:h-[78px] lg:h-[82px] flex items-center overflow-hidden select-none z-20 no-scrollbar m-0 p-0 border-0"
       style={{
         boxShadow: 'none',
         border: 'none',

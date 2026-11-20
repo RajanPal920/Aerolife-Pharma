@@ -178,7 +178,10 @@ export default function Navbar({ onNavigate }) {
   const handleProductSelect = (product) => {
     setIsProductsDropdownOpen(false);
     setIsMobileMenuOpen(false);
-    navigate(`/products?search=${encodeURIComponent(product.name)}`);
+    const cat = menuCategories.find(c => c.id === product.categoryId || c.name === product.categoryName) || menuCategories[0];
+    const catSlug = cat.slug || cat.id;
+    const prodSlug = product.slug || product.id || encodeURIComponent(product.name);
+    navigate(`/products/${catSlug}/${prodSlug}`);
   };
 
   const handleCategoryNavigate = (catId) => {
@@ -187,7 +190,9 @@ export default function Navbar({ onNavigate }) {
     if (catId === 'all') {
       navigate('/products');
     } else {
-      navigate(`/products?category=${catId}`);
+      const cat = menuCategories.find(c => c.id === catId);
+      const catSlug = cat ? (cat.slug || cat.id) : catId;
+      navigate(`/products/${catSlug}`);
     }
   };
 

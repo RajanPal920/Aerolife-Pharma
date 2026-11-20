@@ -109,7 +109,7 @@ export default function Footer() {
             </h3>
             <div className="space-y-3.5 text-xs sm:text-sm">
               <div>
-                <Link to="/products?category=tablets" className="font-bold text-white hover:text-[#00AEEF] transition-colors block">
+                <Link to="/products/tablets-capsules" className="font-bold text-white hover:text-[#00AEEF] transition-colors block">
                   Broad-Spectrum Antibiotics & Combination Therapy
                 </Link>
                 <span className="text-[10px] font-bold uppercase tracking-wider text-[#00AEEF]">
@@ -118,7 +118,7 @@ export default function Footer() {
               </div>
 
               <div>
-                <Link to="/products?category=capsules" className="font-bold text-white hover:text-[#00AEEF] transition-colors block">
+                <Link to="/products/capsules-softgels" className="font-bold text-white hover:text-[#00AEEF] transition-colors block">
                   Gastrointestinal Support
                 </Link>
                 <span className="text-[10px] font-bold uppercase tracking-wider text-[#38bdf8]">
@@ -127,7 +127,7 @@ export default function Footer() {
               </div>
 
               <div>
-                <Link to="/products?category=powders-nutra" className="font-bold text-white hover:text-[#00AEEF] transition-colors block">
+                <Link to="/products/nutraceuticals-dry-powders" className="font-bold text-white hover:text-[#00AEEF] transition-colors block">
                   Supportive & Adjunctive Therapy
                 </Link>
                 <span className="text-[10px] font-bold uppercase tracking-wider text-[#00AEEF]">
@@ -136,7 +136,7 @@ export default function Footer() {
               </div>
 
               <div>
-                <Link to="/products?category=syrups" className="font-bold text-white hover:text-[#00AEEF] transition-colors block">
+                <Link to="/products/oral-liquids-syrups" className="font-bold text-white hover:text-[#00AEEF] transition-colors block">
                   Pediatric & Respiratory Care
                 </Link>
                 <span className="text-[10px] font-bold uppercase tracking-wider text-[#ED1C24]">

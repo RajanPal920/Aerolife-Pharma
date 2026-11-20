@@ -1,0 +1,383 @@
+import React, { useMemo } from 'react';
+import { useParams, Link, useNavigate } from 'react-router-dom';
+import {
+  CATEGORIES,
+  getCategoryBySlug,
+  getProductBySlug,
+  getRelatedProducts
+} from '../data/productsData';
+import {
+  ChevronRight,
+  ArrowLeft,
+  ArrowRight,
+  Package,
+  Layers,
+  FileText,
+  CheckCircle2,
+  PhoneCall,
+  MessageCircle,
+  Share2,
+  ShieldCheck,
+  Award,
+  Sparkles,
+  ExternalLink
+} from 'lucide-react';
+
+export default function ProductDetailPage() {
+  const { categorySlug, productSlug } = useParams();
+  const navigate = useNavigate();
+
+  // Find category and product
+  const category = useMemo(() => {
+    return getCategoryBySlug(categorySlug) || CATEGORIES[0];
+  }, [categorySlug]);
+
+  const product = useMemo(() => {
+    return getProductBySlug(category.slug, productSlug);
+  }, [category, productSlug]);
+
+  // Related products from same category
+  const relatedProducts = useMemo(() => {
+    if (!product) return [];
+    return getRelatedProducts(category.slug, product.slug, 4);
+  }, [category, product]);
+
+  // If product not found
+  if (!product) {
+    return (
+      <div className="min-h-screen bg-slate-50 flex items-center justify-center p-6 select-none">
+        <div className="max-w-md w-full bg-white rounded-2xl border border-slate-200 p-8 text-center shadow-lg">
+          <Package className="w-12 h-12 text-slate-300 mx-auto mb-4" />
+          <h2 className="text-xl font-bold text-slate-900 mb-2">Product Not Found</h2>
+          <p className="text-xs text-slate-600 mb-6">
+            The requested formulation could not be located in our verified product database.
+          </p>
+          <Link
+            to="/products"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#00AEEF] text-white text-xs font-bold shadow-md hover:bg-[#0097D1] transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            <span>Return to Commercial Catalogue</span>
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  const whatsappMessage = encodeURIComponent(
+    `Hello Aerolife Pharma, I would like to inquire about ${product.name} (Composition: ${product.composition}, Pack: ${product.pack}) for commercial supply / PCD franchise.`
+  );
+
+  return (
+    <div className="min-h-screen bg-slate-50/50 flex flex-col font-sans select-none">
+      
+      {/* 
+        ========================================================================
+        BREADCRUMB HEADER
+        ========================================================================
+      */}
+      <div className="bg-[#102D4B] text-white py-4 border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <nav className="flex items-center gap-2 text-xs font-semibold text-slate-300 flex-wrap" aria-label="Breadcrumb">
+            <Link to="/" className="hover:text-[#00AEEF] transition-colors">Home</Link>
+            <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+            <Link to="/products" className="hover:text-[#00AEEF] transition-colors">Commercial Catalogue</Link>
+            <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+            <Link to={`/products/${category.slug}`} className="hover:text-[#00AEEF] transition-colors">
+              {category.title}
+            </Link>
+            <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+            <span className="text-[#00AEEF] font-bold truncate max-w-xs">{product.name}</span>
+          </nav>
+        </div>
+      </div>
+
+      {/* 
+        ========================================================================
+        MAIN PRODUCT DETAIL SHOWCASE
+        Desktop: Left Image (bg-white, big packaging) + Right Monograph Information
+        Mobile: Stacked Image First -> Specs -> CTAs
+        ========================================================================
+      */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 w-full flex-1">
+        
+        {/* Back Link */}
+        <div className="mb-6">
+          <Link
+            to={`/products/${category.slug}`}
+            className="inline-flex items-center gap-2 text-xs font-bold text-slate-600 hover:text-[#00AEEF] transition-colors group"
+          >
+            <ArrowLeft className="w-4 h-4 transition-transform group-hover:-translate-x-1" />
+            <span>Back to {category.title}</span>
+          </Link>
+        </div>
+
+        {/* Product Card Container */}
+        <div className="bg-white rounded-3xl border border-slate-200/90 shadow-sm overflow-hidden p-6 sm:p-8 lg:p-10 mb-14">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+            
+            {/* 
+              LEFT COLUMN (lg:col-span-5):
+              Big, Clean Product Packaging Image on Pure White Background
+            */}
+            <div className="lg:col-span-5 flex flex-col items-center">
+              <div className="w-full aspect-[4/3] bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 flex items-center justify-center relative shadow-inner overflow-hidden group">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-108"
+                  onError={(e) => { e.currentTarget.src = '/assets/products/clavaero-cv-625.jpg'; }}
+                />
+
+                {/* Catalog Monograph Verification Badge */}
+                <div className="absolute top-3 left-3 bg-[#00AEEF]/10 border border-[#00AEEF]/20 text-[#00AEEF] px-2.5 py-1 rounded-lg text-[11px] font-bold flex items-center gap-1.5">
+                  <FileText className="w-3.5 h-3.5" />
+                  <span>CATLOP.pdf • Page {product.page}</span>
+                </div>
+
+                {/* WHO-GMP Stamp */}
+                <div className="absolute top-3 right-3 bg-slate-100 border border-slate-200 text-slate-700 px-2.5 py-1 rounded-lg text-[10px] font-bold flex items-center gap-1">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#00AEEF]" />
+                  <span>WHO-GMP Validated</span>
+                </div>
+
+                <div className="absolute bottom-3 right-3 text-[10px] font-semibold text-slate-400 bg-white/90 px-2 py-0.5 rounded shadow-xs border border-slate-100">
+                  Genuine Commercial Pack
+                </div>
+              </div>
+
+              {/* Security & Quality Trust Seals under Image */}
+              <div className="grid grid-cols-3 gap-2 w-full mt-4 text-center">
+                <div className="bg-slate-50 border border-slate-100 rounded-xl p-2.5">
+                  <CheckCircle2 className="w-4 h-4 text-[#00AEEF] mx-auto mb-1" />
+                  <span className="block text-[10px] font-bold text-slate-700">100% Verified</span>
+                  <span className="block text-[9px] text-slate-400">Original Monograph</span>
+                </div>
+                <div className="bg-slate-50 border border-slate-100 rounded-xl p-2.5">
+                  <Award className="w-4 h-4 text-[#00AEEF] mx-auto mb-1" />
+                  <span className="block text-[10px] font-bold text-slate-700">GMP Standard</span>
+                  <span className="block text-[9px] text-slate-400">Strict Quality Control</span>
+                </div>
+                <div className="bg-slate-50 border border-slate-100 rounded-xl p-2.5">
+                  <Package className="w-4 h-4 text-[#00AEEF] mx-auto mb-1" />
+                  <span className="block text-[10px] font-bold text-slate-700">Tamper-Proof</span>
+                  <span className="block text-[9px] text-slate-400">Secure Packaging</span>
+                </div>
+              </div>
+            </div>
+
+            {/* 
+              RIGHT COLUMN (lg:col-span-7):
+              Complete Verified Product Monograph & Inquiry CTAs
+            */}
+            <div className="lg:col-span-7 flex flex-col justify-between">
+              <div>
+                
+                {/* Category & Page Badge */}
+                <div className="flex items-center gap-2 mb-3 flex-wrap">
+                  <Link
+                    to={`/products/${category.slug}`}
+                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#00AEEF]/10 text-[#00AEEF] hover:bg-[#00AEEF]/20 transition-colors"
+                  >
+                    <span>{category.title}</span>
+                  </Link>
+
+                  <span className="px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600">
+                    {product.dosageForm}
+                  </span>
+
+                  <span className="px-3 py-1 rounded-full text-xs font-bold text-[#ED1C24] bg-red-50 border border-red-100">
+                    Commercial Supply Ready
+                  </span>
+                </div>
+
+                {/* Brand Name */}
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#102D4B] tracking-tight leading-tight mb-3">
+                  {product.name}
+                </h1>
+
+                {/* Active Composition Box */}
+                <div className="bg-slate-50/80 border border-slate-200/80 rounded-2xl p-4 sm:p-5 mb-6">
+                  <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">
+                    Active Pharmaceutical Ingredients / Composition:
+                  </div>
+                  <div className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+                    {product.composition}
+                  </div>
+                </div>
+
+                {/* Product Technical Specifications Table */}
+                <div className="border border-slate-200 rounded-2xl overflow-hidden mb-6">
+                  <div className="bg-slate-50 px-4 py-2.5 border-b border-slate-200 text-xs font-bold text-slate-700">
+                    Product Monograph &amp; Specifications
+                  </div>
+                  <div className="divide-y divide-slate-100 text-xs">
+                    <div className="grid grid-cols-3 p-3">
+                      <span className="font-semibold text-slate-500">Commercial Packaging:</span>
+                      <span className="col-span-2 font-bold text-slate-900">{product.pack}</span>
+                    </div>
+                    <div className="grid grid-cols-3 p-3">
+                      <span className="font-semibold text-slate-500">Dosage Form:</span>
+                      <span className="col-span-2 font-bold text-slate-900">{product.dosageForm}</span>
+                    </div>
+                    <div className="grid grid-cols-3 p-3">
+                      <span className="font-semibold text-slate-500">Strength / Formulation:</span>
+                      <span className="col-span-2 font-bold text-slate-900">{product.strength}</span>
+                    </div>
+                    <div className="grid grid-cols-3 p-3">
+                      <span className="font-semibold text-slate-500">Catalogue Reference:</span>
+                      <span className="col-span-2 font-bold text-[#00AEEF]">
+                        CATLOP.pdf — Page {product.page}
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-3 p-3">
+                      <span className="font-semibold text-slate-500">Quality Standard:</span>
+                      <span className="col-span-2 font-bold text-slate-900">
+                        WHO-GMP Compliant • Batch Analytical Testing
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-3 p-3">
+                      <span className="font-semibold text-slate-500">Storage Guidelines:</span>
+                      <span className="col-span-2 font-medium text-slate-700">
+                        Store in a cool, dry and dark place below 25°C. Protect from direct moisture &amp; light.
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Professional Monograph Overview */}
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                  {product.description}
+                </p>
+
+              </div>
+
+              {/* 
+                ================================================================
+                ACTION CTA BUTTONS
+                Get a Quote, WhatsApp Direct, Call Commercial Desk
+                ================================================================
+              */}
+              <div className="pt-6 border-t border-slate-200 flex flex-col sm:flex-row gap-3">
+                
+                {/* Primary CTA: Get a Quote */}
+                <Link
+                  to={`/quote?product=${encodeURIComponent(product.name)}`}
+                  className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-[#00AEEF] hover:bg-[#0097D1] shadow-lg shadow-cyan-500/25 transition-all duration-200 active:scale-[0.98]"
+                >
+                  <span>Request Commercial Quote</span>
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+
+                {/* Secondary CTA: WhatsApp Direct */}
+                <a
+                  href={`https://wa.me/917045147453?text=${whatsappMessage}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-bold text-white bg-[#25D366] hover:bg-[#20BD5A] shadow-lg shadow-green-500/20 transition-all duration-200"
+                >
+                  <MessageCircle className="w-4 h-4" />
+                  <span>WhatsApp Inquiry</span>
+                </a>
+
+                {/* Tertiary CTA: Direct Call */}
+                <a
+                  href="tel:7045147453"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-3.5 rounded-xl text-sm font-bold text-slate-700 bg-slate-100 hover:bg-slate-200 transition-colors"
+                >
+                  <PhoneCall className="w-4 h-4 text-[#ED1C24]" />
+                  <span>+91 70451 47453</span>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        {/* 
+          ======================================================================
+          RELATED FORMULATIONS IN SAME CATEGORY
+          ======================================================================
+        */}
+        {relatedProducts.length > 0 && (
+          <div>
+            <div className="flex items-center justify-between mb-6">
+              <div>
+                <h3 className="text-xl sm:text-2xl font-bold text-[#102D4B]">
+                  Related Formulations in {category.title}
+                </h3>
+                <p className="text-xs text-slate-500 mt-1">
+                  Explore other therapeutic options verified in CATLOP.pdf
+                </p>
+              </div>
+
+              <Link
+                to={`/products/${category.slug}`}
+                className="text-xs font-bold text-[#00AEEF] hover:underline flex items-center gap-1"
+              >
+                <span>View all in {category.title}</span>
+                <ChevronRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {relatedProducts.map((rel) => (
+                <div
+                  key={rel.id}
+                  className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-200 flex flex-col overflow-hidden group"
+                >
+                  <div className="w-full h-44 bg-white p-4 flex items-center justify-center border-b border-slate-100 relative">
+                    <img
+                      src={rel.image}
+                      alt={rel.name}
+                      className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-200"
+                      onError={(e) => { e.currentTarget.src = '/assets/products/clavaero-cv-625.jpg'; }}
+                    />
+                    <span className="absolute top-2 left-2 text-[9px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
+                      Page {rel.page}
+                    </span>
+                  </div>
+
+                  <div className="p-4 flex-1 flex flex-col justify-between">
+                    <div>
+                      <h4 className="text-xs sm:text-sm font-bold text-slate-900 group-hover:text-[#00AEEF] transition-colors line-clamp-1">
+                        {rel.name}
+                      </h4>
+                      <p className="text-[11px] text-slate-500 line-clamp-2 mt-1">
+                        {rel.composition}
+                      </p>
+                      <span className="inline-block mt-2 text-[10px] font-semibold text-slate-700 bg-slate-50 px-2 py-0.5 rounded border border-slate-200/60">
+                        {rel.pack}
+                      </span>
+                    </div>
+
+                    <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                      <Link
+                        to={`/products/${category.slug}/${rel.slug}`}
+                        className="text-xs font-bold text-[#00AEEF] hover:text-[#0097D1] transition-colors flex items-center gap-1"
+                      >
+                        <span>Details</span>
+                        <ChevronRight className="w-3.5 h-3.5" />
+                      </Link>
+
+                      <Link
+                        to={`/quote?product=${encodeURIComponent(rel.name)}`}
+                        className="text-[11px] font-bold text-[#ED1C24] hover:underline"
+                      >
+                        Quote
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+      </div>
+
+    </div>
+  );
+}

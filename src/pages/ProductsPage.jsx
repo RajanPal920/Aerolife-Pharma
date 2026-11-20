@@ -1,488 +1,421 @@
-import React, { useState, useMemo, useEffect } from 'react';
-import { useSearchParams, Link } from 'react-router-dom';
-import { menuCategories } from '../data/menuProducts';
+import React, { useState, useMemo } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import {
+  CATEGORIES,
+  ALL_PRODUCTS,
+  searchProducts
+} from '../data/productsData';
 import {
   Search,
-  Filter,
-  Package,
-  Layers,
   ArrowRight,
-  FileText,
-  CheckCircle2,
-  X,
-  PhoneCall,
+  Pill,
+  Layers,
+  FlaskConical,
+  Baby,
+  ShieldCheck,
   Sparkles,
-  Info,
-  Award
+  Eye,
+  CheckCircle2,
+  FileText,
+  Package,
+  Award,
+  ChevronRight,
+  PhoneCall,
+  ExternalLink
 } from 'lucide-react';
 
-const FLAGSHIP_PRODUCTS = [
-  {
-    name: 'CLAVAERO - CV 625 TABLETS',
-    composition: 'Amoxycillin & Potassium Clavulanate Tablets I.P.',
-    category: 'Tablets',
-    pack: '10 × 6 Tablets',
-    page: 3,
-    image: '/assets/products/clavaero-cv-625.jpg'
-  },
-  {
-    name: 'AEROMARK - SP TABLETS',
-    composition: 'Aceclofenac, Paracetamol & Serratiopeptidase Tablets',
-    category: 'Tablets',
-    pack: '10 × 10 Tablets',
-    page: 2,
-    image: '/assets/products/aeromark-sp.jpg'
-  },
-  {
-    name: 'AEROMOX - 500 CAPSULES',
-    composition: 'Amoxycillin Capsules I.P. 500 mg',
-    category: 'Capsules',
-    pack: '20 × 10 Capsules',
-    page: 19,
-    image: '/assets/products/aeromox-500.jpg'
-  },
-  {
-    name: 'ITRAAERO - 200 CAPSULES',
-    composition: 'Itraconazole Capsules 200 mg',
-    category: 'Capsules',
-    pack: '10 × 1 × 10 Capsules',
-    page: 17,
-    image: '/assets/products/itraero-200.jpg'
-  },
-  {
-    name: 'OMEFIST D CAPSULES',
-    composition: 'Omeprazole & Domperidone Capsules IP',
-    category: 'Capsules',
-    pack: '20 × 15 Capsules',
-    page: 18,
-    image: '/assets/products/omefist-d.jpg'
-  },
-  {
-    name: 'AEROFOL - Z DRY SYRUP',
-    composition: 'Lactic Acid Bacillus, Niacinamide, Folic Acid & Zinc Dry Syrup',
-    category: 'Dry Syrups',
-    pack: '60 ml (Orange Flavour)',
-    page: 28,
-    image: '/assets/products/aerofol-z.jpg'
-  },
-  {
-    name: 'AEROLIV SYRUP',
-    composition: 'Silymarine with Digestive Enzyme Syrup (Liver Tonic)',
-    category: 'Syrups',
-    pack: '200 ml',
-    page: 34,
-    image: '/assets/products/aeroliv_syrup.jpg'
-  },
-  {
-    name: 'AEROVITA - Z ENERGY BOOSTER',
-    composition: 'Dextrose with Vitamin C & Zinc Instant Energy Drink Powder',
-    category: 'ORS & Energy',
-    pack: '105 gm / 200 g (Orange)',
-    page: 24,
-    image: '/assets/products/aerovita-z.jpg'
-  }
-];
+const ICON_MAP = {
+  Pill: Pill,
+  Layers: Layers,
+  FlaskConical: FlaskConical,
+  Baby: Baby,
+  ShieldCheck: ShieldCheck,
+  Sparkles: Sparkles,
+  Eye: Eye
+};
 
 export default function ProductsPage() {
-  const [searchParams, setSearchParams] = useSearchParams();
-  const initialCategory = searchParams.get('category') || 'all';
-  const initialSearch = searchParams.get('search') || '';
+  const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isSearchFocused, setIsSearchFocused] = useState(false);
 
-  const [activeCategory, setActiveCategory] = useState(initialCategory);
-  const [searchTerm, setSearchTerm] = useState(initialSearch);
-  const [selectedProduct, setSelectedProduct] = useState(null);
+  // Live search results
+  const searchResults = useMemo(() => {
+    if (!searchQuery.trim()) return [];
+    return searchProducts(searchQuery).slice(0, 8);
+  }, [searchQuery]);
 
-  // Sync state if URL query params change
-  useEffect(() => {
-    const cat = searchParams.get('category') || 'all';
-    const s = searchParams.get('search') || '';
-    setActiveCategory(cat);
-    setSearchTerm(s);
-  }, [searchParams]);
+  // Total products count
+  const totalProductsCount = ALL_PRODUCTS.length;
 
-  const handleCategoryChange = (catId) => {
-    setActiveCategory(catId);
-    const newParams = new URLSearchParams(searchParams);
-    if (catId === 'all') {
-      newParams.delete('category');
-    } else {
-      newParams.set('category', catId);
-    }
-    setSearchParams(newParams);
-  };
-
-  const handleSearchChange = (e) => {
-    const val = e.target.value;
-    setSearchTerm(val);
-    const newParams = new URLSearchParams(searchParams);
-    if (val.trim()) {
-      newParams.set('search', val.trim());
-    } else {
-      newParams.delete('search');
-    }
-    setSearchParams(newParams);
-  };
-
-  // Flatten all products with their category metadata
-  const allProducts = useMemo(() => {
-    return menuCategories.flatMap(cat => 
-      cat.products.map(p => ({
-        ...p,
-        categoryId: cat.id,
-        categoryName: cat.name
-      }))
-    );
+  // Flagship showcase formulations from CATLOP.pdf
+  const flagshipProducts = useMemo(() => {
+    return ALL_PRODUCTS.filter(p => p.isFlagship).slice(0, 8);
   }, []);
 
-  // Filter products by category and search term
-  const filteredProducts = useMemo(() => {
-    let list = allProducts;
-
-    if (activeCategory !== 'all') {
-      list = list.filter(p => p.categoryId === activeCategory);
-    }
-
-    if (searchTerm.trim()) {
-      const q = searchTerm.toLowerCase().trim();
-      list = list.filter(p =>
-        p.name.toLowerCase().includes(q) ||
-        (p.composition && p.composition.toLowerCase().includes(q)) ||
-        (p.pack && p.pack.toLowerCase().includes(q))
-      );
-    }
-
-    return list;
-  }, [allProducts, activeCategory, searchTerm]);
+  const handleSearchResultClick = (product) => {
+    const category = CATEGORIES.find(c => c.id === product.category) || CATEGORIES[0];
+    navigate(`/products/${category.slug}/${product.slug}`);
+  };
 
   return (
-    <div className="w-full bg-[#F0F8FD] min-h-screen font-sans text-slate-800 pb-20">
+    <div className="min-h-screen bg-slate-50/50 flex flex-col font-sans select-none">
       
-      {/* 1. Header Hero Banner */}
-      <section className="bg-[#102D4B] text-white py-14 sm:py-16 relative overflow-hidden">
-        {/* Subtle Technical Grid Background Pattern */}
-        <div 
-          className="absolute inset-0 opacity-15 pointer-events-none bg-grid-pattern" 
-          aria-hidden="true" 
-        />
+      {/* 
+        ========================================================================
+        HERO SECTION: PHARMACEUTICAL CATALOGUE OVERVIEW
+        ========================================================================
+      */}
+      <section className="relative bg-[#102D4B] text-white pt-12 pb-16 sm:pt-16 sm:pb-20 overflow-hidden">
+        {/* Subtle grid background */}
+        <div className="absolute inset-0 opacity-10 bg-grid-pattern pointer-events-none" />
         
-        {/* Accent Top and Bottom Lines */}
-        <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-[#00AEEF] via-[#38bdf8] to-[#ED1C24]" />
-        <div className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-[#ED1C24] via-[#00AEEF] to-[#00AEEF]" />
+        {/* Brand Accent Lines */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00AEEF] via-[#ED1C24] to-[#00AEEF]" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[#00AEEF] text-xs font-bold uppercase tracking-wider mb-3">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>CATLOP.pdf Verified Formulations</span>
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          
+          {/* Breadcrumb Navigation */}
+          <nav className="flex items-center gap-2 text-xs font-semibold text-slate-300 mb-6" aria-label="Breadcrumb">
+            <Link to="/" className="hover:text-[#00AEEF] transition-colors">Home</Link>
+            <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+            <span className="text-[#00AEEF]">Commercial Product Catalogue</span>
+          </nav>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight uppercase">
-            Commercial Formulations Portfolio
-          </h1>
-          <p className="mt-3 text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed font-normal">
-            Browse our complete WHO-GMP certified catalogue of {allProducts.length} commercial products across 9 dosage categories indexed directly from CATLOP.pdf.
-          </p>
+          <div className="max-w-3xl">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[#00AEEF] text-xs font-bold tracking-wide uppercase mb-4">
+              <span className="w-2 h-2 rounded-full bg-[#00AEEF] animate-pulse" />
+              <span>OFFICIAL PRODUCT PORTFOLIO • CATLOP.PDF</span>
+            </div>
 
-          {/* Search bar inside header */}
-          <div className="mt-8 max-w-xl mx-auto relative">
-            <Search className="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
-            <input
-              type="text"
-              value={searchTerm}
-              onChange={handleSearchChange}
-              placeholder="Search by brand name (e.g. AEROMARK, CLAVAERO) or active salt..."
-              className="w-full pl-12 pr-10 py-3.5 rounded-xl bg-white text-slate-900 placeholder-slate-400 text-sm shadow-xl focus:outline-none focus:ring-2 focus:ring-[#00AEEF] transition-all"
-            />
-            {searchTerm && (
-              <button
-                onClick={() => handleSearchChange({ target: { value: '' } })}
-                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 p-1"
-                aria-label="Clear search"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            )}
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight mb-4">
+              Pharmaceutical Formulations &amp; Product Catalogue
+            </h1>
+
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed mb-8">
+              Explore Aerolife Pharma's comprehensive portfolio of <strong className="text-white font-semibold">{totalProductsCount} verified commercial formulations</strong> across {CATEGORIES.length} primary dosage forms. Manufactured under stringent WHO-GMP standards with strict quality control.
+            </p>
+
+            {/* Fast Global Search Bar */}
+            <div className="relative max-w-xl">
+              <div className="relative flex items-center">
+                <Search className="w-5 h-5 text-slate-400 absolute left-4 pointer-events-none" />
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onFocus={() => setIsSearchFocused(true)}
+                  onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
+                  placeholder="Search 84 formulations by brand name, composition, or dosage..."
+                  className="w-full pl-12 pr-4 py-3.5 bg-white text-slate-900 rounded-xl text-sm sm:text-base font-medium shadow-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#00AEEF] focus:border-[#00AEEF] transition-all placeholder-slate-400"
+                />
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery('')}
+                    className="absolute right-4 text-slate-400 hover:text-slate-600 text-sm font-bold"
+                  >
+                    ✕
+                  </button>
+                )}
+              </div>
+
+              {/* Instant Search Dropdown Preview */}
+              {isSearchFocused && searchQuery.trim() && (
+                <div className="absolute top-[calc(100%+6px)] left-0 right-0 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden z-50">
+                  <div className="p-2 border-b border-slate-100 flex items-center justify-between bg-slate-50 text-[11px] font-bold text-slate-500">
+                    <span>{searchResults.length} Formulations Found</span>
+                    <span>Click to inspect</span>
+                  </div>
+                  {searchResults.length > 0 ? (
+                    <div className="divide-y divide-slate-100 max-h-80 overflow-y-auto">
+                      {searchResults.map((prod) => (
+                        <div
+                          key={prod.id}
+                          onMouseDown={() => handleSearchResultClick(prod)}
+                          className="p-3 hover:bg-slate-50 cursor-pointer flex items-center gap-3 transition-colors text-left"
+                        >
+                          <div className="w-12 h-12 bg-white rounded-lg border border-slate-200 flex-shrink-0 p-1 flex items-center justify-center">
+                            <img
+                              src={prod.image}
+                              alt={prod.name}
+                              className="w-full h-full object-contain"
+                              onError={(e) => { e.currentTarget.src = '/assets/products/clavaero-cv-625.jpg'; }}
+                            />
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <h4 className="text-xs sm:text-sm font-bold text-slate-900 truncate">{prod.name}</h4>
+                            <p className="text-[11px] text-slate-500 truncate">{prod.composition}</p>
+                            <span className="text-[10px] font-semibold text-[#00AEEF]">{prod.pack} • Page {prod.page}</span>
+                          </div>
+                          <ArrowRight className="w-4 h-4 text-slate-400 flex-shrink-0" />
+                        </div>
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="p-6 text-center text-xs text-slate-500">
+                      No matching formulations found for "{searchQuery}".
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+
+            {/* Quick Metrics Bar */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-6 border-t border-white/10">
+              <div>
+                <span className="block text-2xl font-black text-white">{totalProductsCount}+</span>
+                <span className="text-xs text-slate-400">Total Formulations</span>
+              </div>
+              <div>
+                <span className="block text-2xl font-black text-[#00AEEF]">{CATEGORIES.length}</span>
+                <span className="text-xs text-slate-400">Dosage Categories</span>
+              </div>
+              <div>
+                <span className="block text-2xl font-black text-white">WHO-GMP</span>
+                <span className="text-xs text-slate-400">Certified Production</span>
+              </div>
+              <div>
+                <span className="block text-2xl font-black text-[#ED1C24]">100%</span>
+                <span className="text-xs text-slate-400">Catalog Verified</span>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* 2. Main Content Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
+      {/* 
+        ========================================================================
+        PHASE 2: PRIMARY FORMULATION CATEGORIES GRID
+        "When a visitor opens the Products page, the first thing they should 
+         see is a clean, professional grid of the main formulation categories."
+        ========================================================================
+      */}
+      <section className="py-14 sm:py-18 lg:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         
-        {/* Featured Flagship Products Section (When not actively searching) */}
-        {!searchTerm && activeCategory === 'all' && (
-          <div className="mb-12">
-            <div className="flex items-center justify-between mb-6">
-              <div>
-                <span className="text-xs font-bold uppercase tracking-wider text-[#00AEEF]">
-                  FLAGSHIP MONOGRAPHS
-                </span>
-                <h2 className="text-xl sm:text-2xl font-extrabold text-[#102D4B]">
-                  Featured Commercial Products
-                </h2>
-              </div>
-              <span className="text-xs font-semibold text-slate-500 hidden sm:inline">
-                Verified Packaging from CATLOP.pdf
-              </span>
-            </div>
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 mb-3">
+            <span className="w-6 h-[2px] bg-[#00AEEF] rounded-full" />
+            <span className="text-xs font-bold text-[#00AEEF] tracking-widest uppercase">
+              Formulation Taxonomy
+            </span>
+            <span className="w-6 h-[2px] bg-[#ED1C24] rounded-full" />
+          </div>
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#102D4B] tracking-tight">
+            Commercial Formulation Categories
+          </h2>
+          <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+            Select a therapeutic category below to inspect all verified formulations, active compositions, packaging specifications, and clinical monographs from <strong className="text-slate-800">CATLOP.pdf</strong>.
+          </p>
+        </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-5">
-              {FLAGSHIP_PRODUCTS.map((prod, idx) => (
-                <div
-                  key={idx}
-                  onClick={() => setSelectedProduct({
-                    name: prod.name,
-                    categoryName: prod.category,
-                    composition: prod.composition,
-                    pack: prod.pack,
-                    page: prod.page,
-                    image: prod.image
-                  })}
-                  className="bg-white rounded-2xl border border-sky-100/90 shadow-sm hover:shadow-xl hover:shadow-cyan-500/10 p-4 flex flex-col justify-between group cursor-pointer transition-all duration-300"
-                >
-                  <div>
-                    <div className="w-full h-32 sm:h-36 bg-white rounded-xl border border-slate-100 flex items-center justify-center p-2 mb-3 overflow-hidden">
-                      <img
-                        src={prod.image}
-                        alt={prod.name}
-                        className="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-                        loading="lazy"
-                      />
+        {/* 7 Canonical Formulation Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {CATEGORIES.map((category, index) => {
+            const IconComponent = ICON_MAP[category.icon] || Pill;
+            return (
+              <div
+                key={category.id}
+                className="group bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#00AEEF]/50 transition-all duration-300 flex flex-col overflow-hidden relative"
+              >
+                {/* Top Badge & Formulation Count */}
+                <div className="p-5 pb-3 flex items-center justify-between border-b border-slate-100 bg-gradient-to-r from-slate-50/70 to-white">
+                  <div className="flex items-center gap-2.5">
+                    <div className="w-9 h-9 rounded-xl bg-[#00AEEF]/10 text-[#00AEEF] flex items-center justify-center font-bold">
+                      <IconComponent className="w-5 h-5 text-[#00AEEF]" />
                     </div>
-                    <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded bg-[#00AEEF]/10 text-[#00AEEF]">
-                      {prod.category}
+                    <span className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                      Category 0{index + 1}
                     </span>
-                    <h3 className="text-sm font-extrabold text-[#102D4B] group-hover:text-[#00AEEF] transition-colors mt-1.5 leading-snug line-clamp-1">
-                      {prod.name}
+                  </div>
+                  <span className="px-3 py-1 rounded-full text-xs font-extrabold bg-[#00AEEF]/10 text-[#00AEEF] border border-[#00AEEF]/20">
+                    {category.count} Products
+                  </span>
+                </div>
+
+                {/* Big Crisp Product Visual on Pure White Canvas */}
+                <div className="relative w-full h-48 bg-white flex items-center justify-center p-4 overflow-hidden border-b border-slate-100">
+                  <img
+                    src={category.flagshipImage}
+                    alt={category.title}
+                    className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    onError={(e) => { e.currentTarget.src = '/assets/products/clavaero-cv-625.jpg'; }}
+                  />
+                  <span className="absolute bottom-2 right-3 text-[10px] font-semibold text-slate-400 bg-white/90 px-2 py-0.5 rounded shadow-xs border border-slate-100">
+                    Verified Packaging
+                  </span>
+                </div>
+
+                {/* Card Content */}
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-lg sm:text-xl font-bold text-[#102D4B] group-hover:text-[#00AEEF] transition-colors mb-2">
+                      {category.title}
                     </h3>
-                    <p className="text-xs text-slate-500 line-clamp-2 mt-1">
-                      {prod.composition}
+                    <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4 line-clamp-2">
+                      {category.shortDesc}
                     </p>
                   </div>
-                  <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-600">
-                    <span className="font-semibold">{prod.pack}</span>
-                    <span className="text-[#00AEEF] font-bold">Details →</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
 
-        {/* Category Filter Tabs (9 Categories) */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-4 no-scrollbar">
-          <button
-            type="button"
-            onClick={() => handleCategoryChange('all')}
-            className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all cursor-pointer ${
-              activeCategory === 'all'
-                ? 'bg-[#00AEEF] text-white shadow-md'
-                : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
-            }`}
-          >
-            All Categories ({allProducts.length})
-          </button>
-
-          {menuCategories.map((cat) => (
-            <button
-              key={cat.id}
-              type="button"
-              onClick={() => handleCategoryChange(cat.id)}
-              className={`px-4 py-2.5 rounded-xl text-xs sm:text-sm font-bold whitespace-nowrap transition-all cursor-pointer ${
-                activeCategory === cat.id
-                  ? 'bg-[#00AEEF] text-white shadow-md'
-                  : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200'
-              }`}
-            >
-              {cat.name} ({cat.products.length})
-            </button>
-          ))}
-        </div>
-
-        {/* Results Info Bar */}
-        <div className="mt-4 flex items-center justify-between text-xs sm:text-sm text-slate-500 pb-4 border-b border-slate-200">
-          <div>
-            Showing <span className="font-bold text-[#102D4B]">{filteredProducts.length}</span> formulations
-            {searchTerm && <span> matching "<span className="text-[#00AEEF] font-semibold">{searchTerm}</span>"</span>}
-          </div>
-          {(searchTerm || activeCategory !== 'all') && (
-            <button
-              onClick={() => {
-                setActiveCategory('all');
-                setSearchTerm('');
-                setSearchParams({});
-              }}
-              className="text-[#00AEEF] hover:underline font-semibold cursor-pointer"
-            >
-              Reset Filters
-            </button>
-          )}
-        </div>
-
-        {/* 3. Product Cards Grid */}
-        {filteredProducts.length === 0 ? (
-          <div className="py-20 text-center bg-white rounded-2xl border border-slate-200 mt-6 p-8">
-            <Package className="w-12 h-12 text-slate-300 mx-auto mb-3" />
-            <h3 className="text-lg font-bold text-slate-700">No Formulations Found</h3>
-            <p className="text-xs sm:text-sm text-slate-400 mt-1 max-w-sm mx-auto">
-              We couldn't find any formulations matching your search. Try searching by generic active ingredient or select another category.
-            </p>
-            <button
-              onClick={() => {
-                setActiveCategory('all');
-                setSearchTerm('');
-                setSearchParams({});
-              }}
-              className="mt-4 px-4 py-2 bg-[#00AEEF] text-white text-xs font-bold rounded-lg shadow-sm"
-            >
-              Clear Search
-            </button>
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-            {filteredProducts.map((p, idx) => (
-              <div
-                key={`${p.name}-${idx}`}
-                className="bg-white rounded-2xl border border-sky-100 hover:border-[#00AEEF] shadow-sm hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 flex flex-col justify-between p-5 group relative overflow-hidden"
-              >
-                <div>
-                  {/* Category & Page Badge */}
-                  <div className="flex items-center justify-between gap-2 mb-2.5">
-                    <span className="text-[11px] font-bold text-[#00AEEF] bg-[#00AEEF]/10 px-2.5 py-0.5 rounded-full">
-                      {p.categoryName}
+                  {/* Explore Button */}
+                  <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
+                    <span className="text-xs font-semibold text-slate-500">
+                      WHO-GMP Validated
                     </span>
-                    <span className="text-[11px] font-semibold text-slate-400 bg-slate-100 px-2 py-0.5 rounded">
-                      Page {p.page} (CATLOP.pdf)
-                    </span>
-                  </div>
-
-                  {/* Packaging Image if available */}
-                  {p.image && (
-                    <div className="w-full h-32 bg-white rounded-xl border border-slate-100 flex items-center justify-center p-2 mb-3 overflow-hidden shadow-2xs">
-                      <img
-                        src={p.image}
-                        alt={p.name}
-                        className="h-full w-auto object-contain group-hover:scale-105 transition-transform duration-300"
-                        loading="lazy"
-                      />
-                    </div>
-                  )}
-
-                  {/* Product Title */}
-                  <h3 className="text-base font-extrabold text-[#102D4B] group-hover:text-[#00AEEF] transition-colors leading-snug">
-                    {p.name}
-                  </h3>
-
-                  {/* Active Composition */}
-                  <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
-                    {p.composition}
-                  </p>
-                </div>
-
-                {/* Card Footer: Pack size & CTA */}
-                <div className="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between">
-                  <div className="text-xs font-semibold text-slate-700 bg-slate-50 border border-slate-200/80 px-2.5 py-1 rounded-md">
-                    Pack: {p.pack || 'Standard Pack'}
-                  </div>
-
-                  <div className="flex items-center gap-2">
-                    <button
-                      type="button"
-                      onClick={() => setSelectedProduct(p)}
-                      className="p-1.5 rounded-lg text-slate-500 hover:text-[#00AEEF] hover:bg-slate-100 text-xs font-semibold cursor-pointer"
-                      title="View Details"
-                    >
-                      <Info className="w-4 h-4" />
-                    </button>
                     <Link
-                      to={`/quote?product=${encodeURIComponent(p.name)}`}
-                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-[#00AEEF] hover:bg-[#0097D1] shadow-xs hover:shadow transition-all"
+                      to={`/products/${category.slug}`}
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#00AEEF] hover:bg-[#0097D1] shadow-md shadow-cyan-500/20 transition-all duration-200 group-hover:translate-x-1"
                     >
-                      <span>Enquire</span>
-                      <ArrowRight className="w-3 h-3" />
+                      <span>Explore Category</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        )}
+            );
+          })}
+        </div>
+      </section>
 
-      </div>
-
-      {/* 4. Product Details Modal */}
-      {selectedProduct && (
-        <div 
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs animate-in fade-in duration-200"
-          onClick={() => setSelectedProduct(null)}
-        >
-          <div 
-            className="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-slate-200 relative animate-in zoom-in-95 duration-200"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setSelectedProduct(null)}
-              className="absolute right-4 top-4 text-slate-400 hover:text-slate-600 p-1 rounded-lg cursor-pointer"
-              aria-label="Close modal"
-            >
-              <X className="w-5 h-5" />
-            </button>
-
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-xs font-bold text-[#00AEEF] bg-[#00AEEF]/10 px-2.5 py-0.5 rounded-full">
-                {selectedProduct.categoryName}
-              </span>
-              <span className="text-xs text-slate-400">
-                Official Monograph Page {selectedProduct.page}
-              </span>
-            </div>
-
-            {selectedProduct.image && (
-              <div className="w-full h-44 bg-white rounded-xl border border-slate-100 flex items-center justify-center p-3 mb-4 shadow-sm">
-                <img
-                  src={selectedProduct.image}
-                  alt={selectedProduct.name}
-                  className="h-full w-auto object-contain"
-                />
+      {/* 
+        ========================================================================
+        FEATURED COMMERCIAL FORMULATIONS SHOWCASE
+        Big Packaging Images with Pure White Background (CATLOP.pdf)
+        ========================================================================
+      */}
+      <section className="py-14 sm:py-16 bg-white border-y border-slate-200/80">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+            <div>
+              <div className="inline-flex items-center gap-2 mb-2">
+                <span className="w-5 h-[2px] bg-[#ED1C24] rounded-full" />
+                <span className="text-xs font-bold text-[#ED1C24] tracking-widest uppercase">
+                  Flagship Portfolio
+                </span>
               </div>
-            )}
-
-            <h3 className="text-xl font-extrabold text-[#102D4B]">
-              {selectedProduct.name}
-            </h3>
-
-            <div className="mt-4 p-3.5 rounded-xl bg-slate-50 border border-slate-200">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
-                Active Composition & Formulation Details
-              </span>
-              <p className="text-sm text-slate-700 leading-relaxed font-medium">
-                {selectedProduct.composition}
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#102D4B] tracking-tight">
+                Featured Commercial Formulations
+              </h2>
+              <p className="text-sm text-slate-500 mt-1">
+                High-demand antibiotic, analgesic, anti-fungal, and nutritional formulations from CATLOP.pdf.
               </p>
             </div>
 
-            <div className="mt-3 flex items-center justify-between text-xs text-slate-600 px-1">
-              <span>Packaging Specification:</span>
-              <span className="font-bold text-[#102D4B]">{selectedProduct.pack}</span>
+            <Link
+              to="/products/tablets-capsules"
+              className="inline-flex items-center gap-2 text-sm font-bold text-[#00AEEF] hover:text-[#0097D1] transition-colors"
+            >
+              <span>View All 84 Products</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          {/* Grid of Featured Product Cards with Big Packaging on bg-white */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {flagshipProducts.map((prod) => {
+              const cat = CATEGORIES.find(c => c.id === prod.category) || CATEGORIES[0];
+              return (
+                <div
+                  key={prod.id}
+                  className="bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-200 flex flex-col overflow-hidden group"
+                >
+                  {/* Big Image on Clean White Canvas */}
+                  <div className="w-full h-48 bg-white p-4 flex items-center justify-center border-b border-slate-100 relative">
+                    <img
+                      src={prod.image}
+                      alt={prod.name}
+                      className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-200"
+                      onError={(e) => { e.currentTarget.src = '/assets/products/clavaero-cv-625.jpg'; }}
+                    />
+                    <span className="absolute top-2 left-2 text-[10px] font-bold text-[#00AEEF] bg-[#00AEEF]/10 px-2 py-0.5 rounded">
+                      CATLOP Page {prod.page}
+                    </span>
+                  </div>
+
+                  {/* Product Details */}
+                  <div className="p-4 flex-1 flex flex-col justify-between">
+                    <div>
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                        {cat.title}
+                      </span>
+                      <h3 className="text-sm font-bold text-slate-900 group-hover:text-[#00AEEF] transition-colors mt-0.5 line-clamp-1">
+                        {prod.name}
+                      </h3>
+                      <p className="text-xs text-slate-600 line-clamp-2 mt-1 leading-snug">
+                        {prod.composition}
+                      </p>
+                      <div className="mt-2 text-[11px] font-semibold text-slate-500">
+                        Pack: <span className="text-slate-800">{prod.pack}</span>
+                      </div>
+                    </div>
+
+                    <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                      <Link
+                        to={`/products/${cat.slug}/${prod.slug}`}
+                        className="text-xs font-bold text-[#00AEEF] hover:text-[#0097D1] transition-colors flex items-center gap-1"
+                      >
+                        <span>View Details</span>
+                        <ChevronRight className="w-3.5 h-3.5" />
+                      </Link>
+
+                      <Link
+                        to={`/quote?product=${encodeURIComponent(prod.name)}`}
+                        className="text-[11px] font-bold text-[#ED1C24] hover:underline"
+                      >
+                        Enquire Now
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+        </div>
+      </section>
+
+      {/* 
+        ========================================================================
+        QUALITY ASSURANCE & COMPLIANCE BANNER
+        ========================================================================
+      */}
+      <section className="bg-slate-100/70 border-t border-slate-200 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="flex items-start gap-3.5">
+              <CheckCircle2 className="w-6 h-6 text-[#00AEEF] flex-shrink-0 mt-0.5" />
+              <div>
+                <h4 className="text-sm font-bold text-slate-900">WHO-GMP &amp; ISO 9001:2015 Compliant</h4>
+                <p className="text-xs text-slate-600 mt-1">
+                  Every product listed in our catalog adheres to strict validation and manufacturing protocols in certified cleanroom facilities.
+                </p>
+              </div>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-slate-100 flex items-center justify-end gap-3">
-              <button
-                type="button"
-                onClick={() => setSelectedProduct(null)}
-                className="px-4 py-2 rounded-lg text-xs font-bold text-slate-600 hover:bg-slate-100 cursor-pointer"
-              >
-                Close
-              </button>
-              <Link
-                to={`/quote?product=${encodeURIComponent(selectedProduct.name)}`}
-                className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-bold text-white bg-[#00AEEF] hover:bg-[#0097D1] shadow-md"
-              >
-                <span>Request Quotation</span>
-                <ArrowRight className="w-3.5 h-3.5" />
-              </Link>
+            <div className="flex items-start gap-3.5">
+              <FileText className="w-6 h-6 text-[#00AEEF] flex-shrink-0 mt-0.5" />
+              <div>
+                <h4 className="text-sm font-bold text-slate-900">Certificate of Analysis (COA) with Each Batch</h4>
+                <p className="text-xs text-slate-600 mt-1">
+                  Complete documentation, analytical testing, and stability reports are provided for all commercial distribution partnerships.
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3.5">
+              <PhoneCall className="w-6 h-6 text-[#ED1C24] flex-shrink-0 mt-0.5" />
+              <div>
+                <h4 className="text-sm font-bold text-slate-900">PCD Franchise &amp; Third-Party Manufacturing</h4>
+                <p className="text-xs text-slate-600 mt-1">
+                  Monopoly PCD franchise rights and contract manufacturing available across India. Call our commercial desk at +91 70451 47453.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      )}
+      </section>
 
     </div>
   );

@@ -11,67 +11,67 @@ const NINE_DOSAGE_CATEGORIES = [
     image: '/assets/products/clavaero-cv-625.jpg',
     desc: 'Analgesics, broad-spectrum antibiotics, NSAIDs, antipyretics & calcium monographs in Alu-Alu and blister strips.',
     badge: 'ALU-ALU & BLISTER',
-    link: '/products?category=tablets'
+    link: '/products/tablets-capsules'
   },
   {
     id: 'capsules',
     name: 'Capsules & Softgels',
-    count: '9 Formulations',
+    count: '10 Formulations',
     mainProduct: 'AEROMOX - 500',
     image: '/assets/products/aeromox-500.jpg',
     desc: 'Hard gelatin antimicrobial capsules, gastro-resistant pellets & softgel formulations for high bio-availability.',
     badge: 'HARD GEL & SOFTGEL',
-    link: '/products?category=capsules'
+    link: '/products/capsules-softgels'
   },
   {
     id: 'syrups',
     name: 'Oral Liquids & Syrups',
-    count: '18 Formulations',
+    count: '20 Formulations',
     mainProduct: 'AEROLIV SYRUP',
     image: '/assets/products/aeroliv_syrup.jpg',
     desc: 'Cough syrups, bronchodilator expectorants, appetite tonics & pediatric suspensions in sealed amber PET bottles.',
     badge: 'AMBER PET BOTTLES',
-    link: '/products?category=syrups'
+    link: '/products/oral-liquids-syrups'
   },
   {
     id: 'dry-syrups',
     name: 'Pediatric Dry Syrups',
-    count: '4 Formulations',
+    count: '3 Formulations',
     mainProduct: 'AEROFOL - Z DRY SYRUP',
     image: '/assets/products/aerofol-z.jpg',
     desc: 'Reconstitutable high-stability dry suspensions (Amoxycillin + Clavulanate) with purified sterile water.',
     badge: 'WITH STERILE WATER',
-    link: '/products?category=dry-syrups'
+    link: '/products/pediatric-dry-syrups'
   },
   {
     id: 'creams',
     name: 'Creams, Gels & Ointments',
-    count: '8 Formulations',
+    count: '6 Formulations',
     mainProduct: 'LULIAERO CREAM',
     image: '/assets/products/luliaero_cream.jpg',
     desc: 'Topical antifungal creams, pain relief gels & antiseptic ointments in lami tubes and tamper-evident jars.',
     badge: 'DERMA & TOPICALS',
-    link: '/products?category=creams'
+    link: '/products/creams-gels-ointments'
   },
   {
     id: 'powders',
     name: 'Nutraceuticals & Dietary Powders',
-    count: '4 Formulations',
+    count: '8 Formulations',
     mainProduct: 'AERO PROTEIN DHA',
     image: '/assets/products/aero_protein.jpg',
     desc: 'Protein supplements with DHA, maternal nutrition formulas & kids growth tonics in 200g sealed tins.',
     badge: '200G SEALED TINS',
-    link: '/products?category=powders'
+    link: '/products/nutraceuticals-dry-powders'
   },
   {
     id: 'drops',
     name: 'Ophthalmic & Ear Drops',
-    count: '2 Formulations',
+    count: '6 Formulations',
     mainProduct: 'MOXI AERO-D EYE DROPS',
     image: '/assets/products/moxi_aero_d.jpg',
     desc: 'Sterile ophthalmic antibacterial and anti-inflammatory eye and ear drops packed in Class 100 cleanrooms.',
     badge: 'STERILE 5ML & 10ML',
-    link: '/products?category=drops'
+    link: '/products/ophthalmic-ear-drops'
   },
   {
     id: 'ors',
@@ -81,17 +81,17 @@ const NINE_DOSAGE_CATEGORIES = [
     image: '/assets/products/aerovita-z.jpg',
     desc: 'WHO-recommended oral rehydration salts (21.8g sachets) and instant dextrose vitamin C energy drink powders.',
     badge: 'WHO FORMULA SACHETS',
-    link: '/products?category=ors'
+    link: '/products/nutraceuticals-dry-powders'
   },
   {
     id: 'ayurvedic',
     name: 'Ayurvedic & Personal Care',
-    count: '5 Formulations',
+    count: '3 Formulations',
     mainProduct: 'KESH AERO AYURVEDIC OIL',
     image: '/assets/products/kesh_aero.jpg',
     desc: '100% natural herbal hair oils, medicated antifungal soaps, piles capsules & dermatological face wash gels.',
     badge: 'HERBAL & MEDICATED',
-    link: '/products?category=ayurvedic'
+    link: '/products/ophthalmic-ear-drops'
   }
 ];
 

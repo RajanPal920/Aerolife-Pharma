@@ -8,6 +8,8 @@ import FloatingContactButtons from './components/FloatingContactButtons';
 import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import ProductsPage from './pages/ProductsPage';
+import ProductCategoryPage from './pages/ProductCategoryPage';
+import ProductDetailPage from './pages/ProductDetailPage';
 import QualityPage from './pages/QualityPage';
 import CertificatesPage from './pages/CertificatesPage';
 import ContactPage from './pages/ContactPage';
@@ -30,6 +32,8 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/products/:categorySlug" element={<ProductCategoryPage />} />
+          <Route path="/products/:categorySlug/:productSlug" element={<ProductDetailPage />} />
           <Route path="/quality" element={<QualityPage />} />
           <Route path="/certificates" element={<CertificatesPage />} />
           <Route path="/contact" element={<ContactPage />} />

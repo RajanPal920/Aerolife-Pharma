@@ -105,17 +105,26 @@ export default function OurProductsSection() {
   const [activeCategory, setActiveCategory] = useState('all');
   const navigate = useNavigate();
 
-  const filteredProducts = activeCategory === 'all' 
-    ? FEATURED_PRODUCTS 
+  const filteredProducts = activeCategory === 'all'
+    ? FEATURED_PRODUCTS
     : FEATURED_PRODUCTS.filter(p => p.category === activeCategory);
 
-  const handleProductClick = (productName) => {
-    navigate(`/products?search=${encodeURIComponent(productName)}`);
+  const handleProductClick = (prod) => {
+    const categoryMap = {
+      tablets: 'tablets-capsules',
+      capsules: 'capsules-softgels',
+      syrups: 'oral-liquids-syrups',
+      dry_syrups: 'pediatric-dry-syrups',
+      ors: 'nutraceuticals-dry-powders',
+      supplements: 'nutraceuticals-dry-powders'
+    };
+    const catSlug = categoryMap[prod.category] || 'tablets-capsules';
+    navigate(`/products/${catSlug}/${prod.id}`);
   };
 
   return (
-    <section 
-      id="our-products" 
+    <section
+      id="our-products"
       className="relative w-full py-16 sm:py-20 lg:py-24 bg-[#102D4B] text-white overflow-hidden select-none scroll-mt-24"
       aria-label="Our Pharmaceutical Products Section"
     >
@@ -129,11 +138,11 @@ export default function OurProductsSection() {
         - Diagonal accent seam
         ========================================================================
       */}
-      
+
       {/* Subtle Technical Grid Background Pattern */}
-      <div 
-        className="absolute inset-0 opacity-15 pointer-events-none bg-grid-pattern z-0" 
-        aria-hidden="true" 
+      <div
+        className="absolute inset-0 opacity-15 pointer-events-none bg-grid-pattern z-0"
+        aria-hidden="true"
       />
 
       {/* Razor-thin 1.5px Top Accent Line: Cyan to Red */}
@@ -157,10 +166,10 @@ export default function OurProductsSection() {
 
       {/* Main Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          
+
           {/* Sub-label */}
           <div className="inline-flex items-center gap-2.5 mb-3">
             <span className="w-6 sm:w-8 h-[2px] bg-[#00AEEF] rounded-full" />
@@ -189,11 +198,10 @@ export default function OurProductsSection() {
                   key={cat.id}
                   type="button"
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`px-4 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${
-                    isActive
+                  className={`px-4 sm:px-5 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all duration-200 cursor-pointer ${isActive
                       ? 'bg-[#00AEEF] text-white shadow-lg shadow-cyan-500/25 scale-105'
                       : 'bg-white/10 hover:bg-white/15 text-slate-300 hover:text-white border border-white/15'
-                  }`}
+                    }`}
                 >
                   {cat.label}
                 </button>
@@ -213,7 +221,7 @@ export default function OurProductsSection() {
           {filteredProducts.map((prod) => (
             <div
               key={prod.id}
-              onClick={() => handleProductClick(prod.name)}
+              onClick={() => handleProductClick(prod)}
               className="bg-white rounded-2xl shadow-md hover:shadow-2xl hover:shadow-cyan-500/20 border border-white/20 p-4 sm:p-5 flex flex-col justify-between group hover:-translate-y-2 transition-all duration-300 cursor-pointer relative overflow-hidden"
             >
               {/* Top Accent Hover Line (Dual-tone Cyan to Red) */}
@@ -273,7 +281,7 @@ export default function OurProductsSection() {
             to="/products"
             className="inline-flex items-center gap-3 px-8 sm:px-9 py-4 rounded-xl text-base sm:text-lg font-bold text-white bg-[#00AEEF] hover:bg-[#0097D1] shadow-xl hover:shadow-cyan-500/30 transition-all duration-200 active:scale-[0.98] group"
           >
-            <span>VIEW COMPLETE 84+ PRODUCT CATALOGUE</span>
+            <span>VIEW All PRODUCT RANGE</span>
             <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
           </Link>
         </div>
