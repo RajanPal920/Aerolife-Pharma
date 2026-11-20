@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, ChevronRight, Package, Sparkles } from 'lucide-react';
+import AnimatedCounter from './AnimatedCounter';
 
 const FEATURED_PRODUCTS = [
   {
-    id: 'clavaero-cv-625',
+    id: 'clavaero-cv-625-tablets-10-x-6',
+    slug: 'clavaero-cv-625-tablets-10-x-6',
+    categorySlug: 'tablets-capsules',
     name: 'CLAVAERO - CV 625',
     category: 'tablets',
     dosageForm: 'TABLETS',
@@ -15,7 +18,9 @@ const FEATURED_PRODUCTS = [
     badge: 'Antibiotic'
   },
   {
-    id: 'aeromark-sp',
+    id: 'aeromark-sp-tablets',
+    slug: 'aeromark-sp-tablets',
+    categorySlug: 'tablets-capsules',
     name: 'AEROMARK - SP',
     category: 'tablets',
     dosageForm: 'TABLETS',
@@ -26,7 +31,9 @@ const FEATURED_PRODUCTS = [
     badge: 'Analgesic & NSAID'
   },
   {
-    id: 'aeromox-500',
+    id: 'aeromox-500-capsules',
+    slug: 'aeromox-500-capsules',
+    categorySlug: 'capsules-softgels',
     name: 'AEROMOX - 500',
     category: 'capsules',
     dosageForm: 'CAPSULES',
@@ -37,7 +44,9 @@ const FEATURED_PRODUCTS = [
     badge: 'Antibacterial'
   },
   {
-    id: 'itraero-200',
+    id: 'itraero-200-capsules',
+    slug: 'itraero-200-capsules',
+    categorySlug: 'capsules-softgels',
     name: 'ITRAERO 200',
     category: 'capsules',
     dosageForm: 'CAPSULES',
@@ -48,7 +57,9 @@ const FEATURED_PRODUCTS = [
     badge: 'Anti-Fungal'
   },
   {
-    id: 'omefist-d',
+    id: 'omefist-d-capsules',
+    slug: 'omefist-d-capsules',
+    categorySlug: 'capsules-softgels',
     name: 'OMEFIST D',
     category: 'capsules',
     dosageForm: 'CAPSULES',
@@ -59,7 +70,9 @@ const FEATURED_PRODUCTS = [
     badge: 'Gastro Care'
   },
   {
-    id: 'aerofol-z',
+    id: 'aerofol-z-dry-syrup',
+    slug: 'aerofol-z-dry-syrup',
+    categorySlug: 'pediatric-dry-syrups',
     name: 'AEROFOL - Z',
     category: 'syrups',
     dosageForm: 'DRY SYRUP',
@@ -70,7 +83,9 @@ const FEATURED_PRODUCTS = [
     badge: 'Probiotic & Vitamins'
   },
   {
-    id: 'aeromark-p',
+    id: 'aeromark-p-tablets',
+    slug: 'aeromark-p-tablets',
+    categorySlug: 'tablets-capsules',
     name: 'AEROMARK - P',
     category: 'tablets',
     dosageForm: 'TABLETS',
@@ -81,7 +96,9 @@ const FEATURED_PRODUCTS = [
     badge: 'Pain Relief'
   },
   {
-    id: 'aerovita-z',
+    id: 'aerovita-z-instant-energy-drink-booster',
+    slug: 'aerovita-z-instant-energy-drink-booster',
+    categorySlug: 'nutraceuticals-dry-powders',
     name: 'AEROVITA - Z',
     category: 'supplements',
     dosageForm: 'ENERGY BOOSTER',
@@ -110,16 +127,7 @@ export default function OurProductsSection() {
     : FEATURED_PRODUCTS.filter(p => p.category === activeCategory);
 
   const handleProductClick = (prod) => {
-    const categoryMap = {
-      tablets: 'tablets-capsules',
-      capsules: 'capsules-softgels',
-      syrups: 'oral-liquids-syrups',
-      dry_syrups: 'pediatric-dry-syrups',
-      ors: 'nutraceuticals-dry-powders',
-      supplements: 'nutraceuticals-dry-powders'
-    };
-    const catSlug = categoryMap[prod.category] || 'tablets-capsules';
-    navigate(`/products/${catSlug}/${prod.id}`);
+    navigate(`/products/${prod.categorySlug}/${prod.slug}`);
   };
 
   return (
@@ -186,7 +194,7 @@ export default function OurProductsSection() {
 
           {/* Subtitle */}
           <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Explore our verified commercial formulations developed to meet diverse clinical and healthcare requirements across 84+ monographs.
+            Explore our verified commercial formulations developed to meet diverse clinical and healthcare requirements across <strong className="text-[#00AEEF]"><AnimatedCounter target={84} suffix="+" /></strong> monographs.
           </p>
 
           {/* Category Filter Tabs */}

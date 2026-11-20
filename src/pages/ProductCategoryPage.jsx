@@ -26,6 +26,7 @@ import {
   ExternalLink
 } from 'lucide-react';
 import PartnershipBannerSection from '../components/PartnershipBannerSection';
+import AnimatedCounter from '../components/AnimatedCounter';
 
 const ICON_MAP = {
   Pill: Pill,
@@ -128,7 +129,9 @@ export default function ProductCategoryPage() {
           {/* Category Stats Centered */}
           <div className="inline-flex items-center justify-center gap-4 bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl px-6 py-3 mb-6">
             <div>
-              <span className="block text-2xl font-black text-white">{categoryProducts.length}</span>
+              <span className="block text-2xl font-black text-white">
+                <AnimatedCounter target={categoryProducts.length} />
+              </span>
               <span className="text-[11px] text-slate-300 font-medium">Verified Products</span>
             </div>
             <div className="w-[1px] h-8 bg-white/20" />

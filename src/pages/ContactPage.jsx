@@ -19,6 +19,7 @@ import {
   AlertCircle
 } from 'lucide-react';
 import PartnershipBannerSection from '../components/PartnershipBannerSection';
+import AnimatedCounter from '../components/AnimatedCounter';
 
 export default function ContactPage({ isQuoteMode = false }) {
   const [searchParams] = useSearchParams();
@@ -88,20 +89,45 @@ export default function ContactPage({ isQuoteMode = false }) {
     if (!validate()) return;
 
     setIsSubmitting(true);
-    // Simulate API registration with reference ID
-    setTimeout(() => {
-      const refId = `ALP-INQ-${Math.floor(1000 + Math.random() * 9000)}`;
-      setSubmittedData({
-        ...formData,
-        refId,
-        date: new Date().toLocaleDateString('en-IN', {
-          day: 'numeric',
-          month: 'short',
-          year: 'numeric'
-        })
-      });
-      setIsSubmitting(false);
-    }, 800);
+    const refId = `ALP-INQ-${Math.floor(1000 + Math.random() * 9000)}`;
+    const submission = {
+      ...formData,
+      refId,
+      date: new Date().toLocaleDateString('en-IN', {
+        day: 'numeric',
+        month: 'short',
+        year: 'numeric'
+      })
+    };
+
+    setSubmittedData(submission);
+    setIsSubmitting(false);
+
+    // Navigate to official email client with pre-filled commercial inquiry
+    const emailSubject = encodeURIComponent(`[${refId}] Commercial Inquiry: ${formData.enquiryType} - ${formData.name}`);
+    const emailBody = encodeURIComponent(
+      `Dear Aerolife Pharma Commercial Desk,\n\n` +
+      `I am writing to submit a commercial pharmaceutical inquiry with the following details:\n\n` +
+      `----------------------------------------\n` +
+      `INQUIRY DETAILS\n` +
+      `----------------------------------------\n` +
+      `Reference ID: ${refId}\n` +
+      `Inquiry Nature: ${formData.enquiryType}\n` +
+      `Full Name: ${formData.name}\n` +
+      `Company / Enterprise: ${formData.company || 'Not Specified'}\n` +
+      `Mobile / WhatsApp: ${formData.phone}\n` +
+      `Official Email: ${formData.email}\n` +
+      `Location: ${formData.city ? formData.city + ', ' : ''}${formData.state || 'India'}\n` +
+      `Formulation of Interest: ${formData.productOfInterest || 'General Catalogue Formulations'}\n` +
+      `Estimated Quantity / MOQ: ${formData.quantity || 'Standard Commercial Batch'}\n\n` +
+      `Commercial Requirement / Message:\n` +
+      `${formData.message || 'Please provide batch price lists, product dossiers, and franchise terms.'}\n\n` +
+      `----------------------------------------\n` +
+      `Submitted via Aerolife Pharma Portal\n` +
+      `Trade Mark No. 4665534 (Class 5)`
+    );
+
+    window.location.href = `mailto:info@aerolifepharma.com?subject=${emailSubject}&body=${emailBody}`;
   };
 
   // WhatsApp pre-filled text for direct handoff
@@ -144,10 +170,10 @@ export default function ContactPage({ isQuoteMode = false }) {
       {/* 
         ========================================================================
         1. UNIFIED CLEAN HERO SECTION: CORPORATE CONTACT & TRADE DESK
-        Centered layout with zero hero images
+        Increased Height (Deep Blue Visual Presence) & Dedicated WhatsApp Action
         ========================================================================
       */}
-      <section className="relative bg-[#102D4B] text-white pt-16 pb-24 sm:pt-20 sm:pb-32 overflow-hidden flex flex-col justify-center">
+      <section className="relative bg-[#102D4B] text-white pt-24 pb-36 sm:pt-32 sm:pb-48 lg:pt-40 lg:pb-56 min-h-[500px] sm:min-h-[560px] lg:min-h-[620px] overflow-hidden flex flex-col justify-center">
         {/* Subtle technical background grid */}
         <div className="absolute inset-0 opacity-10 bg-grid-pattern pointer-events-none" />
 
@@ -202,6 +228,38 @@ export default function ContactPage({ isQuoteMode = false }) {
               <span className="w-2 h-2 rounded-full bg-[#ED1C24]" />
               <span>24-Hour Trade Desk Response</span>
             </div>
+          </div>
+
+          {/* Hero Action Buttons including Dedicated Green WhatsApp Button */}
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-8">
+            <a
+              href={`https://wa.me/91${phone}?text=Hi%20Aerolife%20Pharma,%20I%20would%20like%20to%20connect%20regarding%20commercial%20inquiry.`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 rounded-xl text-xs sm:text-sm font-extrabold text-white bg-[#00AEEF] hover:bg-[#0097D1] shadow-lg shadow-cyan-500/25 transition-all duration-200 active:scale-98"
+            >
+              <span>DIRECT WHATSAPP DESK</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
+            <Link
+              to="/products"
+              className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 rounded-xl text-xs sm:text-sm font-extrabold text-slate-200 hover:text-white bg-white/10 hover:bg-white/15 border border-white/20 backdrop-blur-xs transition-all duration-200 active:scale-98"
+            >
+              <span>EXPLORE PRODUCTS</span>
+              <ArrowRight className="w-4 h-4 text-[#00AEEF]" />
+            </Link>
+            <a
+              href={`https://wa.me/91${phone}?text=Hi%20Aerolife%20Pharma,%20I%20would%20like%20to%20connect%20regarding%20commercial%20inquiry.`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Direct WhatsApp Inquiry with Aerolife Pharma"
+              title="Chat with Aerolife Pharma on WhatsApp"
+              className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-white shadow-lg shadow-[#25D366]/30 transition-all duration-200 hover:scale-105 active:scale-95 flex-shrink-0"
+            >
+              <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+              </svg>
+            </a>
           </div>
 
         </div>

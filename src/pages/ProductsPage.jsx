@@ -26,6 +26,7 @@ import {
   HelpCircle
 } from 'lucide-react';
 import PartnershipBannerSection from '../components/PartnershipBannerSection';
+import AnimatedCounter from '../components/AnimatedCounter';
 
 const ICON_MAP = {
   Pill: Pill,
@@ -89,17 +90,17 @@ export default function ProductsPage() {
       
       {/* 
         ========================================================================
-        1. UNIFIED CLEAN HERO SECTION: PHARMACEUTICAL CATALOGUE OVERVIEW
-        Centered layout with zero hero images
+        1. HERO SECTION: PHARMACEUTICAL CATALOGUE OVERVIEW (Side-by-Side 2-Column Design)
+        Features Search, Verified Stats & Clinical Excellence Showcase Card
         ========================================================================
       */}
-      <section className="relative bg-[#102D4B] text-white pt-16 pb-20 sm:pt-20 sm:pb-28 overflow-hidden flex flex-col justify-center">
+      <section className="relative bg-[#102D4B] text-white pt-12 pb-16 sm:pt-16 sm:pb-24 overflow-hidden">
         {/* Subtle grid background */}
         <div className="absolute inset-0 opacity-10 bg-grid-pattern pointer-events-none" />
         
-        {/* Giant Watermark Typography Centered */}
+        {/* Giant Watermark Typography */}
         <div 
-          className="absolute -top-10 left-1/2 -translate-x-1/2 text-[120px] sm:text-[180px] lg:text-[240px] font-black text-white/[0.03] select-none pointer-events-none uppercase tracking-tighter leading-none"
+          className="absolute -top-6 -left-10 text-[100px] sm:text-[160px] lg:text-[200px] font-black text-white/[0.03] select-none pointer-events-none uppercase tracking-tighter leading-none"
           aria-hidden="true"
         >
           PRODUCTS
@@ -108,114 +109,161 @@ export default function ProductsPage() {
         {/* Brand Accent Line */}
         <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#00AEEF] via-[#ED1C24] to-[#00AEEF] z-20" />
 
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           
-          {/* Breadcrumb Navigation Centered */}
-          <nav className="flex items-center justify-center gap-2 text-xs font-semibold text-slate-300 mb-6" aria-label="Breadcrumb">
+          {/* Breadcrumb Navigation */}
+          <nav className="flex items-center gap-2 text-xs font-semibold text-slate-300 mb-6 sm:mb-8" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-[#00AEEF] transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
             <span className="text-[#00AEEF]">Commercial Product Catalogue</span>
           </nav>
 
-          {/* Centered Category Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#00AEEF] text-xs font-bold tracking-wide uppercase mb-5 shadow-sm">
-            <span className="w-2.5 h-2.5 rounded-full bg-[#00AEEF] animate-pulse" />
-            <span>PORTFOLIO / OUR PHARMACEUTICAL PORTFOLIO</span>
-          </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            
+            {/* Left Column (7 cols): Heading, intro, search, and stats */}
+            <div className="lg:col-span-7">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[#00AEEF] text-xs font-bold tracking-wide uppercase mb-4">
+                <span className="w-2 h-2 rounded-full bg-[#00AEEF] animate-pulse" />
+                <span>PORTFOLIO / OUR PHARMACEUTICAL PORTFOLIO</span>
+              </div>
 
-          {/* Centered Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12] mb-5">
-            PHARMACEUTICAL SOLUTIONS. <br />
-            <span className="text-[#00AEEF]">FOCUSED ON HEALTHCARE.</span>
-          </h1>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight mb-4">
+                PHARMACEUTICAL SOLUTIONS. <br />
+                <span className="text-[#00AEEF]">FOCUSED ON HEALTHCARE.</span>
+              </h1>
 
-          {/* Centered Subtext */}
-          <p className="text-sm sm:text-base lg:text-lg text-slate-200 leading-relaxed mb-8 max-w-2xl mx-auto">
-            Explore Aerolife Pharma's comprehensive portfolio of <strong className="text-white font-semibold">{totalProductsCount} verified commercial formulations</strong> across {CATEGORIES.length} primary dosage forms. Manufactured under stringent WHO-GMP standards with strict quality control.
-          </p>
+              <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed mb-8 max-w-2xl">
+                Explore Aerolife Pharma's comprehensive portfolio of <strong className="text-white font-semibold"><AnimatedCounter target={totalProductsCount} suffix="+" /> verified commercial formulations</strong> across <strong className="text-white font-semibold"><AnimatedCounter target={CATEGORIES.length} /> primary dosage forms</strong>. Manufactured under stringent WHO-GMP standards with strict quality control.
+              </p>
 
-          {/* Fast Global Search Bar Centered */}
-          <div className="relative max-w-xl mx-auto mb-8">
-            <div className="relative flex items-center">
-              <Search className="w-5 h-5 text-slate-400 absolute left-4 pointer-events-none" />
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                onFocus={() => setIsSearchFocused(true)}
-                onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
-                placeholder="Search 84 formulations by brand name, composition, or dosage..."
-                className="w-full pl-12 pr-4 py-3.5 bg-white text-slate-900 rounded-xl text-sm sm:text-base font-medium shadow-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#00AEEF] focus:border-[#00AEEF] transition-all placeholder-slate-400"
-              />
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery('')}
-                  className="absolute right-4 text-slate-400 hover:text-slate-600 text-sm font-bold"
-                >
-                  ✕
-                </button>
-              )}
-            </div>
-
-            {/* Instant Search Dropdown Preview */}
-            {isSearchFocused && searchQuery.trim() && (
-              <div className="absolute top-[calc(100%+6px)] left-0 right-0 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden z-50 text-left">
-                <div className="p-2.5 border-b border-slate-100 flex items-center justify-between bg-slate-50 text-[11px] font-bold text-slate-500">
-                  <span>{searchResults.length} Formulations Found</span>
-                  <span>Click to inspect</span>
+              {/* Fast Global Search Bar */}
+              <div className="relative max-w-xl mb-8">
+                <div className="relative flex items-center">
+                  <Search className="w-5 h-5 text-slate-400 absolute left-4 pointer-events-none" />
+                  <input
+                    type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    onFocus={() => setIsSearchFocused(true)}
+                    onBlur={() => setTimeout(() => setIsSearchFocused(false), 200)}
+                    placeholder="Search 84 formulations by brand name, composition, or dosage..."
+                    className="w-full pl-12 pr-4 py-3.5 bg-white text-slate-900 rounded-xl text-sm sm:text-base font-medium shadow-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-[#00AEEF] focus:border-[#00AEEF] transition-all placeholder-slate-400"
+                  />
+                  {searchQuery && (
+                    <button
+                      onClick={() => setSearchQuery('')}
+                      className="absolute right-4 text-slate-400 hover:text-slate-600 text-sm font-bold"
+                    >
+                      ✕
+                    </button>
+                  )}
                 </div>
-                {searchResults.length > 0 ? (
-                  <div className="divide-y divide-slate-100 max-h-80 overflow-y-auto">
-                    {searchResults.map((prod) => (
-                      <div
-                        key={prod.id}
-                        onMouseDown={() => handleSearchResultClick(prod)}
-                        className="p-3 hover:bg-slate-50 cursor-pointer flex items-center gap-3 transition-colors text-left"
-                      >
-                        <div className="w-12 h-12 bg-white rounded-lg border border-slate-200 flex-shrink-0 p-1 flex items-center justify-center">
-                          <img
-                            src={prod.image}
-                            alt={prod.name}
-                            className="w-full h-full object-contain"
-                            onError={(e) => { e.currentTarget.src = '/assets/products/clavaero-cv-625.jpg'; }}
-                          />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <h4 className="text-xs sm:text-sm font-bold text-slate-900 truncate">{prod.name}</h4>
-                          <p className="text-[11px] text-slate-500 truncate">{prod.composition}</p>
-                          <span className="text-[10px] font-semibold text-[#00AEEF]">{prod.pack} • Formulation #{prod.page}</span>
-                        </div>
-                        <ArrowRight className="w-4 h-4 text-slate-400 flex-shrink-0" />
+
+                {/* Instant Search Dropdown Preview */}
+                {isSearchFocused && searchQuery.trim() && (
+                  <div className="absolute top-[calc(100%+6px)] left-0 right-0 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden z-50 text-left">
+                    <div className="p-2.5 border-b border-slate-100 flex items-center justify-between bg-slate-50 text-[11px] font-bold text-slate-500">
+                      <span>{searchResults.length} Formulations Found</span>
+                      <span>Click to inspect</span>
+                    </div>
+                    {searchResults.length > 0 ? (
+                      <div className="divide-y divide-slate-100 max-h-80 overflow-y-auto">
+                        {searchResults.map((prod) => (
+                          <div
+                            key={prod.id}
+                            onMouseDown={() => handleSearchResultClick(prod)}
+                            className="p-3 hover:bg-slate-50 cursor-pointer flex items-center gap-3 transition-colors text-left"
+                          >
+                            <div className="w-12 h-12 bg-white rounded-lg border border-slate-200 flex-shrink-0 p-1 flex items-center justify-center">
+                              <img
+                                src={prod.image}
+                                alt={prod.name}
+                                className="w-full h-full object-contain"
+                                onError={(e) => { e.currentTarget.src = '/assets/products/clavaero-cv-625.jpg'; }}
+                              />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <h4 className="text-xs sm:text-sm font-bold text-slate-900 truncate">{prod.name}</h4>
+                              <p className="text-[11px] text-slate-500 truncate">{prod.composition}</p>
+                              <span className="text-[10px] font-semibold text-[#00AEEF]">{prod.pack} • Formulation #{prod.page}</span>
+                            </div>
+                            <ArrowRight className="w-4 h-4 text-slate-400 flex-shrink-0" />
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="p-6 text-center text-xs text-slate-500">
-                    No matching formulations found for "{searchQuery}".
+                    ) : (
+                      <div className="p-6 text-center text-xs text-slate-500">
+                        No matching formulations found for "{searchQuery}".
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
-            )}
-          </div>
 
-          {/* Quick Metrics Bar Centered */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-6 border-t border-white/15 max-w-2xl mx-auto text-center">
-            <div>
-              <span className="block text-2xl sm:text-3xl font-black text-white">{totalProductsCount}+</span>
-              <span className="text-xs text-slate-300 font-medium">Total Formulations</span>
+              {/* Quick Metrics Bar with Animated Counters */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 pt-6 border-t border-white/10">
+                <div>
+                  <span className="block text-2xl sm:text-3xl font-black text-white">
+                    <AnimatedCounter target={totalProductsCount} suffix="+" />
+                  </span>
+                  <span className="text-xs text-slate-300 font-medium">Total Formulations</span>
+                </div>
+                <div>
+                  <span className="block text-2xl sm:text-3xl font-black text-[#00AEEF]">
+                    <AnimatedCounter target={CATEGORIES.length} />
+                  </span>
+                  <span className="text-xs text-slate-300 font-medium">Dosage Categories</span>
+                </div>
+                <div>
+                  <span className="block text-2xl sm:text-3xl font-black text-white">WHO-GMP</span>
+                  <span className="text-xs text-slate-300 font-medium">Certified Production</span>
+                </div>
+                <div>
+                  <span className="block text-2xl sm:text-3xl font-black text-[#ED1C24]">
+                    <AnimatedCounter target={100} suffix="%" />
+                  </span>
+                  <span className="text-xs text-slate-300 font-medium">Catalog Verified</span>
+                </div>
+              </div>
             </div>
-            <div>
-              <span className="block text-2xl sm:text-3xl font-black text-[#00AEEF]">{CATEGORIES.length}</span>
-              <span className="text-xs text-slate-300 font-medium">Dosage Categories</span>
+
+            {/* Right Column (5 cols): Styled Image Card Matching Screenshot 8 */}
+            <div className="lg:col-span-5 flex justify-center lg:justify-end">
+              <div className="relative w-full max-w-md">
+                {/* Subtle back card layer for depth */}
+                <div className="absolute inset-0 bg-[#0C1F33] rounded-3xl transform translate-x-3 translate-y-3 -z-10 border border-white/10" />
+
+                {/* Main Card with Clinical Reference Image */}
+                <div className="relative rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl bg-[#0F2842] aspect-[4/3] group">
+                  <img
+                    src="/assets/quality/quality_blister_tablets.jpg"
+                    alt="Pharmaceutical Formulations - Blister Packaging and Solid Dosage Forms"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#102D4B]/80 via-transparent to-black/20" />
+
+                  {/* High-Impact Badge in Bottom-Left */}
+                  <div className="absolute bottom-4 left-4 right-4 bg-[#102D4B]/95 backdrop-blur-md rounded-xl p-3 sm:p-3.5 border border-white/20 shadow-lg flex items-center gap-3">
+                    <div className="w-9 h-9 rounded-lg bg-[#00AEEF]/20 flex items-center justify-center text-[#00AEEF] flex-shrink-0">
+                      <ShieldCheck className="w-5 h-5" />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-xs font-black text-white uppercase tracking-wider truncate">
+                        CLINICAL EXCELLENCE
+                      </div>
+                      <div className="text-[11px] text-slate-300 font-medium truncate">
+                        Monograph Validated Formulations
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Symmetrical Dual-Color Framing Brackets */}
+                  <div className="absolute top-2.5 right-2.5 w-6 h-6 border-t-2 border-r-2 border-[#00AEEF] rounded-tr-md pointer-events-none" />
+                  <div className="absolute bottom-2.5 left-2.5 w-6 h-6 border-b-2 border-l-2 border-[#ED1C24] rounded-bl-md pointer-events-none" />
+                </div>
+              </div>
             </div>
-            <div>
-              <span className="block text-2xl sm:text-3xl font-black text-white">WHO-GMP</span>
-              <span className="text-xs text-slate-300 font-medium">Certified Production</span>
-            </div>
-            <div>
-              <span className="block text-2xl sm:text-3xl font-black text-[#ED1C24]">100%</span>
-              <span className="text-xs text-slate-300 font-medium">Catalog Verified</span>
-            </div>
+
           </div>
 
         </div>

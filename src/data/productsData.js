@@ -2509,12 +2509,34 @@ export function getProductsByCategory(categorySlug) {
 }
 
 /**
- * Finds a specific product by its slug
+ * Finds a specific product by its slug (with resilient fuzzy/prefix fallback)
  */
 export function getProductBySlug(categorySlug, productSlug) {
   if (!productSlug) return null;
   const cleanProdSlug = productSlug.toLowerCase().trim();
-  return ALL_PRODUCTS.find(p => p.slug === cleanProdSlug || p.id === cleanProdSlug) || null;
+
+  // 1. Exact match on slug or id
+  let found = ALL_PRODUCTS.find(p => p.slug === cleanProdSlug || p.id === cleanProdSlug);
+  if (found) return found;
+
+  // 2. Starts with / prefix match
+  found = ALL_PRODUCTS.find(p => p.slug.startsWith(cleanProdSlug) || cleanProdSlug.startsWith(p.slug));
+  if (found) return found;
+
+  // 3. Substring containment
+  found = ALL_PRODUCTS.find(p => p.slug.includes(cleanProdSlug) || cleanProdSlug.includes(p.slug));
+  if (found) return found;
+
+  // 4. Normalized alphanumeric match (ignoring dashes and symbols)
+  const alphaClean = cleanProdSlug.replace(/[^a-z0-9]/g, '');
+  if (alphaClean.length >= 4) {
+    found = ALL_PRODUCTS.find(p => {
+      const pAlpha = p.slug.replace(/[^a-z0-9]/g, '');
+      return pAlpha.includes(alphaClean) || alphaClean.includes(pAlpha);
+    });
+  }
+
+  return found || null;
 }
 
 /**

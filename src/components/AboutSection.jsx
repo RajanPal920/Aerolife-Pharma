@@ -11,6 +11,7 @@ import {
   FileCheck2,
   PackageCheck
 } from 'lucide-react';
+import AnimatedCounter from './AnimatedCounter';
 
 export default function AboutSection() {
   const navigate = useNavigate();
@@ -147,14 +148,14 @@ export default function AboutSection() {
 
             {/* Paragraph 2: Formulation & Compliance Focus */}
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-7 font-normal">
-              Our comprehensive commercial monograph portfolio combines <strong className="text-[#102D4B]">84+ certified formulations</strong> across Tablets, Capsules, Syrups, Oral Suspensions, and Specialized Preparations—developed to meet the evolving therapeutic needs of healthcare professionals, PCD franchise distributors, and institutional partners nationwide.
+              Our comprehensive commercial monograph portfolio combines <strong className="text-[#102D4B]"><AnimatedCounter target={84} suffix="+" /> certified formulations</strong> across Tablets, Capsules, Syrups, Oral Suspensions, and Specialized Preparations—developed to meet the evolving therapeutic needs of healthcare professionals, PCD franchise distributors, and institutional partners nationwide.
             </p>
 
             {/* 3 Metric / Stat Pillars in a Clean Row */}
             <div className="grid grid-cols-3 gap-3 sm:gap-4 py-5 border-y border-slate-200/90 mb-7">
               <div>
                 <div className="text-2xl sm:text-3xl font-extrabold text-[#00AEEF] tracking-tight">
-                  84+
+                  <AnimatedCounter target={84} suffix="+" />
                 </div>
                 <div className="text-[11px] sm:text-xs font-bold text-slate-800 uppercase tracking-wide mt-0.5">
                   COMMERCIAL PRODUCTS
@@ -166,7 +167,7 @@ export default function AboutSection() {
 
               <div>
                 <div className="text-2xl sm:text-3xl font-extrabold text-[#102D4B] tracking-tight">
-                  CLASS 5
+                  CLASS <AnimatedCounter target={5} />
                 </div>
                 <div className="text-[11px] sm:text-xs font-bold text-slate-800 uppercase tracking-wide mt-0.5">
                   GOVT. REGISTERED
@@ -178,7 +179,7 @@ export default function AboutSection() {
 
               <div>
                 <div className="text-2xl sm:text-3xl font-extrabold text-[#ED1C24] tracking-tight">
-                  100%
+                  <AnimatedCounter target={100} suffix="%" />
                 </div>
                 <div className="text-[11px] sm:text-xs font-bold text-slate-800 uppercase tracking-wide mt-0.5">
                   QUALITY ASSURED
