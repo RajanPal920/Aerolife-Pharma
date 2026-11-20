@@ -118,7 +118,7 @@ export default function DosageCapabilitiesSection() {
               ACROSS <span className="text-[#00AEEF]">84+ COMMERCIAL MONOGRAPHS</span>
             </h2>
             <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
-              Structured across 9 specialized delivery systems with validated bio-equivalence, stable dissolution kinetics, and authentic packaging from CATLOP.pdf.
+              Structured across 9 specialized delivery systems with validated bio-equivalence, stable dissolution kinetics, and authentic packaging from our official catalogue.
             </p>
           </div>
 
@@ -186,7 +186,7 @@ export default function DosageCapabilitiesSection() {
 
               {/* Bottom Explore Link */}
               <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold">
-                <span className="text-slate-400">CATLOP.pdf Verified</span>
+                <span className="text-slate-400">Catalogue Verified</span>
                 <span className="text-[#00AEEF] font-bold group-hover:translate-x-1 transition-transform inline-flex items-center gap-1">
                   <span>Explore Formulations</span>
                   <span>→</span>

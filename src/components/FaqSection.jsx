@@ -13,7 +13,7 @@ const FAQS = [
   },
   {
     q: 'Can I download the complete commercial product catalogue?',
-    a: 'Yes, our complete 84+ monograph product catalogue (CATLOP.pdf) is available for healthcare professionals and franchise partners, detailing active compositions, pack sizes, MRPs, and therapeutic categories across all 7 dosage forms.'
+    a: 'Yes, our complete 84+ monograph product catalogue is available for healthcare professionals and franchise partners, detailing active compositions, pack sizes, MRPs, and therapeutic categories across all 7 dosage forms.'
   },
   {
     q: 'What is the standard delivery timeline and dispatch procedure?',

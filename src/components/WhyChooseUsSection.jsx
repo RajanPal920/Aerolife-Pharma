@@ -11,7 +11,7 @@ const REASONS = [
   {
     num: '02',
     title: 'COMPREHENSIVE 84+ PRODUCT PORTFOLIO',
-    desc: 'Diverse formulation range across 84+ commercial monographs from CATLOP.pdf—including Tablets, Capsules, Dry Syrups, Suspensions, ORS, and Topicals.',
+    desc: 'Diverse formulation range across 84+ commercial monographs from our official catalogue—including Tablets, Capsules, Dry Syrups, Suspensions, ORS, and Topicals.',
     accent: '#ED1C24'
   },
   {

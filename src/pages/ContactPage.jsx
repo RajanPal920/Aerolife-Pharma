@@ -42,6 +42,7 @@ export default function ContactPage({ isQuoteMode = false }) {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submittedData, setSubmittedData] = useState(null);
+  const [openFaq, setOpenFaq] = useState(0);
 
   useEffect(() => {
     if (prefilledProduct) {
@@ -128,11 +129,11 @@ export default function ContactPage({ isQuoteMode = false }) {
     },
     {
       q: 'What is the commercial dispatch and delivery turnaround time?',
-      a: 'For repeated orders of existing approved products in our catalog (CATLOP.pdf), dispatch typically takes place within 48 to 72 hours via verified cold-chain and dry freight networks. For new contract manufacturing with custom packaging and carton development, initial batch delivery takes approximately 25 to 30 days.'
+      a: 'For repeated orders of approved formulations in our commercial portfolio, dispatch typically takes place within 48 to 72 hours via verified cold-chain and dry freight networks. For contract manufacturing with custom packaging and carton development, initial batch delivery takes approximately 25 to 30 days.'
     },
     {
       q: 'Are all formulations compliant with Schedule M and WHO-GMP guidelines?',
-      a: '100% of formulations indexed in CATLOP.pdf are produced in certified cleanroom partner facilities strictly adhering to Revised Schedule M of the Drugs and Cosmetics Act, state FDA manufacturing licenses, and international WHO-GMP quality parameters.'
+      a: '100% of formulations indexed in our commercial product portfolio are produced in certified cleanroom partner facilities strictly adhering to Revised Schedule M of the Drugs and Cosmetics Act, state FDA manufacturing licenses, and international quality parameters.'
     }
   ];
 
@@ -141,47 +142,72 @@ export default function ContactPage({ isQuoteMode = false }) {
       
       {/* 
         ========================================================================
-        1. HERO SECTION: COMMERCIAL CORRESPONDENCE (Matching Brand Aesthetics)
+        1. FULL-SCREEN HERO SECTION: CORPORATE CONTACT & TRADE DESK
         ========================================================================
       */}
-      <section className="relative bg-[#102D4B] text-white pt-12 pb-16 sm:pt-16 sm:pb-20 overflow-hidden">
-        {/* Subtle background grid pattern */}
-        <div className="absolute inset-0 opacity-10 bg-grid-pattern pointer-events-none" />
+      <section className="relative min-h-[600px] sm:min-h-[680px] lg:min-h-[750px] bg-[#102D4B] text-white pt-16 pb-32 sm:pt-24 sm:pb-40 overflow-hidden flex flex-col justify-center">
+        {/* Full-width High-Res Pharmaceutical Facility Background Image with Rich Dark Gradient */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/assets/hero_manufacturing_1794824908214.jpg"
+            alt="Aerolife Pharma Corporate Facility"
+            className="w-full h-full object-cover object-center filter brightness-[0.30] contrast-[1.10] scale-105 transition-transform duration-1000"
+          />
+          {/* Gradient Overlays for perfect legibility and Aerolife brand presence */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#102D4B] via-[#102D4B]/92 to-[#102D4B]/60" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#102D4B] via-transparent to-transparent" />
+        </div>
 
         {/* Top seam line */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00AEEF] via-[#ED1C24] to-[#00AEEF]" />
+        <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#00AEEF] via-[#ED1C24] to-[#00AEEF] z-20" />
 
         {/* Giant Watermark Typography */}
         <div 
-          className="absolute -top-10 -left-12 text-[120px] sm:text-[180px] lg:text-[240px] font-black text-white/[0.03] select-none pointer-events-none uppercase tracking-tighter leading-none"
+          className="absolute -top-10 -left-12 text-[120px] sm:text-[180px] lg:text-[250px] font-black text-white/[0.04] select-none pointer-events-none uppercase tracking-tighter leading-none z-10"
           aria-hidden="true"
         >
           CONTACT
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
           
           {/* Breadcrumb Navigation */}
-          <nav className="flex items-center gap-2 text-xs font-semibold text-slate-300 mb-6" aria-label="Breadcrumb">
+          <nav className="flex items-center gap-2 text-xs font-semibold text-slate-300 mb-6 sm:mb-8" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-[#00AEEF] transition-colors">Home</Link>
             <span className="text-slate-400">/</span>
-            <span className="text-[#00AEEF]">{isQuoteMode ? 'Request Quotation' : 'Corporate Contact'}</span>
+            <span className="text-[#00AEEF]">{isQuoteMode ? 'Request Commercial Quotation' : 'Corporate Contact & Support'}</span>
           </nav>
 
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[#00AEEF] text-xs font-bold tracking-wide uppercase mb-3">
-              <span className="w-2 h-2 rounded-full bg-[#00AEEF] animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#00AEEF] text-xs font-bold tracking-wide uppercase mb-4 shadow-sm">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#00AEEF] animate-pulse" />
               <span>Commercial Correspondence & Trade Desk</span>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight mb-4">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12] mb-5">
               CONNECT WITH <br />
               <span className="text-[#00AEEF]">AEROLIFE PHARMA.</span>
             </h1>
 
-            <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed max-w-2xl">
-              Get in touch with our commercial sales desk for monopoly PCD pharma franchise opportunities, third-party contract manufacturing, institutional procurement, and complete product dossiers.
+            <p className="text-sm sm:text-base lg:text-lg text-slate-200 leading-relaxed max-w-2xl mb-8">
+              Connect directly with our corporate sales desk for monopoly PCD pharma franchise partnerships, third-party contract manufacturing, institutional hospital procurement, and official formulation dossiers.
             </p>
+
+            {/* Quick Hero Highlights */}
+            <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-white/15 text-xs font-semibold text-slate-300">
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                <span>Pan-India Commercial Supply</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#00AEEF]" />
+                <span>Monopoly PCD Franchise Rights</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-[#ED1C24]" />
+                <span>24-Hour Trade Desk Response</span>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -527,7 +553,7 @@ export default function ContactPage({ isQuoteMode = false }) {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-xs font-bold text-[#102D4B] uppercase tracking-wider mb-1">
-                      Product of Interest (CATLOP.pdf)
+                      Product of Interest / Formulation Name
                     </label>
                     <input
                       type="text"

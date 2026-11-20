@@ -132,8 +132,8 @@ export default function ProductCategoryPage() {
               </div>
               <div className="w-[1px] h-10 bg-white/20" />
               <div>
-                <span className="block text-xs font-bold uppercase tracking-wider text-[#00AEEF]">Source</span>
-                <span className="text-xs font-semibold text-white">CATLOP.pdf</span>
+                <span className="block text-xs font-bold uppercase tracking-wider text-[#00AEEF]">Portfolio</span>
+                <span className="text-xs font-semibold text-white">Official Catalogue</span>
               </div>
             </div>
           </div>
@@ -248,7 +248,7 @@ export default function ProductCategoryPage() {
                     onError={(e) => { e.currentTarget.src = '/assets/products/clavaero-cv-625.jpg'; }}
                   />
                   <span className="absolute top-2.5 left-2.5 text-[10px] font-bold text-[#00AEEF] bg-[#00AEEF]/10 px-2 py-0.5 rounded border border-[#00AEEF]/15">
-                    CATLOP Page {product.page}
+                    Formulation #{product.page}
                   </span>
                   <span className="absolute top-2.5 right-2.5 text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
                     {product.dosageForm}
@@ -327,7 +327,7 @@ export default function ProductCategoryPage() {
           </Link>
 
           <div className="text-xs text-slate-400">
-            All formulations verified against <strong className="text-slate-600">CATLOP.pdf</strong> • Aerolife Pharma
+            All formulations verified against <strong className="text-slate-600">Official Product Dossier</strong> • Aerolife Pharma
           </div>
         </div>
 

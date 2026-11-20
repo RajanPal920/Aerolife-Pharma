@@ -132,7 +132,7 @@ export default function ProductDetailPage() {
                 {/* Catalog Monograph Verification Badge */}
                 <div className="absolute top-3 left-3 bg-[#00AEEF]/10 border border-[#00AEEF]/20 text-[#00AEEF] px-2.5 py-1 rounded-lg text-[11px] font-bold flex items-center gap-1.5">
                   <FileText className="w-3.5 h-3.5" />
-                  <span>CATLOP.pdf • Page {product.page}</span>
+                  <span>Monograph • Page {product.page}</span>
                 </div>
 
                 {/* WHO-GMP Stamp */}
@@ -227,7 +227,7 @@ export default function ProductDetailPage() {
                     <div className="grid grid-cols-3 p-3">
                       <span className="font-semibold text-slate-500">Catalogue Reference:</span>
                       <span className="col-span-2 font-bold text-[#00AEEF]">
-                        CATLOP.pdf — Page {product.page}
+                        Official Catalogue — Page {product.page}
                       </span>
                     </div>
                     <div className="grid grid-cols-3 p-3">
@@ -315,7 +315,7 @@ export default function ProductDetailPage() {
                   Related Formulations in {category.title}
                 </h3>
                 <p className="text-xs text-slate-500 mt-1">
-                  Explore other therapeutic options verified in CATLOP.pdf
+                  Explore other therapeutic options verified in our product catalogue
                 </p>
               </div>
 

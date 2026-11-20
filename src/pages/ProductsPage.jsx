@@ -67,7 +67,7 @@ export default function ProductsPage() {
   const faqs = [
     {
       q: 'What pharmaceutical formulations does Aerolife Pharma offer?',
-      a: 'Aerolife Pharma offers 84+ verified commercial formulations across 7 core dosage forms: Tablets & Caplets, Hard & Softgel Capsules, Oral Liquids & Syrups, Pediatric Dry Syrups with sterile water, Creams, Gels & Ointments, Nutraceuticals & Dry Powders (including WHO-formula ORS), and Ophthalmic/Ear Drops. All products are verified against our official CATLOP.pdf catalogue.'
+      a: 'Aerolife Pharma offers 84+ verified commercial formulations across 7 core dosage forms: Tablets & Caplets, Hard & Softgel Capsules, Oral Liquids & Syrups, Pediatric Dry Syrups with sterile water, Creams, Gels & Ointments, Nutraceuticals & Dry Powders (including WHO-formula ORS), and Ophthalmic/Ear Drops. All products are verified against our official commercial monograph catalogue.'
     },
     {
       q: 'What dosage forms and packaging specifications are available?',
@@ -268,7 +268,7 @@ export default function ProductsPage() {
             Commercial Formulation Categories
           </h2>
           <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed">
-            Select a therapeutic category below to inspect all verified formulations, active compositions, packaging specifications, and clinical monographs from <strong className="text-slate-800">CATLOP.pdf</strong>.
+            Select a therapeutic category below to inspect all verified formulations, active compositions, packaging specifications, and clinical monographs from <strong className="text-slate-800">our approved commercial catalogue</strong>.
           </p>
         </div>
 
@@ -361,7 +361,7 @@ export default function ProductsPage() {
                 Featured Commercial Formulations
               </h2>
               <p className="text-sm text-slate-500 mt-1">
-                High-demand antibiotic, analgesic, anti-fungal, and nutritional formulations from CATLOP.pdf.
+                High-demand antibiotic, analgesic, anti-fungal, and nutritional formulations from our commercial portfolio.
               </p>
             </div>
 
@@ -381,52 +381,56 @@ export default function ProductsPage() {
               return (
                 <div
                   key={prod.id}
-                  className="bg-white rounded-xl border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-200 flex flex-col overflow-hidden group"
+                  className="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#00AEEF]/50 transition-all duration-300 flex flex-col overflow-hidden group"
                 >
-                  {/* Big Image on Clean White Canvas */}
-                  <div className="w-full h-48 bg-white p-4 flex items-center justify-center border-b border-slate-100 relative">
+                  {/* Clean 3D Product Box Visual on Pure White Canvas */}
+                  <div className="w-full h-52 bg-white p-4 flex items-center justify-center border-b border-slate-100 relative overflow-hidden">
                     <img
                       src={prod.image}
                       alt={prod.name}
-                      className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-200"
-                      onError={(e) => { e.currentTarget.src = '/assets/products/clavaero-cv-625.jpg'; }}
+                      className="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-108 transition-transform duration-300"
+                      onError={(e) => { e.currentTarget.src = '/assets/products/clavaero-cv-625-tablets-10-x-6.jpg'; }}
                     />
-                    <span className="absolute top-2 left-2 text-[10px] font-bold text-[#00AEEF] bg-[#00AEEF]/10 px-2 py-0.5 rounded">
-                      CATLOP Page {prod.page}
+                    <span className="absolute top-2.5 left-2.5 text-[10px] font-bold text-[#00AEEF] bg-[#00AEEF]/10 px-2 py-0.5 rounded border border-[#00AEEF]/20">
+                      Formulation #{prod.page}
+                    </span>
+                    <span className="absolute top-2.5 right-2.5 text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded uppercase tracking-wider">
+                      {prod.dosageForm || 'Formulation'}
                     </span>
                   </div>
 
-                  {/* Product Details */}
-                  <div className="p-4 flex-1 flex flex-col justify-between">
+                  {/* Product Information Body */}
+                  <div className="p-5 flex-1 flex flex-col justify-between">
                     <div>
-                      <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-[#00AEEF]">
                         {cat.title}
                       </span>
-                      <h3 className="text-sm font-bold text-slate-900 group-hover:text-[#00AEEF] transition-colors mt-0.5 line-clamp-1">
+                      <h3 className="text-base font-extrabold text-[#102D4B] group-hover:text-[#00AEEF] transition-colors mt-0.5 line-clamp-1">
                         {prod.name}
                       </h3>
-                      <p className="text-xs text-slate-600 line-clamp-2 mt-1 leading-snug">
+                      <p className="text-xs font-semibold text-slate-600 line-clamp-2 mt-1 leading-snug">
                         {prod.composition}
                       </p>
-                      <div className="mt-2 text-[11px] font-semibold text-slate-500">
-                        Pack: <span className="text-slate-800">{prod.pack}</span>
+                      <div className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-slate-700 bg-slate-50 border border-slate-200/80 px-2.5 py-1 rounded-md mt-2.5">
+                        <Package className="w-3.5 h-3.5 text-[#00AEEF]" />
+                        <span>Pack: <strong className="text-slate-900">{prod.pack}</strong></span>
                       </div>
                     </div>
 
-                    <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+                    <div className="mt-4 pt-3.5 border-t border-slate-100 flex items-center justify-between">
                       <Link
                         to={`/products/${cat.slug}/${prod.slug}`}
-                        className="text-xs font-bold text-[#00AEEF] hover:text-[#0097D1] transition-colors flex items-center gap-1"
+                        className="text-xs font-bold text-[#00AEEF] hover:text-[#0097D1] transition-colors flex items-center gap-1 group-hover:translate-x-0.5 transition-transform"
                       >
-                        <span>View Details</span>
+                        <span>VIEW PRODUCT</span>
                         <ChevronRight className="w-3.5 h-3.5" />
                       </Link>
 
                       <Link
                         to={`/quote?product=${encodeURIComponent(prod.name)}`}
-                        className="text-[11px] font-bold text-[#ED1C24] hover:underline"
+                        className="text-xs font-bold text-[#ED1C24] hover:underline"
                       >
-                        Enquire Now
+                        Inquire Now
                       </Link>
                     </div>
                   </div>

@@ -413,7 +413,7 @@ export default function Navbar({ onNavigate }) {
                       <h3 className="text-sm font-bold text-[#0C1B2A] tracking-tight flex items-center gap-2">
                         <span>Aero Life Pharma Formulation Portfolio</span>
                         <span className="text-[11px] font-semibold text-[#00AEEF] bg-[#00AEEF]/10 px-2 py-0.5 rounded-full">
-                          {totalFormulationsCount} Products (CATLOP.pdf)
+                          {totalFormulationsCount} Verified Formulations
                         </span>
                       </h3>
                       <p className="text-[11px] text-slate-500">

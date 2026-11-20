@@ -160,7 +160,7 @@ export default function AboutSection() {
                   COMMERCIAL PRODUCTS
                 </div>
                 <div className="text-[10px] text-slate-500">
-                  CATLOP.pdf Verified
+                  Catalogue Verified
                 </div>
               </div>
 
