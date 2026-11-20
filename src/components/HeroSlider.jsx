@@ -214,43 +214,42 @@ export default function HeroSlider({ onActionClick }) {
       {/* 
         ========================================================================
         HERO SLIDER CONTAINER
-        - Left Content Panel: ~42% width, lighter medium/deep corporate navy (#102D4B)
-        - Right Image Panel: ~58% width, clean diagonal cut with brand Cyan/Red seam
-        - Calibrated height: fits fully in screen without vertical scrollbar cut-offs
+        - Layer 0: Background pattern
+        - Layer 1 (z-10): Left Navy Panel & Right Image Panel
+        - Layer 2 (z-30): Foreground Thin Red & Blue Lines and Razor-thin Diagonal Seam
+        - Layer 3 (z-40): Large Text, Bold Headings, Prominent Buttons & Controls
         ========================================================================
       */}
-      <div className="relative w-full max-w-full min-h-[560px] sm:min-h-[600px] lg:h-[640px] xl:h-[660px] 2xl:h-[680px] flex flex-col lg:flex-row">
+      <div className="relative w-full max-w-full min-h-[580px] sm:min-h-[620px] lg:h-[660px] xl:h-[680px] 2xl:h-[700px] flex flex-col lg:flex-row">
         
+        {/* Subtle Technical Grid Background Pattern (Layer 0) */}
+        <div 
+          className="absolute inset-0 opacity-15 pointer-events-none bg-grid-pattern z-0" 
+          aria-hidden="true" 
+        />
+
         {/* 
           ----------------------------------------------------------------------
-          LEFT CONTENT PANEL
-          Background: medium/deep professional navy (#102D4B)
-          Uses flexbox justify-between to position content comfortably:
-          - Top group: Label, Headline, Paragraph, Buttons, Trust Tags
-          - Bottom group: 01 02 03 04 ━━━━━━ [←] [→] in one clean row
+          LEFT CONTENT PANEL (Layer 1 - z-20)
+          Background: transparent on desktop (section background is #102D4B)
+          Ensures NO solid rectangular block covers or misaligns the right image's diagonal cut!
           ----------------------------------------------------------------------
         */}
-        <div className="w-full lg:w-[45%] xl:w-[42%] h-full z-20 flex flex-col justify-between p-6 sm:p-8 lg:p-10 lg:pl-16 xl:pl-20 relative max-w-full min-w-0 bg-[#102D4B]">
+        <div className="w-full lg:w-[45%] xl:w-[43%] h-full z-20 flex flex-col justify-between p-6 sm:p-8 lg:p-10 lg:pl-16 xl:pl-20 relative max-w-full min-w-0 bg-[#102D4B] lg:bg-transparent">
           
-          {/* Subtle Technical Grid Background Pattern */}
-          <div 
-            className="absolute inset-0 opacity-15 pointer-events-none bg-grid-pattern" 
-            aria-hidden="true" 
-          />
-
-          {/* TOP SECTION: Brand Label, Headline, Paragraph, CTAs & Trust Badges */}
-          <div className="relative z-10 pt-2 sm:pt-3 lg:pt-4 max-w-full min-w-0">
+          {/* TOP SECTION: Large Brand Label, Big Bold Headline, Clear Paragraph, CTAs & Trust Badges (Layer 3 - z-40) */}
+          <div className="relative z-40 pt-1 sm:pt-2 max-w-full min-w-0">
             
-            {/* Small Uppercase Brand Label with colored accent dash */}
-            <div className="inline-flex items-center gap-2 mb-2.5 sm:mb-3">
-              <span className="w-5 h-[2px] bg-[#00AEEF] rounded-full" />
-              <span className="text-xs sm:text-[13px] font-semibold tracking-wider uppercase text-[#00AEEF]">
+            {/* Brand Label with colored accent dash - Enlarged */}
+            <div className="inline-flex items-center gap-2.5 mb-3 sm:mb-4">
+              <span className="w-7 sm:w-9 h-[2.5px] bg-[#00AEEF] rounded-full" />
+              <span className="text-xs sm:text-sm font-extrabold tracking-wider uppercase text-[#00AEEF]">
                 {activeSlide.label}
               </span>
             </div>
 
-            {/* Large Bold Headline with Open, Natural Letter Spacing (matching Suyash Pharma) */}
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[45px] font-extrabold tracking-normal leading-[1.18] uppercase text-white mb-3 sm:mb-4">
+            {/* Large Bold Headline - Enlarged, bold, high-contrast, comfortable leading */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[48px] xl:text-[54px] 2xl:text-[58px] font-black tracking-tight leading-[1.14] uppercase text-white mb-4 sm:mb-5">
               {activeSlide.headlinePre}{' '}
               {activeSlide.headlinePost}{' '}
               <span className="text-[#00AEEF] block sm:inline">
@@ -258,40 +257,40 @@ export default function HeroSlider({ onActionClick }) {
               </span>
             </h1>
 
-            {/* Supporting Paragraph with comfortable line height */}
-            <p className="text-xs sm:text-sm lg:text-[15px] text-slate-200/90 leading-[1.65] max-w-lg mb-4 sm:mb-6 font-normal">
+            {/* Supporting Paragraph - Generous comfortable line height & spacing */}
+            <p className="text-sm sm:text-base lg:text-[16px] text-slate-200 leading-[1.7] max-w-xl mb-5 sm:mb-6 font-normal">
               {activeSlide.description}
             </p>
 
-            {/* Two Action CTAs */}
-            <div className="flex flex-wrap items-center gap-2.5 sm:gap-3.5 mb-4 sm:mb-6">
+            {/* Action CTAs - Directly under text with comfortable spacing */}
+            <div className="flex flex-wrap items-center gap-3.5 sm:gap-4 mb-5 sm:mb-6">
               {/* Primary Filled Button */}
               <a
                 href={activeSlide.targetPrimary}
                 onClick={(e) => handleCtaClick(e, activeSlide.actionPrimary)}
-                className="inline-flex items-center gap-1.5 sm:gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-semibold text-white bg-[#00AEEF] hover:bg-[#0097D1] shadow-sm hover:shadow-md transition-all duration-200 active:scale-[0.98] group"
+                className="inline-flex items-center gap-2.5 px-6 sm:px-7 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base font-bold text-white bg-[#00AEEF] hover:bg-[#0097D1] shadow-lg shadow-cyan-500/25 transition-all duration-200 active:scale-[0.98] group"
               >
                 <span>{activeSlide.ctaPrimary}</span>
-                <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-200 group-hover:translate-x-1" />
+                <ArrowRight className="w-5 h-5 transition-transform duration-200 group-hover:translate-x-1" />
               </a>
 
               {/* Secondary Outlined Ghost Button */}
               <a
                 href={activeSlide.targetSecondary}
                 onClick={(e) => handleCtaClick(e, activeSlide.actionSecondary)}
-                className="inline-flex items-center gap-1.5 sm:gap-2 px-4 sm:px-5 py-2.5 sm:py-3 rounded-lg text-xs sm:text-sm font-semibold text-white bg-white/5 hover:bg-white/10 border border-white/20 hover:border-white/40 transition-all duration-200 active:scale-[0.98]"
+                className="inline-flex items-center gap-2 px-5 sm:px-6 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base font-semibold text-white bg-white/10 hover:bg-white/15 border border-white/25 hover:border-white/50 transition-all duration-200 active:scale-[0.98] group"
               >
                 <span>{activeSlide.ctaSecondary}</span>
-                <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-400 group-hover:text-white" />
+                <ChevronRight className="w-5 h-5 text-slate-300 group-hover:text-white" />
               </a>
             </div>
 
-            {/* Trust Tags Badges: Inline row matching Suyash Pharma */}
-            <div className="flex flex-wrap items-center gap-2 pt-3 sm:pt-4 border-t border-white/10 w-full max-w-lg">
+            {/* Trust Tags Badges: Inline row with clear readable text */}
+            <div className="flex flex-wrap items-center gap-2 sm:gap-2.5 pt-4 border-t border-white/15 w-full max-w-xl">
               {activeSlide.trustTags.map((tag, idx) => (
                 <div 
                   key={idx} 
-                  className="text-[10px] sm:text-[11px] font-semibold tracking-wide uppercase text-slate-300 bg-white/5 border border-white/10 px-2.5 sm:px-3 py-1 rounded"
+                  className="text-xs sm:text-[13px] font-bold tracking-wide uppercase text-slate-200 bg-white/10 border border-white/15 px-3 py-1.5 rounded-lg"
                 >
                   {tag}
                 </div>
@@ -302,16 +301,15 @@ export default function HeroSlider({ onActionClick }) {
 
           {/* 
             ====================================================================
-            BOTTOM SECTION: Slide Numbers, Progress Bar & Navigation Arrows
+            BOTTOM SECTION: Slide Numbers, Progress Bar & Navigation Arrows (Layer 3 - z-40)
             Layout: 01   02   03   04     ━━━━━━━━━     [←] [→]
-            Aligned in ONE clean horizontal row inside the lower left navy panel.
-            Visible on the first screen without scrolling.
+            Aligned in ONE clean row, completely visible on screen and never hidden behind the image!
             ====================================================================
           */}
-          <div className="relative z-30 pt-4 sm:pt-6 pb-2 lg:pb-3 mt-4 lg:mt-6 flex items-center gap-3 sm:gap-5 flex-wrap">
+          <div className="relative z-40 pt-4 pb-2 mt-auto flex items-center gap-3 sm:gap-4 flex-wrap max-w-md">
             
             {/* Slide Number Indicators: 01  02  03  04 */}
-            <div className="flex items-center gap-2 sm:gap-3">
+            <div className="flex items-center gap-2.5 sm:gap-3.5">
               {SLIDES_DATA.map((slide, idx) => {
                 const isActive = idx === currentSlide;
                 return (
@@ -319,10 +317,10 @@ export default function HeroSlider({ onActionClick }) {
                     key={slide.id}
                     type="button"
                     onClick={() => goToSlide(idx)}
-                    className={`text-sm sm:text-[15px] font-semibold tracking-wider transition-all duration-200 focus:outline-none px-1 py-0.5 rounded ${
+                    className={`text-base sm:text-lg font-bold tracking-wider transition-all duration-200 focus:outline-none px-1.5 py-0.5 rounded cursor-pointer ${
                       isActive 
-                        ? 'text-[#00AEEF] font-bold drop-shadow-[0_0_8px_rgba(0,174,239,0.5)]' 
-                        : 'text-slate-400 hover:text-white font-medium'
+                        ? 'text-[#00AEEF] drop-shadow-[0_0_10px_rgba(0,174,239,0.6)]' 
+                        : 'text-slate-400 hover:text-white font-semibold'
                     }`}
                     aria-label={`Go to slide ${idx + 1}`}
                   >
@@ -334,7 +332,7 @@ export default function HeroSlider({ onActionClick }) {
 
             {/* Horizontal Progress Line Indicator */}
             <div 
-              className="w-14 sm:w-20 md:w-28 lg:w-36 h-[2px] bg-white/20 rounded-full overflow-hidden" 
+              className="w-16 sm:w-20 md:w-28 lg:w-32 h-[3px] bg-white/20 rounded-full overflow-hidden" 
               aria-hidden="true"
             >
               <div 
@@ -343,23 +341,23 @@ export default function HeroSlider({ onActionClick }) {
               />
             </div>
 
-            {/* Previous & Next Arrow Controls: Compact thin-bordered squares */}
-            <div className="flex items-center gap-1.5 sm:gap-2">
+            {/* Previous & Next Arrow Controls */}
+            <div className="flex items-center gap-2">
               <button
                 type="button"
                 onClick={prevSlide}
-                className="w-7 h-7 sm:w-8 sm:h-8 rounded border border-white/20 bg-white/5 hover:bg-[#00AEEF] hover:border-[#00AEEF] text-slate-300 hover:text-white flex items-center justify-center transition-all duration-200 focus:outline-none"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl border border-white/20 bg-white/10 hover:bg-[#00AEEF] hover:border-[#00AEEF] text-slate-200 hover:text-white flex items-center justify-center transition-all duration-200 focus:outline-none cursor-pointer"
                 aria-label="Previous slide"
               >
-                <ChevronLeft className="w-4 h-4" />
+                <ChevronLeft className="w-5 h-5" />
               </button>
               <button
                 type="button"
                 onClick={nextSlide}
-                className="w-7 h-7 sm:w-8 sm:h-8 rounded border border-white/20 bg-white/5 hover:bg-[#00AEEF] hover:border-[#00AEEF] text-slate-300 hover:text-white flex items-center justify-center transition-all duration-200 focus:outline-none"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl border border-white/20 bg-white/10 hover:bg-[#00AEEF] hover:border-[#00AEEF] text-slate-200 hover:text-white flex items-center justify-center transition-all duration-200 focus:outline-none cursor-pointer"
                 aria-label="Next slide"
               >
-                <ChevronRight className="w-4 h-4" />
+                <ChevronRight className="w-5 h-5" />
               </button>
             </div>
 
@@ -369,15 +367,14 @@ export default function HeroSlider({ onActionClick }) {
 
         {/* 
           ----------------------------------------------------------------------
-          RIGHT IMAGE PANEL (~58% on Desktop with Diagonal Angled Cut)
-          CLEAN, BRIGHT, NATURAL COLORS:
-          - NO dark overlay, blue tint, gradient overlay, or opacity reduction.
-          - 100% sharp, original brightness and natural details.
-          - object-fit: cover with per-slide object-position calibration.
+          RIGHT IMAGE PANEL (Layer 1 - z-10)
+          - ~58% width on Desktop with Diagonal Angled Cut
+          - CLEAN, BRIGHT, NATURAL COLORS: 100% original sharp details
+          - object-fit: cover with per-slide object-position calibration
           ----------------------------------------------------------------------
         */}
         <div 
-          className="relative lg:absolute lg:right-0 lg:top-0 lg:bottom-0 w-full lg:w-[60%] xl:w-[62%] h-[340px] sm:h-[400px] lg:h-full z-10 overflow-hidden hero-diagonal-clip"
+          className="relative lg:absolute lg:right-0 lg:top-0 lg:bottom-0 w-full lg:w-[58%] h-[340px] sm:h-[400px] lg:h-full z-10 overflow-hidden hero-diagonal-clip"
         >
           {/* Slides Images: Clean & Bright, Natural Colors, No Overlays */}
           {SLIDES_DATA.map((slide, idx) => {
@@ -399,36 +396,70 @@ export default function HeroSlider({ onActionClick }) {
               </div>
             );
           })}
+        </div>
+
+        {/* 
+          ======================================================================
+          FOREGROUND SLEEK RED AND BLUE DECORATIVE BORDER ACCENTS (Layer 2 - z-30)
+          - RAZOR-THIN (Line jitna patla): 1.5px non-scaling stroke
+          - Clearly visible border accents framing the hero section
+          - pointer-events: none ensures zero blockage of buttons, text, or links
+          - Authentic Aerolife Cyan (#00AEEF) and Red (#ED1C24)
+          ======================================================================
+        */}
+        <div className="absolute inset-0 pointer-events-none z-30 overflow-hidden">
+          
+          {/* Top Border Accent Line: Razor-thin 1.5px Cyan to Red line */}
+          <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-[#00AEEF] via-[#38bdf8] to-[#ED1C24]" />
+
+          {/* Bottom Border Accent Line: Razor-thin 1.5px Red to Cyan line */}
+          <div className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-[#ED1C24] via-[#00AEEF] to-[#00AEEF]" />
+
+          {/* Symmetrical Precision Corner Framing Accents - Thin 1.5px */}
+          {/* Top-Left: Cyan (#00AEEF) */}
+          <div className="absolute top-2.5 left-2.5 sm:top-4 sm:left-4 w-6 sm:w-10 h-6 sm:h-10 border-t-[1.5px] border-l-[1.5px] border-[#00AEEF] rounded-tl-sm opacity-80" />
+
+          {/* Bottom-Left: Red (#ED1C24) */}
+          <div className="absolute bottom-2.5 left-2.5 sm:bottom-4 sm:left-4 w-6 sm:w-10 h-6 sm:h-10 border-b-[1.5px] border-l-[1.5px] border-[#ED1C24] rounded-bl-sm opacity-80" />
+
+          {/* Top-Right: Red (#ED1C24) */}
+          <div className="absolute top-2.5 right-2.5 sm:top-4 sm:right-4 w-6 sm:w-10 h-6 sm:h-10 border-t-[1.5px] border-r-[1.5px] border-[#ED1C24] rounded-tr-sm opacity-80" />
+
+          {/* Bottom-Right: Cyan (#00AEEF) */}
+          <div className="absolute bottom-2.5 right-2.5 sm:bottom-4 sm:right-4 w-6 sm:w-10 h-6 sm:h-10 border-b-[1.5px] border-r-[1.5px] border-[#00AEEF] rounded-br-sm opacity-80" />
 
           {/* 
-            Thin Diagonal Brand Separator Line along the angled edge
-            Dual Cyan (#00AEEF) on top & Red (#ED1C24) on bottom
+            FOREGROUND DIAGONAL BRAND SEPARATOR LINE (Desktop)
+            - SLEEK & THIN LIKE A LINE (1.5px non-scaling stroke): Never stretches or becomes thick!
+            - No distorted oval circle in the middle.
+            - Top Half: Process Cyan (#00AEEF)
+            - Bottom Half: Process Red (#ED1C24)
           */}
           <svg 
-            className="hidden lg:block absolute inset-0 w-full h-full pointer-events-none z-30" 
+            className="hidden lg:block absolute inset-0 w-full h-full pointer-events-none" 
             preserveAspectRatio="none" 
             viewBox="0 0 100 100"
           >
-            {/* Top Half: Process Cyan */}
+            {/* Top Half: Process Cyan (#00AEEF) - 1.5px sleek line */}
             <line 
-              x1="14" 
+              x1="50.12" 
               y1="0" 
-              x2="7" 
+              x2="46.06" 
               y2="50" 
               stroke="#00AEEF" 
-              strokeWidth="1.2" 
+              strokeWidth="1.5" 
+              vectorEffect="non-scaling-stroke"
             />
-            {/* Bottom Half: Process Red */}
+            {/* Bottom Half: Process Red (#ED1C24) - 1.5px sleek line */}
             <line 
-              x1="7" 
+              x1="46.06" 
               y1="50" 
-              x2="0" 
+              x2="42" 
               y2="100" 
               stroke="#ED1C24" 
-              strokeWidth="1.2" 
+              strokeWidth="1.5" 
+              vectorEffect="non-scaling-stroke"
             />
-            {/* Center Junction Accent */}
-            <circle cx="7" cy="50" r="1.5" fill="#00AEEF" stroke="#ED1C24" strokeWidth="0.8" />
           </svg>
 
         </div>

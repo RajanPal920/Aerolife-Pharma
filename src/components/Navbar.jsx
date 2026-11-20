@@ -62,6 +62,25 @@ export default function Navbar({ onNavigate }) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const dropdownRef = useRef(null);
+  const leaveTimeoutRef = useRef(null);
+
+  // Smooth hover handlers with debounce to prevent accidental disappearance
+  const handleOpenDropdown = () => {
+    if (leaveTimeoutRef.current) {
+      clearTimeout(leaveTimeoutRef.current);
+      leaveTimeoutRef.current = null;
+    }
+    setIsProductsDropdownOpen(true);
+  };
+
+  const handleCloseDropdown = () => {
+    if (leaveTimeoutRef.current) {
+      clearTimeout(leaveTimeoutRef.current);
+    }
+    leaveTimeoutRef.current = setTimeout(() => {
+      setIsProductsDropdownOpen(false);
+    }, 180);
+  };
 
   // Close menus when route changes
   useEffect(() => {
@@ -122,6 +141,18 @@ export default function Navbar({ onNavigate }) {
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
+  // Close dropdown when pressing Escape key
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setIsProductsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
   // Close mobile drawer on resize to desktop
@@ -228,11 +259,12 @@ export default function Navbar({ onNavigate }) {
         MAIN NAVBAR CONTENT BAR
         Height: h-20 sm:h-22 md:h-[96px] lg:h-[102px] xl:h-[106px]
         Balanced breathing space for the prominent logo and centered nav items.
+        CRITICAL FIX: NO 'overflow-hidden' here so the Products dropdown is NEVER clipped!
         ========================================================================
       */}
-      <div className="w-full max-w-full overflow-hidden h-20 sm:h-22 md:h-[96px] lg:h-[102px] xl:h-[106px] px-2 sm:px-6 md:px-8 lg:px-10 relative flex items-center justify-between">
+      <div className="w-full max-w-full h-20 sm:h-22 md:h-[96px] lg:h-[102px] xl:h-[106px] px-2 sm:px-6 md:px-8 lg:px-10 relative flex items-center justify-between z-20">
 
-        {/* LEFT SECTION: Noticeably larger original Logo (230-260px on desktop) vertically centered */}
+        {/* LEFT SECTION: Original Logo (230-260px on desktop) vertically centered */}
         <div className="flex-shrink-0 min-w-0 flex items-center pl-6 sm:pl-10 md:pl-14 lg:pl-18 xl:pl-20 z-20">
           <Link
             to="/"
@@ -308,8 +340,14 @@ export default function Navbar({ onNavigate }) {
           <div
             className="relative"
             ref={dropdownRef}
-            onMouseEnter={() => setIsProductsDropdownOpen(true)}
-            onMouseLeave={() => setIsProductsDropdownOpen(false)}
+            onMouseEnter={handleOpenDropdown}
+            onMouseLeave={handleCloseDropdown}
+            onFocus={handleOpenDropdown}
+            onBlur={(e) => {
+              if (!dropdownRef.current?.contains(e.relatedTarget)) {
+                handleCloseDropdown();
+              }
+            }}
           >
             <Link
               to="/products"
@@ -337,14 +375,26 @@ export default function Navbar({ onNavigate }) {
             {/* 
               ==================================================================
               PRODUCTS MEGA-MENU: ALL 84 FORMULATIONS FROM CATLOP.PDF
+              - High z-index: z-[70] so it renders above all page elements
+              - Invisible bridge prevents mouse-leave gaps
+              - Never clipped by parent overflow
+              - Smooth fade & slide transition
               ==================================================================
             */}
             {isProductsDropdownOpen && (
               <div
-                className="fixed lg:absolute top-[84px] lg:top-full left-1/2 -translate-x-1/2 mt-2 w-[920px] max-w-[95vw] bg-white rounded-2xl shadow-2xl border border-slate-200/90 overflow-hidden z-50 animate-in fade-in slide-in-from-top-2 duration-200"
+                className="absolute top-[calc(100%+8px)] left-1/2 -translate-x-1/2 w-[920px] max-w-[calc(100vw-32px)] bg-white rounded-2xl shadow-[0_25px_60px_-15px_rgba(16,45,75,0.25)] border border-slate-200/90 overflow-hidden z-[70] animate-in fade-in slide-in-from-top-2 duration-200"
                 role="menu"
                 aria-orientation="vertical"
+                onMouseEnter={handleOpenDropdown}
+                onMouseLeave={handleCloseDropdown}
               >
+                {/* Invisible Hover Bridge to eliminate any dead zone between button and dropdown */}
+                <div 
+                  className="absolute -top-3 left-0 right-0 h-4 bg-transparent pointer-events-auto" 
+                  aria-hidden="true" 
+                />
+
                 {/* Mega-Menu Top Header & Search Bar */}
                 <div className="px-5 py-3.5 bg-gradient-to-r from-slate-50 via-white to-slate-50 border-b border-slate-200/80 flex items-center justify-between gap-4">
                   <div className="flex items-center gap-2.5">

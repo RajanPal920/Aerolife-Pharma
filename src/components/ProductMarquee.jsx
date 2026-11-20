@@ -39,7 +39,7 @@ export default function ProductMarquee({ onProductClick }) {
 
   return (
     <div 
-      className="relative w-full max-w-full bg-[#ED1C24] h-[75px] sm:h-[82px] lg:h-[88px] flex items-center overflow-hidden select-none z-20 no-scrollbar m-0 p-0 border-0"
+      className="relative w-full max-w-full bg-[#8B0000] h-[72px] sm:h-[78px] lg:h-[82px] flex items-center overflow-hidden select-none z-20 no-scrollbar m-0 p-0 border-0"
       style={{
         boxShadow: 'none',
         border: 'none',
@@ -47,17 +47,13 @@ export default function ProductMarquee({ onProductClick }) {
       }}
       aria-label="Aero Life Pharma Formulations Marquee"
     >
-      {/* Left & Right Soft Fade Gradients matching authentic red background */}
-      <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-16 sm:w-28 md:w-40 bg-gradient-to-r from-[#ED1C24] via-[#ED1C24]/80 to-transparent z-20" />
-      <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-16 sm:w-28 md:w-40 bg-gradient-to-l from-[#ED1C24] via-[#ED1C24]/80 to-transparent z-20" />
-
-      {/* Scrolling Content Track - Seamless Infinite Loop, Pause on Hover */}
+      {/* Scrolling Content Track - Seamless Infinite Loop, Pause on Hover (No corner blur/fade) */}
       <div className="animate-marquee flex items-center gap-3 sm:gap-4 md:gap-5 pl-4 no-scrollbar">
         {marqueeItems.map((prod, idx) => (
           <React.Fragment key={idx}>
             <div
               onClick={(e) => handleClick(e, prod)}
-              className="flex-shrink-0 group flex items-center gap-2.5 sm:gap-3 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/20 hover:border-white/50 transition-all duration-200 cursor-pointer shadow-sm hover:scale-[1.02]"
+              className="flex-shrink-0 group flex items-center gap-2.5 sm:gap-3 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-white/25 hover:border-white/50 transition-all duration-200 cursor-pointer shadow-xs hover:scale-[1.02]"
               role="button"
               tabIndex={0}
               title={`${prod.name} - ${prod.composition}`}
@@ -66,31 +62,31 @@ export default function ProductMarquee({ onProductClick }) {
               <span className="w-2 h-2 rounded-full bg-white flex-shrink-0" />
 
               {/* Product Brand Name in crisp bold white */}
-              <span className="text-sm sm:text-[15px] lg:text-[16px] font-bold text-white tracking-normal whitespace-nowrap">
+              <span className="text-sm sm:text-[15px] lg:text-[16px] font-extrabold text-white tracking-normal whitespace-nowrap">
                 {prod.name}
               </span>
 
-              {/* Dosage Form Badge */}
-              <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-[#ED1C24] bg-white px-2.5 py-0.5 sm:py-1 rounded-full flex-shrink-0 shadow-xs">
+              {/* Dosage Form Badge in crisp white */}
+              <span className="text-[10px] sm:text-[11px] font-extrabold uppercase tracking-wider text-white bg-white/20 border border-white/30 px-2.5 py-0.5 sm:py-1 rounded-full flex-shrink-0">
                 {prod.category}
               </span>
 
-              {/* Active Composition */}
-              <span className="text-xs sm:text-[13px] text-white/90 font-normal truncate max-w-[160px] sm:max-w-[220px] lg:max-w-[280px] hidden sm:inline">
+              {/* Active Composition in pure white */}
+              <span className="text-xs sm:text-[13px] text-white font-medium truncate max-w-[160px] sm:max-w-[220px] lg:max-w-[280px] hidden sm:inline">
                 {prod.composition}
               </span>
 
-              {/* Pack Size */}
-              <span className="text-[11px] sm:text-xs text-white/75 font-normal hidden md:inline">
+              {/* Pack Size in pure white */}
+              <span className="text-[11px] sm:text-xs text-white font-medium hidden md:inline">
                 ({prod.pack})
               </span>
 
-              {/* Subtle Arrow */}
-              <ChevronRight className="w-4 h-4 text-white/70 group-hover:text-white group-hover:translate-x-0.5 transition-all" />
+              {/* Pure White Arrow */}
+              <ChevronRight className="w-4 h-4 text-white group-hover:translate-x-0.5 transition-all" />
             </div>
 
-            {/* Subtle separator dot between products */}
-            <span className="text-white/40 text-sm font-bold flex-shrink-0" aria-hidden="true">•</span>
+            {/* Pure White separator dot between products */}
+            <span className="text-white text-sm font-bold flex-shrink-0" aria-hidden="true">•</span>
           </React.Fragment>
         ))}
       </div>
