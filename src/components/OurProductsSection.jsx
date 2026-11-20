@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, ChevronRight, Package, Sparkles } from 'lucide-react';
-import AnimatedCounter from './AnimatedCounter';
 
 const FEATURED_PRODUCTS = [
   {
@@ -194,7 +193,7 @@ export default function OurProductsSection() {
 
           {/* Subtitle */}
           <p className="text-sm sm:text-base text-slate-300 max-w-2xl mx-auto leading-relaxed">
-            Explore our verified commercial formulations developed to meet diverse clinical and healthcare requirements across <strong className="text-[#00AEEF]"><AnimatedCounter target={84} suffix="+" /></strong> monographs.
+            Explore our verified commercial formulations developed to meet diverse clinical and healthcare requirements across <strong className="text-[#00AEEF]">84+</strong> monographs.
           </p>
 
           {/* Category Filter Tabs */}

@@ -148,7 +148,7 @@ export default function AboutSection() {
 
             {/* Paragraph 2: Formulation & Compliance Focus */}
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-7 font-normal">
-              Our comprehensive commercial monograph portfolio combines <strong className="text-[#102D4B]"><AnimatedCounter target={84} suffix="+" /> certified formulations</strong> across Tablets, Capsules, Syrups, Oral Suspensions, and Specialized Preparations—developed to meet the evolving therapeutic needs of healthcare professionals, PCD franchise distributors, and institutional partners nationwide.
+              Our comprehensive commercial monograph portfolio combines <strong className="text-[#102D4B]">84+ certified formulations</strong> across Tablets, Capsules, Syrups, Oral Suspensions, and Specialized Preparations—developed to meet the evolving therapeutic needs of healthcare professionals, PCD franchise distributors, and institutional partners nationwide.
             </p>
 
             {/* 3 Metric / Stat Pillars in a Clean Row */}

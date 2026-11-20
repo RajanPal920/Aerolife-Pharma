@@ -26,7 +26,6 @@ import {
   HelpCircle
 } from 'lucide-react';
 import PartnershipBannerSection from '../components/PartnershipBannerSection';
-import AnimatedCounter from '../components/AnimatedCounter';
 
 const ICON_MAP = {
   Pill: Pill,
@@ -133,7 +132,7 @@ export default function ProductsPage() {
               </h1>
 
               <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed mb-8 max-w-2xl">
-                Explore Aerolife Pharma's comprehensive portfolio of <strong className="text-white font-semibold"><AnimatedCounter target={totalProductsCount} suffix="+" /> verified commercial formulations</strong> across <strong className="text-white font-semibold"><AnimatedCounter target={CATEGORIES.length} /> primary dosage forms</strong>. Manufactured under stringent WHO-GMP standards with strict quality control.
+                Explore Aerolife Pharma's comprehensive portfolio of <strong className="text-white font-semibold">{totalProductsCount}+ verified commercial formulations</strong> across <strong className="text-white font-semibold">{CATEGORIES.length} primary dosage forms</strong>. Manufactured under stringent WHO-GMP standards with strict quality control.
               </p>
 
               {/* Fast Global Search Bar */}
@@ -200,17 +199,17 @@ export default function ProductsPage() {
                 )}
               </div>
 
-              {/* Quick Metrics Bar with Animated Counters */}
+              {/* Quick Metrics Bar with Solid Numbers */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 pt-6 border-t border-white/10">
                 <div>
                   <span className="block text-2xl sm:text-3xl font-black text-white">
-                    <AnimatedCounter target={totalProductsCount} suffix="+" />
+                    {totalProductsCount}+
                   </span>
                   <span className="text-xs text-slate-300 font-medium">Total Formulations</span>
                 </div>
                 <div>
                   <span className="block text-2xl sm:text-3xl font-black text-[#00AEEF]">
-                    <AnimatedCounter target={CATEGORIES.length} />
+                    {CATEGORIES.length}
                   </span>
                   <span className="text-xs text-slate-300 font-medium">Dosage Categories</span>
                 </div>
@@ -220,46 +219,46 @@ export default function ProductsPage() {
                 </div>
                 <div>
                   <span className="block text-2xl sm:text-3xl font-black text-[#ED1C24]">
-                    <AnimatedCounter target={100} suffix="%" />
+                    100%
                   </span>
                   <span className="text-xs text-slate-300 font-medium">Catalog Verified</span>
                 </div>
               </div>
             </div>
 
-            {/* Right Column (5 cols): Styled Image Card Matching Screenshot 8 */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-md">
+            {/* Right Column (5 cols): Styled Image Card Full to Container */}
+            <div className="lg:col-span-5 flex items-stretch">
+              <div className="relative w-full h-full min-h-[380px] lg:min-h-[460px]">
                 {/* Subtle back card layer for depth */}
-                <div className="absolute inset-0 bg-[#0C1F33] rounded-3xl transform translate-x-3 translate-y-3 -z-10 border border-white/10" />
+                <div className="absolute inset-0 bg-[#0C1F33] rounded-3xl transform translate-x-2.5 translate-y-2.5 -z-10 border border-white/10" />
 
-                {/* Main Card with Clinical Reference Image */}
-                <div className="relative rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl bg-[#0F2842] aspect-[4/3] group">
+                {/* Main Card with Clinical Reference Image - Full to Container */}
+                <div className="relative w-full h-full min-h-[380px] lg:min-h-[460px] rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl bg-[#0F2842] flex flex-col justify-end group">
                   <img
                     src="/assets/quality/quality_blister_tablets.jpg"
                     alt="Pharmaceutical Formulations - Blister Packaging and Solid Dosage Forms"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#102D4B]/80 via-transparent to-black/20" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#102D4B]/85 via-[#102D4B]/20 to-black/30" />
 
                   {/* High-Impact Badge in Bottom-Left */}
-                  <div className="absolute bottom-4 left-4 right-4 bg-[#102D4B]/95 backdrop-blur-md rounded-xl p-3 sm:p-3.5 border border-white/20 shadow-lg flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-[#00AEEF]/20 flex items-center justify-center text-[#00AEEF] flex-shrink-0">
+                  <div className="relative z-10 m-4 sm:m-6 bg-[#102D4B]/95 backdrop-blur-md rounded-xl p-3.5 sm:p-4 border border-white/20 shadow-lg flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-lg bg-[#00AEEF]/20 flex items-center justify-center text-[#00AEEF] flex-shrink-0">
                       <ShieldCheck className="w-5 h-5" />
                     </div>
                     <div className="min-w-0">
-                      <div className="text-xs font-black text-white uppercase tracking-wider truncate">
+                      <div className="text-xs sm:text-sm font-black text-white uppercase tracking-wider truncate">
                         CLINICAL EXCELLENCE
                       </div>
-                      <div className="text-[11px] text-slate-300 font-medium truncate">
+                      <div className="text-xs text-slate-300 font-medium truncate">
                         Monograph Validated Formulations
                       </div>
                     </div>
                   </div>
 
                   {/* Symmetrical Dual-Color Framing Brackets */}
-                  <div className="absolute top-2.5 right-2.5 w-6 h-6 border-t-2 border-r-2 border-[#00AEEF] rounded-tr-md pointer-events-none" />
-                  <div className="absolute bottom-2.5 left-2.5 w-6 h-6 border-b-2 border-l-2 border-[#ED1C24] rounded-bl-md pointer-events-none" />
+                  <div className="absolute top-3 right-3 w-7 h-7 border-t-2 border-r-2 border-[#00AEEF] rounded-tr-md pointer-events-none z-10" />
+                  <div className="absolute bottom-3 left-3 w-7 h-7 border-b-2 border-l-2 border-[#ED1C24] rounded-bl-md pointer-events-none z-10" />
                 </div>
               </div>
             </div>

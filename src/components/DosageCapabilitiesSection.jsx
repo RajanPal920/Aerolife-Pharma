@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import AnimatedCounter from './AnimatedCounter';
 
 const NINE_DOSAGE_CATEGORIES = [
   {
@@ -116,7 +115,7 @@ export default function DosageCapabilitiesSection() {
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-extrabold text-[#102D4B] tracking-tight uppercase leading-[1.18]">
               COMPLETE DOSAGE SPECTRUM <br className="hidden sm:inline" />
-              ACROSS <span className="text-[#00AEEF]"><AnimatedCounter target={84} suffix="+" /> COMMERCIAL MONOGRAPHS</span>
+              ACROSS <span className="text-[#00AEEF]">84+ COMMERCIAL MONOGRAPHS</span>
             </h2>
             <p className="mt-3 text-sm sm:text-base text-slate-600 leading-relaxed font-normal">
               Structured across 9 specialized delivery systems with validated bio-equivalence, stable dissolution kinetics, and authentic packaging from our official catalogue.

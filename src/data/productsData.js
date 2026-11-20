@@ -29,7 +29,7 @@ export const CATEGORIES = [
         "strength": "As per Monograph",
         "pack": "10 x 10 TABLETS",
         "page": 2,
-        "image": "/assets/products/aeromark-sp-tablets.jpg",
+        "image": "/assets/products/aeromark-sp.jpg",
         "isFlagship": true,
         "description": "AEROMARK-SP TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac, Paracetamol & Serratiopeptidase Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
       },
@@ -43,7 +43,7 @@ export const CATEGORIES = [
         "strength": "As per Monograph",
         "pack": "20 x 10 TABLETS",
         "page": 2,
-        "image": "/assets/products/aeromark-p-tablets.jpg",
+        "image": "/assets/products/aeromark-p.jpg",
         "isFlagship": true,
         "description": "AEROMARK-P TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac & Paracetamol Tablets IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
       },
@@ -57,7 +57,7 @@ export const CATEGORIES = [
         "strength": "As per Monograph",
         "pack": "10 x 6 TABLETS",
         "page": 3,
-        "image": "/assets/products/clavaero-cv-625-tablets-10-x-6.jpg",
+        "image": "/assets/products/clavaero-cv-625.jpg",
         "isFlagship": true,
         "description": "CLAVAERO-CV 625 TABLETS (10 x 6) is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin & Potassium Clavulanate Tablets I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
       },
@@ -466,7 +466,7 @@ export const CATEGORIES = [
     "title": "Capsules & Softgels",
     "shortDesc": "Hard gelatin, softgels, enteric-coated pellets & sustained-release capsules",
     "description": "Advanced encapsulation technology delivering optimal bioavailability, gastric protection, and controlled release for gastro-resistant and lipid-soluble therapies.",
-    "flagshipImage": "/assets/products/aeromox-500-capsules.jpg",
+    "flagshipImage": "/assets/products/aeromox-500.jpg",
     "icon": "Layers",
     "products": [
       {
@@ -493,7 +493,7 @@ export const CATEGORIES = [
         "strength": "200 mg",
         "pack": "10 x 10 Capsules",
         "page": 17,
-        "image": "/assets/products/itraero-200-capsules.jpg",
+        "image": "/assets/products/itraero-200.jpg",
         "isFlagship": true,
         "description": "ITRAERO 200 Capsules is a WHO-GMP certified pharmaceutical formulation featuring Itraconazole Capsules 200 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
       },
@@ -521,7 +521,7 @@ export const CATEGORIES = [
         "strength": "As per Monograph",
         "pack": "20 x 15 Capsules",
         "page": 18,
-        "image": "/assets/products/omefist-d-capsules.jpg",
+        "image": "/assets/products/omefist-d.jpg",
         "isFlagship": false,
         "description": "OMEFIST D Capsules is a WHO-GMP certified pharmaceutical formulation featuring Omeprazole Domperidone Capsules IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
       },
@@ -549,7 +549,7 @@ export const CATEGORIES = [
         "strength": "As per Monograph",
         "pack": "20 x 10 CAPSULES",
         "page": 19,
-        "image": "/assets/products/aeromox-500-capsules.jpg",
+        "image": "/assets/products/aeromox-500.jpg",
         "isFlagship": true,
         "description": "AEROMOX - 500 CAPSULES is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin Capsules I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
       },
@@ -961,7 +961,7 @@ export const CATEGORIES = [
         "strength": "As per Monograph",
         "pack": "60 ml",
         "page": 28,
-        "image": "/assets/products/aerofol-z-dry-syrup.jpg",
+        "image": "/assets/products/aerofol-z.jpg",
         "isFlagship": true,
         "description": "Aerofol - Z Dry Syrup is a WHO-GMP certified pharmaceutical formulation featuring Lactic Acid Bacillus, Niacinamide, Folic Acid, Pyridoxine & Zinc Dry Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
       }
@@ -1080,7 +1080,7 @@ export const CATEGORIES = [
     "title": "Nutraceuticals & Dry Powders",
     "shortDesc": "WHO-standard ORS, energy boosters, medical dusting powders & nutritional protein supplements",
     "description": "Nutritional and therapeutic powders manufactured in certified cleanroom environments to restore electrolyte equilibrium, accelerate recovery, and provide balanced dietary support.",
-    "flagshipImage": "/assets/products/aerovita-z-instant-energy-drink-booster.jpg",
+    "flagshipImage": "/assets/products/aerovita-z.jpg",
     "icon": "Sparkles",
     "products": [
       {
@@ -1177,7 +1177,7 @@ export const CATEGORIES = [
         "strength": "As per Monograph",
         "pack": "105 gm / 200 g",
         "page": 24,
-        "image": "/assets/products/aerovita-z-instant-energy-drink-booster.jpg",
+        "image": "/assets/products/aerovita-z.jpg",
         "isFlagship": true,
         "description": "Aerovita-Z Instant Energy Drink Booster is a WHO-GMP certified pharmaceutical formulation featuring Dextrose with Vitamin C & Mineral Powder. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
       },
@@ -1761,7 +1761,7 @@ export const ALL_PRODUCTS = [
     "strength": "200 mg",
     "pack": "10 x 10 Capsules",
     "page": 17,
-    "image": "/assets/products/itraero-200-capsules.jpg",
+    "image": "/assets/products/itraero-200.jpg",
     "isFlagship": true,
     "description": "ITRAERO 200 Capsules is a WHO-GMP certified pharmaceutical formulation featuring Itraconazole Capsules 200 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
   },
@@ -1789,7 +1789,7 @@ export const ALL_PRODUCTS = [
     "strength": "As per Monograph",
     "pack": "20 x 15 Capsules",
     "page": 18,
-    "image": "/assets/products/omefist-d-capsules.jpg",
+    "image": "/assets/products/omefist-d.jpg",
     "isFlagship": false,
     "description": "OMEFIST D Capsules is a WHO-GMP certified pharmaceutical formulation featuring Omeprazole Domperidone Capsules IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
   },
@@ -1817,7 +1817,7 @@ export const ALL_PRODUCTS = [
     "strength": "As per Monograph",
     "pack": "20 x 10 CAPSULES",
     "page": 19,
-    "image": "/assets/products/aeromox-500-capsules.jpg",
+    "image": "/assets/products/aeromox-500.jpg",
     "isFlagship": true,
     "description": "AEROMOX - 500 CAPSULES is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin Capsules I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
   },
@@ -1985,7 +1985,7 @@ export const ALL_PRODUCTS = [
     "strength": "As per Monograph",
     "pack": "60 ml",
     "page": 28,
-    "image": "/assets/products/aerofol-z-dry-syrup.jpg",
+    "image": "/assets/products/aerofol-z.jpg",
     "isFlagship": true,
     "description": "Aerofol - Z Dry Syrup is a WHO-GMP certified pharmaceutical formulation featuring Lactic Acid Bacillus, Niacinamide, Folic Acid, Pyridoxine & Zinc Dry Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
   },
@@ -2377,7 +2377,7 @@ export const ALL_PRODUCTS = [
     "strength": "As per Monograph",
     "pack": "105 gm / 200 g",
     "page": 24,
-    "image": "/assets/products/aerovita-z-instant-energy-drink-booster.jpg",
+    "image": "/assets/products/aerovita-z.jpg",
     "isFlagship": true,
     "description": "Aerovita-Z Instant Energy Drink Booster is a WHO-GMP certified pharmaceutical formulation featuring Dextrose with Vitamin C & Mineral Powder. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
   },
