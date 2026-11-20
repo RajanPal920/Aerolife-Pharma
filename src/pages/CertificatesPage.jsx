@@ -16,6 +16,7 @@ import {
   Clock,
   Stamp
 } from 'lucide-react';
+import PartnershipBannerSection from '../components/PartnershipBannerSection';
 
 export default function CertificatesPage() {
   const [openFaqIdx, setOpenFaqIdx] = useState(0);
@@ -99,69 +100,64 @@ export default function CertificatesPage() {
       
       {/* 
         ========================================================================
-        1. HERO SECTION: STATUTORY CREDENTIALS & REGULATORY STANDARDS
+        1. UNIFIED CLEAN HERO SECTION: STATUTORY CREDENTIALS & REGULATORY STANDARDS
+        Centered layout with zero hero images
         ========================================================================
       */}
-      <section className="relative min-h-[460px] sm:min-h-[520px] bg-[#102D4B] text-white pt-14 pb-24 sm:pt-20 sm:pb-32 overflow-hidden flex flex-col justify-center">
-        {/* Full-width High-Res Pharmaceutical Facility Background Image with Rich Dark Gradient */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/assets/hero_healthcare_1794824904141.jpg"
-            alt="Aerolife Pharma Regulatory Credentials"
-            className="w-full h-full object-cover object-center filter brightness-[0.30] contrast-[1.10]"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#102D4B] via-[#102D4B]/92 to-[#102D4B]/65" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#102D4B] via-transparent to-transparent" />
-        </div>
+      <section className="relative bg-[#102D4B] text-white pt-16 pb-28 sm:pt-20 sm:pb-36 overflow-hidden flex flex-col justify-center">
+        {/* Subtle technical background grid */}
+        <div className="absolute inset-0 opacity-10 bg-grid-pattern pointer-events-none" />
 
         {/* Top seam line */}
         <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#00AEEF] via-[#ED1C24] to-[#00AEEF] z-20" />
 
-        {/* Giant Watermark Typography */}
+        {/* Giant Watermark Typography Centered */}
         <div 
-          className="absolute -top-10 -left-12 text-[120px] sm:text-[180px] lg:text-[240px] font-black text-white/[0.04] select-none pointer-events-none uppercase tracking-tighter leading-none z-10"
+          className="absolute -top-10 left-1/2 -translate-x-1/2 text-[120px] sm:text-[180px] lg:text-[240px] font-black text-white/[0.04] select-none pointer-events-none uppercase tracking-tighter leading-none z-10"
           aria-hidden="true"
         >
           CREDENTIALS
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full text-center">
           
-          {/* Breadcrumb Navigation */}
-          <nav className="flex items-center gap-2 text-xs font-semibold text-slate-300 mb-6 sm:mb-8" aria-label="Breadcrumb">
+          {/* Breadcrumb Navigation Centered */}
+          <nav className="flex items-center justify-center gap-2 text-xs font-semibold text-slate-300 mb-6 sm:mb-8" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-[#00AEEF] transition-colors">Home</Link>
             <span className="text-slate-400">/</span>
             <span className="text-[#00AEEF]">Statutory Credentials & Compliance</span>
           </nav>
 
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#00AEEF] text-xs font-bold tracking-wide uppercase mb-4 shadow-sm">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#00AEEF] animate-pulse" />
-              <span>STATUTORY COMPLIANCE & ACCREDITATIONS</span>
+          {/* Centered Category Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#00AEEF] text-xs font-bold tracking-wide uppercase mb-5 shadow-sm">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#00AEEF] animate-pulse" />
+            <span>STATUTORY COMPLIANCE & ACCREDITATIONS</span>
+          </div>
+
+          {/* Centered Headline */}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12] mb-5">
+            STATUTORY CREDENTIALS & <br />
+            <span className="text-[#00AEEF]">REGULATORY STANDARDS.</span>
+          </h1>
+
+          {/* Centered Subtext */}
+          <p className="text-sm sm:text-base lg:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto mb-8">
+            Verified corporate credentials, statutory Government of India trademark registrations, Schedule M partner manufacturing compliance, and transparent batch release governance.
+          </p>
+
+          {/* Quick Highlight Badges Centered */}
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 pt-6 border-t border-white/15 text-xs font-semibold text-slate-300 max-w-2xl mx-auto">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#00AEEF]" />
+              <span>Trade Mark No. 4665534 (Class 5)</span>
             </div>
-
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12] mb-5">
-              STATUTORY CREDENTIALS & <br />
-              <span className="text-[#00AEEF]">REGULATORY STANDARDS.</span>
-            </h1>
-
-            <p className="text-sm sm:text-base lg:text-lg text-slate-200 leading-relaxed max-w-2xl mb-8">
-              Verified corporate credentials, statutory Government of India trademark registrations, Schedule M partner manufacturing compliance, and transparent batch release governance.
-            </p>
-
-            <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-white/15 text-xs font-semibold text-slate-300">
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#00AEEF]" />
-                <span>Trade Mark No. 4665534 (Class 5)</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                <span>Certificate No. 3333225</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#ED1C24]" />
-                <span>Batch COA Dispatched With Consignments</span>
-              </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-400" />
+              <span>Certificate No. 3333225</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#ED1C24]" />
+              <span>Batch COA Protocol</span>
             </div>
           </div>
 
@@ -452,50 +448,19 @@ export default function CertificatesPage() {
 
       {/* 
         ========================================================================
-        5. PARTNERSHIP CALL-TO-ACTION SECTION
+        5. PARTNERSHIP CALL-TO-ACTION SECTION WITH WHATSAPP ACTION (Bespoke for Certificates)
         ========================================================================
       */}
-      <section className="py-16 sm:py-20 bg-[#102D4B] text-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-          
-          <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 mb-3">
-              <span className="w-5 h-[2px] bg-[#00AEEF] rounded-full" />
-              <span className="text-xs font-bold text-[#00AEEF] tracking-widest uppercase">
-                PARTNER WITH AEROLIFE PHARMA
-              </span>
-              <span className="w-5 h-[2px] bg-[#ED1C24] rounded-full" />
-            </div>
-
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-snug mb-3">
-              BUILD YOUR PHARMACEUTICAL BUSINESS ON VERIFIED TRUST.
-            </h2>
-
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Connect with our corporate trade team to explore monopoly PCD franchise opportunities, contract manufacturing, or institutional formulation supply.
-            </p>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-4 flex-shrink-0">
-            <Link
-              to="/quote"
-              className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#00AEEF] hover:bg-[#0097D1] shadow-lg shadow-cyan-500/25 transition-all duration-200 active:scale-98"
-            >
-              <span>GET IN TOUCH</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-
-            <Link
-              to="/products"
-              className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-slate-200 hover:text-white bg-white/10 hover:bg-white/15 border border-white/20 transition-all duration-200"
-            >
-              <span>EXPLORE PRODUCTS</span>
-              <ArrowRight className="w-4 h-4 text-[#00AEEF]" />
-            </Link>
-          </div>
-
-        </div>
-      </section>
+      <PartnershipBannerSection
+        tag="REGULATORY VERIFICATION"
+        title="NEED STATUTORY TRADEMARK & REGULATORY COMPLIANCE DOSSIERS?"
+        description="Access verified Government of India Class 5 trademark records, Schedule M partner audit certificates, and tender supply documentation."
+        primaryText="REQUEST COMPLIANCE DOSSIER"
+        primaryLink="/contact"
+        secondaryText="EXPLORE FORMULATIONS"
+        secondaryLink="/products"
+        whatsappMessage="Hi Aerolife Pharma, I would like to request statutory trademark and quality compliance dossiers."
+      />
 
     </div>
   );

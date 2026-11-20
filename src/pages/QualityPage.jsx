@@ -16,8 +16,10 @@ import {
   Sparkles,
   Award,
   Clock,
-  Box
+  Box,
+  ChevronRight
 } from 'lucide-react';
+import PartnershipBannerSection from '../components/PartnershipBannerSection';
 
 export default function QualityPage() {
   const [openFaqIdx, setOpenFaqIdx] = useState(0);
@@ -203,133 +205,98 @@ export default function QualityPage() {
       
       {/* 
         ========================================================================
-        1. HERO SECTION: QUALITY ENGINEERED AT EVERY PHASE
-        Increased Image Height (h-[500px] sm:h-[560px] lg:h-[620px]) + Generated Image
+        1. UNIFIED CLEAN HERO SECTION: QUALITY ENGINEERED AT EVERY PHASE
+        Centered layout with zero hero images
         ========================================================================
       */}
-      <section className="relative bg-[#102D4B] text-white overflow-hidden pt-12 pb-16 sm:pt-16 sm:pb-24 lg:pt-20 lg:pb-28">
+      <section className="relative bg-[#102D4B] text-white pt-16 pb-20 sm:pt-20 sm:pb-28 overflow-hidden flex flex-col justify-center">
         {/* Subtle grid pattern */}
         <div className="absolute inset-0 opacity-10 bg-grid-pattern pointer-events-none" />
 
         {/* Top seam line */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00AEEF] via-[#ED1C24] to-[#00AEEF] z-20" />
+        <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#00AEEF] via-[#ED1C24] to-[#00AEEF] z-20" />
 
-        {/* Giant Watermark Typography */}
+        {/* Giant Watermark Typography Centered */}
         <div 
-          className="absolute -top-12 -left-8 text-[120px] sm:text-[180px] lg:text-[240px] font-black text-white/[0.035] select-none pointer-events-none uppercase tracking-tighter leading-none"
+          className="absolute -top-10 left-1/2 -translate-x-1/2 text-[120px] sm:text-[180px] lg:text-[240px] font-black text-white/[0.035] select-none pointer-events-none uppercase tracking-tighter leading-none"
           aria-hidden="true"
         >
           QUALITY
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-            
-            {/* Left Column (7 cols): Hero Content */}
-            <div className="lg:col-span-7">
-              
-              {/* Category Pill Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#00AEEF] text-xs font-bold tracking-wider uppercase mb-5 shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-[#00AEEF] animate-pulse" />
-                <span className="text-white">AEROLIFE PHARMA</span>
-                <span className="text-slate-400">•</span>
-                <span>RIGOROUS FORMULATION GOVERNANCE</span>
-              </div>
+          {/* Breadcrumb Navigation Centered */}
+          <nav className="flex items-center justify-center gap-2 text-xs font-semibold text-slate-300 mb-6" aria-label="Breadcrumb">
+            <Link to="/" className="hover:text-[#00AEEF] transition-colors">Home</Link>
+            <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
+            <span className="text-[#00AEEF]">Formulation Quality & Monograph Governance</span>
+          </nav>
 
-              {/* Headline */}
-              <h1 className="text-3xl sm:text-5xl lg:text-[56px] font-black text-white tracking-tight leading-[1.12] mb-5">
-                QUALITY ENGINEERED <br />
-                AT EVERY <br />
-                <span className="text-[#00AEEF]">PHARMACEUTICAL PHASE.</span>
-              </h1>
+          {/* Centered Category Pill Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#00AEEF] text-xs font-bold tracking-wider uppercase mb-5 shadow-sm">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#00AEEF] animate-pulse" />
+            <span className="text-white">AEROLIFE PHARMA</span>
+            <span className="text-slate-400">•</span>
+            <span>RIGOROUS FORMULATION GOVERNANCE</span>
+          </div>
 
-              {/* Subtext grounded in pharmaceutical reality */}
-              <p className="text-sm sm:text-base lg:text-lg text-slate-200 leading-relaxed max-w-2xl mb-8">
-                From strict raw material assay testing and bioequivalent in-vitro dissolution kinetics to tropical moisture-barrier blister packaging, our formulation governance is built around clinical efficacy, repeatability, and patient safety across 84+ commercial preparations.
-              </p>
+          {/* Centered Headline */}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12] mb-5">
+            QUALITY ENGINEERED <br />
+            AT EVERY <br className="hidden sm:inline" />
+            <span className="text-[#00AEEF]">PHARMACEUTICAL PHASE.</span>
+          </h1>
 
-              {/* Action Buttons */}
-              <div className="flex flex-wrap items-center gap-4 mb-10">
-                <a
-                  href="#quality-standards"
-                  onClick={scrollToStandards}
-                  className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 rounded-full text-xs sm:text-sm font-bold text-slate-900 bg-white hover:bg-slate-100 shadow-md transition-all duration-200 active:scale-98"
-                >
-                  <span>EXPLORE QUALITY STANDARDS</span>
-                  <ArrowRight className="w-4 h-4 text-[#102D4B]" />
-                </a>
+          {/* Centered Subtext */}
+          <p className="text-sm sm:text-base lg:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto mb-8">
+            From strict raw material assay testing and bioequivalent in-vitro dissolution kinetics to tropical moisture-barrier blister packaging, our formulation governance is built around clinical efficacy, repeatability, and patient safety across 84+ commercial preparations.
+          </p>
 
-                <Link
-                  to="/products"
-                  className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 rounded-full text-xs sm:text-sm font-bold text-white bg-transparent hover:bg-white/10 border border-white/30 transition-all duration-200"
-                >
-                  <span>VIEW COMMERCIAL PORTFOLIO</span>
-                  <ArrowRight className="w-4 h-4 text-[#00AEEF]" />
-                </Link>
-              </div>
+          {/* Centered Action Buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
+            <a
+              href="#quality-standards"
+              onClick={scrollToStandards}
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-xs sm:text-sm font-extrabold text-slate-900 bg-white hover:bg-slate-100 shadow-md transition-all duration-200 active:scale-98"
+            >
+              <span>EXPLORE QUALITY STANDARDS</span>
+              <ArrowRight className="w-4 h-4 text-[#102D4B]" />
+            </a>
 
-              {/* Bottom Metrics Bar */}
-              <div className="pt-6 border-t border-white/15 grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-xl">
-                <div>
-                  <h4 className="text-xs sm:text-sm font-bold text-white flex items-center gap-1.5">
-                    <CheckCircle2 className="w-4 h-4 text-[#00AEEF]" />
-                    <span>Monograph Compliance</span>
-                  </h4>
-                  <p className="text-xs text-slate-300 mt-1 pl-5">
-                    Conforms to current IP, BP & USP analytical monographs.
-                  </p>
-                </div>
-                <div>
-                  <h4 className="text-xs sm:text-sm font-bold text-white flex items-center gap-1.5">
-                    <ShieldCheck className="w-4 h-4 text-emerald-400" />
-                    <span>Zone IVb Stability Barrier</span>
-                  </h4>
-                  <p className="text-xs text-slate-300 mt-1 pl-5">
-                    Alu-Alu and PVDC foils resistant to tropical humidity.
-                  </p>
-                </div>
-              </div>
+            <Link
+              to="/products"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-xs sm:text-sm font-extrabold text-white bg-transparent hover:bg-white/10 border border-white/30 backdrop-blur-xs transition-all duration-200"
+            >
+              <span>VIEW COMMERCIAL PORTFOLIO</span>
+              <ArrowRight className="w-4 h-4 text-[#00AEEF]" />
+            </Link>
+          </div>
 
-            </div>
-
-            {/* Right Column (5 cols): TALLER HERO IMAGE WITH DUAL-TONE ACCENT */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl bg-slate-900 group">
-                
-                {/* High-Resolution Laboratory Testing Image */}
-                <img
-                  src="/assets/quality/quality_lab_testing.jpg"
-                  alt="Aerolife Pharma Quality Testing Laboratory"
-                  className="w-full h-[520px] sm:h-[600px] lg:h-[660px] object-cover transition-transform duration-700 group-hover:scale-103"
-                  onError={(e) => {
-                    e.currentTarget.src = '/assets/hero_quality_1794824912430.jpg';
-                  }}
-                />
-
-                {/* Corner Precision Accents */}
-                <div className="absolute top-0 right-0 w-16 h-16 border-t-2 border-r-2 border-[#00AEEF] rounded-tr-3xl pointer-events-none" />
-                <div className="absolute bottom-0 left-0 w-16 h-16 border-b-2 border-l-2 border-[#ED1C24] rounded-bl-3xl pointer-events-none" />
-
-                {/* Floating Offset Badge matching reference screenshot 8 */}
-                <div className="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 bg-[#102D4B]/95 text-white backdrop-blur-md rounded-2xl p-4 sm:p-5 shadow-2xl border border-white/20 max-w-[280px] sm:max-w-[320px]">
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <span className="w-2 h-2 rounded-full bg-[#00AEEF] animate-pulse" />
-                    <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#00AEEF]">
-                      ASSURANCE & INTEGRITY
-                    </span>
-                  </div>
-                  <h4 className="text-xs sm:text-sm font-extrabold text-white leading-snug">
-                    Indian Pharmaceutical Quality Focus
-                  </h4>
-                  <p className="text-[11px] text-slate-300 mt-1 leading-relaxed">
-                    Chromatographic API purity assay, dissolution kinetics & pharmacopoeial monograph validation.
-                  </p>
-                </div>
-
+          {/* Centered Bottom Metrics Bar */}
+          <div className="pt-6 border-t border-white/15 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl mx-auto text-center sm:text-left">
+            <div className="flex items-start gap-3 justify-center sm:justify-start">
+              <CheckCircle2 className="w-5 h-5 text-[#00AEEF] flex-shrink-0 mt-0.5" />
+              <div>
+                <h4 className="text-xs sm:text-sm font-extrabold text-white">
+                  Monograph Compliance
+                </h4>
+                <p className="text-xs text-slate-300 mt-0.5">
+                  Conforms to current IP, BP & USP analytical monographs.
+                </p>
               </div>
             </div>
-
+            <div className="flex items-start gap-3 justify-center sm:justify-start">
+              <ShieldCheck className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+              <div>
+                <h4 className="text-xs sm:text-sm font-extrabold text-white">
+                  Zone IVb Stability Barrier
+                </h4>
+                <p className="text-xs text-slate-300 mt-0.5">
+                  Alu-Alu and PVDC foils resistant to tropical humidity.
+                </p>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -364,30 +331,48 @@ export default function QualityPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
-            {/* Left Column (5 cols): Photo with Bottom Caption Card (Screenshot 9) */}
+            {/* Left Column (5 cols): Photo with Bottom Caption Card (Matching User Reference Image 2) */}
             <div className="lg:col-span-5 flex flex-col">
-              <div className="bg-white rounded-3xl border border-slate-200/90 shadow-md overflow-hidden group">
-                <div className="h-72 sm:h-80 w-full overflow-hidden relative">
+              <div className="relative rounded-3xl overflow-hidden border-2 border-white/60 shadow-2xl bg-white p-2 group">
+                <div className="h-72 sm:h-80 lg:h-[360px] w-full overflow-hidden rounded-2xl relative">
                   <img
-                    src="/assets/quality/quality_lab_testing.jpg"
-                    alt="Disciplined Laboratory Oversight"
+                    src="/assets/quality/quality_blister_tablets.jpg"
+                    alt="Clinical Excellence Formulation Packaging"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     onError={(e) => {
-                      e.currentTarget.src = '/assets/hero_quality_1794824912430.jpg';
+                      e.currentTarget.src = '/assets/quality/quality_monograph_testing.jpg';
                     }}
                   />
-                  <div className="absolute top-3 left-3 bg-[#102D4B]/90 text-white text-[10px] font-bold px-3 py-1 rounded-full backdrop-blur-xs">
-                    ANALYTICAL OVERSIGHT
+
+                  {/* Floating Offset Badge matching User Reference Image 2 */}
+                  <div className="absolute bottom-4 left-4 bg-[#102D4B]/95 text-white backdrop-blur-md border border-[#00AEEF]/40 p-3.5 rounded-2xl shadow-xl flex items-center gap-3 max-w-[260px] sm:max-w-[300px]">
+                    <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/10 flex items-center justify-center flex-shrink-0 text-[#00AEEF]">
+                      <ShieldCheck className="w-5 h-5 text-[#00AEEF]" />
+                    </div>
+                    <div>
+                      <h4 className="text-xs font-black uppercase tracking-wider text-white">
+                        CLINICAL EXCELLENCE
+                      </h4>
+                      <p className="text-[11px] text-slate-300">
+                        Monograph Validated Formulations
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="p-6">
-                  <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#00AEEF] block mb-1">
-                    DISCIPLINED OVERSIGHT
-                  </span>
-                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                    Careful attention to incoming active ingredients (APIs), chromatographic purity validation, and disciplined verification before progressing to subsequent formulation phases.
-                  </p>
-                </div>
+
+                {/* Precision Corner Accents matching Reference Image 2 */}
+                <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-[#00AEEF] rounded-tr-2xl pointer-events-none" />
+                <div className="absolute bottom-0 left-0 w-12 h-12 border-b-2 border-l-2 border-[#ED1C24] rounded-bl-2xl pointer-events-none" />
+              </div>
+
+              {/* Bottom Context Card */}
+              <div className="bg-white rounded-2xl p-5 border border-slate-200/90 shadow-sm mt-4">
+                <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#00AEEF] block mb-1">
+                  DISCIPLINED OVERSIGHT & MONOGRAPH VALIDATION
+                </span>
+                <p className="text-xs text-slate-600 leading-relaxed">
+                  Careful chromatographic verification of incoming active ingredients (APIs) and disciplined in-vitro dissolution profiling before progressing to commercial formulation phases.
+                </p>
               </div>
             </div>
 
@@ -854,67 +839,19 @@ export default function QualityPage() {
 
       {/* 
         ========================================================================
-        8. PARTNERSHIP CALL-TO-ACTION SECTION
+        8. PARTNERSHIP CALL-TO-ACTION SECTION WITH WHATSAPP ACTION (Bespoke for Quality Page)
         ========================================================================
       */}
-      <section className="py-16 sm:py-20 bg-[#102D4B] text-white relative overflow-hidden">
-        {/* Subtle background radar / concentric circles */}
-        <div 
-          className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full border border-white/5 pointer-events-none"
-          aria-hidden="true" 
-        />
-        <div 
-          className="absolute right-12 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full border border-white/5 pointer-events-none"
-          aria-hidden="true" 
-        />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-            
-            <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 mb-3">
-                <span className="w-5 h-[2px] bg-[#00AEEF] rounded-full" />
-                <span className="text-xs font-bold text-[#00AEEF] tracking-widest uppercase">
-                  PARTNER WITH AEROLIFE PHARMA
-                </span>
-                <span className="w-5 h-[2px] bg-[#ED1C24] rounded-full" />
-              </div>
-
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-snug mb-3">
-                DEMAND UNCOMPROMISED PHARMACEUTICAL QUALITY.
-              </h2>
-
-              <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                Connect with our commercial desk to inquire about formulation dossiers, third-party contract manufacturing, or exclusive monopoly PCD franchise agreements.
-              </p>
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 flex-shrink-0">
-              
-              <Link
-                to="/quote"
-                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#00AEEF] hover:bg-[#0097D1] shadow-lg shadow-cyan-500/25 transition-all duration-200 active:scale-98"
-              >
-                <span>REQUEST QUOTATION</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-
-              <Link
-                to="/products"
-                className="inline-flex items-center gap-2 px-6 sm:px-7 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-slate-200 hover:text-white bg-white/10 hover:bg-white/15 border border-white/20 transition-all duration-200"
-              >
-                <span>EXPLORE PRODUCTS</span>
-                <ArrowRight className="w-4 h-4 text-[#00AEEF]" />
-              </Link>
-
-            </div>
-
-          </div>
-
-        </div>
-      </section>
+      <PartnershipBannerSection
+        tag="PHARMACOPOEIAL ASSURANCE"
+        title="REQUEST BATCH CERTIFICATES OF ANALYSIS & QUALITY DOSSIERS."
+        description="Looking for analytical chromatographic reports, stability study summaries, or batch release COA documents for institutional hospital procurement?"
+        primaryText="REQUEST QUALITY DOSSIER"
+        primaryLink="/quote"
+        secondaryText="EXPLORE 84 PRODUCTS"
+        secondaryLink="/products"
+        whatsappMessage="Hi Aerolife Pharma QA Desk, I would like to request batch COA and pharmacopoeial monograph dossiers."
+      />
 
     </div>
   );

@@ -23,6 +23,7 @@ import {
   Lock,
   Compass
 } from 'lucide-react';
+import PartnershipBannerSection from '../components/PartnershipBannerSection';
 
 export default function AboutPage() {
   const phone = '7045147453';
@@ -33,114 +34,84 @@ export default function AboutPage() {
       
       {/* 
         ========================================================================
-        1. ABOUT HERO SECTION (Unique Aerolife Pharma Identity)
-        Deep Navy (#102D4B), Cyan (#00AEEF), Red (#ED1C24) precision accents
+        1. ABOUT HERO SECTION: UNIFIED CLEAN NAVY CENTER-ALIGNED DESIGN
+        Centered layout with zero hero images
         ========================================================================
       */}
-      <section className="relative bg-[#102D4B] text-white pt-12 pb-16 sm:pt-16 sm:pb-24 overflow-hidden">
+      <section className="relative bg-[#102D4B] text-white pt-16 pb-20 sm:pt-20 sm:pb-28 overflow-hidden flex flex-col justify-center">
         {/* Subtle technical background grid */}
         <div className="absolute inset-0 opacity-10 bg-grid-pattern pointer-events-none" />
         
-        {/* Giant Watermark Typography */}
+        {/* Giant Watermark Typography Centered */}
         <div 
-          className="absolute -top-6 -left-10 text-[100px] sm:text-[160px] lg:text-[200px] font-black text-white/[0.03] select-none pointer-events-none uppercase tracking-tighter leading-none"
+          className="absolute -top-10 left-1/2 -translate-x-1/2 text-[120px] sm:text-[180px] lg:text-[240px] font-black text-white/[0.03] select-none pointer-events-none uppercase tracking-tighter leading-none"
           aria-hidden="true"
         >
-          AEROLIFE
+          ABOUT
         </div>
 
         {/* Top Razor-thin Dual Gradient Accent Line */}
-        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-[#00AEEF] via-[#ED1C24] to-[#00AEEF]" />
+        <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#00AEEF] via-[#ED1C24] to-[#00AEEF] z-20" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           
-          {/* Breadcrumb Navigation */}
-          <nav className="flex items-center gap-2 text-xs font-semibold text-slate-300 mb-6 sm:mb-8" aria-label="Breadcrumb">
+          {/* Breadcrumb Navigation Centered */}
+          <nav className="flex items-center justify-center gap-2 text-xs font-semibold text-slate-300 mb-6" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-[#00AEEF] transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
             <span className="text-[#00AEEF]">About Us</span>
           </nav>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-            
-            {/* Left Column: Hero Narrative */}
-            <div className="lg:col-span-7">
-              <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[#00AEEF] text-xs font-bold tracking-wide uppercase mb-5">
-                <span className="w-2 h-2 rounded-full bg-[#00AEEF] animate-pulse" />
-                <span>01 / ABOUT • AEROLIFE PHARMA</span>
-              </div>
+          {/* Centered Category Badge */}
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#00AEEF] text-xs font-bold tracking-wide uppercase mb-6 shadow-sm">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#00AEEF] animate-pulse" />
+            <span>01 / ABOUT • AEROLIFE PHARMA</span>
+          </div>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.15] mb-5">
-                DRIVEN BY PURPOSE. <br />
-                <span className="text-[#00AEEF]">GROUNDED IN CLINICAL INTEGRITY.</span>
-              </h1>
+          {/* Centered Headline */}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12] mb-5">
+            DRIVEN BY PURPOSE. <br />
+            <span className="text-[#00AEEF]">GROUNDED IN CLINICAL INTEGRITY.</span>
+          </h1>
 
-              <p className="text-sm sm:text-base lg:text-lg text-slate-300 leading-relaxed mb-8 max-w-2xl">
-                Aerolife Pharma is dedicated to delivering quality pharmaceutical formulations with reliability, responsibility, and an unwavering commitment to the evolving therapeutic needs of modern healthcare across India.
-              </p>
+          {/* Centered Subtext */}
+          <p className="text-sm sm:text-base lg:text-lg text-slate-200 leading-relaxed mb-8 max-w-2xl mx-auto">
+            Aerolife Pharma is dedicated to delivering quality pharmaceutical formulations with reliability, responsibility, and an unwavering commitment to the evolving therapeutic needs of modern healthcare across India.
+          </p>
 
-              {/* Action Buttons */}
-              <div className="flex flex-wrap items-center gap-3 sm:gap-4 mb-10">
-                <a
-                  href="#who-we-are"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#00AEEF] hover:bg-[#0097D1] shadow-lg shadow-cyan-500/25 transition-all duration-200 active:scale-98"
-                >
-                  <span>DISCOVER OUR APPROACH</span>
-                  <ArrowRight className="w-4 h-4" />
-                </a>
+          {/* Centered Action Buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
+            <a
+              href="#who-we-are"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-xs sm:text-sm font-extrabold text-white bg-[#00AEEF] hover:bg-[#0097D1] shadow-lg shadow-cyan-500/25 transition-all duration-200 active:scale-98"
+            >
+              <span>DISCOVER OUR APPROACH</span>
+              <ArrowRight className="w-4 h-4" />
+            </a>
 
-                <Link
-                  to="/products"
-                  className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-xs sm:text-sm font-bold text-slate-200 hover:text-white bg-white/10 hover:bg-white/15 border border-white/15 transition-all duration-200"
-                >
-                  <span>VIEW OUR PRODUCTS</span>
-                  <ArrowRight className="w-4 h-4 text-[#00AEEF]" />
-                </Link>
-              </div>
+            <Link
+              to="/products"
+              className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-xs sm:text-sm font-extrabold text-slate-200 hover:text-white bg-white/10 hover:bg-white/15 border border-white/20 backdrop-blur-xs transition-all duration-200 active:scale-98"
+            >
+              <span>VIEW OUR PRODUCTS</span>
+              <ArrowRight className="w-4 h-4 text-[#00AEEF]" />
+            </Link>
+          </div>
 
-              {/* Key Quick Facts */}
-              <div className="grid grid-cols-3 gap-3 sm:gap-4 pt-6 border-t border-white/10 max-w-lg">
-                <div>
-                  <span className="block text-2xl sm:text-3xl font-black text-white">84+</span>
-                  <span className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">Catalog Products</span>
-                </div>
-                <div>
-                  <span className="block text-2xl sm:text-3xl font-black text-[#00AEEF]">Class 5</span>
-                  <span className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">Registered Mark</span>
-                </div>
-                <div>
-                  <span className="block text-2xl sm:text-3xl font-black text-[#ED1C24]">100%</span>
-                  <span className="text-[11px] text-slate-400 font-semibold uppercase tracking-wider">WHO-GMP Standard</span>
-                </div>
-              </div>
+          {/* Centered Key Facts Bar */}
+          <div className="pt-6 border-t border-white/15 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
+            <div>
+              <span className="block text-2xl sm:text-3xl font-black text-white">84+</span>
+              <span className="text-[11px] text-slate-300 font-semibold uppercase tracking-wider">Catalog Products</span>
             </div>
-
-            {/* Right Column: High Quality Pharmaceutical Lab Showcase */}
-            <div className="lg:col-span-5 relative">
-              <div className="relative rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl bg-white p-2">
-                <img
-                  src="/assets/hero_healthcare_1794824904141.jpg"
-                  alt="Aerolife Pharma Quality Formulation Laboratory"
-                  className="w-full h-80 sm:h-96 lg:h-[420px] object-cover rounded-2xl"
-                />
-                
-                {/* Precision Floating Badge */}
-                <div className="absolute bottom-5 left-5 right-5 sm:right-auto bg-[#102D4B]/95 backdrop-blur-md border border-[#00AEEF]/40 p-3.5 rounded-2xl shadow-xl flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/10 flex items-center justify-center flex-shrink-0 text-[#00AEEF]">
-                    <ShieldCheck className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <h4 className="text-xs font-bold text-white uppercase tracking-wider">Clinical Excellence</h4>
-                    <p className="text-[11px] text-slate-300">Monograph Validated Formulations</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Corner decorative bracket */}
-              <div className="absolute -top-3 -right-3 w-16 h-16 border-t-2 border-r-2 border-[#00AEEF] rounded-tr-3xl pointer-events-none" />
-              <div className="absolute -bottom-3 -left-3 w-16 h-16 border-b-2 border-l-2 border-[#ED1C24] rounded-bl-3xl pointer-events-none" />
+            <div>
+              <span className="block text-2xl sm:text-3xl font-black text-[#00AEEF]">Class 5</span>
+              <span className="text-[11px] text-slate-300 font-semibold uppercase tracking-wider">Registered Mark</span>
             </div>
-
+            <div>
+              <span className="block text-2xl sm:text-3xl font-black text-emerald-400">100%</span>
+              <span className="text-[11px] text-slate-300 font-semibold uppercase tracking-wider">WHO-GMP Standard</span>
+            </div>
           </div>
 
         </div>
@@ -739,87 +710,19 @@ export default function AboutPage() {
 
       {/* 
         ========================================================================
-        7. COMMERCIAL PARTNERSHIP CTA
-        High-Contrast Dark Navy Banner with Dual Action CTAs & WhatsApp Icon
+        7. COMMERCIAL PARTNERSHIP CTA WITH WHATSAPP ACTION (Bespoke for About Page)
         ========================================================================
       */}
-      <section className="py-16 sm:py-20 bg-[#102D4B] text-white relative overflow-hidden">
-        {/* Subtle background radar circles */}
-        <div 
-          className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 rounded-full border border-white/5 pointer-events-none"
-          aria-hidden="true" 
-        />
-        <div 
-          className="absolute right-12 top-1/2 -translate-y-1/2 w-72 h-72 rounded-full border border-white/5 pointer-events-none"
-          aria-hidden="true" 
-        />
-
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8">
-            
-            <div className="max-w-2xl">
-              <div className="inline-flex items-center gap-2 mb-3">
-                <span className="w-5 h-[2px] bg-[#00AEEF] rounded-full" />
-                <span className="text-xs font-bold text-[#00AEEF] tracking-widest uppercase">
-                  Partner With Aerolife Pharma
-                </span>
-                <span className="w-5 h-[2px] bg-[#ED1C24] rounded-full" />
-              </div>
-
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-snug mb-3">
-                LET'S BUILD BETTER HEALTHCARE CONNECTIONS.
-              </h2>
-
-              <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-                Have a product enquiry or want to establish a PCD franchise partnership with Aerolife Pharma? Our commercial team is ready to assist you with complete dossiers and price lists.
-              </p>
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex flex-wrap items-center gap-4 flex-shrink-0">
-              
-              {/* Primary CTA: Get In Touch */}
-              <Link
-                to="/quote"
-                className="inline-flex items-center gap-2 px-6 sm:px-7 py-4 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#00AEEF] hover:bg-[#0097D1] shadow-lg shadow-cyan-500/30 transition-all duration-200 active:scale-98"
-              >
-                <span>GET IN TOUCH</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-
-              {/* Secondary CTA: Explore Products */}
-              <Link
-                to="/products"
-                className="inline-flex items-center gap-2 px-6 sm:px-7 py-4 rounded-xl text-xs sm:text-sm font-bold text-slate-200 hover:text-white bg-white/10 hover:bg-white/15 border border-white/15 transition-all duration-200"
-              >
-                <span>EXPLORE PRODUCTS</span>
-                <ArrowRight className="w-4 h-4 text-[#00AEEF]" />
-              </Link>
-
-              {/* Direct WhatsApp Action with Official Icon */}
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-4 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#25D366] hover:bg-[#20ba59] shadow-lg shadow-green-500/20 transition-all duration-200"
-                aria-label="Chat on WhatsApp"
-              >
-                <svg 
-                  className="w-4 h-4 fill-white" 
-                  viewBox="0 0 24 24" 
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.476-.15-.677.15-.201.3-.778.978-.953 1.18-.175.2-.351.226-.652.076-.3-.15-1.267-.467-2.414-1.49-1.077-.96-1.805-2.146-2.016-2.508-.211-.362-.022-.557.128-.707.135-.136.3-.351.451-.527.151-.175.201-.3.301-.501.101-.2.05-.376-.025-.526-.075-.15-.677-1.631-.928-2.233-.244-.587-.492-.507-.677-.517-.175-.01-.376-.01-.577-.01-.201 0-.527.075-.803.376-.276.3-1.054 1.03-1.054 2.511 0 1.482 1.079 2.912 1.23 3.113.15.2 2.124 3.243 5.145 4.548.719.311 1.28.497 1.718.636.722.23 1.378.197 1.898.12.58-.088 1.78-.727 2.03-1.43.251-.702.251-1.304.176-1.43-.075-.126-.276-.201-.577-.351zM12.04 21.786h-.002c-1.77 0-3.507-.476-5.029-1.38l-.361-.214-3.742.981.999-3.649-.236-.375a10.02 10.02 0 0 1-1.536-5.32c0-5.545 4.512-10.057 10.061-10.057 2.686 0 5.212 1.047 7.11 2.947a10.007 10.007 0 0 1 2.946 7.109c-.002 5.547-4.515 10.058-10.06 10.058zm0-21.786C5.401 0 0 5.402 0 12.042c0 2.12.553 4.19 1.603 6.012L0 24l6.104-1.602a11.98 11.98 0 0 0 5.936 1.554h.005c6.638 0 12.04-5.402 12.04-12.042 0-3.217-1.253-6.241-3.53-8.518A12.002 12.002 0 0 0 12.04 0z"/>
-                </svg>
-              </a>
-
-            </div>
-
-          </div>
-
-        </div>
-      </section>
+      <PartnershipBannerSection
+        tag="COLLABORATE WITH AEROLIFE"
+        title="JOIN HANDS WITH A DEPENDABLE PHARMACEUTICAL PARTNER."
+        description="Learn more about our ethical PCD distribution, regulatory compliance, and pan-India reach across hospital and retail healthcare networks."
+        primaryText="REQUEST PCD PROPOSAL"
+        primaryLink="/contact"
+        secondaryText="EXPLORE FORMULATIONS"
+        secondaryLink="/products"
+        whatsappMessage="Hi Aerolife Pharma, I would like to inquire about PCD franchise collaboration and distribution terms."
+      />
 
     </div>
   );

@@ -18,6 +18,7 @@ import {
   FileText,
   AlertCircle
 } from 'lucide-react';
+import PartnershipBannerSection from '../components/PartnershipBannerSection';
 
 export default function ContactPage({ isQuoteMode = false }) {
   const [searchParams] = useSearchParams();
@@ -106,16 +107,16 @@ export default function ContactPage({ isQuoteMode = false }) {
   // WhatsApp pre-filled text for direct handoff
   const whatsappInquiryUrl = submittedData
     ? `https://wa.me/91${phone}?text=${encodeURIComponent(
-        `*New Inquiry - Aerolife Pharma*\n` +
-        `Ref ID: ${submittedData.refId}\n` +
-        `Name: ${submittedData.name}\n` +
-        `Company: ${submittedData.company || 'N/A'}\n` +
-        `Phone: ${submittedData.phone}\n` +
-        `Type: ${submittedData.enquiryType}\n` +
-        `Product: ${submittedData.productOfInterest || 'General Portfolio'}\n` +
-        `City/State: ${submittedData.city || ''} ${submittedData.state || ''}\n` +
-        `Message: ${submittedData.message}`
-      )}`
+      `*New Inquiry - Aerolife Pharma*\n` +
+      `Ref ID: ${submittedData.refId}\n` +
+      `Name: ${submittedData.name}\n` +
+      `Company: ${submittedData.company || 'N/A'}\n` +
+      `Phone: ${submittedData.phone}\n` +
+      `Type: ${submittedData.enquiryType}\n` +
+      `Product: ${submittedData.productOfInterest || 'General Portfolio'}\n` +
+      `City/State: ${submittedData.city || ''} ${submittedData.state || ''}\n` +
+      `Message: ${submittedData.message}`
+    )}`
     : whatsappUrl;
 
   const faqs = [
@@ -139,74 +140,67 @@ export default function ContactPage({ isQuoteMode = false }) {
 
   return (
     <div className="w-full bg-slate-50 min-h-screen font-sans text-slate-800 select-none">
-      
+
       {/* 
         ========================================================================
-        1. FULL-SCREEN HERO SECTION: CORPORATE CONTACT & TRADE DESK
+        1. UNIFIED CLEAN HERO SECTION: CORPORATE CONTACT & TRADE DESK
+        Centered layout with zero hero images
         ========================================================================
       */}
-      <section className="relative min-h-[600px] sm:min-h-[680px] lg:min-h-[750px] bg-[#102D4B] text-white pt-16 pb-32 sm:pt-24 sm:pb-40 overflow-hidden flex flex-col justify-center">
-        {/* Full-width High-Res Pharmaceutical Facility Background Image with Rich Dark Gradient */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/assets/hero_manufacturing_1794824908214.jpg"
-            alt="Aerolife Pharma Corporate Facility"
-            className="w-full h-full object-cover object-center filter brightness-[0.30] contrast-[1.10] scale-105 transition-transform duration-1000"
-          />
-          {/* Gradient Overlays for perfect legibility and Aerolife brand presence */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#102D4B] via-[#102D4B]/92 to-[#102D4B]/60" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#102D4B] via-transparent to-transparent" />
-        </div>
+      <section className="relative bg-[#102D4B] text-white pt-16 pb-24 sm:pt-20 sm:pb-32 overflow-hidden flex flex-col justify-center">
+        {/* Subtle technical background grid */}
+        <div className="absolute inset-0 opacity-10 bg-grid-pattern pointer-events-none" />
 
         {/* Top seam line */}
         <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#00AEEF] via-[#ED1C24] to-[#00AEEF] z-20" />
 
-        {/* Giant Watermark Typography */}
-        <div 
-          className="absolute -top-10 -left-12 text-[120px] sm:text-[180px] lg:text-[250px] font-black text-white/[0.04] select-none pointer-events-none uppercase tracking-tighter leading-none z-10"
+        {/* Giant Watermark Typography Centered */}
+        <div
+          className="absolute -top-10 left-1/2 -translate-x-1/2 text-[120px] sm:text-[180px] lg:text-[250px] font-black text-white/[0.04] select-none pointer-events-none uppercase tracking-tighter leading-none z-10"
           aria-hidden="true"
         >
           CONTACT
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
-          
-          {/* Breadcrumb Navigation */}
-          <nav className="flex items-center gap-2 text-xs font-semibold text-slate-300 mb-6 sm:mb-8" aria-label="Breadcrumb">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full text-center">
+
+          {/* Breadcrumb Navigation Centered */}
+          <nav className="flex items-center justify-center gap-2 text-xs font-semibold text-slate-300 mb-6" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-[#00AEEF] transition-colors">Home</Link>
             <span className="text-slate-400">/</span>
             <span className="text-[#00AEEF]">{isQuoteMode ? 'Request Commercial Quotation' : 'Corporate Contact & Support'}</span>
           </nav>
 
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#00AEEF] text-xs font-bold tracking-wide uppercase mb-4 shadow-sm">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#00AEEF] animate-pulse" />
-              <span>Commercial Correspondence & Trade Desk</span>
+          {/* Centered Category Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#00AEEF] text-xs font-bold tracking-wide uppercase mb-5 shadow-sm">
+            <span className="w-2.5 h-2.5 rounded-full bg-[#00AEEF] animate-pulse" />
+            <span>Commercial Correspondence & Trade Desk</span>
+          </div>
+
+          {/* Centered Headline */}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12] mb-5">
+            CONNECT WITH <br />
+            <span className="text-[#00AEEF]">AEROLIFE PHARMA.</span>
+          </h1>
+
+          {/* Centered Subtext */}
+          <p className="text-sm sm:text-base lg:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto mb-8">
+            Connect directly with our corporate sales desk for monopoly PCD pharma franchise partnerships, third-party contract manufacturing, institutional hospital procurement, and official formulation dossiers.
+          </p>
+
+          {/* Quick Hero Highlights Centered */}
+          <div className="flex flex-wrap items-center justify-center gap-6 pt-6 border-t border-white/15 text-xs font-semibold text-slate-300 max-w-2xl mx-auto">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-emerald-400" />
+              <span>Pan-India Commercial Supply</span>
             </div>
-
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.12] mb-5">
-              CONNECT WITH <br />
-              <span className="text-[#00AEEF]">AEROLIFE PHARMA.</span>
-            </h1>
-
-            <p className="text-sm sm:text-base lg:text-lg text-slate-200 leading-relaxed max-w-2xl mb-8">
-              Connect directly with our corporate sales desk for monopoly PCD pharma franchise partnerships, third-party contract manufacturing, institutional hospital procurement, and official formulation dossiers.
-            </p>
-
-            {/* Quick Hero Highlights */}
-            <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-white/15 text-xs font-semibold text-slate-300">
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                <span>Pan-India Commercial Supply</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#00AEEF]" />
-                <span>Monopoly PCD Franchise Rights</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-[#ED1C24]" />
-                <span>24-Hour Trade Desk Response</span>
-              </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#00AEEF]" />
+              <span>Monopoly PCD Franchise Rights</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#ED1C24]" />
+              <span>24-Hour Trade Desk Response</span>
             </div>
           </div>
 
@@ -221,7 +215,7 @@ export default function ContactPage({ isQuoteMode = false }) {
       */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          
+
           {/* 1. Registered Corporate Office */}
           <div className="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/90 shadow-lg hover:shadow-xl transition-shadow flex flex-col justify-between">
             <div>
@@ -270,7 +264,7 @@ export default function ContactPage({ isQuoteMode = false }) {
             <div>
               <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center mb-3">
                 <svg className="w-5 h-5 fill-[#25D366]" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.476-.15-.677.15-.201.3-.778.978-.953 1.18-.175.2-.351.226-.652.076-.3-.15-1.267-.467-2.414-1.49-1.077-.96-1.805-2.146-2.016-2.508-.211-.362-.022-.557.128-.707.135-.136.3-.351.451-.527.151-.175.201-.3.301-.501.101-.2.05-.376-.025-.526-.075-.15-.677-1.631-.928-2.233-.244-.587-.492-.507-.677-.517-.175-.01-.376-.01-.577-.01-.201 0-.527.075-.803.376-.276.3-1.054 1.03-1.054 2.511 0 1.482 1.079 2.912 1.23 3.113.15.2 2.124 3.243 5.145 4.548.719.311 1.28.497 1.718.636.722.23 1.378.197 1.898.12.58-.088 1.78-.727 2.03-1.43.251-.702.251-1.304.176-1.43-.075-.126-.276-.201-.577-.351zM12.04 21.786h-.002c-1.77 0-3.507-.476-5.029-1.38l-.361-.214-3.742.981.999-3.649-.236-.375a10.02 10.02 0 0 1-1.536-5.32c0-5.545 4.512-10.057 10.061-10.057 2.686 0 5.212 1.047 7.11 2.947a10.007 10.007 0 0 1 2.946 7.109c-.002 5.547-4.515 10.058-10.06 10.058zm0-21.786C5.401 0 0 5.402 0 12.042c0 2.12.553 4.19 1.603 6.012L0 24l6.104-1.602a11.98 11.98 0 0 0 5.936 1.554h.005c6.638 0 12.04-5.402 12.04-12.042 0-3.217-1.253-6.241-3.53-8.518A12.002 12.002 0 0 0 12.04 0z"/>
+                  <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.476-.15-.677.15-.201.3-.778.978-.953 1.18-.175.2-.351.226-.652.076-.3-.15-1.267-.467-2.414-1.49-1.077-.96-1.805-2.146-2.016-2.508-.211-.362-.022-.557.128-.707.135-.136.3-.351.451-.527.151-.175.201-.3.301-.501.101-.2.05-.376-.025-.526-.075-.15-.677-1.631-.928-2.233-.244-.587-.492-.507-.677-.517-.175-.01-.376-.01-.577-.01-.201 0-.527.075-.803.376-.276.3-1.054 1.03-1.054 2.511 0 1.482 1.079 2.912 1.23 3.113.15.2 2.124 3.243 5.145 4.548.719.311 1.28.497 1.718.636.722.23 1.378.197 1.898.12.58-.088 1.78-.727 2.03-1.43.251-.702.251-1.304.176-1.43-.075-.126-.276-.201-.577-.351zM12.04 21.786h-.002c-1.77 0-3.507-.476-5.029-1.38l-.361-.214-3.742.981.999-3.649-.236-.375a10.02 10.02 0 0 1-1.536-5.32c0-5.545 4.512-10.057 10.061-10.057 2.686 0 5.212 1.047 7.11 2.947a10.007 10.007 0 0 1 2.946 7.109c-.002 5.547-4.515 10.058-10.06 10.058zm0-21.786C5.401 0 0 5.402 0 12.042c0 2.12.553 4.19 1.603 6.012L0 24l6.104-1.602a11.98 11.98 0 0 0 5.936 1.554h.005c6.638 0 12.04-5.402 12.04-12.042 0-3.217-1.253-6.241-3.53-8.518A12.002 12.002 0 0 0 12.04 0z" />
                 </svg>
               </div>
               <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
@@ -335,10 +329,10 @@ export default function ContactPage({ isQuoteMode = false }) {
       */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
-          
+
           {/* Left Column (7 cols): Interactive Inquiry Form */}
           <div className="lg:col-span-7 bg-white rounded-3xl border border-slate-200/90 p-6 sm:p-10 shadow-sm">
-            
+
             <div className="mb-8">
               <div className="inline-flex items-center gap-2 mb-2">
                 <span className="w-5 h-[2px] bg-[#00AEEF] rounded-full" />
@@ -360,7 +354,7 @@ export default function ContactPage({ isQuoteMode = false }) {
                 <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4">
                   <CheckCircle2 className="w-9 h-9" />
                 </div>
-                
+
                 <span className="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 text-xs font-bold rounded-full mb-2">
                   Reference ID: {submittedData.refId}
                 </span>
@@ -388,7 +382,7 @@ export default function ContactPage({ isQuoteMode = false }) {
                     className="inline-flex items-center justify-center gap-2 w-full py-3 bg-[#25D366] hover:bg-[#20ba59] text-white text-xs font-bold rounded-xl shadow-md transition-colors"
                   >
                     <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.476-.15-.677.15-.201.3-.778.978-.953 1.18-.175.2-.351.226-.652.076-.3-.15-1.267-.467-2.414-1.49-1.077-.96-1.805-2.146-2.016-2.508-.211-.362-.022-.557.128-.707.135-.136.3-.351.451-.527.151-.175.201-.3.301-.501.101-.2.05-.376-.025-.526-.075-.15-.677-1.631-.928-2.233-.244-.587-.492-.507-.677-.517-.175-.01-.376-.01-.577-.01-.201 0-.527.075-.803.376-.276.3-1.054 1.03-1.054 2.511 0 1.482 1.079 2.912 1.23 3.113.15.2 2.124 3.243 5.145 4.548.719.311 1.28.497 1.718.636.722.23 1.378.197 1.898.12.58-.088 1.78-.727 2.03-1.43.251-.702.251-1.304.176-1.43-.075-.126-.276-.201-.577-.351zM12.04 21.786h-.002c-1.77 0-3.507-.476-5.029-1.38l-.361-.214-3.742.981.999-3.649-.236-.375a10.02 10.02 0 0 1-1.536-5.32c0-5.545 4.512-10.057 10.061-10.057 2.686 0 5.212 1.047 7.11 2.947a10.007 10.007 0 0 1 2.946 7.109c-.002 5.547-4.515 10.058-10.06 10.058zm0-21.786C5.401 0 0 5.402 0 12.042c0 2.12.553 4.19 1.603 6.012L0 24l6.104-1.602a11.98 11.98 0 0 0 5.936 1.554h.005c6.638 0 12.04-5.402 12.04-12.042 0-3.217-1.253-6.241-3.53-8.518A12.002 12.002 0 0 0 12.04 0z"/>
+                      <path d="M17.472 14.382c-.301-.15-1.78-.878-2.056-.978-.276-.1-.476-.15-.677.15-.201.3-.778.978-.953 1.18-.175.2-.351.226-.652.076-.3-.15-1.267-.467-2.414-1.49-1.077-.96-1.805-2.146-2.016-2.508-.211-.362-.022-.557.128-.707.135-.136.3-.351.451-.527.151-.175.201-.3.301-.501.101-.2.05-.376-.025-.526-.075-.15-.677-1.631-.928-2.233-.244-.587-.492-.507-.677-.517-.175-.01-.376-.01-.577-.01-.201 0-.527.075-.803.376-.276.3-1.054 1.03-1.054 2.511 0 1.482 1.079 2.912 1.23 3.113.15.2 2.124 3.243 5.145 4.548.719.311 1.28.497 1.718.636.722.23 1.378.197 1.898.12.58-.088 1.78-.727 2.03-1.43.251-.702.251-1.304.176-1.43-.075-.126-.276-.201-.577-.351zM12.04 21.786h-.002c-1.77 0-3.507-.476-5.029-1.38l-.361-.214-3.742.981.999-3.649-.236-.375a10.02 10.02 0 0 1-1.536-5.32c0-5.545 4.512-10.057 10.061-10.057 2.686 0 5.212 1.047 7.11 2.947a10.007 10.007 0 0 1 2.946 7.109c-.002 5.547-4.515 10.058-10.06 10.058zm0-21.786C5.401 0 0 5.402 0 12.042c0 2.12.553 4.19 1.603 6.012L0 24l6.104-1.602a11.98 11.98 0 0 0 5.936 1.554h.005c6.638 0 12.04-5.402 12.04-12.042 0-3.217-1.253-6.241-3.53-8.518A12.002 12.002 0 0 0 12.04 0z" />
                     </svg>
                     <span>Forward to WhatsApp Desk</span>
                   </a>
@@ -418,7 +412,7 @@ export default function ContactPage({ isQuoteMode = false }) {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
-                
+
                 {/* 1. Inquiry Type Selector Tabs */}
                 <div>
                   <label className="block text-xs font-bold text-[#102D4B] uppercase tracking-wider mb-2">
@@ -435,11 +429,10 @@ export default function ContactPage({ isQuoteMode = false }) {
                         key={type}
                         type="button"
                         onClick={() => setFormData(prev => ({ ...prev, enquiryType: type }))}
-                        className={`py-2.5 px-2 text-center rounded-xl text-xs font-bold border transition-all ${
-                          formData.enquiryType === type
+                        className={`py-2.5 px-2 text-center rounded-xl text-xs font-bold border transition-all ${formData.enquiryType === type
                             ? 'bg-[#102D4B] text-white border-[#102D4B] shadow-xs'
                             : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
-                        }`}
+                          }`}
                       >
                         {type}
                       </button>
@@ -459,9 +452,8 @@ export default function ContactPage({ isQuoteMode = false }) {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="e.g. Dr. Rajesh Sharma"
-                      className={`w-full px-4 py-2.5 text-xs sm:text-sm bg-slate-50 border rounded-xl text-slate-800 focus:bg-white focus:outline-none transition-colors ${
-                        errors.name ? 'border-[#ED1C24] focus:ring-1 focus:ring-[#ED1C24]' : 'border-slate-200 focus:border-[#00AEEF] focus:ring-1 focus:ring-[#00AEEF]'
-                      }`}
+                      className={`w-full px-4 py-2.5 text-xs sm:text-sm bg-slate-50 border rounded-xl text-slate-800 focus:bg-white focus:outline-none transition-colors ${errors.name ? 'border-[#ED1C24] focus:ring-1 focus:ring-[#ED1C24]' : 'border-slate-200 focus:border-[#00AEEF] focus:ring-1 focus:ring-[#00AEEF]'
+                        }`}
                     />
                     {errors.name && <p className="text-[11px] text-[#ED1C24] mt-1">{errors.name}</p>}
                   </div>
@@ -493,9 +485,8 @@ export default function ContactPage({ isQuoteMode = false }) {
                       value={formData.phone}
                       onChange={handleChange}
                       placeholder="e.g. 9876543210"
-                      className={`w-full px-4 py-2.5 text-xs sm:text-sm bg-slate-50 border rounded-xl text-slate-800 focus:bg-white focus:outline-none transition-colors ${
-                        errors.phone ? 'border-[#ED1C24] focus:ring-1 focus:ring-[#ED1C24]' : 'border-slate-200 focus:border-[#00AEEF] focus:ring-1 focus:ring-[#00AEEF]'
-                      }`}
+                      className={`w-full px-4 py-2.5 text-xs sm:text-sm bg-slate-50 border rounded-xl text-slate-800 focus:bg-white focus:outline-none transition-colors ${errors.phone ? 'border-[#ED1C24] focus:ring-1 focus:ring-[#ED1C24]' : 'border-slate-200 focus:border-[#00AEEF] focus:ring-1 focus:ring-[#00AEEF]'
+                        }`}
                     />
                     {errors.phone && <p className="text-[11px] text-[#ED1C24] mt-1">{errors.phone}</p>}
                   </div>
@@ -510,9 +501,8 @@ export default function ContactPage({ isQuoteMode = false }) {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="e.g. purchase@apexhealth.in"
-                      className={`w-full px-4 py-2.5 text-xs sm:text-sm bg-slate-50 border rounded-xl text-slate-800 focus:bg-white focus:outline-none transition-colors ${
-                        errors.email ? 'border-[#ED1C24] focus:ring-1 focus:ring-[#ED1C24]' : 'border-slate-200 focus:border-[#00AEEF] focus:ring-1 focus:ring-[#00AEEF]'
-                      }`}
+                      className={`w-full px-4 py-2.5 text-xs sm:text-sm bg-slate-50 border rounded-xl text-slate-800 focus:bg-white focus:outline-none transition-colors ${errors.email ? 'border-[#ED1C24] focus:ring-1 focus:ring-[#ED1C24]' : 'border-slate-200 focus:border-[#00AEEF] focus:ring-1 focus:ring-[#00AEEF]'
+                        }`}
                     />
                     {errors.email && <p className="text-[11px] text-[#ED1C24] mt-1">{errors.email}</p>}
                   </div>
@@ -591,9 +581,8 @@ export default function ContactPage({ isQuoteMode = false }) {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Provide details on dosage strength, packaging preference (Alu-Alu, Blister, Amber Bottle), monopoly territory needed, or commercial queries..."
-                    className={`w-full px-4 py-2.5 text-xs sm:text-sm bg-slate-50 border rounded-xl text-slate-800 focus:bg-white focus:outline-none transition-colors ${
-                      errors.message ? 'border-[#ED1C24] focus:ring-1 focus:ring-[#ED1C24]' : 'border-slate-200 focus:border-[#00AEEF] focus:ring-1 focus:ring-[#00AEEF]'
-                    }`}
+                    className={`w-full px-4 py-2.5 text-xs sm:text-sm bg-slate-50 border rounded-xl text-slate-800 focus:bg-white focus:outline-none transition-colors ${errors.message ? 'border-[#ED1C24] focus:ring-1 focus:ring-[#ED1C24]' : 'border-slate-200 focus:border-[#00AEEF] focus:ring-1 focus:ring-[#00AEEF]'
+                      }`}
                   />
                   {errors.message && <p className="text-[11px] text-[#ED1C24] mt-1">{errors.message}</p>}
                 </div>
@@ -629,7 +618,7 @@ export default function ContactPage({ isQuoteMode = false }) {
 
           {/* Right Column (5 cols): Office Details, Working Hours & Location Map */}
           <div className="lg:col-span-5 space-y-6">
-            
+
             {/* 1. Legal Entity & Regulatory Transparency Card */}
             <div className="bg-[#102D4B] text-white rounded-3xl p-6 sm:p-8 border border-white/10 shadow-lg">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-[#00AEEF] text-xs font-bold uppercase tracking-wider mb-4 border border-white/15">
@@ -640,7 +629,7 @@ export default function ContactPage({ isQuoteMode = false }) {
               <h3 className="text-xl font-extrabold text-white mb-2">
                 AEROLIFE PHARMA
               </h3>
-              
+
               <p className="text-xs text-slate-300 leading-relaxed mb-4">
                 Registered Trade Mark No. <strong className="text-white">4665534</strong> in Class 5 (Medical and Pharmaceutical Preparations) under the Trade Marks Act, 1999, Trade Marks Registry, Mumbai.
               </p>
@@ -742,13 +731,13 @@ export default function ContactPage({ isQuoteMode = false }) {
         4. FREQUENTLY ASKED QUESTIONS (Exact Match to HomePage FaqSection)
         ========================================================================
       */}
-      <section 
-        id="faq-section" 
+      <section
+        id="faq-section"
         className="py-16 sm:py-20 lg:py-24 bg-[#F4F9FD] border-b border-sky-100 relative overflow-hidden scroll-mt-24"
         aria-label="Frequently Asked Questions"
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          
+
           {/* Header */}
           <div className="text-center mb-12 sm:mb-14">
             <div className="inline-flex items-center gap-2 mb-3">
@@ -773,7 +762,7 @@ export default function ContactPage({ isQuoteMode = false }) {
             {faqs.map((faq, idx) => {
               const isOpen = openFaq === idx;
               return (
-                <div 
+                <div
                   key={idx}
                   className="bg-white rounded-2xl border border-sky-100/90 shadow-sm overflow-hidden transition-all duration-200"
                 >
@@ -818,6 +807,22 @@ export default function ContactPage({ isQuoteMode = false }) {
 
         </div>
       </section>
+
+      {/* 
+        ========================================================================
+        PARTNERSHIP CTA BANNER WITH WHATSAPP ACTION (Bespoke for Contact Page)
+        ========================================================================
+      */}
+      <PartnershipBannerSection
+        tag="DIRECT COMMERCIAL DESK"
+        title="START A CONVERSATION WITH OUR SALES DIRECTORS."
+        description="Get instant clarification on distribution rights, batch dispatch schedules, institutional tenders, and product dossiers from our Vasai East headquarters."
+        primaryText="REQUEST A CALLBACK"
+        primaryLink="/quote"
+        secondaryText="EXPLORE 84 PRODUCTS"
+        secondaryLink="/products"
+        whatsappMessage="Hi Aerolife Pharma Trade Desk, I would like to discuss commercial distribution terms and bulk procurement."
+      />
 
     </div>
   );

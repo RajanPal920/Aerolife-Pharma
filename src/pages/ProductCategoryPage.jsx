@@ -25,6 +25,7 @@ import {
   Eye,
   ExternalLink
 } from 'lucide-react';
+import PartnershipBannerSection from '../components/PartnershipBannerSection';
 
 const ICON_MAP = {
   Pill: Pill,
@@ -87,20 +88,20 @@ export default function ProductCategoryPage() {
       
       {/* 
         ========================================================================
-        CATEGORY HEADER & BREADCRUMBS
+        CATEGORY HEADER & BREADCRUMBS: CENTER-ALIGNED UNIFIED NAVY
         ========================================================================
       */}
-      <section className="bg-[#102D4B] text-white pt-10 pb-14 sm:pt-14 sm:pb-18 relative overflow-hidden">
+      <section className="bg-[#102D4B] text-white pt-14 pb-18 sm:pt-16 sm:pb-22 relative overflow-hidden flex flex-col justify-center">
         {/* Subtle background grid pattern */}
         <div className="absolute inset-0 opacity-10 bg-grid-pattern pointer-events-none" />
         
         {/* Cyan/Red top seam line */}
-        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#00AEEF] via-[#ED1C24] to-[#00AEEF]" />
+        <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#00AEEF] via-[#ED1C24] to-[#00AEEF] z-20" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           
-          {/* Breadcrumb Navigation: Home > Products > Selected Category */}
-          <nav className="flex items-center gap-2 text-xs font-semibold text-slate-300 mb-6 flex-wrap" aria-label="Breadcrumb">
+          {/* Breadcrumb Navigation Centered */}
+          <nav className="flex items-center justify-center gap-2 text-xs font-semibold text-slate-300 mb-6 flex-wrap" aria-label="Breadcrumb">
             <Link to="/" className="hover:text-[#00AEEF] transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
             <Link to="/products" className="hover:text-[#00AEEF] transition-colors">Commercial Catalogue</Link>
@@ -108,38 +109,37 @@ export default function ProductCategoryPage() {
             <span className="text-[#00AEEF] font-bold">{currentCategory.title}</span>
           </nav>
 
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-            <div className="max-w-3xl">
-              <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-[#00AEEF] text-xs font-bold tracking-wide uppercase mb-3">
-                <IconComponent className="w-4 h-4 text-[#00AEEF]" />
-                <span>WHO-GMP Validated Formulation Category</span>
-              </div>
+          {/* Centered Pill */}
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#00AEEF] text-xs font-bold tracking-wide uppercase mb-4 shadow-sm">
+            <IconComponent className="w-4 h-4 text-[#00AEEF]" />
+            <span>WHO-GMP Validated Formulation Category</span>
+          </div>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight mb-3">
-                {currentCategory.title}
-              </h1>
+          {/* Centered Headline */}
+          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-4">
+            {currentCategory.title}
+          </h1>
 
-              <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-2xl">
-                {currentCategory.description}
-              </p>
+          {/* Centered Description */}
+          <p className="text-sm sm:text-base lg:text-lg text-slate-200 leading-relaxed max-w-2xl mx-auto mb-6">
+            {currentCategory.description}
+          </p>
+
+          {/* Category Stats Centered */}
+          <div className="inline-flex items-center justify-center gap-4 bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl px-6 py-3 mb-6">
+            <div>
+              <span className="block text-2xl font-black text-white">{categoryProducts.length}</span>
+              <span className="text-[11px] text-slate-300 font-medium">Verified Products</span>
             </div>
-
-            {/* Category Stats Pill Box */}
-            <div className="flex items-center gap-4 bg-white/10 backdrop-blur-md border border-white/15 rounded-2xl p-4 sm:p-5 self-start lg:self-auto">
-              <div>
-                <span className="block text-3xl font-black text-white">{categoryProducts.length}</span>
-                <span className="text-xs text-slate-300 font-medium">Verified Products</span>
-              </div>
-              <div className="w-[1px] h-10 bg-white/20" />
-              <div>
-                <span className="block text-xs font-bold uppercase tracking-wider text-[#00AEEF]">Portfolio</span>
-                <span className="text-xs font-semibold text-white">Official Catalogue</span>
-              </div>
+            <div className="w-[1px] h-8 bg-white/20" />
+            <div>
+              <span className="block text-[10px] font-bold uppercase tracking-wider text-[#00AEEF]">Portfolio</span>
+              <span className="text-xs font-semibold text-white">Commercial Monograph</span>
             </div>
           </div>
 
-          {/* Quick Category Switcher Tabs */}
-          <div className="mt-8 pt-6 border-t border-white/10 flex items-center gap-2 overflow-x-auto no-scrollbar pb-2">
+          {/* Quick Category Switcher Tabs Centered */}
+          <div className="pt-6 border-t border-white/10 flex items-center justify-center gap-2 overflow-x-auto no-scrollbar pb-2">
             <span className="text-xs font-bold text-slate-400 uppercase tracking-wider mr-2 flex-shrink-0">
               Categories:
             </span>
@@ -332,6 +332,22 @@ export default function ProductCategoryPage() {
         </div>
 
       </div>
+
+      {/* 
+        ========================================================================
+        CATEGORY COMMERCIAL PARTNERSHIP CTA WITH WHATSAPP ACTION
+        ========================================================================
+      */}
+      <PartnershipBannerSection
+        tag="FORMULATION MONOGRAPHS"
+        title={`INTERESTED IN ${currentCategory.title.toUpperCase()}?`}
+        description={`Connect with our commercial desk to request batch pricing, MOQ requirements, and formulation dossiers for ${currentCategory.title}.`}
+        primaryText="REQUEST CATEGORY QUOTE"
+        primaryLink="/quote"
+        secondaryText="EXPLORE ALL 84 PRODUCTS"
+        secondaryLink="/products"
+        whatsappMessage={`Hi Aerolife Pharma, I would like to inquire about commercial supply and dossiers for ${currentCategory.title}.`}
+      />
 
     </div>
   );

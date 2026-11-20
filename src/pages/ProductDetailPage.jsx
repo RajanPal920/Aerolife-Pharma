@@ -22,6 +22,7 @@ import {
   Sparkles,
   ExternalLink
 } from 'lucide-react';
+import PartnershipBannerSection from '../components/PartnershipBannerSection';
 
 export default function ProductDetailPage() {
   const { categorySlug, productSlug } = useParams();
@@ -132,7 +133,7 @@ export default function ProductDetailPage() {
                 {/* Catalog Monograph Verification Badge */}
                 <div className="absolute top-3 left-3 bg-[#00AEEF]/10 border border-[#00AEEF]/20 text-[#00AEEF] px-2.5 py-1 rounded-lg text-[11px] font-bold flex items-center gap-1.5">
                   <FileText className="w-3.5 h-3.5" />
-                  <span>Monograph • Page {product.page}</span>
+                  <span>Monograph • Ref #{product.page}</span>
                 </div>
 
                 {/* WHO-GMP Stamp */}
@@ -383,6 +384,22 @@ export default function ProductDetailPage() {
         )}
 
       </div>
+
+      {/* 
+        ========================================================================
+        PRODUCT COMMERCIAL PARTNERSHIP CTA WITH WHATSAPP ACTION
+        ========================================================================
+      */}
+      <PartnershipBannerSection
+        tag="PRODUCT DOSSIER & SUPPLY"
+        title={`INTERESTED IN ${product.name.toUpperCase()}?`}
+        description={`Connect directly with our commercial desk to request minimum order quantities (MOQ), wholesale pricing, and Certificate of Analysis (COA) for ${product.name}.`}
+        primaryText="REQUEST PRODUCT QUOTE"
+        primaryLink={`/quote?product=${encodeURIComponent(product.name)}`}
+        secondaryText="EXPLORE ALL PRODUCTS"
+        secondaryLink="/products"
+        whatsappMessage={`Hello Aerolife Pharma, I would like to inquire about ${product.name} (Composition: ${product.composition}, Pack: ${product.pack}) for commercial supply / PCD franchise.`}
+      />
 
     </div>
   );
