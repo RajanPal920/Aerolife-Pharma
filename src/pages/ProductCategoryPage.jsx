@@ -86,7 +86,7 @@ export default function ProductCategoryPage() {
 
   const IconComponent = ICON_MAP[currentCategory.icon] || Pill;
 
-  // Auto-scroll active tab into view when category changes
+  // Auto-scroll active tab into view when category changes on mobile
   useEffect(() => {
     if (activeTabRef.current && tabsContainerRef.current) {
       activeTabRef.current.scrollIntoView({
@@ -97,32 +97,24 @@ export default function ProductCategoryPage() {
     }
   }, [currentCategory.id]);
 
-  // Horizontal scroll buttons handler
-  const scrollTabs = (direction) => {
-    if (tabsContainerRef.current) {
-      const scrollAmount = direction === 'left' ? -200 : 200;
-      tabsContainerRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    }
-  };
-
   return (
     <div className="min-h-screen bg-slate-50/50 flex flex-col font-sans select-none overflow-x-hidden">
       
       {/* 
         ========================================================================
-        PHASE 4 & 5: CATEGORY HERO SECTION & RESPONSIVE TABS
+        PHASE 4 & 5: CATEGORY HERO SECTION & FULL-WIDTH DESKTOP TABS
         Clean, centered layout with balanced spacing, verified information,
-        and unclipped horizontal category navigation across all viewports.
+        full-width desktop view with ZERO scrollbar, and smooth touch-scroll on mobile.
         ========================================================================
       */}
-      <section className="bg-[#102D4B] text-white pt-10 pb-8 sm:pt-14 sm:pb-12 relative overflow-hidden flex flex-col justify-center">
+      <section className="bg-[#102D4B] text-white pt-10 pb-8 sm:pt-14 sm:pb-12 relative overflow-hidden flex flex-col justify-center items-center text-center w-full">
         {/* Subtle background grid pattern */}
         <div className="absolute inset-0 opacity-10 bg-grid-pattern pointer-events-none" />
         
         {/* Cyan/Red top seam line */}
         <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#00AEEF] via-[#ED1C24] to-[#00AEEF] z-20" />
 
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center w-full">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center w-full flex flex-col items-center">
           
           {/* 1. Breadcrumb Navigation Centered */}
           <nav className="flex items-center justify-center gap-1.5 sm:gap-2 text-[11px] sm:text-xs font-semibold text-slate-300 mb-4 sm:mb-5 flex-wrap" aria-label="Breadcrumb">
@@ -130,7 +122,7 @@ export default function ProductCategoryPage() {
             <ChevronRight className="w-3.5 h-3.5 text-slate-400 flex-shrink-0" />
             <Link to="/products" className="hover:text-[#00AEEF] transition-colors">Commercial Catalogue</Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-400 flex-shrink-0" />
-            <span className="text-[#00AEEF] font-bold truncate max-w-[200px] sm:max-w-none">{currentCategory.title}</span>
+            <span className="text-[#00AEEF] font-bold">{currentCategory.title}</span>
           </nav>
 
           {/* 2. Category Label Badge */}
@@ -140,12 +132,12 @@ export default function ProductCategoryPage() {
           </div>
 
           {/* 3. Category Heading (Responsive font size with zero overflow) */}
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight mb-3 px-2 break-words">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight mb-3 px-2 break-words text-center">
             {currentCategory.title}
           </h1>
 
           {/* 4. Short, Accurate Category Description */}
-          <p className="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed max-w-2xl mx-auto mb-4 px-2">
+          <p className="text-xs sm:text-sm md:text-base text-slate-200 leading-relaxed max-w-2xl mx-auto mb-4 px-2 text-center">
             {currentCategory.description}
           </p>
 
@@ -168,61 +160,71 @@ export default function ProductCategoryPage() {
         </div>
 
         {/* 
-          6. CATEGORY NAVIGATION TABS (PHASE 5: RESPONSIVE & UNCLIPPED)
-          Full-width container with smooth touch scrolling on mobile
-          and balanced, centered alignment on larger screens.
+          6. CATEGORY NAVIGATION TABS (ZERO SCROLLBAR ON DESKTOP - FULL WIDTH)
+          Desktop (lg+): Full-width 7-column layout, NO scroll, all category names and counts 100% visible.
+          Mobile/Tablet (< lg): Smooth touch scroll without any native scrollbar.
         */}
-        <div className="w-full max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 border-t border-white/10 pt-4 relative z-10">
-          <div className="flex items-center justify-between gap-2">
-            
-            {/* Left Scroll Button (Visible on tablet/mobile when scrollable) */}
-            <button
-              onClick={() => scrollTabs('left')}
-              className="hidden sm:flex md:hidden lg:hidden items-center justify-center w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex-shrink-0 transition-colors"
-              aria-label="Scroll left"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </button>
-
-            {/* Scrollable Container with smooth padding and zero clipping */}
-            <div
-              ref={tabsContainerRef}
-              className="w-full overflow-x-auto scrollbar-none flex items-center lg:justify-center gap-2 sm:gap-2.5 py-1 px-2 sm:px-3 touch-pan-x"
-              style={{ WebkitOverflowScrolling: 'touch' }}
-            >
-              {CATEGORIES.map((cat) => {
-                const isCurrent = cat.id === currentCategory.id;
-                const catProdCount = getProductsByCategory(cat.slug).length;
-                return (
-                  <Link
-                    key={cat.id}
-                    to={`/products/${cat.slug}`}
-                    ref={isCurrent ? activeTabRef : null}
-                    className={`px-3 sm:px-4 py-2 rounded-xl text-xs sm:text-[13px] font-bold transition-all duration-150 flex-shrink-0 flex items-center gap-2 whitespace-nowrap active:scale-95 ${
-                      isCurrent
-                        ? 'bg-[#00AEEF] text-white shadow-lg shadow-cyan-500/25 ring-2 ring-[#00AEEF]/50 scale-[1.02]'
-                        : 'bg-white/10 text-slate-300 hover:text-white hover:bg-white/15 border border-white/10'
-                    }`}
-                  >
-                    <span>{cat.title}</span>
-                    <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-extrabold ${isCurrent ? 'bg-white/25 text-white' : 'bg-white/10 text-slate-400'}`}>
-                      {catProdCount}
-                    </span>
-                  </Link>
-                );
-              })}
-            </div>
-
-            {/* Right Scroll Button (Visible on tablet/mobile when scrollable) */}
-            <button
-              onClick={() => scrollTabs('right')}
-              className="hidden sm:flex md:hidden lg:hidden items-center justify-center w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex-shrink-0 transition-colors"
-              aria-label="Scroll right"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </button>
-
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-white/10 pt-4 relative z-10">
+          
+          {/* DESKTOP VIEW (lg+): Full-width 7-column grid with ZERO scrollbar */}
+          <div className="hidden lg:grid lg:grid-cols-7 gap-2.5 w-full">
+            {CATEGORIES.map((cat) => {
+              const isCurrent = cat.id === currentCategory.id;
+              const catProdCount = getProductsByCategory(cat.slug).length;
+              return (
+                <Link
+                  key={cat.id}
+                  to={`/products/${cat.slug}`}
+                  className={`flex flex-col items-center justify-center text-center px-2 py-3 rounded-xl transition-all duration-200 border min-h-[72px] ${
+                    isCurrent
+                      ? 'bg-[#00AEEF] text-white shadow-lg shadow-cyan-500/25 border-[#00AEEF] ring-2 ring-[#00AEEF]/40 scale-[1.02]'
+                      : 'bg-white/10 text-slate-200 hover:text-white hover:bg-white/15 border-white/10'
+                  }`}
+                >
+                  <span className="text-xs font-bold leading-snug mb-1.5 text-center">
+                    {cat.title}
+                  </span>
+                  <span className={`text-[10px] px-2 py-0.5 rounded-full font-extrabold ${
+                    isCurrent ? 'bg-white/25 text-white' : 'bg-white/10 text-slate-300'
+                  }`}>
+                    {catProdCount} {catProdCount === 1 ? 'Product' : 'Products'}
+                  </span>
+                </Link>
+              );
+            })}
           </div>
+
+          {/* MOBILE & TABLET VIEW (< lg): Horizontally scrollable without native scrollbar */}
+          <div
+            ref={tabsContainerRef}
+            className="lg:hidden w-full overflow-x-auto no-scrollbar flex items-center gap-2 py-1 px-1 touch-pan-x"
+            style={{ WebkitOverflowScrolling: 'touch' }}
+          >
+            {CATEGORIES.map((cat) => {
+              const isCurrent = cat.id === currentCategory.id;
+              const catProdCount = getProductsByCategory(cat.slug).length;
+              return (
+                <Link
+                  key={cat.id}
+                  to={`/products/${cat.slug}`}
+                  ref={isCurrent ? activeTabRef : null}
+                  className={`px-3.5 py-2 rounded-xl text-xs font-bold transition-all duration-150 flex-shrink-0 flex items-center gap-2 whitespace-nowrap active:scale-95 ${
+                    isCurrent
+                      ? 'bg-[#00AEEF] text-white shadow-md shadow-cyan-500/25 ring-2 ring-[#00AEEF]/50 scale-[1.02]'
+                      : 'bg-white/10 text-slate-300 hover:text-white hover:bg-white/15 border border-white/10'
+                  }`}
+                >
+                  <span>{cat.title}</span>
+                  <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-extrabold ${
+                    isCurrent ? 'bg-white/25 text-white' : 'bg-white/10 text-slate-400'
+                  }`}>
+                    {catProdCount}
+                  </span>
+                </Link>
+              );
+            })}
+          </div>
+
         </div>
 
       </section>
