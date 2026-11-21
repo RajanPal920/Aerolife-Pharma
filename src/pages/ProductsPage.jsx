@@ -178,7 +178,10 @@ export default function ProductsPage() {
                                 src={prod.image}
                                 alt={prod.name}
                                 className="w-full h-full object-contain"
-                                onError={(e) => { e.currentTarget.src = '/assets/products/clavaero-cv-625.jpg'; }}
+                                onError={(e) => {
+                                  e.currentTarget.onerror = null;
+                                  e.currentTarget.src = '/assets/products/placeholder-pharmaceutical.svg';
+                                }}
                               />
                             </div>
                             <div className="flex-1 min-w-0">
@@ -346,7 +349,10 @@ export default function ProductsPage() {
                     src={category.flagshipImage}
                     alt={category.title}
                     className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
-                    onError={(e) => { e.currentTarget.src = '/assets/products/clavaero-cv-625.jpg'; }}
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = '/assets/products/placeholder-pharmaceutical.svg';
+                    }}
                   />
                   <span className="absolute bottom-2 right-3 text-[10px] font-semibold text-slate-400 bg-white/90 px-2 py-0.5 rounded shadow-xs border border-slate-100">
                     Verified Packaging
@@ -433,7 +439,10 @@ export default function ProductsPage() {
                       src={prod.image}
                       alt={prod.name}
                       className="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-108 transition-transform duration-300"
-                      onError={(e) => { e.currentTarget.src = '/assets/products/clavaero-cv-625.jpg'; }}
+                      onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = '/assets/products/placeholder-pharmaceutical.svg';
+                    }}
                     />
                     <span className="absolute top-2.5 left-2.5 text-[10px] font-bold text-[#00AEEF] bg-[#00AEEF]/10 px-2 py-0.5 rounded border border-[#00AEEF]/20">
                       Formulation #{prod.page}

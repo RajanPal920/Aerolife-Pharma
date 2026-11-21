@@ -435,13 +435,13 @@ export default function Navbar({ onNavigate }) {
                     <span className="w-2.5 h-2.5 rounded-full bg-[#00AEEF] animate-pulse" />
                     <div>
                       <h3 className="text-sm font-bold text-[#0C1B2A] tracking-tight flex items-center gap-2">
-                        <span>Aero Life Pharma Formulation Portfolio</span>
+                        <span>Explore Our Products</span>
                         <span className="text-[11px] font-semibold text-[#00AEEF] bg-[#00AEEF]/10 px-2 py-0.5 rounded-full">
-                          {totalFormulationsCount} Verified Formulations
+                          {totalFormulationsCount} Products
                         </span>
                       </h3>
                       <p className="text-[11px] text-slate-500">
-                        Select a category to view formulations or search by brand name & active composition.
+                        Explore our pharmaceutical product range.
                       </p>
                     </div>
                   </div>
@@ -453,7 +453,7 @@ export default function Navbar({ onNavigate }) {
                       type="text"
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
-                      placeholder="Search 84 formulations..."
+                      placeholder="Search products..."
                       className="w-full pl-9 pr-3 py-1.5 text-xs bg-white border border-slate-200 rounded-lg focus:outline-none focus:border-[#00AEEF] focus:ring-1 focus:ring-[#00AEEF] text-slate-800 placeholder-slate-400 transition-colors"
                       autoFocus={false}
                     />
@@ -475,7 +475,7 @@ export default function Navbar({ onNavigate }) {
                   <div className="w-64 flex-shrink-0 bg-slate-50/70 border-r border-slate-200/80 p-3 flex flex-col justify-between overflow-y-auto">
                     <div className="space-y-1">
                       <div className="px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-slate-400">
-                        Dosage Categories
+                        Product Categories
                       </div>
 
                       {/* All Products Tab */}
@@ -489,7 +489,7 @@ export default function Navbar({ onNavigate }) {
                       >
                         <div className="flex items-center gap-2">
                           <Layers className={`w-4 h-4 ${activeCategoryTab === 'all' ? 'text-white' : 'text-slate-400 group-hover:text-[#00AEEF]'}`} />
-                          <span>All Formulations</span>
+                          <span>All Products</span>
                         </div>
                         <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded-full ${activeCategoryTab === 'all' ? 'bg-white/20 text-white' : 'bg-slate-200/70 text-slate-600'}`}>
                           {totalFormulationsCount}
@@ -528,13 +528,13 @@ export default function Navbar({ onNavigate }) {
                         onClick={() => handleCategoryNavigate(activeCategoryTab)}
                         className="w-full py-2 px-3 rounded-lg text-xs font-bold text-[#00AEEF] hover:bg-[#00AEEF]/10 transition-colors flex items-center justify-between"
                       >
-                        <span>Open Complete Page</span>
+                        <span>Open Products Page</span>
                         <ArrowRight className="w-3.5 h-3.5" />
                       </button>
                     </div>
                   </div>
 
-                  {/* RIGHT PANE: Product Cards Grid */}
+                  {/* RIGHT PANE: Clean Product Cards Grid (Product Name Only) */}
                   <div className="flex-1 p-4 overflow-y-auto bg-white flex flex-col justify-between">
                     <div>
                       {/* Sub-header inside product pane */}
@@ -546,17 +546,17 @@ export default function Navbar({ onNavigate }) {
                               : menuCategories.find(c => c.id === activeCategoryTab)?.name}
                           </span>
                           <span className="text-[11px] font-normal text-slate-400">
-                            ({displayedProducts.length} formulations available)
+                            ({displayedProducts.length} products)
                           </span>
                         </div>
                         <span className="text-[10px] font-medium text-slate-400">
-                          Click any formulation to inspect
+                          Click any product to view details
                         </span>
                       </div>
 
                       {displayedProducts.length === 0 ? (
                         <div className="py-16 text-center text-slate-400">
-                          <p className="text-xs">No formulations found matching "{searchQuery}".</p>
+                          <p className="text-xs">No products found matching "{searchQuery}".</p>
                           <button
                             type="button"
                             onClick={() => setSearchQuery('')}
@@ -566,32 +566,17 @@ export default function Navbar({ onNavigate }) {
                           </button>
                         </div>
                       ) : (
-                        <div className="grid grid-cols-2 xl:grid-cols-3 gap-2.5">
+                        <div className="grid grid-cols-2 xl:grid-cols-3 gap-2">
                           {displayedProducts.map((p, idx) => (
                             <div
                               key={`${p.name}-${idx}`}
                               onClick={() => handleProductSelect(p)}
-                              className="group p-2.5 rounded-xl border border-slate-150 hover:border-[#00AEEF] hover:bg-[#F0F9FF]/40 transition-all duration-150 cursor-pointer flex flex-col justify-between shadow-xs hover:shadow-sm"
+                              className="group px-3 py-2.5 rounded-xl border border-slate-200/80 hover:border-[#00AEEF] bg-white hover:bg-[#F0F9FF] transition-all duration-150 cursor-pointer flex items-center justify-between shadow-xs hover:shadow-sm"
                             >
-                              <div>
-                                <div className="flex items-start justify-between gap-1 mb-1">
-                                  <h4 className="text-xs font-bold text-[#0C1B2A] group-hover:text-[#00AEEF] line-clamp-1 leading-snug">
-                                    {p.name}
-                                  </h4>
-                                </div>
-                                <p className="text-[10.5px] text-slate-500 line-clamp-2 leading-relaxed">
-                                  {p.composition}
-                                </p>
-                              </div>
-
-                              <div className="mt-2 pt-2 border-t border-slate-100 flex items-center justify-between text-[10px]">
-                                <span className="font-semibold text-slate-700 bg-slate-100 px-1.5 py-0.5 rounded">
-                                  {p.pack || 'Standard Pack'}
-                                </span>
-                                <span className="text-slate-400 font-medium">
-                                  Page {p.page}
-                                </span>
-                              </div>
+                              <span className="text-xs font-semibold text-[#102D4B] group-hover:text-[#00AEEF] transition-colors leading-snug line-clamp-1">
+                                {p.name}
+                              </span>
+                              <ChevronRight className="w-3.5 h-3.5 text-slate-300 group-hover:text-[#00AEEF] group-hover:translate-x-0.5 transition-all flex-shrink-0 ml-1.5" />
                             </div>
                           ))}
                         </div>
@@ -601,14 +586,14 @@ export default function Navbar({ onNavigate }) {
                     {/* Dropdown Bottom Bar */}
                     <div className="pt-3 mt-2 border-t border-slate-100 flex items-center justify-between">
                       <span className="text-[11px] text-slate-500">
-                        Need wholesale or third-party manufacturing information?
+                        Looking for wholesale supply or monopoly PCD franchise?
                       </span>
                       <Link
                         to="/quote"
                         onClick={() => setIsProductsDropdownOpen(false)}
                         className="inline-flex items-center gap-1.5 text-xs font-bold text-[#00AEEF] hover:text-[#0097D1] group"
                       >
-                        <span>Enquire for Catalogue Monograph</span>
+                        <span>Enquire for Product Range</span>
                         <ArrowRight className="w-3.5 h-3.5 transition-transform duration-150 group-hover:translate-x-0.5" />
                       </Link>
                     </div>
@@ -915,14 +900,12 @@ export default function Navbar({ onNavigate }) {
                                   <div
                                     key={pIdx}
                                     onClick={() => handleProductSelect(p)}
-                                    className="py-1 cursor-pointer hover:text-[#00AEEF]"
+                                    className="py-1.5 px-2 rounded-lg hover:bg-slate-100/70 cursor-pointer flex items-center justify-between transition-colors group"
                                   >
-                                    <p className="text-[11px] font-bold text-slate-700 hover:text-[#00AEEF] leading-tight">
+                                    <span className="text-[11.5px] font-medium text-slate-700 group-hover:text-[#00AEEF] truncate pr-2">
                                       {p.name}
-                                    </p>
-                                    <p className="text-[10px] text-slate-400 truncate">
-                                      {p.pack} • Page {p.page}
-                                    </p>
+                                    </span>
+                                    <ChevronRight className="w-3 h-3 text-slate-300 group-hover:text-[#00AEEF] flex-shrink-0" />
                                   </div>
                                 ))}
                               </div>

@@ -247,7 +247,10 @@ export default function ProductCategoryPage() {
                     src={product.image}
                     alt={product.name}
                     className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-108"
-                    onError={(e) => { e.currentTarget.src = '/assets/products/clavaero-cv-625.jpg'; }}
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = '/assets/products/placeholder-pharmaceutical.svg';
+                    }}
                   />
                   <span className="absolute top-2.5 left-2.5 text-[10px] font-bold text-[#00AEEF] bg-[#00AEEF]/10 px-2 py-0.5 rounded border border-[#00AEEF]/15">
                     Formulation #{product.page}

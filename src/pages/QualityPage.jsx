@@ -520,7 +520,8 @@ export default function QualityPage() {
                     alt={box.name}
                     className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-108"
                     onError={(e) => {
-                      e.currentTarget.src = '/assets/products/clavaero-cv-625.jpg';
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = '/assets/products/placeholder-pharmaceutical.svg';
                     }}
                   />
                   <span className="absolute top-3 left-3 text-[10px] font-bold text-[#00AEEF] bg-[#00AEEF]/10 px-2.5 py-0.5 rounded-md border border-[#00AEEF]/20">

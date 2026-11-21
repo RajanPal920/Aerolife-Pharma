@@ -244,6 +244,10 @@ export default function OurProductsSection() {
                     alt={prod.name}
                     className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
+                    onError={(e) => {
+                      e.currentTarget.onerror = null;
+                      e.currentTarget.src = '/assets/products/placeholder-pharmaceutical.svg';
+                    }}
                   />
                 </div>
 
