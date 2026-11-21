@@ -26,12 +26,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Aceclofenac, Paracetamol & Serratiopeptidase Tablets",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Aceclofenac 100 mg + Paracetamol 325 mg + Serratiopeptidase 15 mg",
         "pack": "10 x 10 TABLETS",
         "page": 2,
         "image": "/assets/products/aeromark-sp.jpg",
         "isFlagship": true,
-        "description": "AEROMARK-SP TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac, Paracetamol & Serratiopeptidase Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "AEROMARK-SP TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac, Paracetamol & Serratiopeptidase Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Analgesic, Anti-Inflammatory & Anti-Edematous"
       },
       {
         "id": "aeromark-p-tablets",
@@ -40,12 +41,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Aceclofenac & Paracetamol Tablets IP",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Aceclofenac 100 mg + Paracetamol 325 mg",
         "pack": "20 x 10 TABLETS",
         "page": 2,
         "image": "/assets/products/aeromark-p.jpg",
         "isFlagship": true,
-        "description": "AEROMARK-P TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac & Paracetamol Tablets IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "AEROMARK-P TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac & Paracetamol Tablets IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "NSAID & Antipyretic Analgesic"
       },
       {
         "id": "clavaero-cv-625-tablets-10-x-6",
@@ -54,12 +56,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Amoxycillin & Potassium Clavulanate Tablets I.P.",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Amoxycillin 500 mg + Potassium Clavulanate 125 mg (625 mg)",
         "pack": "10 x 6 TABLETS",
         "page": 3,
         "image": "/assets/products/clavaero-cv-625.jpg",
         "isFlagship": true,
-        "description": "CLAVAERO-CV 625 TABLETS (10 x 6) is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin & Potassium Clavulanate Tablets I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "CLAVAERO-CV 625 TABLETS (10 x 6) is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin & Potassium Clavulanate Tablets I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Broad-Spectrum Penicillin Antibiotic"
       },
       {
         "id": "clavaero-cv-625-tablets-1-x-10",
@@ -68,12 +71,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Amoxycillin & Potassium Clavulanate Tablets I.P.",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Amoxycillin 500 mg + Potassium Clavulanate 125 mg (625 mg)",
         "pack": "1 x 10 TABLETS",
         "page": 3,
         "image": "/assets/products/clavaero-cv-625-tablets-1-x-10.jpg",
         "isFlagship": true,
-        "description": "CLAVAERO-CV 625 TABLETS (1 x 10) is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin & Potassium Clavulanate Tablets I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "CLAVAERO-CV 625 TABLETS (1 x 10) is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin & Potassium Clavulanate Tablets I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Broad-Spectrum Penicillin Antibiotic"
       },
       {
         "id": "aeronim-p-tablets",
@@ -82,12 +86,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Nimesulide & Paracetamol Tablets",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Nimesulide 100 mg + Paracetamol 325 mg",
         "pack": "20 x 10 TABLETS",
         "page": 4,
         "image": "/assets/products/aeronim-p-tablets.jpg",
         "isFlagship": false,
-        "description": "Aeronim - P Tablets is a WHO-GMP certified pharmaceutical formulation featuring Nimesulide & Paracetamol Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aeronim - P Tablets is a WHO-GMP certified pharmaceutical formulation featuring Nimesulide & Paracetamol Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Analgesic & Anti-Inflammatory"
       },
       {
         "id": "aerocof-dx-tablets",
@@ -96,12 +101,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Dextromethorphan Hydrobromide, Phenylephrine Hydrochloride & Chlorpheniramine Maleate Tablets",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Dextromethorphan HBr 15 mg + Phenylephrine HCl 10 mg + Chlorpheniramine Maleate 2 mg",
         "pack": "10 x 10 TABLETS",
         "page": 4,
         "image": "/assets/products/aerocof-dx-tablets.jpg",
         "isFlagship": false,
-        "description": "Aerocof - DX TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Phenylephrine Hydrochloride & Chlorpheniramine Maleate Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aerocof - DX TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Phenylephrine Hydrochloride & Chlorpheniramine Maleate Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Antitussive, Decongestant & Antihistaminic"
       },
       {
         "id": "aerocal-k2-7-tablets",
@@ -110,12 +116,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Calcium Citrate Malate, Magnesium Sulphate, Zinc Sulphate, Vitamin K2 7 & Vitamin D3 Tablets",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Calcium Citrate Malate 1250 mg + Vit K2-7 45 mcg + Vit D3 400 IU + Minerals",
         "pack": "1 x 10 TABLETS",
         "page": 5,
         "image": "/assets/products/aerocal-k2-7-tablets.jpg",
         "isFlagship": false,
-        "description": "Aerocal - K2 7 Tablets is a WHO-GMP certified pharmaceutical formulation featuring Calcium Citrate Malate, Magnesium Sulphate, Zinc Sulphate, Vitamin K2 7 & Vitamin D3 Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aerocal - K2 7 Tablets is a WHO-GMP certified pharmaceutical formulation featuring Calcium Citrate Malate, Magnesium Sulphate, Zinc Sulphate, Vitamin K2 7 & Vitamin D3 Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Bone Mineral Health & Calcium Supplement"
       },
       {
         "id": "coldaero-tablets",
@@ -124,12 +131,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Aceclofenac, Paracetamol, Caffeine, Phenylephrine HCL & Cetirizine Dihydrochloride Tablets",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Aceclofenac 100 mg + Paracetamol 325 mg + Phenylephrine 10 mg + Cetirizine 5 mg + Caffeine 30 mg",
         "pack": "10 x 10 TABLETS",
         "page": 5,
         "image": "/assets/products/coldaero-tablets.jpg",
         "isFlagship": false,
-        "description": "Coldaero Tablets is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac, Paracetamol, Caffeine, Phenylephrine HCL & Cetirizine Dihydrochloride Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Coldaero Tablets is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac, Paracetamol, Caffeine, Phenylephrine HCL & Cetirizine Dihydrochloride Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Comprehensive Cold & Sinus Relief"
       },
       {
         "id": "gravogesic-mr-tablets",
@@ -138,12 +146,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Diclofenac Potassium, Paracetamol & Chlorzoxazone Tablets",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Diclofenac Potassium 50 mg + Paracetamol 325 mg + Chlorzoxazone 250 mg",
         "pack": "20 x 10 TABLETS",
         "page": 6,
         "image": "/assets/products/gravogesic-mr-tablets.jpg",
         "isFlagship": false,
-        "description": "Gravogesic - MR Tablets is a WHO-GMP certified pharmaceutical formulation featuring Diclofenac Potassium, Paracetamol & Chlorzoxazone Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Gravogesic - MR Tablets is a WHO-GMP certified pharmaceutical formulation featuring Diclofenac Potassium, Paracetamol & Chlorzoxazone Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "NSAID Analgesic & Skeletal Muscle Relaxant"
       },
       {
         "id": "sefaero-200-tablets",
@@ -152,12 +161,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Cefixime Tablets I.P. 200 mg",
         "dosageForm": "Tablet",
-        "strength": "200 mg",
+        "strength": "Cefixime 200 mg (Dispersible)",
         "pack": "10 x 10 TABLETS",
         "page": 6,
         "image": "/assets/products/sefaero-200-tablets.jpg",
         "isFlagship": false,
-        "description": "SEFAERO-200 TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Cefixime Tablets I.P. 200 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "SEFAERO-200 TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Cefixime Tablets I.P. 200 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "3rd Generation Cephalosporin Antibiotic"
       },
       {
         "id": "levoflek-l-tablets",
@@ -166,12 +176,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Levocetirizine Hydrochloride Tablets IP",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Levocetirizine Hydrochloride 5 mg",
         "pack": "50 x 10 TABLETS",
         "page": 7,
         "image": "/assets/products/levoflek-l-tablets.jpg",
         "isFlagship": false,
-        "description": "Levoflek - L Tablets is a WHO-GMP certified pharmaceutical formulation featuring Levocetirizine Hydrochloride Tablets IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Levoflek - L Tablets is a WHO-GMP certified pharmaceutical formulation featuring Levocetirizine Hydrochloride Tablets IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Non-Sedating Antihistamine / Anti-Allergic"
       },
       {
         "id": "levoflak-m-tablets",
@@ -180,12 +191,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Levocetirizine Hydrochloride And Montelukast Sodium Tablets IP",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Levocetirizine HCl 5 mg + Montelukast Sodium 10 mg",
         "pack": "10 x 10 TABLETS",
         "page": 7,
         "image": "/assets/products/levoflak-m-tablets.jpg",
         "isFlagship": false,
-        "description": "Levoflak - M Tablets is a WHO-GMP certified pharmaceutical formulation featuring Levocetirizine Hydrochloride And Montelukast Sodium Tablets IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Levoflak - M Tablets is a WHO-GMP certified pharmaceutical formulation featuring Levocetirizine Hydrochloride And Montelukast Sodium Tablets IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Anti-Allergic & Bronchial Anti-Asthmatic"
       },
       {
         "id": "zincaero-tablets",
@@ -194,12 +206,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Multivitamin, Multiminerals & Antioxidant Tablets",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Multivitamin, Multimineral + Zinc & Antioxidants",
         "pack": "2 x 15 TABLETS",
         "page": 8,
         "image": "/assets/products/zincaero-tablets.jpg",
         "isFlagship": false,
-        "description": "Zincaero Tablets is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin, Multiminerals & Antioxidant Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Zincaero Tablets is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin, Multiminerals & Antioxidant Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Nutritional Supplement & Immunity Booster"
       },
       {
         "id": "cycloaero-tablets",
@@ -208,12 +221,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Paracetamol & Dicyclomine Hydrochloride Tablets",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Paracetamol 325 mg + Dicyclomine HCl 20 mg",
         "pack": "20 x 10 Tablets",
         "page": 8,
         "image": "/assets/products/cycloaero-tablets.jpg",
         "isFlagship": false,
-        "description": "CYCLOAERO Tablets is a WHO-GMP certified pharmaceutical formulation featuring Paracetamol & Dicyclomine Hydrochloride Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "CYCLOAERO Tablets is a WHO-GMP certified pharmaceutical formulation featuring Paracetamol & Dicyclomine Hydrochloride Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Antispasmodic & Gastrointestinal Analgesic"
       },
       {
         "id": "aerocal-d3-tablet",
@@ -222,12 +236,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Calcium Citrate Malate with Vitamin D3 Tablets",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Calcium Citrate Malate 1250 mg + Vitamin D3 400 IU",
         "pack": "10 x 1 x 15 TABLETS",
         "page": 9,
         "image": "/assets/products/aerocal-d3-tablet.jpg",
         "isFlagship": false,
-        "description": "Aerocal-D3 Tablet is a WHO-GMP certified pharmaceutical formulation featuring Calcium Citrate Malate with Vitamin D3 Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aerocal-D3 Tablet is a WHO-GMP certified pharmaceutical formulation featuring Calcium Citrate Malate with Vitamin D3 Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Calcium & Bone Health Therapy"
       },
       {
         "id": "faero-xt-tablet",
@@ -236,12 +251,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Ferrous Ascorbate, Folic Acid and Zinc Sulphate Tablets",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Ferrous Ascorbate 100 mg + Folic Acid 1.5 mg + Zinc 22.5 mg",
         "pack": "1 x 10 TABLETS",
         "page": 10,
         "image": "/assets/products/faero-xt-tablet.jpg",
         "isFlagship": false,
-        "description": "Faero-XT Tablet is a WHO-GMP certified pharmaceutical formulation featuring Ferrous Ascorbate, Folic Acid and Zinc Sulphate Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Faero-XT Tablet is a WHO-GMP certified pharmaceutical formulation featuring Ferrous Ascorbate, Folic Acid and Zinc Sulphate Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Hematinic & Iron Deficiency Therapy"
       },
       {
         "id": "aerolife-hair-tablet",
@@ -250,12 +266,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Biotin, Calcium D-Pantothenate, Histidine, Cysteine, Copper Iron, Selenium, Niacinamide with Amino Acid Tablet",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Biotin 10 mg + Amino Acids, L-Cysteine, Minerals & Vitamins",
         "pack": "1 x 10 TABLETS",
         "page": 10,
         "image": "/assets/products/aerolife-hair-tablet.jpg",
         "isFlagship": false,
-        "description": "Aerolife Hair Tablet is a WHO-GMP certified pharmaceutical formulation featuring Biotin, Calcium D-Pantothenate, Histidine, Cysteine, Copper Iron, Selenium, Niacinamide with Amino Acid Tablet. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aerolife Hair Tablet is a WHO-GMP certified pharmaceutical formulation featuring Biotin, Calcium D-Pantothenate, Histidine, Cysteine, Copper Iron, Selenium, Niacinamide with Amino Acid Tablet. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Hair, Skin & Nail Nutritional Therapy"
       },
       {
         "id": "aerovit-9g-tablets",
@@ -264,12 +281,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Ginseng, Green Tea Extract, Grape Seed Extract, Ginkgo Biloba, Garlic Powder, Guggul, Ginger Root Extract, Green Coffee Bean Extract, Glycyrrhiza Glabra Extract, Lycopene, Omega-3 Fatty Acids, Essential Amino Acids, Multivitamin, Multimineral, L-Carnitine L-Tartrate & Trace Elements Tablets",
         "dosageForm": "Tablet",
-        "strength": "9G",
+        "strength": "9G Botanical Extracts + Lycopene, Omega-3, Multivitamins & Minerals",
         "pack": "10 x 10 TABLETS",
         "page": 11,
         "image": "/assets/products/aerovit-9g-tablets.jpg",
         "isFlagship": false,
-        "description": "Aerovit 9G Tablets is a WHO-GMP certified pharmaceutical formulation featuring Ginseng, Green Tea Extract, Grape Seed Extract, Ginkgo Biloba, Garlic Powder, Guggul, Ginger Root Extract, Green Coffee Bean Extract, Glycyrrhiza Glabra Extract, Lycopene, Omega-3 Fatty Acids, Essential Amino Acids, Multivitamin, Multimineral, L-Carnitine L-Tartrate & Trace Elements Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aerovit 9G Tablets is a WHO-GMP certified pharmaceutical formulation featuring Ginseng, Green Tea Extract, Grape Seed Extract, Ginkgo Biloba, Garlic Powder, Guggul, Ginger Root Extract, Green Coffee Bean Extract, Glycyrrhiza Glabra Extract, Lycopene, Omega-3 Fatty Acids, Essential Amino Acids, Multivitamin, Multimineral, L-Carnitine L-Tartrate & Trace Elements Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Advanced Multivitamin, Antioxidant & Vitality"
       },
       {
         "id": "frutmax-tablets",
@@ -278,12 +296,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Multivitamin, Multimineral and Antioxidant Tablets",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Fruit Extracts, Multivitamins, Multiminerals & Antioxidants",
         "pack": "10 x 10 TABLETS",
         "page": 11,
         "image": "/assets/products/frutmax-tablets.jpg",
         "isFlagship": false,
-        "description": "FrutMax Tablets is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin, Multimineral and Antioxidant Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "FrutMax Tablets is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin, Multimineral and Antioxidant Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Daily Nutritional Health Supplement"
       },
       {
         "id": "lyaeroboost-tablets",
@@ -292,12 +311,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Lycopene, Vitamins, Minerals & Grape Seed Extract Tablets",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Lycopene 10% 5000 mcg + Multivitamins & Grape Seed Extract",
         "pack": "1 x 10 Tablets",
         "page": 12,
         "image": "/assets/products/lyaeroboost-tablets.jpg",
         "isFlagship": false,
-        "description": "Lyaeroboost Tablets is a WHO-GMP certified pharmaceutical formulation featuring Lycopene, Vitamins, Minerals & Grape Seed Extract Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Lyaeroboost Tablets is a WHO-GMP certified pharmaceutical formulation featuring Lycopene, Vitamins, Minerals & Grape Seed Extract Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Potent Antioxidant & Cardiovascular Vitality"
       },
       {
         "id": "aero-nor-tz-tablets",
@@ -306,12 +326,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Norfloxacin & Tinidazole Tablets",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Norfloxacin 400 mg + Tinidazole 600 mg",
         "pack": "6 x 5 x 6 Tablets",
         "page": 12,
         "image": "/assets/products/aero-nor-tz-tablets.jpg",
         "isFlagship": false,
-        "description": "AERO Nor-TZ Tablets is a WHO-GMP certified pharmaceutical formulation featuring Norfloxacin & Tinidazole Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "AERO Nor-TZ Tablets is a WHO-GMP certified pharmaceutical formulation featuring Norfloxacin & Tinidazole Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Gastrointestinal Antibiotic & Antiprotozoal"
       },
       {
         "id": "doloaero-650-tablets",
@@ -320,12 +341,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Paracetamol Tablets IP 650 mg",
         "dosageForm": "Tablet",
-        "strength": "650 mg",
+        "strength": "Paracetamol 650 mg",
         "pack": "15 x 10 Tablets",
         "page": 13,
         "image": "/assets/products/doloaero-650-tablets.jpg",
         "isFlagship": false,
-        "description": "Doloaero-650 Tablets is a WHO-GMP certified pharmaceutical formulation featuring Paracetamol Tablets IP 650 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Doloaero-650 Tablets is a WHO-GMP certified pharmaceutical formulation featuring Paracetamol Tablets IP 650 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Antipyretic & Analgesic (Fever & Pain)"
       },
       {
         "id": "dicloaero-sp-tablets",
@@ -334,12 +356,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Diclofenac Potassium, Paracetamol & Serratiopeptidase Tablets",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Diclofenac Potassium 50 mg + Paracetamol 325 mg + Serratiopeptidase 10 mg",
         "pack": "20 x 10 TABLETS",
         "page": 13,
         "image": "/assets/products/dicloaero-sp-tablets.jpg",
         "isFlagship": false,
-        "description": "Dicloaero - SP Tablets is a WHO-GMP certified pharmaceutical formulation featuring Diclofenac Potassium, Paracetamol & Serratiopeptidase Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Dicloaero - SP Tablets is a WHO-GMP certified pharmaceutical formulation featuring Diclofenac Potassium, Paracetamol & Serratiopeptidase Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "NSAID Analgesic, Anti-Inflammatory & Anti-Edema"
       },
       {
         "id": "aziaero-250-tablets",
@@ -348,12 +371,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Azithromycin Tablets IP 250 mg",
         "dosageForm": "Tablet",
-        "strength": "250 mg",
+        "strength": "Azithromycin 250 mg",
         "pack": "10 x 6 Tablets",
         "page": 14,
         "image": "/assets/products/aziaero-250-tablets.jpg",
         "isFlagship": false,
-        "description": "AZIAERO 250 Tablets is a WHO-GMP certified pharmaceutical formulation featuring Azithromycin Tablets IP 250 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "AZIAERO 250 Tablets is a WHO-GMP certified pharmaceutical formulation featuring Azithromycin Tablets IP 250 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Macrolide Antibiotic (Respiratory & Soft Tissue)"
       },
       {
         "id": "aziaero-500-tablets",
@@ -362,12 +386,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Azithromycin Tablets IP 500mg",
         "dosageForm": "Tablet",
-        "strength": "500mg",
+        "strength": "Azithromycin 500 mg",
         "pack": "10 x 3 Tablets",
         "page": 14,
         "image": "/assets/products/aziaero-500-tablets.jpg",
         "isFlagship": false,
-        "description": "AZIAERO 500 Tablets is a WHO-GMP certified pharmaceutical formulation featuring Azithromycin Tablets IP 500mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "AZIAERO 500 Tablets is a WHO-GMP certified pharmaceutical formulation featuring Azithromycin Tablets IP 500mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Macrolide Antibiotic (Broad-Spectrum)"
       },
       {
         "id": "mefnaaero-spas-tablets",
@@ -376,12 +401,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Mefenamic Acid & Dicyclomine Tablets (250/20)",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Mefenamic Acid 250 mg + Dicyclomine HCl 20 mg",
         "pack": "30 x 10 Tablets",
         "page": 15,
         "image": "/assets/products/mefnaaero-spas-tablets.jpg",
         "isFlagship": false,
-        "description": "MEFNAAERO SPAS Tablets is a WHO-GMP certified pharmaceutical formulation featuring Mefenamic Acid & Dicyclomine Tablets (250/20). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "MEFNAAERO SPAS Tablets is a WHO-GMP certified pharmaceutical formulation featuring Mefenamic Acid & Dicyclomine Tablets (250/20). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Antispasmodic & Primary Dysmenorrhea Analgesic"
       },
       {
         "id": "ketoaerol-dt-dispersible-tablets",
@@ -390,12 +416,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Ketorolac Tromethamine Dispersible Tablets",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Ketorolac Tromethamine 10 mg (Dispersible)",
         "pack": "10 x 15 Tablets",
         "page": 15,
         "image": "/assets/products/ketoaerol-dt-dispersible-tablets.jpg",
         "isFlagship": false,
-        "description": "Ketoaerol-DT Dispersible Tablets is a WHO-GMP certified pharmaceutical formulation featuring Ketorolac Tromethamine Dispersible Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Ketoaerol-DT Dispersible Tablets is a WHO-GMP certified pharmaceutical formulation featuring Ketorolac Tromethamine Dispersible Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Potent NSAID Analgesic (Post-Operative & Dental)"
       },
       {
         "id": "ketoaerol-dt-tablets",
@@ -404,12 +431,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Ketorolac Tromethamine Tablets IP 10mg",
         "dosageForm": "Tablet",
-        "strength": "10mg",
+        "strength": "Ketorolac Tromethamine 10 mg",
         "pack": "10 x 15 TABLETS",
         "page": 41,
         "image": "/assets/products/ketoaerol-dt-tablets.jpg",
         "isFlagship": false,
-        "description": "KETOAEROL-DT TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Ketorolac Tromethamine Tablets IP 10mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "KETOAEROL-DT TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Ketorolac Tromethamine Tablets IP 10mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Potent Non-Opioid Analgesic"
       },
       {
         "id": "aerovita-c-tablets",
@@ -418,12 +446,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Vitamin C (Ascorbic Acid), Sodium Ascorbate & Zinc Chewable Tablets",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Vitamin C (Ascorbic Acid) 500 mg + Sodium Ascorbate + Zinc 5 mg (Chewable)",
         "pack": "10 x 15 TABLETS",
         "page": 41,
         "image": "/assets/products/aerovita-c-tablets.jpg",
         "isFlagship": false,
-        "description": "AEROVITA C TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Vitamin C (Ascorbic Acid), Sodium Ascorbate & Zinc Chewable Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "AEROVITA C TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Vitamin C (Ascorbic Acid), Sodium Ascorbate & Zinc Chewable Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Immunity Enhancer & Antioxidant Therapy"
       },
       {
         "id": "aeromark-mr-tablets",
@@ -432,12 +461,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Aceclofenac, Paracetamol & Chlorzoxazone Tablets",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Aceclofenac 100 mg + Paracetamol 325 mg + Chlorzoxazone 250 mg",
         "pack": "10 x 10 TABLETS",
         "page": 42,
         "image": "/assets/products/aeromark-mr-tablets.jpg",
         "isFlagship": false,
-        "description": "AEROMARK-MR TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac, Paracetamol & Chlorzoxazone Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "AEROMARK-MR TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac, Paracetamol & Chlorzoxazone Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "NSAID Analgesic & Skeletal Muscle Relaxant"
       },
       {
         "id": "aero-atoz-tablets",
@@ -446,12 +476,13 @@ export const CATEGORIES = [
         "category": "tablets",
         "composition": "Antioxidant, Multivitamin, Multimineral and Vitamin B12 Tablets",
         "dosageForm": "Tablet",
-        "strength": "As per Monograph",
+        "strength": "Multivitamin, Multimineral, Antioxidants + Vitamin B12",
         "pack": "10 x 15 TABLETS",
         "page": 42,
         "image": "/assets/products/aero-atoz-tablets.jpg",
         "isFlagship": false,
-        "description": "AERO AtoZ TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Antioxidant, Multivitamin, Multimineral and Vitamin B12 Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "AERO AtoZ TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Antioxidant, Multivitamin, Multimineral and Vitamin B12 Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Therapeutic Micronutrient Formulation"
       }
     ],
     "count": 31
@@ -476,12 +507,13 @@ export const CATEGORIES = [
         "category": "capsules",
         "composition": "Itraconazole Capsules 100 mg",
         "dosageForm": "Capsule",
-        "strength": "100 mg",
+        "strength": "Itraconazole 100 mg (Pellet Technology)",
         "pack": "10 x 10 Capsules",
         "page": 17,
         "image": "/assets/products/itraaero-100-capsules.jpg",
         "isFlagship": true,
-        "description": "ITRAAERO 100 Capsules is a WHO-GMP certified pharmaceutical formulation featuring Itraconazole Capsules 100 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "ITRAAERO 100 Capsules is a WHO-GMP certified pharmaceutical formulation featuring Itraconazole Capsules 100 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Broad-Spectrum Triazole Antifungal"
       },
       {
         "id": "itraero-200-capsules",
@@ -490,12 +522,13 @@ export const CATEGORIES = [
         "category": "capsules",
         "composition": "Itraconazole Capsules 200 mg",
         "dosageForm": "Capsule",
-        "strength": "200 mg",
+        "strength": "Itraconazole 200 mg (Pellet Technology)",
         "pack": "10 x 10 Capsules",
         "page": 17,
         "image": "/assets/products/itraero-200.jpg",
         "isFlagship": true,
-        "description": "ITRAERO 200 Capsules is a WHO-GMP certified pharmaceutical formulation featuring Itraconazole Capsules 200 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "ITRAERO 200 Capsules is a WHO-GMP certified pharmaceutical formulation featuring Itraconazole Capsules 200 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Broad-Spectrum Triazole Antifungal"
       },
       {
         "id": "omefist-20-capsules",
@@ -504,12 +537,13 @@ export const CATEGORIES = [
         "category": "capsules",
         "composition": "Omeprazole Capsules IP 20 mg",
         "dosageForm": "Capsule",
-        "strength": "20 mg",
+        "strength": "Omeprazole 20 mg (Enteric-Coated Pellets)",
         "pack": "20 x 15 Capsules",
         "page": 18,
         "image": "/assets/products/omefist-20-capsules.jpg",
         "isFlagship": false,
-        "description": "OMEFIST 20 Capsules is a WHO-GMP certified pharmaceutical formulation featuring Omeprazole Capsules IP 20 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "OMEFIST 20 Capsules is a WHO-GMP certified pharmaceutical formulation featuring Omeprazole Capsules IP 20 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Proton Pump Inhibitor (Acid Reducer)"
       },
       {
         "id": "omefist-d-capsules",
@@ -518,12 +552,13 @@ export const CATEGORIES = [
         "category": "capsules",
         "composition": "Omeprazole Domperidone Capsules IP",
         "dosageForm": "Capsule",
-        "strength": "As per Monograph",
+        "strength": "Omeprazole 20 mg + Domperidone 10 mg",
         "pack": "20 x 15 Capsules",
         "page": 18,
         "image": "/assets/products/omefist-d.jpg",
         "isFlagship": false,
-        "description": "OMEFIST D Capsules is a WHO-GMP certified pharmaceutical formulation featuring Omeprazole Domperidone Capsules IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "OMEFIST D Capsules is a WHO-GMP certified pharmaceutical formulation featuring Omeprazole Domperidone Capsules IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Antacid & Prokinetic (GERD & Dyspepsia)"
       },
       {
         "id": "raika-dsr-capsules",
@@ -532,12 +567,13 @@ export const CATEGORIES = [
         "category": "capsules",
         "composition": "Pantoprazole Gastro-resistant And Domperidone Prolonged-release Capsules IP",
         "dosageForm": "Capsule",
-        "strength": "As per Monograph",
+        "strength": "Pantoprazole 40 mg + Domperidone 30 mg SR",
         "pack": "10 x 10 Capsules",
         "page": 19,
         "image": "/assets/products/raika-dsr-capsules.jpg",
         "isFlagship": true,
-        "description": "RAIKA - DSR Capsules is a WHO-GMP certified pharmaceutical formulation featuring Pantoprazole Gastro-resistant And Domperidone Prolonged-release Capsules IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "RAIKA - DSR Capsules is a WHO-GMP certified pharmaceutical formulation featuring Pantoprazole Gastro-resistant And Domperidone Prolonged-release Capsules IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Sustained-Release PPI & Antiemetic"
       },
       {
         "id": "aeromox-500-capsules",
@@ -546,12 +582,13 @@ export const CATEGORIES = [
         "category": "capsules",
         "composition": "Amoxycillin Capsules I.P.",
         "dosageForm": "Capsule",
-        "strength": "As per Monograph",
+        "strength": "Amoxycillin Trihydrate 500 mg",
         "pack": "20 x 10 CAPSULES",
         "page": 19,
         "image": "/assets/products/aeromox-500.jpg",
         "isFlagship": true,
-        "description": "AEROMOX - 500 CAPSULES is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin Capsules I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "AEROMOX - 500 CAPSULES is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin Capsules I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Broad-Spectrum Beta-Lactam Antibiotic"
       },
       {
         "id": "evaero-400-capsules",
@@ -560,12 +597,13 @@ export const CATEGORIES = [
         "category": "capsules",
         "composition": "Vitamin E Softgel Capsules (Health Supplement)",
         "dosageForm": "Capsule",
-        "strength": "As per Monograph",
+        "strength": "Vitamin E (d-alpha Tocopherol) 400 mg",
         "pack": "20 x 10 Capsules",
         "page": 20,
         "image": "/assets/products/evaero-400-capsules.jpg",
         "isFlagship": false,
-        "description": "EVAERO - 400 Capsules is a WHO-GMP certified pharmaceutical formulation featuring Vitamin E Softgel Capsules (Health Supplement). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "EVAERO - 400 Capsules is a WHO-GMP certified pharmaceutical formulation featuring Vitamin E Softgel Capsules (Health Supplement). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Antioxidant & Skin / Cellular Protection"
       },
       {
         "id": "aerogut-pro-capsule",
@@ -574,12 +612,13 @@ export const CATEGORIES = [
         "category": "capsules",
         "composition": "Pre and Probiotic Capsule",
         "dosageForm": "Capsule",
-        "strength": "As per Monograph",
+        "strength": "Prebiotic & Probiotic Complex (Multi-Strain 2.5 Billion CFU)",
         "pack": "1 x 10 Capsules",
         "page": 20,
         "image": "/assets/products/aerogut-pro-capsule.jpg",
         "isFlagship": false,
-        "description": "Aerogut-Pro Capsule is a WHO-GMP certified pharmaceutical formulation featuring Pre and Probiotic Capsule. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aerogut-Pro Capsule is a WHO-GMP certified pharmaceutical formulation featuring Pre and Probiotic Capsule. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Gastrointestinal Microflora & Digestive Health"
       },
       {
         "id": "arshon-capsule",
@@ -588,12 +627,13 @@ export const CATEGORIES = [
         "category": "capsules",
         "composition": "Ayurvedic Prop. Medicine for Piles",
         "dosageForm": "Capsule",
-        "strength": "As per Monograph",
+        "strength": "Standardized Ayurvedic Herbal Hemorrhoidal Formula",
         "pack": "1 x 30 Capsules",
         "page": 21,
         "image": "/assets/products/arshon-capsule.jpg",
         "isFlagship": false,
-        "description": "Arshon Capsule is a WHO-GMP certified pharmaceutical formulation featuring Ayurvedic Prop. Medicine for Piles. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Arshon Capsule is a WHO-GMP certified pharmaceutical formulation featuring Ayurvedic Prop. Medicine for Piles. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Anorectal Care & Piles Therapy"
       },
       {
         "id": "aeroflex-c-capsules",
@@ -602,12 +642,13 @@ export const CATEGORIES = [
         "category": "capsules",
         "composition": "Rosehip Extract, Boswellia Serrata & Vitamin C Capsules",
         "dosageForm": "Capsule",
-        "strength": "As per Monograph",
+        "strength": "Rosehip Extract 250 mg + Boswellia Serrata 300 mg + Vitamin C 40 mg",
         "pack": "30 CAPSULES",
         "page": 43,
         "image": "/assets/products/aeroflex-c-capsules.jpg",
         "isFlagship": false,
-        "description": "AEROFLEX-C CAPSULES is a WHO-GMP certified pharmaceutical formulation featuring Rosehip Extract, Boswellia Serrata & Vitamin C Capsules. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "AEROFLEX-C CAPSULES is a WHO-GMP certified pharmaceutical formulation featuring Rosehip Extract, Boswellia Serrata & Vitamin C Capsules. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Joint Mobility & Cartilage Support"
       }
     ],
     "count": 10
@@ -633,12 +674,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Dextromethorphan Hydrobromide, Ambroxol Hydrochloride, Chlorpheniramine Maleate, Phenylephrine Hydrochloride & Menthol Syrup",
         "dosageForm": "Liquid Oral",
-        "strength": "As per Monograph",
+        "strength": "Dextromethorphan 10mg + Ambroxol 15mg + CPM 2mg + Phenylephrine 5mg + Menthol / 5ml",
         "pack": "100ML",
         "page": 16,
         "image": "/assets/products/aerocof-supar-syrup-sugar-free.jpg",
         "isFlagship": false,
-        "description": "Aerocof Supar Syrup (Sugar Free) is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Ambroxol Hydrochloride, Chlorpheniramine Maleate, Phenylephrine Hydrochloride & Menthol Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aerocof Supar Syrup (Sugar Free) is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Ambroxol Hydrochloride, Chlorpheniramine Maleate, Phenylephrine Hydrochloride & Menthol Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Sugar-Free Comprehensive Expectorant & Cough Syrup"
       },
       {
         "id": "mefnaaero-ds-suspension",
@@ -647,12 +689,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Mefenamic Acid & Paracetamol Suspension",
         "dosageForm": "Liquid Oral",
-        "strength": "As per Monograph",
+        "strength": "Mefenamic Acid 100 mg + Paracetamol 250 mg / 5ml",
         "pack": "60ml",
         "page": 26,
         "image": "/assets/products/mefnaaero-ds-suspension.jpg",
         "isFlagship": false,
-        "description": "Mefnaaero - DS Suspension is a WHO-GMP certified pharmaceutical formulation featuring Mefenamic Acid & Paracetamol Suspension. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Mefnaaero - DS Suspension is a WHO-GMP certified pharmaceutical formulation featuring Mefenamic Acid & Paracetamol Suspension. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Pediatric Analgesic, Antipyretic & Anti-Inflammatory"
       },
       {
         "id": "ofloaero-oz-suspension",
@@ -661,12 +704,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Ofloxacin with Metronidazole Suspension",
         "dosageForm": "Liquid Oral",
-        "strength": "As per Monograph",
+        "strength": "Ofloxacin 50 mg + Metronidazole 100 mg / 5ml",
         "pack": "60ml",
         "page": 26,
         "image": "/assets/products/ofloaero-oz-suspension.jpg",
         "isFlagship": false,
-        "description": "OFLOAERO-OZ Suspension is a WHO-GMP certified pharmaceutical formulation featuring Ofloxacin with Metronidazole Suspension. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "OFLOAERO-OZ Suspension is a WHO-GMP certified pharmaceutical formulation featuring Ofloxacin with Metronidazole Suspension. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Pediatric Gastrointestinal Antimicrobial & Antiprotozoal"
       },
       {
         "id": "aerocof-dx-pd-suspension",
@@ -675,12 +719,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Dextromethorphan Hydrobromide, Bromhexine Hydrochloride, Phenylephrine Hydrochloride & Menthol",
         "dosageForm": "Liquid Oral",
-        "strength": "As per Monograph",
+        "strength": "Dextromethorphan 5mg + Bromhexine 4mg + Phenylephrine 2.5mg + Menthol / 5ml",
         "pack": "60 ml",
         "page": 27,
         "image": "/assets/products/aerocof-dx-pd-suspension.jpg",
         "isFlagship": false,
-        "description": "Aerocof - DX PD Suspension is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Bromhexine Hydrochloride, Phenylephrine Hydrochloride & Menthol. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aerocof - DX PD Suspension is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Bromhexine Hydrochloride, Phenylephrine Hydrochloride & Menthol. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Pediatric Cough & Mucolytic Suspension"
       },
       {
         "id": "aerocof-ls-junior",
@@ -689,12 +734,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Levosalbutamol Sulphate, Ambroxol Hydrochloride, Guaiphenesin, Expectorant",
         "dosageForm": "Formulation",
-        "strength": "As per Monograph",
+        "strength": "Levosalbutamol 0.5 mg + Ambroxol 15 mg + Guaiphenesin 50 mg / 5ml",
         "pack": "60 ml",
         "page": 27,
         "image": "/assets/products/aerocof-ls-junior.jpg",
         "isFlagship": false,
-        "description": "Aerocof - LS JUNIOR is a WHO-GMP certified pharmaceutical formulation featuring Levosalbutamol Sulphate, Ambroxol Hydrochloride, Guaiphenesin, Expectorant. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aerocof - LS JUNIOR is a WHO-GMP certified pharmaceutical formulation featuring Levosalbutamol Sulphate, Ambroxol Hydrochloride, Guaiphenesin, Expectorant. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Pediatric Bronchodilator & Mucokinetic Expectorant"
       },
       {
         "id": "levoflak-m-syrup",
@@ -703,12 +749,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Levocetirizine DiHCL & Montelukast Sodium Syrup",
         "dosageForm": "Liquid Oral",
-        "strength": "As per Monograph",
+        "strength": "Levocetirizine DiHCl 2.5 mg + Montelukast Sodium 4 mg / 5ml",
         "pack": "60 ml",
         "page": 28,
         "image": "/assets/products/levoflak-m-syrup.jpg",
         "isFlagship": true,
-        "description": "Levoflak-M Syrup is a WHO-GMP certified pharmaceutical formulation featuring Levocetirizine DiHCL & Montelukast Sodium Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Levoflak-M Syrup is a WHO-GMP certified pharmaceutical formulation featuring Levocetirizine DiHCL & Montelukast Sodium Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Pediatric Anti-Allergic & Asthma Prophylaxis"
       },
       {
         "id": "ibutrap-suspension",
@@ -717,12 +764,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Ibuprofen & Paracetamol Suspension",
         "dosageForm": "Liquid Oral",
-        "strength": "As per Monograph",
+        "strength": "Ibuprofen 100 mg + Paracetamol 162.5 mg / 5ml",
         "pack": "60 ml",
         "page": 29,
         "image": "/assets/products/ibutrap-suspension.jpg",
         "isFlagship": false,
-        "description": "IBUTRAP Suspension is a WHO-GMP certified pharmaceutical formulation featuring Ibuprofen & Paracetamol Suspension. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "IBUTRAP Suspension is a WHO-GMP certified pharmaceutical formulation featuring Ibuprofen & Paracetamol Suspension. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Pediatric Analgesic & Antipyretic Suspension"
       },
       {
         "id": "osoaero-solution",
@@ -731,12 +779,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Solution of Lactulose & Licorice",
         "dosageForm": "Liquid Oral",
-        "strength": "As per Monograph",
+        "strength": "Lactulose Solution 10 g + Licorice Extract / 15ml",
         "pack": "100 ml",
         "page": 29,
         "image": "/assets/products/osoaero-solution.jpg",
         "isFlagship": false,
-        "description": "OSOAERO Solution is a WHO-GMP certified pharmaceutical formulation featuring Solution of Lactulose & Licorice. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "OSOAERO Solution is a WHO-GMP certified pharmaceutical formulation featuring Solution of Lactulose & Licorice. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Osmotic Laxative & Hepatic Support Solution"
       },
       {
         "id": "aerocof-dx-plus-cough-syrup",
@@ -745,12 +794,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Guaiphenesin, Dextromethorphan Hydrobromide, Phenylephrine Hydrochloride & Chlorpheniramine Maleate",
         "dosageForm": "Liquid Oral",
-        "strength": "As per Monograph",
+        "strength": "Dextromethorphan 10mg + Guaiphenesin 100mg + Phenylephrine 5mg + CPM 2mg / 5ml",
         "pack": "100 ml",
         "page": 30,
         "image": "/assets/products/aerocof-dx-plus-cough-syrup.jpg",
         "isFlagship": false,
-        "description": "Aerocof - DX PLUS Cough Syrup is a WHO-GMP certified pharmaceutical formulation featuring Guaiphenesin, Dextromethorphan Hydrobromide, Phenylephrine Hydrochloride & Chlorpheniramine Maleate. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aerocof - DX PLUS Cough Syrup is a WHO-GMP certified pharmaceutical formulation featuring Guaiphenesin, Dextromethorphan Hydrobromide, Phenylephrine Hydrochloride & Chlorpheniramine Maleate. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Advanced Formula Expectorant & Cough Syrup"
       },
       {
         "id": "aerocof-a-syrup-expectorant",
@@ -759,12 +809,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Ambroxol Hydrochloride, Guaiphenesin, Terbutaline Sulphate and Menthol Syrup",
         "dosageForm": "Liquid Oral",
-        "strength": "As per Monograph",
+        "strength": "Ambroxol 15mg + Guaiphenesin 50mg + Terbutaline 1.25mg + Menthol / 5ml",
         "pack": "100 ml",
         "page": 30,
         "image": "/assets/products/aerocof-a-syrup-expectorant.jpg",
         "isFlagship": false,
-        "description": "Aerocof - A Syrup EXPECTORANT is a WHO-GMP certified pharmaceutical formulation featuring Ambroxol Hydrochloride, Guaiphenesin, Terbutaline Sulphate and Menthol Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aerocof - A Syrup EXPECTORANT is a WHO-GMP certified pharmaceutical formulation featuring Ambroxol Hydrochloride, Guaiphenesin, Terbutaline Sulphate and Menthol Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Bronchodilator & Mucolytic Expectorant Syrup"
       },
       {
         "id": "aerocof-ls-cough-syrup",
@@ -773,12 +824,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Levosalbutamol Sulphate, Ambroxol Hydrochloride, & Guaiphenesin Expectorant",
         "dosageForm": "Liquid Oral",
-        "strength": "As per Monograph",
+        "strength": "Levosalbutamol 1 mg + Ambroxol 30 mg + Guaiphenesin 50 mg / 5ml",
         "pack": "100ml",
         "page": 31,
         "image": "/assets/products/aerocof-ls-cough-syrup.jpg",
         "isFlagship": false,
-        "description": "Aerocof-LS Cough Syrup is a WHO-GMP certified pharmaceutical formulation featuring Levosalbutamol Sulphate, Ambroxol Hydrochloride, & Guaiphenesin Expectorant. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aerocof-LS Cough Syrup is a WHO-GMP certified pharmaceutical formulation featuring Levosalbutamol Sulphate, Ambroxol Hydrochloride, & Guaiphenesin Expectorant. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Triple-Action Mucolytic & Bronchodilator Syrup"
       },
       {
         "id": "aerocof-bd-couch-syrup-sugar-free",
@@ -787,12 +839,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Dextromethorphan Hydrobromide, Bromhexine Hydrochloride, Phenylephrine Hydrochloride & Menthol",
         "dosageForm": "Liquid Oral",
-        "strength": "As per Monograph",
+        "strength": "Bromhexine 4mg + Dextromethorphan 10mg + Phenylephrine 5mg + Menthol / 5ml",
         "pack": "100 ml",
         "page": 31,
         "image": "/assets/products/aerocof-bd-couch-syrup-sugar-free.jpg",
         "isFlagship": false,
-        "description": "Aerocof-BD Couch Syrup SUGAR FREE is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Bromhexine Hydrochloride, Phenylephrine Hydrochloride & Menthol. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aerocof-BD Couch Syrup SUGAR FREE is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Bromhexine Hydrochloride, Phenylephrine Hydrochloride & Menthol. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Sugar-Free Mucolytic & Decongestant Syrup"
       },
       {
         "id": "aerocof-dx-dry-cough-syrup",
@@ -801,12 +854,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Dextromethorphan Hydrobromide, Phenylephrine hydrochloride & Chlorpheniramine Maleate",
         "dosageForm": "Liquid Oral",
-        "strength": "As per Monograph",
+        "strength": "Dextromethorphan HBr 15 mg + Phenylephrine HCl 10 mg + Chlorpheniramine Maleate 2 mg / 5ml",
         "pack": "100 ml",
         "page": 32,
         "image": "/assets/products/aerocof-dx-dry-cough-syrup.jpg",
         "isFlagship": false,
-        "description": "Aerocof-DX Dry Cough Syrup is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Phenylephrine hydrochloride & Chlorpheniramine Maleate. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aerocof-DX Dry Cough Syrup is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Phenylephrine hydrochloride & Chlorpheniramine Maleate. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Dry Cough Suppressant & Antihistaminic Syrup"
       },
       {
         "id": "aerocain-o-gel-anesthetic-antacid",
@@ -815,12 +869,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Oxetacaine, Dried Aluminium Hydroxide Gel, Magnesium Hydroxide, Simethicone, Deglycyrrhizinated Liquorice",
         "dosageForm": "Liquid Oral",
-        "strength": "As per Monograph",
+        "strength": "Oxetacaine 10mg + Aluminium Hydroxide 0.291g + Magnesium Hydroxide 98mg + Simethicone 25mg / 5ml",
         "pack": "170ML",
         "page": 32,
         "image": "/assets/products/aerocain-o-gel-anesthetic-antacid.jpg",
         "isFlagship": false,
-        "description": "AEROCAIN-O GEL (Anesthetic Antacid) is a WHO-GMP certified pharmaceutical formulation featuring Oxetacaine, Dried Aluminium Hydroxide Gel, Magnesium Hydroxide, Simethicone, Deglycyrrhizinated Liquorice. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "AEROCAIN-O GEL (Anesthetic Antacid) is a WHO-GMP certified pharmaceutical formulation featuring Oxetacaine, Dried Aluminium Hydroxide Gel, Magnesium Hydroxide, Simethicone, Deglycyrrhizinated Liquorice. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Local Anesthetic & High-Potency Antacid Gel"
       },
       {
         "id": "aerovit-gold-syrup",
@@ -829,12 +884,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Multivitamin, Multimineral with Astaxanthin Syrup (Nutraceutical)",
         "dosageForm": "Liquid Oral",
-        "strength": "As per Monograph",
+        "strength": "Astaxanthin 5% + Lycopene + Multivitamins (B-Complex, A, C, E) & Minerals / 5ml",
         "pack": "200 ml",
         "page": 33,
         "image": "/assets/products/aerovit-gold-syrup.jpg",
         "isFlagship": false,
-        "description": "Aerovit Gold Syrup is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin, Multimineral with Astaxanthin Syrup (Nutraceutical). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aerovit Gold Syrup is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin, Multimineral with Astaxanthin Syrup (Nutraceutical). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Premium Antioxidant, Multivitamin & Energy Tonic"
       },
       {
         "id": "aerogro-syrup",
@@ -843,12 +899,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Cyproheptadine Hydrochloride And Tricholine Citrate Syrup",
         "dosageForm": "Liquid Oral",
-        "strength": "As per Monograph",
+        "strength": "Cyproheptadine HCl 2 mg + Tricholine Citrate 275 mg / 5ml",
         "pack": "200 ml",
         "page": 33,
         "image": "/assets/products/aerogro-syrup.jpg",
         "isFlagship": false,
-        "description": "AEROGRO Syrup is a WHO-GMP certified pharmaceutical formulation featuring Cyproheptadine Hydrochloride And Tricholine Citrate Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "AEROGRO Syrup is a WHO-GMP certified pharmaceutical formulation featuring Cyproheptadine Hydrochloride And Tricholine Citrate Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Appetite Stimulant & Hepatic Metabolic Tonic"
       },
       {
         "id": "aeroliv-syrup",
@@ -857,12 +914,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Silymarine, B - Complex with Enzyme (Nutritional Food Supplement)",
         "dosageForm": "Liquid Oral",
-        "strength": "As per Monograph",
+        "strength": "Silymarin 35mg + Vitamin B-Complex with Digestive Enzymes / 5ml",
         "pack": "200 ml",
         "page": 34,
         "image": "/assets/products/aeroliv-syrup.jpg",
         "isFlagship": true,
-        "description": "Aeroliv Syrup is a WHO-GMP certified pharmaceutical formulation featuring Silymarine, B - Complex with Enzyme (Nutritional Food Supplement). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aeroliv Syrup is a WHO-GMP certified pharmaceutical formulation featuring Silymarine, B - Complex with Enzyme (Nutritional Food Supplement). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Hepato-Protective & Liver Regenerative Tonic"
       },
       {
         "id": "aerozinc-syrup",
@@ -871,12 +929,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Multivitamin & Multiminerals Syrup",
         "dosageForm": "Liquid Oral",
-        "strength": "As per Monograph",
+        "strength": "Multivitamins + Essential Trace Minerals & Zinc 10 mg / 5ml",
         "pack": "200 ml",
         "page": 34,
         "image": "/assets/products/aerozinc-syrup.jpg",
         "isFlagship": true,
-        "description": "Aerozinc+ Syrup is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin & Multiminerals Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aerozinc+ Syrup is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin & Multiminerals Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Pediatric & Adult Zinc Micronutrient Supplement"
       },
       {
         "id": "multi-vitamin-syrup-immune-booster",
@@ -885,12 +944,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Multivitamin, Multimineral with Lycopene, L-Lysine, Vitamin B12 & Antioxidant Syrup",
         "dosageForm": "Liquid Oral",
-        "strength": "As per Monograph",
+        "strength": "Multivitamin, Multimineral with Lycopene, L-Lysine & Vitamin B12 / 5ml",
         "pack": "200 ml",
         "page": 36,
         "image": "/assets/products/multi-vitamin-syrup-immune-booster.jpg",
         "isFlagship": false,
-        "description": "MULTI VITAMIN Syrup (Immune Booster) is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin, Multimineral with Lycopene, L-Lysine, Vitamin B12 & Antioxidant Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "MULTI VITAMIN Syrup (Immune Booster) is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin, Multimineral with Lycopene, L-Lysine, Vitamin B12 & Antioxidant Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Comprehensive Immunity Booster & Vitality Syrup"
       },
       {
         "id": "coldaero-ds-suspension",
@@ -899,12 +959,13 @@ export const CATEGORIES = [
         "category": "syrups",
         "composition": "Paracetamol, Chlorpheniramine Maleate & Phenylephrine HCL Suspension",
         "dosageForm": "Liquid Oral",
-        "strength": "As per Monograph",
+        "strength": "Paracetamol 250 mg + Phenylephrine HCl 5 mg + Chlorpheniramine Maleate 2 mg / 5ml",
         "pack": "60 ml",
         "page": 43,
         "image": "/assets/products/coldaero-ds-suspension.jpg",
         "isFlagship": false,
-        "description": "COLDAERO-DS Suspension is a WHO-GMP certified pharmaceutical formulation featuring Paracetamol, Chlorpheniramine Maleate & Phenylephrine HCL Suspension. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "COLDAERO-DS Suspension is a WHO-GMP certified pharmaceutical formulation featuring Paracetamol, Chlorpheniramine Maleate & Phenylephrine HCL Suspension. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Double-Strength Pediatric Cold & Antipyretic Suspension"
       }
     ],
     "count": 20
@@ -930,12 +991,13 @@ export const CATEGORIES = [
         "category": "dry-syrups",
         "composition": "Amoxycillin & Potassium Clavulanate Oral Suspension I.P.",
         "dosageForm": "Dry Syrup",
-        "strength": "As per Monograph",
+        "strength": "Amoxycillin 200 mg + Potassium Clavulanate 28.5 mg / 5ml (30 ml)",
         "pack": "3.3gm / 30ml",
         "page": 25,
         "image": "/assets/products/clavaero-cv-dry-syrup.jpg",
         "isFlagship": true,
-        "description": "Clavaero-CV Dry Syrup is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin & Potassium Clavulanate Oral Suspension I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Clavaero-CV Dry Syrup is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin & Potassium Clavulanate Oral Suspension I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Pediatric Broad-Spectrum Antibiotic Oral Suspension"
       },
       {
         "id": "clavaero-cv-dds-dry-syrup",
@@ -944,12 +1006,13 @@ export const CATEGORIES = [
         "category": "dry-syrups",
         "composition": "Amoxycillin & Potassium Clavulanate Oral Suspension I.P. (Double Strength)",
         "dosageForm": "Dry Syrup",
-        "strength": "As per Monograph",
+        "strength": "Amoxycillin 400 mg + Potassium Clavulanate 57 mg / 5ml (Double Strength - 30 ml)",
         "pack": "6.6gm / 30ml",
         "page": 25,
         "image": "/assets/products/clavaero-cv-dds-dry-syrup.jpg",
         "isFlagship": true,
-        "description": "Clavaero-CV DDS Dry Syrup is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin & Potassium Clavulanate Oral Suspension I.P. (Double Strength). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Clavaero-CV DDS Dry Syrup is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin & Potassium Clavulanate Oral Suspension I.P. (Double Strength). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Pediatric High-Dose Antibiotic Oral Suspension"
       },
       {
         "id": "aerofol-z-dry-syrup",
@@ -958,12 +1021,13 @@ export const CATEGORIES = [
         "category": "dry-syrups",
         "composition": "Lactic Acid Bacillus, Niacinamide, Folic Acid, Pyridoxine & Zinc Dry Syrup",
         "dosageForm": "Dry Syrup",
-        "strength": "As per Monograph",
+        "strength": "Lactic Acid Bacillus 60M spores + Niacinamide 15mg + Folic Acid 100mcg + Zinc 10mg / 5ml",
         "pack": "60 ml",
         "page": 28,
         "image": "/assets/products/aerofol-z.jpg",
         "isFlagship": true,
-        "description": "Aerofol - Z Dry Syrup is a WHO-GMP certified pharmaceutical formulation featuring Lactic Acid Bacillus, Niacinamide, Folic Acid, Pyridoxine & Zinc Dry Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aerofol - Z Dry Syrup is a WHO-GMP certified pharmaceutical formulation featuring Lactic Acid Bacillus, Niacinamide, Folic Acid, Pyridoxine & Zinc Dry Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Pediatric Probiotic & Micronutrient Restoration"
       }
     ],
     "count": 3
@@ -989,12 +1053,13 @@ export const CATEGORIES = [
         "category": "creams",
         "composition": "Ofloxacin, Ornidazole, Itraconazole & Clobetasol Propionate Cream",
         "dosageForm": "Cream",
-        "strength": "As per Monograph",
+        "strength": "Ofloxacin 0.75% + Ornidazole 2% + Itraconazole 1% + Clobetasol Propionate 0.05% w/w",
         "pack": "Pack 20 X 15 gm",
         "page": 35,
         "image": "/assets/products/aeromax-oc-cream.jpg",
         "isFlagship": false,
-        "description": "AEROMAX-OC CREAM is a WHO-GMP certified pharmaceutical formulation featuring Ofloxacin, Ornidazole, Itraconazole & Clobetasol Propionate Cream. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "AEROMAX-OC CREAM is a WHO-GMP certified pharmaceutical formulation featuring Ofloxacin, Ornidazole, Itraconazole & Clobetasol Propionate Cream. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Broad-Spectrum Antimicrobial, Antifungal & Anti-Inflammatory Cream"
       },
       {
         "id": "aeroford-k6-cream",
@@ -1003,12 +1068,13 @@ export const CATEGORIES = [
         "category": "creams",
         "composition": "Ketoconazole, Iodochlorhydroxyquinoline, Tolnaftate, Neomycin, Clobetasol Propionate & Dexpanthenol Cream",
         "dosageForm": "Cream",
-        "strength": "As per Monograph",
+        "strength": "Ketoconazole 2% + Iodochlorhydroxyquinoline 1% + Tolnaftate 1% + Neomycin 0.1% + Clobetasol 0.05% + Dexpanthenol 0.5%",
         "pack": "15 gm",
         "page": 35,
         "image": "/assets/products/aeroford-k6-cream.jpg",
         "isFlagship": false,
-        "description": "Aeroford-K6 Cream is a WHO-GMP certified pharmaceutical formulation featuring Ketoconazole, Iodochlorhydroxyquinoline, Tolnaftate, Neomycin, Clobetasol Propionate & Dexpanthenol Cream. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aeroford-K6 Cream is a WHO-GMP certified pharmaceutical formulation featuring Ketoconazole, Iodochlorhydroxyquinoline, Tolnaftate, Neomycin, Clobetasol Propionate & Dexpanthenol Cream. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Hexa-Action Dermatological Therapy (Anti-Fungal & Anti-Bacterial)"
       },
       {
         "id": "aerodaine-ointment",
@@ -1017,12 +1083,13 @@ export const CATEGORIES = [
         "category": "creams",
         "composition": "Povidone-Iodine Ointment USP 5% w/w",
         "dosageForm": "Ointment",
-        "strength": "As per Monograph",
+        "strength": "Povidone-Iodine USP 5% w/w",
         "pack": "15 gm",
         "page": 37,
         "image": "/assets/products/aerodaine-ointment.jpg",
         "isFlagship": false,
-        "description": "AERODAINE Ointment is a WHO-GMP certified pharmaceutical formulation featuring Povidone-Iodine Ointment USP 5% w/w. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "AERODAINE Ointment is a WHO-GMP certified pharmaceutical formulation featuring Povidone-Iodine Ointment USP 5% w/w. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Topical Microbicidal Antiseptic & Wound Care Ointment"
       },
       {
         "id": "clobiaero-plus-cream",
@@ -1031,12 +1098,13 @@ export const CATEGORIES = [
         "category": "creams",
         "composition": "Ciprofloxacin HCl, Metronidazole, Terbinafine HCl & Clobetasol Propionate Cream",
         "dosageForm": "Cream",
-        "strength": "As per Monograph",
+        "strength": "Ciprofloxacin HCl 0.5% + Metronidazole 1% + Terbinafine HCl 1% + Clobetasol Propionate 0.05% w/w",
         "pack": "15 gm",
         "page": 37,
         "image": "/assets/products/clobiaero-plus-cream.jpg",
         "isFlagship": false,
-        "description": "Clobiaero Plus Cream is a WHO-GMP certified pharmaceutical formulation featuring Ciprofloxacin HCl, Metronidazole, Terbinafine HCl & Clobetasol Propionate Cream. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Clobiaero Plus Cream is a WHO-GMP certified pharmaceutical formulation featuring Ciprofloxacin HCl, Metronidazole, Terbinafine HCl & Clobetasol Propionate Cream. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Broad-Spectrum Antibacterial, Antiprotozoal & Antifungal Cream"
       },
       {
         "id": "rabbari-gel",
@@ -1045,12 +1113,13 @@ export const CATEGORIES = [
         "category": "creams",
         "composition": "Diclofenac Diethylamine, Linseed Oil, Methyl Salicylate & Menthol Gel",
         "dosageForm": "Gel",
-        "strength": "As per Monograph",
+        "strength": "Diclofenac Diethylamine 1.16% + Linseed Oil 3% + Methyl Salicylate 10% + Menthol 5% w/w",
         "pack": "30 gm",
         "page": 38,
         "image": "/assets/products/rabbari-gel.jpg",
         "isFlagship": true,
-        "description": "RABBARI GEL is a WHO-GMP certified pharmaceutical formulation featuring Diclofenac Diethylamine, Linseed Oil, Methyl Salicylate & Menthol Gel. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "RABBARI GEL is a WHO-GMP certified pharmaceutical formulation featuring Diclofenac Diethylamine, Linseed Oil, Methyl Salicylate & Menthol Gel. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Topical NSAID Analgesic & Musculoskeletal Pain Reliever Gel"
       },
       {
         "id": "luliaero-cream",
@@ -1059,12 +1128,13 @@ export const CATEGORIES = [
         "category": "creams",
         "composition": "Luliconazole Cream IP 1% w/w",
         "dosageForm": "Cream",
-        "strength": "As per Monograph",
+        "strength": "Luliconazole IP 1% w/w",
         "pack": "30 gm",
         "page": 38,
         "image": "/assets/products/luliaero-cream.jpg",
         "isFlagship": true,
-        "description": "Luliaero Cream is a WHO-GMP certified pharmaceutical formulation featuring Luliconazole Cream IP 1% w/w. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Luliaero Cream is a WHO-GMP certified pharmaceutical formulation featuring Luliconazole Cream IP 1% w/w. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "High-Efficacy Imidazole Antifungal Cream (Tinea & Dermatomycoses)"
       }
     ],
     "count": 6
@@ -1090,12 +1160,13 @@ export const CATEGORIES = [
         "category": "powders",
         "composition": "Oral Rehydration Salts 21.8 g (W.H.O. Recommended Formula)",
         "dosageForm": "Powder",
-        "strength": "8 g",
+        "strength": "Sodium Chloride 2.6g + Potassium Chloride 1.5g + Sodium Citrate 2.9g + Dextrose 13.5g (Total 21.8g Sachet)",
         "pack": "30 PCS",
         "page": 9,
         "image": "/assets/products/electroaero-oral-rehydration-salts-21-8-g.jpg",
         "isFlagship": false,
-        "description": "ELECTROAERO Oral Rehydration Salts 21.8 g is a WHO-GMP certified pharmaceutical formulation featuring Oral Rehydration Salts 21.8 g (W.H.O. Recommended Formula). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "ELECTROAERO Oral Rehydration Salts 21.8 g is a WHO-GMP certified pharmaceutical formulation featuring Oral Rehydration Salts 21.8 g (W.H.O. Recommended Formula). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "WHO Recommended Low-Osmolarity Oral Electrolyte Replacement"
       },
       {
         "id": "clotriaero-dusting-powder",
@@ -1104,12 +1175,13 @@ export const CATEGORIES = [
         "category": "powders",
         "composition": "Clotrimazole Dusting Powder",
         "dosageForm": "Powder",
-        "strength": "As per Monograph",
+        "strength": "Clotrimazole IP 1% w/w Dusting Powder Base",
         "pack": "100 g",
         "page": 21,
         "image": "/assets/products/clotriaero-dusting-powder.jpg",
         "isFlagship": false,
-        "description": "CLOTRIAERO Dusting Powder is a WHO-GMP certified pharmaceutical formulation featuring Clotrimazole Dusting Powder. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "CLOTRIAERO Dusting Powder is a WHO-GMP certified pharmaceutical formulation featuring Clotrimazole Dusting Powder. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Topical Antifungal & Anti-Pruritic Absorbent Powder"
       },
       {
         "id": "aero-protein-powder-vanilla-flavour",
@@ -1118,12 +1190,13 @@ export const CATEGORIES = [
         "category": "powders",
         "composition": "Complete Balanced Nutrition Protein Powder",
         "dosageForm": "Powder",
-        "strength": "As per Monograph",
+        "strength": "Whey Protein Concentrate + DHA + Bovine Colostrum + 28 Vitamins & Minerals (Vanilla)",
         "pack": "200 g",
         "page": 22,
         "image": "/assets/products/aero-protein-powder-vanilla-flavour.jpg",
         "isFlagship": false,
-        "description": "Aero-PROTEIN Powder (Vanilla Flavour) is a WHO-GMP certified pharmaceutical formulation featuring Complete Balanced Nutrition Protein Powder. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aero-PROTEIN Powder (Vanilla Flavour) is a WHO-GMP certified pharmaceutical formulation featuring Complete Balanced Nutrition Protein Powder. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Balanced Nutritional High-Protein Powder Drink"
       },
       {
         "id": "aero-protein-plus-dha-chocolate-flavour",
@@ -1132,12 +1205,13 @@ export const CATEGORIES = [
         "category": "powders",
         "composition": "Protein Powder with Whey, Omega & DHA",
         "dosageForm": "Formulation",
-        "strength": "As per Monograph",
+        "strength": "Whey Protein Fortified with DHA, Omega-3 Fatty Acids & Micronutrients (Chocolate)",
         "pack": "200 g",
         "page": 22,
         "image": "/assets/products/aero-protein-plus-dha-chocolate-flavour.jpg",
         "isFlagship": false,
-        "description": "Aero Protein Plus DHA (Chocolate Flavour) is a WHO-GMP certified pharmaceutical formulation featuring Protein Powder with Whey, Omega & DHA. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aero Protein Plus DHA (Chocolate Flavour) is a WHO-GMP certified pharmaceutical formulation featuring Protein Powder with Whey, Omega & DHA. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Cognitive & Muscle Nourishing Protein Supplement"
       },
       {
         "id": "aeropro-mom-powder",
@@ -1146,12 +1220,13 @@ export const CATEGORIES = [
         "category": "powders",
         "composition": "Maternal Nutritional Powder Fortified with Protein & Micronutrients",
         "dosageForm": "Powder",
-        "strength": "As per Monograph",
+        "strength": "Protein Supplement Fortified with Iron, Folic Acid, Calcium, DHA & Multivitamins",
         "pack": "200 g",
         "page": 23,
         "image": "/assets/products/aeropro-mom-powder.jpg",
         "isFlagship": false,
-        "description": "Aeropro Mom Powder is a WHO-GMP certified pharmaceutical formulation featuring Maternal Nutritional Powder Fortified with Protein & Micronutrients. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aeropro Mom Powder is a WHO-GMP certified pharmaceutical formulation featuring Maternal Nutritional Powder Fortified with Protein & Micronutrients. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Specialized Maternal, Prenatal & Lactation Nutritional Supplement"
       },
       {
         "id": "aerovit-kids-powder",
@@ -1160,12 +1235,13 @@ export const CATEGORIES = [
         "category": "powders",
         "composition": "Nutritional Support for Healthy Growing Kids",
         "dosageForm": "Powder",
-        "strength": "As per Monograph",
+        "strength": "Essential Amino Acids, Protein, Brain DHA, Calcium & Multivitamins",
         "pack": "200 g",
         "page": 23,
         "image": "/assets/products/aerovit-kids-powder.jpg",
         "isFlagship": false,
-        "description": "AEROVIT KIDS Powder is a WHO-GMP certified pharmaceutical formulation featuring Nutritional Support for Healthy Growing Kids. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "AEROVIT KIDS Powder is a WHO-GMP certified pharmaceutical formulation featuring Nutritional Support for Healthy Growing Kids. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Pediatric Physical Growth & Cognitive Development Nutrition"
       },
       {
         "id": "aerovita-z-instant-energy-drink-booster",
@@ -1174,12 +1250,13 @@ export const CATEGORIES = [
         "category": "powders",
         "composition": "Dextrose with Vitamin C & Mineral Powder",
         "dosageForm": "Formulation",
-        "strength": "As per Monograph",
+        "strength": "Dextrose Monohydrate, Sucrose, Zinc Sulphate 32.5mg & Ascorbic Acid (Vitamin C) 50mg",
         "pack": "105 gm / 200 g",
         "page": 24,
         "image": "/assets/products/aerovita-z.jpg",
         "isFlagship": true,
-        "description": "Aerovita-Z Instant Energy Drink Booster is a WHO-GMP certified pharmaceutical formulation featuring Dextrose with Vitamin C & Mineral Powder. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aerovita-Z Instant Energy Drink Booster is a WHO-GMP certified pharmaceutical formulation featuring Dextrose with Vitamin C & Mineral Powder. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Instant Rehydration & Cellular Energy Drink Booster"
       },
       {
         "id": "aerovit-ors-powder",
@@ -1188,12 +1265,13 @@ export const CATEGORIES = [
         "category": "powders",
         "composition": "Dextrose with Vitamin C, Zinc & Electrolyte Powder",
         "dosageForm": "Powder",
-        "strength": "As per Monograph",
+        "strength": "Dextrose, Sodium Chloride, Potassium Chloride, Sodium Citrate with Zinc & Vitamin C",
         "pack": "10 x 35 gm / 200 g",
         "page": 24,
         "image": "/assets/products/aerovit-ors-powder.jpg",
         "isFlagship": true,
-        "description": "AEROVIT ORS Powder is a WHO-GMP certified pharmaceutical formulation featuring Dextrose with Vitamin C, Zinc & Electrolyte Powder. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "AEROVIT ORS Powder is a WHO-GMP certified pharmaceutical formulation featuring Dextrose with Vitamin C, Zinc & Electrolyte Powder. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Instant Electrolyte Hydration & Fatigue Relief Powder"
       }
     ],
     "count": 8
@@ -1220,12 +1298,13 @@ export const CATEGORIES = [
         "category": "drops",
         "composition": "Glycolic Acid, Salicylic Acid & Vitamin E Acetate Gel",
         "dosageForm": "Face Wash",
-        "strength": "As per Monograph",
+        "strength": "Glycolic Acid 1% + Salicylic Acid 2% + Vitamin E Acetate Gentle Gel Base",
         "pack": "75gm",
         "page": 16,
         "image": "/assets/products/aerosilix-face-wash.jpg",
         "isFlagship": false,
-        "description": "Aerosilix Face Wash is a WHO-GMP certified pharmaceutical formulation featuring Glycolic Acid, Salicylic Acid & Vitamin E Acetate Gel. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Aerosilix Face Wash is a WHO-GMP certified pharmaceutical formulation featuring Glycolic Acid, Salicylic Acid & Vitamin E Acetate Gel. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Dermatological Exfoliating, Anti-Acne & Deep Cleansing Face Wash"
       },
       {
         "id": "cotton-crepe-bandage-with-fast-edges",
@@ -1234,12 +1313,13 @@ export const CATEGORIES = [
         "category": "drops",
         "composition": "Cotton Crepe Bandage B.P.C. Flesh Coloured Elastic",
         "dosageForm": "Medical Supply",
-        "strength": "As per Monograph",
+        "strength": "100% Pure Woven Cotton with Non-Fraying Fast Edges (B.P.C. Standard - 4 Metre)",
         "pack": "Length 4 Mtr.",
         "page": 36,
         "image": "/assets/products/cotton-crepe-bandage-with-fast-edges.jpg",
         "isFlagship": false,
-        "description": "Cotton Crepe Bandage (With Fast Edges) is a WHO-GMP certified pharmaceutical formulation featuring Cotton Crepe Bandage B.P.C. Flesh Coloured Elastic. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Cotton Crepe Bandage (With Fast Edges) is a WHO-GMP certified pharmaceutical formulation featuring Cotton Crepe Bandage B.P.C. Flesh Coloured Elastic. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Orthopedic Support & Compression Bandage"
       },
       {
         "id": "kesh-aero-ayurvedic-oil",
@@ -1248,12 +1328,13 @@ export const CATEGORIES = [
         "category": "drops",
         "composition": "Ayurvedic Hair Oil (100% Natural Product)",
         "dosageForm": "Herbal Oil",
-        "strength": "As per Monograph",
+        "strength": "Bhringraj, Amla, Brahmi, Neem, Sesame Oil & Classical Ayurvedic Herb Extracts",
         "pack": "100 ml",
         "page": 39,
         "image": "/assets/products/kesh-aero-ayurvedic-oil.jpg",
         "isFlagship": false,
-        "description": "Kesh Aero Ayurvedic Oil is a WHO-GMP certified pharmaceutical formulation featuring Ayurvedic Hair Oil (100% Natural Product). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Kesh Aero Ayurvedic Oil is a WHO-GMP certified pharmaceutical formulation featuring Ayurvedic Hair Oil (100% Natural Product). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "100% Natural Ayurvedic Anti-Hairfall & Scalp Nourishment Therapy"
       },
       {
         "id": "ketaero-soap",
@@ -1262,12 +1343,13 @@ export const CATEGORIES = [
         "category": "drops",
         "composition": "Ketoconazole 2% w/w Soap (Anti-Fungal Medicated Soap)",
         "dosageForm": "Medicated Soap",
-        "strength": "As per Monograph",
+        "strength": "Ketoconazole 2% w/w in Grade 1 Moisturizing Soap Base",
         "pack": "75 gm",
         "page": 39,
         "image": "/assets/products/ketaero-soap.jpg",
         "isFlagship": false,
-        "description": "KETAERO Soap is a WHO-GMP certified pharmaceutical formulation featuring Ketoconazole 2% w/w Soap (Anti-Fungal Medicated Soap). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "KETAERO Soap is a WHO-GMP certified pharmaceutical formulation featuring Ketoconazole 2% w/w Soap (Anti-Fungal Medicated Soap). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Medicated Antifungal & Anti-Dandruff Body Cleansing Soap"
       },
       {
         "id": "moxi-aero-d-eye-drops",
@@ -1276,12 +1358,13 @@ export const CATEGORIES = [
         "category": "drops",
         "composition": "Moxifloxacin & Dexamethasone Eye Drops",
         "dosageForm": "Ophthalmic Drop",
-        "strength": "As per Monograph",
+        "strength": "Moxifloxacin HCl 0.5% w/v + Dexamethasone Sodium Phosphate 0.1% w/v",
         "pack": "5ml",
         "page": 40,
         "image": "/assets/products/moxi-aero-d-eye-drops.jpg",
         "isFlagship": true,
-        "description": "Moxi Aero-D Eye Drops is a WHO-GMP certified pharmaceutical formulation featuring Moxifloxacin & Dexamethasone Eye Drops. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Moxi Aero-D Eye Drops is a WHO-GMP certified pharmaceutical formulation featuring Moxifloxacin & Dexamethasone Eye Drops. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Ophthalmic Fluoroquinolone Antimicrobial & Anti-Inflammatory Solution"
       },
       {
         "id": "cefi-aero-d-eye-ear-drops",
@@ -1290,17 +1373,18 @@ export const CATEGORIES = [
         "category": "drops",
         "composition": "Ciprofloxacin & Dexamethasone Eye/Ear Drops",
         "dosageForm": "Ophthalmic Drop",
-        "strength": "As per Monograph",
+        "strength": "Ciprofloxacin HCl 0.3% w/v + Dexamethasone Sodium Phosphate 0.1% w/v",
         "pack": "10 ml",
         "page": 40,
         "image": "/assets/products/cefi-aero-d-eye-ear-drops.jpg",
         "isFlagship": true,
-        "description": "Cefi Aero D Eye & Ear Drops is a WHO-GMP certified pharmaceutical formulation featuring Ciprofloxacin & Dexamethasone Eye/Ear Drops. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+        "description": "Cefi Aero D Eye & Ear Drops is a WHO-GMP certified pharmaceutical formulation featuring Ciprofloxacin & Dexamethasone Eye/Ear Drops. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+        "therapeuticCategory": "Ophthalmic & Otic Broad-Spectrum Antibiotic / Steroid Suspension"
       }
     ],
     "count": 6
   }
-];
+];;
 
 export const ALL_PRODUCTS = [
   {
@@ -1310,12 +1394,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Aceclofenac, Paracetamol & Serratiopeptidase Tablets",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Aceclofenac 100 mg + Paracetamol 325 mg + Serratiopeptidase 15 mg",
     "pack": "10 x 10 TABLETS",
     "page": 2,
     "image": "/assets/products/aeromark-sp-tablets.jpg",
     "isFlagship": true,
-    "description": "AEROMARK-SP TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac, Paracetamol & Serratiopeptidase Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "AEROMARK-SP TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac, Paracetamol & Serratiopeptidase Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Analgesic, Anti-Inflammatory & Anti-Edematous"
   },
   {
     "id": "aeromark-p-tablets",
@@ -1324,12 +1409,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Aceclofenac & Paracetamol Tablets IP",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Aceclofenac 100 mg + Paracetamol 325 mg",
     "pack": "20 x 10 TABLETS",
     "page": 2,
     "image": "/assets/products/aeromark-p-tablets.jpg",
     "isFlagship": true,
-    "description": "AEROMARK-P TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac & Paracetamol Tablets IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "AEROMARK-P TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac & Paracetamol Tablets IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "NSAID & Antipyretic Analgesic"
   },
   {
     "id": "clavaero-cv-625-tablets-10-x-6",
@@ -1338,12 +1424,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Amoxycillin & Potassium Clavulanate Tablets I.P.",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Amoxycillin 500 mg + Potassium Clavulanate 125 mg (625 mg)",
     "pack": "10 x 6 TABLETS",
     "page": 3,
     "image": "/assets/products/clavaero-cv-625-tablets-10-x-6.jpg",
     "isFlagship": true,
-    "description": "CLAVAERO-CV 625 TABLETS (10 x 6) is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin & Potassium Clavulanate Tablets I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "CLAVAERO-CV 625 TABLETS (10 x 6) is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin & Potassium Clavulanate Tablets I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Broad-Spectrum Penicillin Antibiotic"
   },
   {
     "id": "clavaero-cv-625-tablets-1-x-10",
@@ -1352,12 +1439,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Amoxycillin & Potassium Clavulanate Tablets I.P.",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Amoxycillin 500 mg + Potassium Clavulanate 125 mg (625 mg)",
     "pack": "1 x 10 TABLETS",
     "page": 3,
     "image": "/assets/products/clavaero-cv-625-tablets-1-x-10.jpg",
     "isFlagship": true,
-    "description": "CLAVAERO-CV 625 TABLETS (1 x 10) is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin & Potassium Clavulanate Tablets I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "CLAVAERO-CV 625 TABLETS (1 x 10) is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin & Potassium Clavulanate Tablets I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Broad-Spectrum Penicillin Antibiotic"
   },
   {
     "id": "aeronim-p-tablets",
@@ -1366,12 +1454,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Nimesulide & Paracetamol Tablets",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Nimesulide 100 mg + Paracetamol 325 mg",
     "pack": "20 x 10 TABLETS",
     "page": 4,
     "image": "/assets/products/aeronim-p-tablets.jpg",
     "isFlagship": false,
-    "description": "Aeronim - P Tablets is a WHO-GMP certified pharmaceutical formulation featuring Nimesulide & Paracetamol Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aeronim - P Tablets is a WHO-GMP certified pharmaceutical formulation featuring Nimesulide & Paracetamol Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Analgesic & Anti-Inflammatory"
   },
   {
     "id": "aerocof-dx-tablets",
@@ -1380,12 +1469,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Dextromethorphan Hydrobromide, Phenylephrine Hydrochloride & Chlorpheniramine Maleate Tablets",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Dextromethorphan HBr 15 mg + Phenylephrine HCl 10 mg + Chlorpheniramine Maleate 2 mg",
     "pack": "10 x 10 TABLETS",
     "page": 4,
     "image": "/assets/products/aerocof-dx-tablets.jpg",
     "isFlagship": false,
-    "description": "Aerocof - DX TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Phenylephrine Hydrochloride & Chlorpheniramine Maleate Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aerocof - DX TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Phenylephrine Hydrochloride & Chlorpheniramine Maleate Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Antitussive, Decongestant & Antihistaminic"
   },
   {
     "id": "aerocal-k2-7-tablets",
@@ -1394,12 +1484,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Calcium Citrate Malate, Magnesium Sulphate, Zinc Sulphate, Vitamin K2 7 & Vitamin D3 Tablets",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Calcium Citrate Malate 1250 mg + Vit K2-7 45 mcg + Vit D3 400 IU + Minerals",
     "pack": "1 x 10 TABLETS",
     "page": 5,
     "image": "/assets/products/aerocal-k2-7-tablets.jpg",
     "isFlagship": false,
-    "description": "Aerocal - K2 7 Tablets is a WHO-GMP certified pharmaceutical formulation featuring Calcium Citrate Malate, Magnesium Sulphate, Zinc Sulphate, Vitamin K2 7 & Vitamin D3 Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aerocal - K2 7 Tablets is a WHO-GMP certified pharmaceutical formulation featuring Calcium Citrate Malate, Magnesium Sulphate, Zinc Sulphate, Vitamin K2 7 & Vitamin D3 Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Bone Mineral Health & Calcium Supplement"
   },
   {
     "id": "coldaero-tablets",
@@ -1408,12 +1499,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Aceclofenac, Paracetamol, Caffeine, Phenylephrine HCL & Cetirizine Dihydrochloride Tablets",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Aceclofenac 100 mg + Paracetamol 325 mg + Phenylephrine 10 mg + Cetirizine 5 mg + Caffeine 30 mg",
     "pack": "10 x 10 TABLETS",
     "page": 5,
     "image": "/assets/products/coldaero-tablets.jpg",
     "isFlagship": false,
-    "description": "Coldaero Tablets is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac, Paracetamol, Caffeine, Phenylephrine HCL & Cetirizine Dihydrochloride Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Coldaero Tablets is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac, Paracetamol, Caffeine, Phenylephrine HCL & Cetirizine Dihydrochloride Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Comprehensive Cold & Sinus Relief"
   },
   {
     "id": "gravogesic-mr-tablets",
@@ -1422,12 +1514,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Diclofenac Potassium, Paracetamol & Chlorzoxazone Tablets",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Diclofenac Potassium 50 mg + Paracetamol 325 mg + Chlorzoxazone 250 mg",
     "pack": "20 x 10 TABLETS",
     "page": 6,
     "image": "/assets/products/gravogesic-mr-tablets.jpg",
     "isFlagship": false,
-    "description": "Gravogesic - MR Tablets is a WHO-GMP certified pharmaceutical formulation featuring Diclofenac Potassium, Paracetamol & Chlorzoxazone Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Gravogesic - MR Tablets is a WHO-GMP certified pharmaceutical formulation featuring Diclofenac Potassium, Paracetamol & Chlorzoxazone Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "NSAID Analgesic & Skeletal Muscle Relaxant"
   },
   {
     "id": "sefaero-200-tablets",
@@ -1436,12 +1529,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Cefixime Tablets I.P. 200 mg",
     "dosageForm": "Tablet",
-    "strength": "200 mg",
+    "strength": "Cefixime 200 mg (Dispersible)",
     "pack": "10 x 10 TABLETS",
     "page": 6,
     "image": "/assets/products/sefaero-200-tablets.jpg",
     "isFlagship": false,
-    "description": "SEFAERO-200 TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Cefixime Tablets I.P. 200 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "SEFAERO-200 TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Cefixime Tablets I.P. 200 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "3rd Generation Cephalosporin Antibiotic"
   },
   {
     "id": "levoflek-l-tablets",
@@ -1450,12 +1544,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Levocetirizine Hydrochloride Tablets IP",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Levocetirizine Hydrochloride 5 mg",
     "pack": "50 x 10 TABLETS",
     "page": 7,
     "image": "/assets/products/levoflek-l-tablets.jpg",
     "isFlagship": false,
-    "description": "Levoflek - L Tablets is a WHO-GMP certified pharmaceutical formulation featuring Levocetirizine Hydrochloride Tablets IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Levoflek - L Tablets is a WHO-GMP certified pharmaceutical formulation featuring Levocetirizine Hydrochloride Tablets IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Non-Sedating Antihistamine / Anti-Allergic"
   },
   {
     "id": "levoflak-m-tablets",
@@ -1464,12 +1559,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Levocetirizine Hydrochloride And Montelukast Sodium Tablets IP",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Levocetirizine HCl 5 mg + Montelukast Sodium 10 mg",
     "pack": "10 x 10 TABLETS",
     "page": 7,
     "image": "/assets/products/levoflak-m-tablets.jpg",
     "isFlagship": false,
-    "description": "Levoflak - M Tablets is a WHO-GMP certified pharmaceutical formulation featuring Levocetirizine Hydrochloride And Montelukast Sodium Tablets IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Levoflak - M Tablets is a WHO-GMP certified pharmaceutical formulation featuring Levocetirizine Hydrochloride And Montelukast Sodium Tablets IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Anti-Allergic & Bronchial Anti-Asthmatic"
   },
   {
     "id": "zincaero-tablets",
@@ -1478,12 +1574,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Multivitamin, Multiminerals & Antioxidant Tablets",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Multivitamin, Multimineral + Zinc & Antioxidants",
     "pack": "2 x 15 TABLETS",
     "page": 8,
     "image": "/assets/products/zincaero-tablets.jpg",
     "isFlagship": false,
-    "description": "Zincaero Tablets is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin, Multiminerals & Antioxidant Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Zincaero Tablets is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin, Multiminerals & Antioxidant Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Nutritional Supplement & Immunity Booster"
   },
   {
     "id": "cycloaero-tablets",
@@ -1492,12 +1589,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Paracetamol & Dicyclomine Hydrochloride Tablets",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Paracetamol 325 mg + Dicyclomine HCl 20 mg",
     "pack": "20 x 10 Tablets",
     "page": 8,
     "image": "/assets/products/cycloaero-tablets.jpg",
     "isFlagship": false,
-    "description": "CYCLOAERO Tablets is a WHO-GMP certified pharmaceutical formulation featuring Paracetamol & Dicyclomine Hydrochloride Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "CYCLOAERO Tablets is a WHO-GMP certified pharmaceutical formulation featuring Paracetamol & Dicyclomine Hydrochloride Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Antispasmodic & Gastrointestinal Analgesic"
   },
   {
     "id": "aerocal-d3-tablet",
@@ -1506,12 +1604,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Calcium Citrate Malate with Vitamin D3 Tablets",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Calcium Citrate Malate 1250 mg + Vitamin D3 400 IU",
     "pack": "10 x 1 x 15 TABLETS",
     "page": 9,
     "image": "/assets/products/aerocal-d3-tablet.jpg",
     "isFlagship": false,
-    "description": "Aerocal-D3 Tablet is a WHO-GMP certified pharmaceutical formulation featuring Calcium Citrate Malate with Vitamin D3 Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aerocal-D3 Tablet is a WHO-GMP certified pharmaceutical formulation featuring Calcium Citrate Malate with Vitamin D3 Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Calcium & Bone Health Therapy"
   },
   {
     "id": "faero-xt-tablet",
@@ -1520,12 +1619,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Ferrous Ascorbate, Folic Acid and Zinc Sulphate Tablets",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Ferrous Ascorbate 100 mg + Folic Acid 1.5 mg + Zinc 22.5 mg",
     "pack": "1 x 10 TABLETS",
     "page": 10,
     "image": "/assets/products/faero-xt-tablet.jpg",
     "isFlagship": false,
-    "description": "Faero-XT Tablet is a WHO-GMP certified pharmaceutical formulation featuring Ferrous Ascorbate, Folic Acid and Zinc Sulphate Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Faero-XT Tablet is a WHO-GMP certified pharmaceutical formulation featuring Ferrous Ascorbate, Folic Acid and Zinc Sulphate Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Hematinic & Iron Deficiency Therapy"
   },
   {
     "id": "aerolife-hair-tablet",
@@ -1534,12 +1634,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Biotin, Calcium D-Pantothenate, Histidine, Cysteine, Copper Iron, Selenium, Niacinamide with Amino Acid Tablet",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Biotin 10 mg + Amino Acids, L-Cysteine, Minerals & Vitamins",
     "pack": "1 x 10 TABLETS",
     "page": 10,
     "image": "/assets/products/aerolife-hair-tablet.jpg",
     "isFlagship": false,
-    "description": "Aerolife Hair Tablet is a WHO-GMP certified pharmaceutical formulation featuring Biotin, Calcium D-Pantothenate, Histidine, Cysteine, Copper Iron, Selenium, Niacinamide with Amino Acid Tablet. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aerolife Hair Tablet is a WHO-GMP certified pharmaceutical formulation featuring Biotin, Calcium D-Pantothenate, Histidine, Cysteine, Copper Iron, Selenium, Niacinamide with Amino Acid Tablet. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Hair, Skin & Nail Nutritional Therapy"
   },
   {
     "id": "aerovit-9g-tablets",
@@ -1548,12 +1649,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Ginseng, Green Tea Extract, Grape Seed Extract, Ginkgo Biloba, Garlic Powder, Guggul, Ginger Root Extract, Green Coffee Bean Extract, Glycyrrhiza Glabra Extract, Lycopene, Omega-3 Fatty Acids, Essential Amino Acids, Multivitamin, Multimineral, L-Carnitine L-Tartrate & Trace Elements Tablets",
     "dosageForm": "Tablet",
-    "strength": "9G",
+    "strength": "9G Botanical Extracts + Lycopene, Omega-3, Multivitamins & Minerals",
     "pack": "10 x 10 TABLETS",
     "page": 11,
     "image": "/assets/products/aerovit-9g-tablets.jpg",
     "isFlagship": false,
-    "description": "Aerovit 9G Tablets is a WHO-GMP certified pharmaceutical formulation featuring Ginseng, Green Tea Extract, Grape Seed Extract, Ginkgo Biloba, Garlic Powder, Guggul, Ginger Root Extract, Green Coffee Bean Extract, Glycyrrhiza Glabra Extract, Lycopene, Omega-3 Fatty Acids, Essential Amino Acids, Multivitamin, Multimineral, L-Carnitine L-Tartrate & Trace Elements Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aerovit 9G Tablets is a WHO-GMP certified pharmaceutical formulation featuring Ginseng, Green Tea Extract, Grape Seed Extract, Ginkgo Biloba, Garlic Powder, Guggul, Ginger Root Extract, Green Coffee Bean Extract, Glycyrrhiza Glabra Extract, Lycopene, Omega-3 Fatty Acids, Essential Amino Acids, Multivitamin, Multimineral, L-Carnitine L-Tartrate & Trace Elements Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Advanced Multivitamin, Antioxidant & Vitality"
   },
   {
     "id": "frutmax-tablets",
@@ -1562,12 +1664,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Multivitamin, Multimineral and Antioxidant Tablets",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Fruit Extracts, Multivitamins, Multiminerals & Antioxidants",
     "pack": "10 x 10 TABLETS",
     "page": 11,
     "image": "/assets/products/frutmax-tablets.jpg",
     "isFlagship": false,
-    "description": "FrutMax Tablets is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin, Multimineral and Antioxidant Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "FrutMax Tablets is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin, Multimineral and Antioxidant Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Daily Nutritional Health Supplement"
   },
   {
     "id": "lyaeroboost-tablets",
@@ -1576,12 +1679,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Lycopene, Vitamins, Minerals & Grape Seed Extract Tablets",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Lycopene 10% 5000 mcg + Multivitamins & Grape Seed Extract",
     "pack": "1 x 10 Tablets",
     "page": 12,
     "image": "/assets/products/lyaeroboost-tablets.jpg",
     "isFlagship": false,
-    "description": "Lyaeroboost Tablets is a WHO-GMP certified pharmaceutical formulation featuring Lycopene, Vitamins, Minerals & Grape Seed Extract Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Lyaeroboost Tablets is a WHO-GMP certified pharmaceutical formulation featuring Lycopene, Vitamins, Minerals & Grape Seed Extract Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Potent Antioxidant & Cardiovascular Vitality"
   },
   {
     "id": "aero-nor-tz-tablets",
@@ -1590,12 +1694,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Norfloxacin & Tinidazole Tablets",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Norfloxacin 400 mg + Tinidazole 600 mg",
     "pack": "6 x 5 x 6 Tablets",
     "page": 12,
     "image": "/assets/products/aero-nor-tz-tablets.jpg",
     "isFlagship": false,
-    "description": "AERO Nor-TZ Tablets is a WHO-GMP certified pharmaceutical formulation featuring Norfloxacin & Tinidazole Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "AERO Nor-TZ Tablets is a WHO-GMP certified pharmaceutical formulation featuring Norfloxacin & Tinidazole Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Gastrointestinal Antibiotic & Antiprotozoal"
   },
   {
     "id": "doloaero-650-tablets",
@@ -1604,12 +1709,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Paracetamol Tablets IP 650 mg",
     "dosageForm": "Tablet",
-    "strength": "650 mg",
+    "strength": "Paracetamol 650 mg",
     "pack": "15 x 10 Tablets",
     "page": 13,
     "image": "/assets/products/doloaero-650-tablets.jpg",
     "isFlagship": false,
-    "description": "Doloaero-650 Tablets is a WHO-GMP certified pharmaceutical formulation featuring Paracetamol Tablets IP 650 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Doloaero-650 Tablets is a WHO-GMP certified pharmaceutical formulation featuring Paracetamol Tablets IP 650 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Antipyretic & Analgesic (Fever & Pain)"
   },
   {
     "id": "dicloaero-sp-tablets",
@@ -1618,12 +1724,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Diclofenac Potassium, Paracetamol & Serratiopeptidase Tablets",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Diclofenac Potassium 50 mg + Paracetamol 325 mg + Serratiopeptidase 10 mg",
     "pack": "20 x 10 TABLETS",
     "page": 13,
     "image": "/assets/products/dicloaero-sp-tablets.jpg",
     "isFlagship": false,
-    "description": "Dicloaero - SP Tablets is a WHO-GMP certified pharmaceutical formulation featuring Diclofenac Potassium, Paracetamol & Serratiopeptidase Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Dicloaero - SP Tablets is a WHO-GMP certified pharmaceutical formulation featuring Diclofenac Potassium, Paracetamol & Serratiopeptidase Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "NSAID Analgesic, Anti-Inflammatory & Anti-Edema"
   },
   {
     "id": "aziaero-250-tablets",
@@ -1632,12 +1739,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Azithromycin Tablets IP 250 mg",
     "dosageForm": "Tablet",
-    "strength": "250 mg",
+    "strength": "Azithromycin 250 mg",
     "pack": "10 x 6 Tablets",
     "page": 14,
     "image": "/assets/products/aziaero-250-tablets.jpg",
     "isFlagship": false,
-    "description": "AZIAERO 250 Tablets is a WHO-GMP certified pharmaceutical formulation featuring Azithromycin Tablets IP 250 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "AZIAERO 250 Tablets is a WHO-GMP certified pharmaceutical formulation featuring Azithromycin Tablets IP 250 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Macrolide Antibiotic (Respiratory & Soft Tissue)"
   },
   {
     "id": "aziaero-500-tablets",
@@ -1646,12 +1754,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Azithromycin Tablets IP 500mg",
     "dosageForm": "Tablet",
-    "strength": "500mg",
+    "strength": "Azithromycin 500 mg",
     "pack": "10 x 3 Tablets",
     "page": 14,
     "image": "/assets/products/aziaero-500-tablets.jpg",
     "isFlagship": false,
-    "description": "AZIAERO 500 Tablets is a WHO-GMP certified pharmaceutical formulation featuring Azithromycin Tablets IP 500mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "AZIAERO 500 Tablets is a WHO-GMP certified pharmaceutical formulation featuring Azithromycin Tablets IP 500mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Macrolide Antibiotic (Broad-Spectrum)"
   },
   {
     "id": "mefnaaero-spas-tablets",
@@ -1660,12 +1769,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Mefenamic Acid & Dicyclomine Tablets (250/20)",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Mefenamic Acid 250 mg + Dicyclomine HCl 20 mg",
     "pack": "30 x 10 Tablets",
     "page": 15,
     "image": "/assets/products/mefnaaero-spas-tablets.jpg",
     "isFlagship": false,
-    "description": "MEFNAAERO SPAS Tablets is a WHO-GMP certified pharmaceutical formulation featuring Mefenamic Acid & Dicyclomine Tablets (250/20). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "MEFNAAERO SPAS Tablets is a WHO-GMP certified pharmaceutical formulation featuring Mefenamic Acid & Dicyclomine Tablets (250/20). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Antispasmodic & Primary Dysmenorrhea Analgesic"
   },
   {
     "id": "ketoaerol-dt-dispersible-tablets",
@@ -1674,12 +1784,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Ketorolac Tromethamine Dispersible Tablets",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Ketorolac Tromethamine 10 mg (Dispersible)",
     "pack": "10 x 15 Tablets",
     "page": 15,
     "image": "/assets/products/ketoaerol-dt-dispersible-tablets.jpg",
     "isFlagship": false,
-    "description": "Ketoaerol-DT Dispersible Tablets is a WHO-GMP certified pharmaceutical formulation featuring Ketorolac Tromethamine Dispersible Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Ketoaerol-DT Dispersible Tablets is a WHO-GMP certified pharmaceutical formulation featuring Ketorolac Tromethamine Dispersible Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Potent NSAID Analgesic (Post-Operative & Dental)"
   },
   {
     "id": "ketoaerol-dt-tablets",
@@ -1688,12 +1799,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Ketorolac Tromethamine Tablets IP 10mg",
     "dosageForm": "Tablet",
-    "strength": "10mg",
+    "strength": "Ketorolac Tromethamine 10 mg",
     "pack": "10 x 15 TABLETS",
     "page": 41,
     "image": "/assets/products/ketoaerol-dt-tablets.jpg",
     "isFlagship": false,
-    "description": "KETOAEROL-DT TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Ketorolac Tromethamine Tablets IP 10mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "KETOAEROL-DT TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Ketorolac Tromethamine Tablets IP 10mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Potent Non-Opioid Analgesic"
   },
   {
     "id": "aerovita-c-tablets",
@@ -1702,12 +1814,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Vitamin C (Ascorbic Acid), Sodium Ascorbate & Zinc Chewable Tablets",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Vitamin C (Ascorbic Acid) 500 mg + Sodium Ascorbate + Zinc 5 mg (Chewable)",
     "pack": "10 x 15 TABLETS",
     "page": 41,
     "image": "/assets/products/aerovita-c-tablets.jpg",
     "isFlagship": false,
-    "description": "AEROVITA C TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Vitamin C (Ascorbic Acid), Sodium Ascorbate & Zinc Chewable Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "AEROVITA C TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Vitamin C (Ascorbic Acid), Sodium Ascorbate & Zinc Chewable Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Immunity Enhancer & Antioxidant Therapy"
   },
   {
     "id": "aeromark-mr-tablets",
@@ -1716,12 +1829,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Aceclofenac, Paracetamol & Chlorzoxazone Tablets",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Aceclofenac 100 mg + Paracetamol 325 mg + Chlorzoxazone 250 mg",
     "pack": "10 x 10 TABLETS",
     "page": 42,
     "image": "/assets/products/aeromark-mr-tablets.jpg",
     "isFlagship": false,
-    "description": "AEROMARK-MR TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac, Paracetamol & Chlorzoxazone Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "AEROMARK-MR TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac, Paracetamol & Chlorzoxazone Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "NSAID Analgesic & Skeletal Muscle Relaxant"
   },
   {
     "id": "aero-atoz-tablets",
@@ -1730,12 +1844,13 @@ export const ALL_PRODUCTS = [
     "category": "tablets",
     "composition": "Antioxidant, Multivitamin, Multimineral and Vitamin B12 Tablets",
     "dosageForm": "Tablet",
-    "strength": "As per Monograph",
+    "strength": "Multivitamin, Multimineral, Antioxidants + Vitamin B12",
     "pack": "10 x 15 TABLETS",
     "page": 42,
     "image": "/assets/products/aero-atoz-tablets.jpg",
     "isFlagship": false,
-    "description": "AERO AtoZ TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Antioxidant, Multivitamin, Multimineral and Vitamin B12 Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "AERO AtoZ TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Antioxidant, Multivitamin, Multimineral and Vitamin B12 Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Therapeutic Micronutrient Formulation"
   },
   {
     "id": "itraaero-100-capsules",
@@ -1744,12 +1859,13 @@ export const ALL_PRODUCTS = [
     "category": "capsules",
     "composition": "Itraconazole Capsules 100 mg",
     "dosageForm": "Capsule",
-    "strength": "100 mg",
+    "strength": "Itraconazole 100 mg (Pellet Technology)",
     "pack": "10 x 10 Capsules",
     "page": 17,
     "image": "/assets/products/itraaero-100-capsules.jpg",
     "isFlagship": true,
-    "description": "ITRAAERO 100 Capsules is a WHO-GMP certified pharmaceutical formulation featuring Itraconazole Capsules 100 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "ITRAAERO 100 Capsules is a WHO-GMP certified pharmaceutical formulation featuring Itraconazole Capsules 100 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Broad-Spectrum Triazole Antifungal"
   },
   {
     "id": "itraero-200-capsules",
@@ -1758,12 +1874,13 @@ export const ALL_PRODUCTS = [
     "category": "capsules",
     "composition": "Itraconazole Capsules 200 mg",
     "dosageForm": "Capsule",
-    "strength": "200 mg",
+    "strength": "Itraconazole 200 mg (Pellet Technology)",
     "pack": "10 x 10 Capsules",
     "page": 17,
     "image": "/assets/products/itraero-200.jpg",
     "isFlagship": true,
-    "description": "ITRAERO 200 Capsules is a WHO-GMP certified pharmaceutical formulation featuring Itraconazole Capsules 200 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "ITRAERO 200 Capsules is a WHO-GMP certified pharmaceutical formulation featuring Itraconazole Capsules 200 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Broad-Spectrum Triazole Antifungal"
   },
   {
     "id": "omefist-20-capsules",
@@ -1772,12 +1889,13 @@ export const ALL_PRODUCTS = [
     "category": "capsules",
     "composition": "Omeprazole Capsules IP 20 mg",
     "dosageForm": "Capsule",
-    "strength": "20 mg",
+    "strength": "Omeprazole 20 mg (Enteric-Coated Pellets)",
     "pack": "20 x 15 Capsules",
     "page": 18,
     "image": "/assets/products/omefist-20-capsules.jpg",
     "isFlagship": false,
-    "description": "OMEFIST 20 Capsules is a WHO-GMP certified pharmaceutical formulation featuring Omeprazole Capsules IP 20 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "OMEFIST 20 Capsules is a WHO-GMP certified pharmaceutical formulation featuring Omeprazole Capsules IP 20 mg. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Proton Pump Inhibitor (Acid Reducer)"
   },
   {
     "id": "omefist-d-capsules",
@@ -1786,12 +1904,13 @@ export const ALL_PRODUCTS = [
     "category": "capsules",
     "composition": "Omeprazole Domperidone Capsules IP",
     "dosageForm": "Capsule",
-    "strength": "As per Monograph",
+    "strength": "Omeprazole 20 mg + Domperidone 10 mg",
     "pack": "20 x 15 Capsules",
     "page": 18,
     "image": "/assets/products/omefist-d.jpg",
     "isFlagship": false,
-    "description": "OMEFIST D Capsules is a WHO-GMP certified pharmaceutical formulation featuring Omeprazole Domperidone Capsules IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "OMEFIST D Capsules is a WHO-GMP certified pharmaceutical formulation featuring Omeprazole Domperidone Capsules IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Antacid & Prokinetic (GERD & Dyspepsia)"
   },
   {
     "id": "raika-dsr-capsules",
@@ -1800,12 +1919,13 @@ export const ALL_PRODUCTS = [
     "category": "capsules",
     "composition": "Pantoprazole Gastro-resistant And Domperidone Prolonged-release Capsules IP",
     "dosageForm": "Capsule",
-    "strength": "As per Monograph",
+    "strength": "Pantoprazole 40 mg + Domperidone 30 mg SR",
     "pack": "10 x 10 Capsules",
     "page": 19,
     "image": "/assets/products/raika-dsr-capsules.jpg",
     "isFlagship": true,
-    "description": "RAIKA - DSR Capsules is a WHO-GMP certified pharmaceutical formulation featuring Pantoprazole Gastro-resistant And Domperidone Prolonged-release Capsules IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "RAIKA - DSR Capsules is a WHO-GMP certified pharmaceutical formulation featuring Pantoprazole Gastro-resistant And Domperidone Prolonged-release Capsules IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Sustained-Release PPI & Antiemetic"
   },
   {
     "id": "aeromox-500-capsules",
@@ -1814,12 +1934,13 @@ export const ALL_PRODUCTS = [
     "category": "capsules",
     "composition": "Amoxycillin Capsules I.P.",
     "dosageForm": "Capsule",
-    "strength": "As per Monograph",
+    "strength": "Amoxycillin Trihydrate 500 mg",
     "pack": "20 x 10 CAPSULES",
     "page": 19,
     "image": "/assets/products/aeromox-500.jpg",
     "isFlagship": true,
-    "description": "AEROMOX - 500 CAPSULES is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin Capsules I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "AEROMOX - 500 CAPSULES is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin Capsules I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Broad-Spectrum Beta-Lactam Antibiotic"
   },
   {
     "id": "evaero-400-capsules",
@@ -1828,12 +1949,13 @@ export const ALL_PRODUCTS = [
     "category": "capsules",
     "composition": "Vitamin E Softgel Capsules (Health Supplement)",
     "dosageForm": "Capsule",
-    "strength": "As per Monograph",
+    "strength": "Vitamin E (d-alpha Tocopherol) 400 mg",
     "pack": "20 x 10 Capsules",
     "page": 20,
     "image": "/assets/products/evaero-400-capsules.jpg",
     "isFlagship": false,
-    "description": "EVAERO - 400 Capsules is a WHO-GMP certified pharmaceutical formulation featuring Vitamin E Softgel Capsules (Health Supplement). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "EVAERO - 400 Capsules is a WHO-GMP certified pharmaceutical formulation featuring Vitamin E Softgel Capsules (Health Supplement). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Antioxidant & Skin / Cellular Protection"
   },
   {
     "id": "aerogut-pro-capsule",
@@ -1842,12 +1964,13 @@ export const ALL_PRODUCTS = [
     "category": "capsules",
     "composition": "Pre and Probiotic Capsule",
     "dosageForm": "Capsule",
-    "strength": "As per Monograph",
+    "strength": "Prebiotic & Probiotic Complex (Multi-Strain 2.5 Billion CFU)",
     "pack": "1 x 10 Capsules",
     "page": 20,
     "image": "/assets/products/aerogut-pro-capsule.jpg",
     "isFlagship": false,
-    "description": "Aerogut-Pro Capsule is a WHO-GMP certified pharmaceutical formulation featuring Pre and Probiotic Capsule. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aerogut-Pro Capsule is a WHO-GMP certified pharmaceutical formulation featuring Pre and Probiotic Capsule. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Gastrointestinal Microflora & Digestive Health"
   },
   {
     "id": "arshon-capsule",
@@ -1856,12 +1979,13 @@ export const ALL_PRODUCTS = [
     "category": "capsules",
     "composition": "Ayurvedic Prop. Medicine for Piles",
     "dosageForm": "Capsule",
-    "strength": "As per Monograph",
+    "strength": "Standardized Ayurvedic Herbal Hemorrhoidal Formula",
     "pack": "1 x 30 Capsules",
     "page": 21,
     "image": "/assets/products/arshon-capsule.jpg",
     "isFlagship": false,
-    "description": "Arshon Capsule is a WHO-GMP certified pharmaceutical formulation featuring Ayurvedic Prop. Medicine for Piles. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Arshon Capsule is a WHO-GMP certified pharmaceutical formulation featuring Ayurvedic Prop. Medicine for Piles. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Anorectal Care & Piles Therapy"
   },
   {
     "id": "aeroflex-c-capsules",
@@ -1870,12 +1994,13 @@ export const ALL_PRODUCTS = [
     "category": "capsules",
     "composition": "Rosehip Extract, Boswellia Serrata & Vitamin C Capsules",
     "dosageForm": "Capsule",
-    "strength": "As per Monograph",
+    "strength": "Rosehip Extract 250 mg + Boswellia Serrata 300 mg + Vitamin C 40 mg",
     "pack": "30 CAPSULES",
     "page": 43,
     "image": "/assets/products/aeroflex-c-capsules.jpg",
     "isFlagship": false,
-    "description": "AEROFLEX-C CAPSULES is a WHO-GMP certified pharmaceutical formulation featuring Rosehip Extract, Boswellia Serrata & Vitamin C Capsules. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "AEROFLEX-C CAPSULES is a WHO-GMP certified pharmaceutical formulation featuring Rosehip Extract, Boswellia Serrata & Vitamin C Capsules. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Joint Mobility & Cartilage Support"
   },
   {
     "id": "aerocof-supar-syrup-sugar-free",
@@ -1884,12 +2009,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Dextromethorphan Hydrobromide, Ambroxol Hydrochloride, Chlorpheniramine Maleate, Phenylephrine Hydrochloride & Menthol Syrup",
     "dosageForm": "Liquid Oral",
-    "strength": "As per Monograph",
+    "strength": "Dextromethorphan 10mg + Ambroxol 15mg + CPM 2mg + Phenylephrine 5mg + Menthol / 5ml",
     "pack": "100ML",
     "page": 16,
     "image": "/assets/products/aerocof-supar-syrup-sugar-free.jpg",
     "isFlagship": false,
-    "description": "Aerocof Supar Syrup (Sugar Free) is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Ambroxol Hydrochloride, Chlorpheniramine Maleate, Phenylephrine Hydrochloride & Menthol Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aerocof Supar Syrup (Sugar Free) is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Ambroxol Hydrochloride, Chlorpheniramine Maleate, Phenylephrine Hydrochloride & Menthol Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Sugar-Free Comprehensive Expectorant & Cough Syrup"
   },
   {
     "id": "clavaero-cv-dry-syrup",
@@ -1898,12 +2024,13 @@ export const ALL_PRODUCTS = [
     "category": "dry-syrups",
     "composition": "Amoxycillin & Potassium Clavulanate Oral Suspension I.P.",
     "dosageForm": "Dry Syrup",
-    "strength": "As per Monograph",
+    "strength": "Amoxycillin 200 mg + Potassium Clavulanate 28.5 mg / 5ml (30 ml)",
     "pack": "3.3gm / 30ml",
     "page": 25,
     "image": "/assets/products/clavaero-cv-dry-syrup.jpg",
     "isFlagship": true,
-    "description": "Clavaero-CV Dry Syrup is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin & Potassium Clavulanate Oral Suspension I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Clavaero-CV Dry Syrup is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin & Potassium Clavulanate Oral Suspension I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Pediatric Broad-Spectrum Antibiotic Oral Suspension"
   },
   {
     "id": "clavaero-cv-dds-dry-syrup",
@@ -1912,12 +2039,13 @@ export const ALL_PRODUCTS = [
     "category": "dry-syrups",
     "composition": "Amoxycillin & Potassium Clavulanate Oral Suspension I.P. (Double Strength)",
     "dosageForm": "Dry Syrup",
-    "strength": "As per Monograph",
+    "strength": "Amoxycillin 400 mg + Potassium Clavulanate 57 mg / 5ml (Double Strength - 30 ml)",
     "pack": "6.6gm / 30ml",
     "page": 25,
     "image": "/assets/products/clavaero-cv-dds-dry-syrup.jpg",
     "isFlagship": true,
-    "description": "Clavaero-CV DDS Dry Syrup is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin & Potassium Clavulanate Oral Suspension I.P. (Double Strength). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Clavaero-CV DDS Dry Syrup is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin & Potassium Clavulanate Oral Suspension I.P. (Double Strength). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Pediatric High-Dose Antibiotic Oral Suspension"
   },
   {
     "id": "mefnaaero-ds-suspension",
@@ -1926,12 +2054,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Mefenamic Acid & Paracetamol Suspension",
     "dosageForm": "Liquid Oral",
-    "strength": "As per Monograph",
+    "strength": "Mefenamic Acid 100 mg + Paracetamol 250 mg / 5ml",
     "pack": "60ml",
     "page": 26,
     "image": "/assets/products/mefnaaero-ds-suspension.jpg",
     "isFlagship": false,
-    "description": "Mefnaaero - DS Suspension is a WHO-GMP certified pharmaceutical formulation featuring Mefenamic Acid & Paracetamol Suspension. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Mefnaaero - DS Suspension is a WHO-GMP certified pharmaceutical formulation featuring Mefenamic Acid & Paracetamol Suspension. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Pediatric Analgesic, Antipyretic & Anti-Inflammatory"
   },
   {
     "id": "ofloaero-oz-suspension",
@@ -1940,12 +2069,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Ofloxacin with Metronidazole Suspension",
     "dosageForm": "Liquid Oral",
-    "strength": "As per Monograph",
+    "strength": "Ofloxacin 50 mg + Metronidazole 100 mg / 5ml",
     "pack": "60ml",
     "page": 26,
     "image": "/assets/products/ofloaero-oz-suspension.jpg",
     "isFlagship": false,
-    "description": "OFLOAERO-OZ Suspension is a WHO-GMP certified pharmaceutical formulation featuring Ofloxacin with Metronidazole Suspension. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "OFLOAERO-OZ Suspension is a WHO-GMP certified pharmaceutical formulation featuring Ofloxacin with Metronidazole Suspension. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Pediatric Gastrointestinal Antimicrobial & Antiprotozoal"
   },
   {
     "id": "aerocof-dx-pd-suspension",
@@ -1954,12 +2084,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Dextromethorphan Hydrobromide, Bromhexine Hydrochloride, Phenylephrine Hydrochloride & Menthol",
     "dosageForm": "Liquid Oral",
-    "strength": "As per Monograph",
+    "strength": "Dextromethorphan 5mg + Bromhexine 4mg + Phenylephrine 2.5mg + Menthol / 5ml",
     "pack": "60 ml",
     "page": 27,
     "image": "/assets/products/aerocof-dx-pd-suspension.jpg",
     "isFlagship": false,
-    "description": "Aerocof - DX PD Suspension is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Bromhexine Hydrochloride, Phenylephrine Hydrochloride & Menthol. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aerocof - DX PD Suspension is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Bromhexine Hydrochloride, Phenylephrine Hydrochloride & Menthol. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Pediatric Cough & Mucolytic Suspension"
   },
   {
     "id": "aerocof-ls-junior",
@@ -1968,12 +2099,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Levosalbutamol Sulphate, Ambroxol Hydrochloride, Guaiphenesin, Expectorant",
     "dosageForm": "Formulation",
-    "strength": "As per Monograph",
+    "strength": "Levosalbutamol 0.5 mg + Ambroxol 15 mg + Guaiphenesin 50 mg / 5ml",
     "pack": "60 ml",
     "page": 27,
     "image": "/assets/products/aerocof-ls-junior.jpg",
     "isFlagship": false,
-    "description": "Aerocof - LS JUNIOR is a WHO-GMP certified pharmaceutical formulation featuring Levosalbutamol Sulphate, Ambroxol Hydrochloride, Guaiphenesin, Expectorant. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aerocof - LS JUNIOR is a WHO-GMP certified pharmaceutical formulation featuring Levosalbutamol Sulphate, Ambroxol Hydrochloride, Guaiphenesin, Expectorant. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Pediatric Bronchodilator & Mucokinetic Expectorant"
   },
   {
     "id": "aerofol-z-dry-syrup",
@@ -1982,12 +2114,13 @@ export const ALL_PRODUCTS = [
     "category": "dry-syrups",
     "composition": "Lactic Acid Bacillus, Niacinamide, Folic Acid, Pyridoxine & Zinc Dry Syrup",
     "dosageForm": "Dry Syrup",
-    "strength": "As per Monograph",
+    "strength": "Lactic Acid Bacillus 60M spores + Niacinamide 15mg + Folic Acid 100mcg + Zinc 10mg / 5ml",
     "pack": "60 ml",
     "page": 28,
     "image": "/assets/products/aerofol-z.jpg",
     "isFlagship": true,
-    "description": "Aerofol - Z Dry Syrup is a WHO-GMP certified pharmaceutical formulation featuring Lactic Acid Bacillus, Niacinamide, Folic Acid, Pyridoxine & Zinc Dry Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aerofol - Z Dry Syrup is a WHO-GMP certified pharmaceutical formulation featuring Lactic Acid Bacillus, Niacinamide, Folic Acid, Pyridoxine & Zinc Dry Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Pediatric Probiotic & Micronutrient Restoration"
   },
   {
     "id": "levoflak-m-syrup",
@@ -1996,12 +2129,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Levocetirizine DiHCL & Montelukast Sodium Syrup",
     "dosageForm": "Liquid Oral",
-    "strength": "As per Monograph",
+    "strength": "Levocetirizine DiHCl 2.5 mg + Montelukast Sodium 4 mg / 5ml",
     "pack": "60 ml",
     "page": 28,
     "image": "/assets/products/levoflak-m-syrup.jpg",
     "isFlagship": true,
-    "description": "Levoflak-M Syrup is a WHO-GMP certified pharmaceutical formulation featuring Levocetirizine DiHCL & Montelukast Sodium Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Levoflak-M Syrup is a WHO-GMP certified pharmaceutical formulation featuring Levocetirizine DiHCL & Montelukast Sodium Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Pediatric Anti-Allergic & Asthma Prophylaxis"
   },
   {
     "id": "ibutrap-suspension",
@@ -2010,12 +2144,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Ibuprofen & Paracetamol Suspension",
     "dosageForm": "Liquid Oral",
-    "strength": "As per Monograph",
+    "strength": "Ibuprofen 100 mg + Paracetamol 162.5 mg / 5ml",
     "pack": "60 ml",
     "page": 29,
     "image": "/assets/products/ibutrap-suspension.jpg",
     "isFlagship": false,
-    "description": "IBUTRAP Suspension is a WHO-GMP certified pharmaceutical formulation featuring Ibuprofen & Paracetamol Suspension. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "IBUTRAP Suspension is a WHO-GMP certified pharmaceutical formulation featuring Ibuprofen & Paracetamol Suspension. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Pediatric Analgesic & Antipyretic Suspension"
   },
   {
     "id": "osoaero-solution",
@@ -2024,12 +2159,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Solution of Lactulose & Licorice",
     "dosageForm": "Liquid Oral",
-    "strength": "As per Monograph",
+    "strength": "Lactulose Solution 10 g + Licorice Extract / 15ml",
     "pack": "100 ml",
     "page": 29,
     "image": "/assets/products/osoaero-solution.jpg",
     "isFlagship": false,
-    "description": "OSOAERO Solution is a WHO-GMP certified pharmaceutical formulation featuring Solution of Lactulose & Licorice. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "OSOAERO Solution is a WHO-GMP certified pharmaceutical formulation featuring Solution of Lactulose & Licorice. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Osmotic Laxative & Hepatic Support Solution"
   },
   {
     "id": "aerocof-dx-plus-cough-syrup",
@@ -2038,12 +2174,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Guaiphenesin, Dextromethorphan Hydrobromide, Phenylephrine Hydrochloride & Chlorpheniramine Maleate",
     "dosageForm": "Liquid Oral",
-    "strength": "As per Monograph",
+    "strength": "Dextromethorphan 10mg + Guaiphenesin 100mg + Phenylephrine 5mg + CPM 2mg / 5ml",
     "pack": "100 ml",
     "page": 30,
     "image": "/assets/products/aerocof-dx-plus-cough-syrup.jpg",
     "isFlagship": false,
-    "description": "Aerocof - DX PLUS Cough Syrup is a WHO-GMP certified pharmaceutical formulation featuring Guaiphenesin, Dextromethorphan Hydrobromide, Phenylephrine Hydrochloride & Chlorpheniramine Maleate. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aerocof - DX PLUS Cough Syrup is a WHO-GMP certified pharmaceutical formulation featuring Guaiphenesin, Dextromethorphan Hydrobromide, Phenylephrine Hydrochloride & Chlorpheniramine Maleate. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Advanced Formula Expectorant & Cough Syrup"
   },
   {
     "id": "aerocof-a-syrup-expectorant",
@@ -2052,12 +2189,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Ambroxol Hydrochloride, Guaiphenesin, Terbutaline Sulphate and Menthol Syrup",
     "dosageForm": "Liquid Oral",
-    "strength": "As per Monograph",
+    "strength": "Ambroxol 15mg + Guaiphenesin 50mg + Terbutaline 1.25mg + Menthol / 5ml",
     "pack": "100 ml",
     "page": 30,
     "image": "/assets/products/aerocof-a-syrup-expectorant.jpg",
     "isFlagship": false,
-    "description": "Aerocof - A Syrup EXPECTORANT is a WHO-GMP certified pharmaceutical formulation featuring Ambroxol Hydrochloride, Guaiphenesin, Terbutaline Sulphate and Menthol Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aerocof - A Syrup EXPECTORANT is a WHO-GMP certified pharmaceutical formulation featuring Ambroxol Hydrochloride, Guaiphenesin, Terbutaline Sulphate and Menthol Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Bronchodilator & Mucolytic Expectorant Syrup"
   },
   {
     "id": "aerocof-ls-cough-syrup",
@@ -2066,12 +2204,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Levosalbutamol Sulphate, Ambroxol Hydrochloride, & Guaiphenesin Expectorant",
     "dosageForm": "Liquid Oral",
-    "strength": "As per Monograph",
+    "strength": "Levosalbutamol 1 mg + Ambroxol 30 mg + Guaiphenesin 50 mg / 5ml",
     "pack": "100ml",
     "page": 31,
     "image": "/assets/products/aerocof-ls-cough-syrup.jpg",
     "isFlagship": false,
-    "description": "Aerocof-LS Cough Syrup is a WHO-GMP certified pharmaceutical formulation featuring Levosalbutamol Sulphate, Ambroxol Hydrochloride, & Guaiphenesin Expectorant. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aerocof-LS Cough Syrup is a WHO-GMP certified pharmaceutical formulation featuring Levosalbutamol Sulphate, Ambroxol Hydrochloride, & Guaiphenesin Expectorant. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Triple-Action Mucolytic & Bronchodilator Syrup"
   },
   {
     "id": "aerocof-bd-couch-syrup-sugar-free",
@@ -2080,12 +2219,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Dextromethorphan Hydrobromide, Bromhexine Hydrochloride, Phenylephrine Hydrochloride & Menthol",
     "dosageForm": "Liquid Oral",
-    "strength": "As per Monograph",
+    "strength": "Bromhexine 4mg + Dextromethorphan 10mg + Phenylephrine 5mg + Menthol / 5ml",
     "pack": "100 ml",
     "page": 31,
     "image": "/assets/products/aerocof-bd-couch-syrup-sugar-free.jpg",
     "isFlagship": false,
-    "description": "Aerocof-BD Couch Syrup SUGAR FREE is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Bromhexine Hydrochloride, Phenylephrine Hydrochloride & Menthol. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aerocof-BD Couch Syrup SUGAR FREE is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Bromhexine Hydrochloride, Phenylephrine Hydrochloride & Menthol. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Sugar-Free Mucolytic & Decongestant Syrup"
   },
   {
     "id": "aerocof-dx-dry-cough-syrup",
@@ -2094,12 +2234,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Dextromethorphan Hydrobromide, Phenylephrine hydrochloride & Chlorpheniramine Maleate",
     "dosageForm": "Liquid Oral",
-    "strength": "As per Monograph",
+    "strength": "Dextromethorphan HBr 15 mg + Phenylephrine HCl 10 mg + Chlorpheniramine Maleate 2 mg / 5ml",
     "pack": "100 ml",
     "page": 32,
     "image": "/assets/products/aerocof-dx-dry-cough-syrup.jpg",
     "isFlagship": false,
-    "description": "Aerocof-DX Dry Cough Syrup is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Phenylephrine hydrochloride & Chlorpheniramine Maleate. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aerocof-DX Dry Cough Syrup is a WHO-GMP certified pharmaceutical formulation featuring Dextromethorphan Hydrobromide, Phenylephrine hydrochloride & Chlorpheniramine Maleate. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Dry Cough Suppressant & Antihistaminic Syrup"
   },
   {
     "id": "aerocain-o-gel-anesthetic-antacid",
@@ -2108,12 +2249,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Oxetacaine, Dried Aluminium Hydroxide Gel, Magnesium Hydroxide, Simethicone, Deglycyrrhizinated Liquorice",
     "dosageForm": "Liquid Oral",
-    "strength": "As per Monograph",
+    "strength": "Oxetacaine 10mg + Aluminium Hydroxide 0.291g + Magnesium Hydroxide 98mg + Simethicone 25mg / 5ml",
     "pack": "170ML",
     "page": 32,
     "image": "/assets/products/aerocain-o-gel-anesthetic-antacid.jpg",
     "isFlagship": false,
-    "description": "AEROCAIN-O GEL (Anesthetic Antacid) is a WHO-GMP certified pharmaceutical formulation featuring Oxetacaine, Dried Aluminium Hydroxide Gel, Magnesium Hydroxide, Simethicone, Deglycyrrhizinated Liquorice. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "AEROCAIN-O GEL (Anesthetic Antacid) is a WHO-GMP certified pharmaceutical formulation featuring Oxetacaine, Dried Aluminium Hydroxide Gel, Magnesium Hydroxide, Simethicone, Deglycyrrhizinated Liquorice. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Local Anesthetic & High-Potency Antacid Gel"
   },
   {
     "id": "aerovit-gold-syrup",
@@ -2122,12 +2264,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Multivitamin, Multimineral with Astaxanthin Syrup (Nutraceutical)",
     "dosageForm": "Liquid Oral",
-    "strength": "As per Monograph",
+    "strength": "Astaxanthin 5% + Lycopene + Multivitamins (B-Complex, A, C, E) & Minerals / 5ml",
     "pack": "200 ml",
     "page": 33,
     "image": "/assets/products/aerovit-gold-syrup.jpg",
     "isFlagship": false,
-    "description": "Aerovit Gold Syrup is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin, Multimineral with Astaxanthin Syrup (Nutraceutical). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aerovit Gold Syrup is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin, Multimineral with Astaxanthin Syrup (Nutraceutical). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Premium Antioxidant, Multivitamin & Energy Tonic"
   },
   {
     "id": "aerogro-syrup",
@@ -2136,12 +2279,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Cyproheptadine Hydrochloride And Tricholine Citrate Syrup",
     "dosageForm": "Liquid Oral",
-    "strength": "As per Monograph",
+    "strength": "Cyproheptadine HCl 2 mg + Tricholine Citrate 275 mg / 5ml",
     "pack": "200 ml",
     "page": 33,
     "image": "/assets/products/aerogro-syrup.jpg",
     "isFlagship": false,
-    "description": "AEROGRO Syrup is a WHO-GMP certified pharmaceutical formulation featuring Cyproheptadine Hydrochloride And Tricholine Citrate Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "AEROGRO Syrup is a WHO-GMP certified pharmaceutical formulation featuring Cyproheptadine Hydrochloride And Tricholine Citrate Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Appetite Stimulant & Hepatic Metabolic Tonic"
   },
   {
     "id": "aeroliv-syrup",
@@ -2150,12 +2294,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Silymarine, B - Complex with Enzyme (Nutritional Food Supplement)",
     "dosageForm": "Liquid Oral",
-    "strength": "As per Monograph",
+    "strength": "Silymarin 35mg + Vitamin B-Complex with Digestive Enzymes / 5ml",
     "pack": "200 ml",
     "page": 34,
     "image": "/assets/products/aeroliv-syrup.jpg",
     "isFlagship": true,
-    "description": "Aeroliv Syrup is a WHO-GMP certified pharmaceutical formulation featuring Silymarine, B - Complex with Enzyme (Nutritional Food Supplement). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aeroliv Syrup is a WHO-GMP certified pharmaceutical formulation featuring Silymarine, B - Complex with Enzyme (Nutritional Food Supplement). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Hepato-Protective & Liver Regenerative Tonic"
   },
   {
     "id": "aerozinc-syrup",
@@ -2164,12 +2309,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Multivitamin & Multiminerals Syrup",
     "dosageForm": "Liquid Oral",
-    "strength": "As per Monograph",
+    "strength": "Multivitamins + Essential Trace Minerals & Zinc 10 mg / 5ml",
     "pack": "200 ml",
     "page": 34,
     "image": "/assets/products/aerozinc-syrup.jpg",
     "isFlagship": true,
-    "description": "Aerozinc+ Syrup is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin & Multiminerals Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aerozinc+ Syrup is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin & Multiminerals Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Pediatric & Adult Zinc Micronutrient Supplement"
   },
   {
     "id": "multi-vitamin-syrup-immune-booster",
@@ -2178,12 +2324,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Multivitamin, Multimineral with Lycopene, L-Lysine, Vitamin B12 & Antioxidant Syrup",
     "dosageForm": "Liquid Oral",
-    "strength": "As per Monograph",
+    "strength": "Multivitamin, Multimineral with Lycopene, L-Lysine & Vitamin B12 / 5ml",
     "pack": "200 ml",
     "page": 36,
     "image": "/assets/products/multi-vitamin-syrup-immune-booster.jpg",
     "isFlagship": false,
-    "description": "MULTI VITAMIN Syrup (Immune Booster) is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin, Multimineral with Lycopene, L-Lysine, Vitamin B12 & Antioxidant Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "MULTI VITAMIN Syrup (Immune Booster) is a WHO-GMP certified pharmaceutical formulation featuring Multivitamin, Multimineral with Lycopene, L-Lysine, Vitamin B12 & Antioxidant Syrup. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Comprehensive Immunity Booster & Vitality Syrup"
   },
   {
     "id": "coldaero-ds-suspension",
@@ -2192,12 +2339,13 @@ export const ALL_PRODUCTS = [
     "category": "syrups",
     "composition": "Paracetamol, Chlorpheniramine Maleate & Phenylephrine HCL Suspension",
     "dosageForm": "Liquid Oral",
-    "strength": "As per Monograph",
+    "strength": "Paracetamol 250 mg + Phenylephrine HCl 5 mg + Chlorpheniramine Maleate 2 mg / 5ml",
     "pack": "60 ml",
     "page": 43,
     "image": "/assets/products/coldaero-ds-suspension.jpg",
     "isFlagship": false,
-    "description": "COLDAERO-DS Suspension is a WHO-GMP certified pharmaceutical formulation featuring Paracetamol, Chlorpheniramine Maleate & Phenylephrine HCL Suspension. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "COLDAERO-DS Suspension is a WHO-GMP certified pharmaceutical formulation featuring Paracetamol, Chlorpheniramine Maleate & Phenylephrine HCL Suspension. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Double-Strength Pediatric Cold & Antipyretic Suspension"
   },
   {
     "id": "aeromax-oc-cream",
@@ -2206,12 +2354,13 @@ export const ALL_PRODUCTS = [
     "category": "creams",
     "composition": "Ofloxacin, Ornidazole, Itraconazole & Clobetasol Propionate Cream",
     "dosageForm": "Cream",
-    "strength": "As per Monograph",
+    "strength": "Ofloxacin 0.75% + Ornidazole 2% + Itraconazole 1% + Clobetasol Propionate 0.05% w/w",
     "pack": "Pack 20 X 15 gm",
     "page": 35,
     "image": "/assets/products/aeromax-oc-cream.jpg",
     "isFlagship": false,
-    "description": "AEROMAX-OC CREAM is a WHO-GMP certified pharmaceutical formulation featuring Ofloxacin, Ornidazole, Itraconazole & Clobetasol Propionate Cream. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "AEROMAX-OC CREAM is a WHO-GMP certified pharmaceutical formulation featuring Ofloxacin, Ornidazole, Itraconazole & Clobetasol Propionate Cream. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Broad-Spectrum Antimicrobial, Antifungal & Anti-Inflammatory Cream"
   },
   {
     "id": "aeroford-k6-cream",
@@ -2220,12 +2369,13 @@ export const ALL_PRODUCTS = [
     "category": "creams",
     "composition": "Ketoconazole, Iodochlorhydroxyquinoline, Tolnaftate, Neomycin, Clobetasol Propionate & Dexpanthenol Cream",
     "dosageForm": "Cream",
-    "strength": "As per Monograph",
+    "strength": "Ketoconazole 2% + Iodochlorhydroxyquinoline 1% + Tolnaftate 1% + Neomycin 0.1% + Clobetasol 0.05% + Dexpanthenol 0.5%",
     "pack": "15 gm",
     "page": 35,
     "image": "/assets/products/aeroford-k6-cream.jpg",
     "isFlagship": false,
-    "description": "Aeroford-K6 Cream is a WHO-GMP certified pharmaceutical formulation featuring Ketoconazole, Iodochlorhydroxyquinoline, Tolnaftate, Neomycin, Clobetasol Propionate & Dexpanthenol Cream. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aeroford-K6 Cream is a WHO-GMP certified pharmaceutical formulation featuring Ketoconazole, Iodochlorhydroxyquinoline, Tolnaftate, Neomycin, Clobetasol Propionate & Dexpanthenol Cream. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Hexa-Action Dermatological Therapy (Anti-Fungal & Anti-Bacterial)"
   },
   {
     "id": "aerodaine-ointment",
@@ -2234,12 +2384,13 @@ export const ALL_PRODUCTS = [
     "category": "creams",
     "composition": "Povidone-Iodine Ointment USP 5% w/w",
     "dosageForm": "Ointment",
-    "strength": "As per Monograph",
+    "strength": "Povidone-Iodine USP 5% w/w",
     "pack": "15 gm",
     "page": 37,
     "image": "/assets/products/aerodaine-ointment.jpg",
     "isFlagship": false,
-    "description": "AERODAINE Ointment is a WHO-GMP certified pharmaceutical formulation featuring Povidone-Iodine Ointment USP 5% w/w. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "AERODAINE Ointment is a WHO-GMP certified pharmaceutical formulation featuring Povidone-Iodine Ointment USP 5% w/w. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Topical Microbicidal Antiseptic & Wound Care Ointment"
   },
   {
     "id": "clobiaero-plus-cream",
@@ -2248,12 +2399,13 @@ export const ALL_PRODUCTS = [
     "category": "creams",
     "composition": "Ciprofloxacin HCl, Metronidazole, Terbinafine HCl & Clobetasol Propionate Cream",
     "dosageForm": "Cream",
-    "strength": "As per Monograph",
+    "strength": "Ciprofloxacin HCl 0.5% + Metronidazole 1% + Terbinafine HCl 1% + Clobetasol Propionate 0.05% w/w",
     "pack": "15 gm",
     "page": 37,
     "image": "/assets/products/clobiaero-plus-cream.jpg",
     "isFlagship": false,
-    "description": "Clobiaero Plus Cream is a WHO-GMP certified pharmaceutical formulation featuring Ciprofloxacin HCl, Metronidazole, Terbinafine HCl & Clobetasol Propionate Cream. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Clobiaero Plus Cream is a WHO-GMP certified pharmaceutical formulation featuring Ciprofloxacin HCl, Metronidazole, Terbinafine HCl & Clobetasol Propionate Cream. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Broad-Spectrum Antibacterial, Antiprotozoal & Antifungal Cream"
   },
   {
     "id": "rabbari-gel",
@@ -2262,12 +2414,13 @@ export const ALL_PRODUCTS = [
     "category": "creams",
     "composition": "Diclofenac Diethylamine, Linseed Oil, Methyl Salicylate & Menthol Gel",
     "dosageForm": "Gel",
-    "strength": "As per Monograph",
+    "strength": "Diclofenac Diethylamine 1.16% + Linseed Oil 3% + Methyl Salicylate 10% + Menthol 5% w/w",
     "pack": "30 gm",
     "page": 38,
     "image": "/assets/products/rabbari-gel.jpg",
     "isFlagship": true,
-    "description": "RABBARI GEL is a WHO-GMP certified pharmaceutical formulation featuring Diclofenac Diethylamine, Linseed Oil, Methyl Salicylate & Menthol Gel. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "RABBARI GEL is a WHO-GMP certified pharmaceutical formulation featuring Diclofenac Diethylamine, Linseed Oil, Methyl Salicylate & Menthol Gel. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Topical NSAID Analgesic & Musculoskeletal Pain Reliever Gel"
   },
   {
     "id": "luliaero-cream",
@@ -2276,12 +2429,13 @@ export const ALL_PRODUCTS = [
     "category": "creams",
     "composition": "Luliconazole Cream IP 1% w/w",
     "dosageForm": "Cream",
-    "strength": "As per Monograph",
+    "strength": "Luliconazole IP 1% w/w",
     "pack": "30 gm",
     "page": 38,
     "image": "/assets/products/luliaero-cream.jpg",
     "isFlagship": true,
-    "description": "Luliaero Cream is a WHO-GMP certified pharmaceutical formulation featuring Luliconazole Cream IP 1% w/w. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Luliaero Cream is a WHO-GMP certified pharmaceutical formulation featuring Luliconazole Cream IP 1% w/w. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "High-Efficacy Imidazole Antifungal Cream (Tinea & Dermatomycoses)"
   },
   {
     "id": "electroaero-oral-rehydration-salts-21-8-g",
@@ -2290,12 +2444,13 @@ export const ALL_PRODUCTS = [
     "category": "powders",
     "composition": "Oral Rehydration Salts 21.8 g (W.H.O. Recommended Formula)",
     "dosageForm": "Powder",
-    "strength": "8 g",
+    "strength": "Sodium Chloride 2.6g + Potassium Chloride 1.5g + Sodium Citrate 2.9g + Dextrose 13.5g (Total 21.8g Sachet)",
     "pack": "30 PCS",
     "page": 9,
     "image": "/assets/products/electroaero-oral-rehydration-salts-21-8-g.jpg",
     "isFlagship": false,
-    "description": "ELECTROAERO Oral Rehydration Salts 21.8 g is a WHO-GMP certified pharmaceutical formulation featuring Oral Rehydration Salts 21.8 g (W.H.O. Recommended Formula). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "ELECTROAERO Oral Rehydration Salts 21.8 g is a WHO-GMP certified pharmaceutical formulation featuring Oral Rehydration Salts 21.8 g (W.H.O. Recommended Formula). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "WHO Recommended Low-Osmolarity Oral Electrolyte Replacement"
   },
   {
     "id": "clotriaero-dusting-powder",
@@ -2304,12 +2459,13 @@ export const ALL_PRODUCTS = [
     "category": "powders",
     "composition": "Clotrimazole Dusting Powder",
     "dosageForm": "Powder",
-    "strength": "As per Monograph",
+    "strength": "Clotrimazole IP 1% w/w Dusting Powder Base",
     "pack": "100 g",
     "page": 21,
     "image": "/assets/products/clotriaero-dusting-powder.jpg",
     "isFlagship": false,
-    "description": "CLOTRIAERO Dusting Powder is a WHO-GMP certified pharmaceutical formulation featuring Clotrimazole Dusting Powder. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "CLOTRIAERO Dusting Powder is a WHO-GMP certified pharmaceutical formulation featuring Clotrimazole Dusting Powder. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Topical Antifungal & Anti-Pruritic Absorbent Powder"
   },
   {
     "id": "aero-protein-powder-vanilla-flavour",
@@ -2318,12 +2474,13 @@ export const ALL_PRODUCTS = [
     "category": "powders",
     "composition": "Complete Balanced Nutrition Protein Powder",
     "dosageForm": "Powder",
-    "strength": "As per Monograph",
+    "strength": "Whey Protein Concentrate + DHA + Bovine Colostrum + 28 Vitamins & Minerals (Vanilla)",
     "pack": "200 g",
     "page": 22,
     "image": "/assets/products/aero-protein-powder-vanilla-flavour.jpg",
     "isFlagship": false,
-    "description": "Aero-PROTEIN Powder (Vanilla Flavour) is a WHO-GMP certified pharmaceutical formulation featuring Complete Balanced Nutrition Protein Powder. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aero-PROTEIN Powder (Vanilla Flavour) is a WHO-GMP certified pharmaceutical formulation featuring Complete Balanced Nutrition Protein Powder. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Balanced Nutritional High-Protein Powder Drink"
   },
   {
     "id": "aero-protein-plus-dha-chocolate-flavour",
@@ -2332,12 +2489,13 @@ export const ALL_PRODUCTS = [
     "category": "powders",
     "composition": "Protein Powder with Whey, Omega & DHA",
     "dosageForm": "Formulation",
-    "strength": "As per Monograph",
+    "strength": "Whey Protein Fortified with DHA, Omega-3 Fatty Acids & Micronutrients (Chocolate)",
     "pack": "200 g",
     "page": 22,
     "image": "/assets/products/aero-protein-plus-dha-chocolate-flavour.jpg",
     "isFlagship": false,
-    "description": "Aero Protein Plus DHA (Chocolate Flavour) is a WHO-GMP certified pharmaceutical formulation featuring Protein Powder with Whey, Omega & DHA. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aero Protein Plus DHA (Chocolate Flavour) is a WHO-GMP certified pharmaceutical formulation featuring Protein Powder with Whey, Omega & DHA. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Cognitive & Muscle Nourishing Protein Supplement"
   },
   {
     "id": "aeropro-mom-powder",
@@ -2346,12 +2504,13 @@ export const ALL_PRODUCTS = [
     "category": "powders",
     "composition": "Maternal Nutritional Powder Fortified with Protein & Micronutrients",
     "dosageForm": "Powder",
-    "strength": "As per Monograph",
+    "strength": "Protein Supplement Fortified with Iron, Folic Acid, Calcium, DHA & Multivitamins",
     "pack": "200 g",
     "page": 23,
     "image": "/assets/products/aeropro-mom-powder.jpg",
     "isFlagship": false,
-    "description": "Aeropro Mom Powder is a WHO-GMP certified pharmaceutical formulation featuring Maternal Nutritional Powder Fortified with Protein & Micronutrients. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aeropro Mom Powder is a WHO-GMP certified pharmaceutical formulation featuring Maternal Nutritional Powder Fortified with Protein & Micronutrients. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Specialized Maternal, Prenatal & Lactation Nutritional Supplement"
   },
   {
     "id": "aerovit-kids-powder",
@@ -2360,12 +2519,13 @@ export const ALL_PRODUCTS = [
     "category": "powders",
     "composition": "Nutritional Support for Healthy Growing Kids",
     "dosageForm": "Powder",
-    "strength": "As per Monograph",
+    "strength": "Essential Amino Acids, Protein, Brain DHA, Calcium & Multivitamins",
     "pack": "200 g",
     "page": 23,
     "image": "/assets/products/aerovit-kids-powder.jpg",
     "isFlagship": false,
-    "description": "AEROVIT KIDS Powder is a WHO-GMP certified pharmaceutical formulation featuring Nutritional Support for Healthy Growing Kids. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "AEROVIT KIDS Powder is a WHO-GMP certified pharmaceutical formulation featuring Nutritional Support for Healthy Growing Kids. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Pediatric Physical Growth & Cognitive Development Nutrition"
   },
   {
     "id": "aerovita-z-instant-energy-drink-booster",
@@ -2374,12 +2534,13 @@ export const ALL_PRODUCTS = [
     "category": "powders",
     "composition": "Dextrose with Vitamin C & Mineral Powder",
     "dosageForm": "Formulation",
-    "strength": "As per Monograph",
+    "strength": "Dextrose Monohydrate, Sucrose, Zinc Sulphate 32.5mg & Ascorbic Acid (Vitamin C) 50mg",
     "pack": "105 gm / 200 g",
     "page": 24,
     "image": "/assets/products/aerovita-z.jpg",
     "isFlagship": true,
-    "description": "Aerovita-Z Instant Energy Drink Booster is a WHO-GMP certified pharmaceutical formulation featuring Dextrose with Vitamin C & Mineral Powder. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aerovita-Z Instant Energy Drink Booster is a WHO-GMP certified pharmaceutical formulation featuring Dextrose with Vitamin C & Mineral Powder. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Instant Rehydration & Cellular Energy Drink Booster"
   },
   {
     "id": "aerovit-ors-powder",
@@ -2388,12 +2549,13 @@ export const ALL_PRODUCTS = [
     "category": "powders",
     "composition": "Dextrose with Vitamin C, Zinc & Electrolyte Powder",
     "dosageForm": "Powder",
-    "strength": "As per Monograph",
+    "strength": "Dextrose, Sodium Chloride, Potassium Chloride, Sodium Citrate with Zinc & Vitamin C",
     "pack": "10 x 35 gm / 200 g",
     "page": 24,
     "image": "/assets/products/aerovit-ors-powder.jpg",
     "isFlagship": true,
-    "description": "AEROVIT ORS Powder is a WHO-GMP certified pharmaceutical formulation featuring Dextrose with Vitamin C, Zinc & Electrolyte Powder. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "AEROVIT ORS Powder is a WHO-GMP certified pharmaceutical formulation featuring Dextrose with Vitamin C, Zinc & Electrolyte Powder. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Instant Electrolyte Hydration & Fatigue Relief Powder"
   },
   {
     "id": "aerosilix-face-wash",
@@ -2402,12 +2564,13 @@ export const ALL_PRODUCTS = [
     "category": "drops",
     "composition": "Glycolic Acid, Salicylic Acid & Vitamin E Acetate Gel",
     "dosageForm": "Face Wash",
-    "strength": "As per Monograph",
+    "strength": "Glycolic Acid 1% + Salicylic Acid 2% + Vitamin E Acetate Gentle Gel Base",
     "pack": "75gm",
     "page": 16,
     "image": "/assets/products/aerosilix-face-wash.jpg",
     "isFlagship": false,
-    "description": "Aerosilix Face Wash is a WHO-GMP certified pharmaceutical formulation featuring Glycolic Acid, Salicylic Acid & Vitamin E Acetate Gel. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Aerosilix Face Wash is a WHO-GMP certified pharmaceutical formulation featuring Glycolic Acid, Salicylic Acid & Vitamin E Acetate Gel. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Dermatological Exfoliating, Anti-Acne & Deep Cleansing Face Wash"
   },
   {
     "id": "cotton-crepe-bandage-with-fast-edges",
@@ -2416,12 +2579,13 @@ export const ALL_PRODUCTS = [
     "category": "drops",
     "composition": "Cotton Crepe Bandage B.P.C. Flesh Coloured Elastic",
     "dosageForm": "Medical Supply",
-    "strength": "As per Monograph",
+    "strength": "100% Pure Woven Cotton with Non-Fraying Fast Edges (B.P.C. Standard - 4 Metre)",
     "pack": "Length 4 Mtr.",
     "page": 36,
     "image": "/assets/products/cotton-crepe-bandage-with-fast-edges.jpg",
     "isFlagship": false,
-    "description": "Cotton Crepe Bandage (With Fast Edges) is a WHO-GMP certified pharmaceutical formulation featuring Cotton Crepe Bandage B.P.C. Flesh Coloured Elastic. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Cotton Crepe Bandage (With Fast Edges) is a WHO-GMP certified pharmaceutical formulation featuring Cotton Crepe Bandage B.P.C. Flesh Coloured Elastic. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Orthopedic Support & Compression Bandage"
   },
   {
     "id": "kesh-aero-ayurvedic-oil",
@@ -2430,12 +2594,13 @@ export const ALL_PRODUCTS = [
     "category": "drops",
     "composition": "Ayurvedic Hair Oil (100% Natural Product)",
     "dosageForm": "Herbal Oil",
-    "strength": "As per Monograph",
+    "strength": "Bhringraj, Amla, Brahmi, Neem, Sesame Oil & Classical Ayurvedic Herb Extracts",
     "pack": "100 ml",
     "page": 39,
     "image": "/assets/products/kesh-aero-ayurvedic-oil.jpg",
     "isFlagship": false,
-    "description": "Kesh Aero Ayurvedic Oil is a WHO-GMP certified pharmaceutical formulation featuring Ayurvedic Hair Oil (100% Natural Product). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Kesh Aero Ayurvedic Oil is a WHO-GMP certified pharmaceutical formulation featuring Ayurvedic Hair Oil (100% Natural Product). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "100% Natural Ayurvedic Anti-Hairfall & Scalp Nourishment Therapy"
   },
   {
     "id": "ketaero-soap",
@@ -2444,12 +2609,13 @@ export const ALL_PRODUCTS = [
     "category": "drops",
     "composition": "Ketoconazole 2% w/w Soap (Anti-Fungal Medicated Soap)",
     "dosageForm": "Medicated Soap",
-    "strength": "As per Monograph",
+    "strength": "Ketoconazole 2% w/w in Grade 1 Moisturizing Soap Base",
     "pack": "75 gm",
     "page": 39,
     "image": "/assets/products/ketaero-soap.jpg",
     "isFlagship": false,
-    "description": "KETAERO Soap is a WHO-GMP certified pharmaceutical formulation featuring Ketoconazole 2% w/w Soap (Anti-Fungal Medicated Soap). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "KETAERO Soap is a WHO-GMP certified pharmaceutical formulation featuring Ketoconazole 2% w/w Soap (Anti-Fungal Medicated Soap). Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Medicated Antifungal & Anti-Dandruff Body Cleansing Soap"
   },
   {
     "id": "moxi-aero-d-eye-drops",
@@ -2458,12 +2624,13 @@ export const ALL_PRODUCTS = [
     "category": "drops",
     "composition": "Moxifloxacin & Dexamethasone Eye Drops",
     "dosageForm": "Ophthalmic Drop",
-    "strength": "As per Monograph",
+    "strength": "Moxifloxacin HCl 0.5% w/v + Dexamethasone Sodium Phosphate 0.1% w/v",
     "pack": "5ml",
     "page": 40,
     "image": "/assets/products/moxi-aero-d-eye-drops.jpg",
     "isFlagship": true,
-    "description": "Moxi Aero-D Eye Drops is a WHO-GMP certified pharmaceutical formulation featuring Moxifloxacin & Dexamethasone Eye Drops. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Moxi Aero-D Eye Drops is a WHO-GMP certified pharmaceutical formulation featuring Moxifloxacin & Dexamethasone Eye Drops. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Ophthalmic Fluoroquinolone Antimicrobial & Anti-Inflammatory Solution"
   },
   {
     "id": "cefi-aero-d-eye-ear-drops",
@@ -2472,14 +2639,15 @@ export const ALL_PRODUCTS = [
     "category": "drops",
     "composition": "Ciprofloxacin & Dexamethasone Eye/Ear Drops",
     "dosageForm": "Ophthalmic Drop",
-    "strength": "As per Monograph",
+    "strength": "Ciprofloxacin HCl 0.3% w/v + Dexamethasone Sodium Phosphate 0.1% w/v",
     "pack": "10 ml",
     "page": 40,
     "image": "/assets/products/cefi-aero-d-eye-ear-drops.jpg",
     "isFlagship": true,
-    "description": "Cefi Aero D Eye & Ear Drops is a WHO-GMP certified pharmaceutical formulation featuring Ciprofloxacin & Dexamethasone Eye/Ear Drops. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes."
+    "description": "Cefi Aero D Eye & Ear Drops is a WHO-GMP certified pharmaceutical formulation featuring Ciprofloxacin & Dexamethasone Eye/Ear Drops. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
+    "therapeuticCategory": "Ophthalmic & Otic Broad-Spectrum Antibiotic / Steroid Suspension"
   }
-];
+];;
 
 /**
  * Returns all formulation categories with dynamic product counts
