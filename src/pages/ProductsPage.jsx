@@ -169,7 +169,7 @@ export default function ProductsPage() {
                         onMouseDown={() => handleSearchResultClick(prod)}
                         className="p-3 hover:bg-slate-50 cursor-pointer flex items-center gap-3 transition-colors text-left"
                       >
-                        <div className="w-12 h-12 bg-transparent rounded-lg border border-slate-200 flex-shrink-0 p-1 flex items-center justify-center">
+                        <div className="w-12 h-12 bg-white rounded-lg border border-slate-200 flex-shrink-0 p-1 flex items-center justify-center">
                           <img
                             src={prod.image}
                             alt={prod.name}
@@ -299,8 +299,8 @@ export default function ProductsPage() {
                   </span>
                 </div>
 
-                {/* Big Crisp Product Visual on Transparent Canvas */}
-                <div className="relative w-full h-48 bg-transparent flex items-center justify-center p-4 overflow-hidden border-b border-slate-100/70">
+                {/* Big Crisp Product Visual on Pure White Canvas */}
+                <div className="relative w-full h-48 bg-white flex items-center justify-center p-4 overflow-hidden border-b border-slate-100/70">
                   <img
                     src={category.flagshipImage}
                     alt={category.title}
@@ -389,8 +389,8 @@ export default function ProductsPage() {
                   key={prod.id}
                   className="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#00AEEF]/50 transition-all duration-300 flex flex-col overflow-hidden group"
                 >
-                  {/* Clean Product Visual on Transparent Canvas */}
-                  <div className="w-full h-52 bg-transparent p-4 flex items-center justify-center border-b border-slate-100/70 relative overflow-hidden">
+                  {/* Clean Product Visual on Pure White Canvas */}
+                  <div className="w-full h-52 bg-white p-4 flex items-center justify-center border-b border-slate-100/70 relative overflow-hidden">
                     <img
                       src={prod.image}
                       alt={prod.name}

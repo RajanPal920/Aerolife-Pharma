@@ -119,10 +119,10 @@ export default function ProductDetailPage() {
             
             {/* 
               LEFT COLUMN (lg:col-span-5):
-              Clean Product Packaging Image on Transparent Canvas
+              Clean Product Packaging Image on Pure White Canvas
             */}
             <div className="lg:col-span-5 flex flex-col items-center">
-              <div className="w-full aspect-[4/3] bg-transparent rounded-2xl border border-slate-200/80 p-6 sm:p-8 flex items-center justify-center relative shadow-inner overflow-hidden group">
+              <div className="w-full aspect-[4/3] bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 flex items-center justify-center relative shadow-inner overflow-hidden group">
                 <img
                   src={product.image}
                   alt={product.name}
@@ -347,7 +347,8 @@ export default function ProductDetailPage() {
                   key={rel.id}
                   className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-200 flex flex-col overflow-hidden group"
                 >
-                  <div className="w-full h-44 bg-transparent p-4 flex items-center justify-center border-b border-slate-100/70 relative">
+                  {/* Product Packaging Image on Pure White Canvas */}
+                  <div className="w-full h-44 bg-white p-4 flex items-center justify-center border-b border-slate-100/70 relative">
                     <img
                       src={rel.image}
                       alt={rel.name}

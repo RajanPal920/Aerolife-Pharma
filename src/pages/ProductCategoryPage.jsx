@@ -303,8 +303,8 @@ export default function ProductCategoryPage() {
                 key={product.id}
                 className="group bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#00AEEF]/50 transition-all duration-200 flex flex-col overflow-hidden"
               >
-                {/* Product Packaging Image on Transparent Canvas */}
-                <div className="w-full h-48 sm:h-52 bg-transparent p-4 flex items-center justify-center border-b border-slate-100/70 relative overflow-hidden">
+                {/* Product Packaging Image on Clean White Canvas (Seamless matching Aeromark-P) */}
+                <div className="w-full h-48 sm:h-52 bg-white p-4 flex items-center justify-center border-b border-slate-100/70 relative overflow-hidden">
                   <img
                     src={product.image}
                     alt={product.name}

@@ -237,8 +237,8 @@ export default function OurProductsSection() {
                   </span>
                 </div>
 
-                {/* Product Packaging Image on Transparent Canvas */}
-                <div className="relative w-full h-44 sm:h-48 rounded-xl bg-transparent flex items-center justify-center p-2 mb-3.5 overflow-hidden">
+                {/* Product Packaging Image on Pure White Canvas (Matches Aeromark-P) */}
+                <div className="relative w-full h-44 sm:h-48 rounded-xl bg-white flex items-center justify-center p-2 mb-3.5 overflow-hidden">
                   <img
                     src={prod.image}
                     alt={prod.name}
