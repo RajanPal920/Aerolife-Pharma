@@ -331,36 +331,21 @@ export default function QualityPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
-            {/* Left Column (5 cols): Photo with Bottom Caption Card (Matching User Reference Image 2) */}
+            {/* Left Column (5 cols): Photo with Full Container View (No Overlays, Crisp Analytical Laboratory Quality Image) */}
             <div className="lg:col-span-5 flex flex-col">
               <div className="relative rounded-3xl overflow-hidden border-2 border-white/60 shadow-2xl bg-white p-2 group">
-                <div className="h-72 sm:h-80 lg:h-[360px] w-full overflow-hidden rounded-2xl relative">
+                <div className="h-80 sm:h-96 lg:h-[420px] w-full overflow-hidden rounded-2xl relative">
                   <img
-                    src="/assets/quality/quality_blister_tablets.jpg"
-                    alt="Clinical Excellence Formulation Packaging"
+                    src="/assets/quality/quality_lab_testing.jpg"
+                    alt="Pharmaceutical Quality Control Laboratory and Chromatographic Testing"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     onError={(e) => {
-                      e.currentTarget.src = '/assets/quality/quality_monograph_testing.jpg';
+                      e.currentTarget.src = '/assets/quality/quality_cleanroom_packaging.jpg';
                     }}
                   />
-
-                  {/* Floating Offset Badge matching User Reference Image 2 */}
-                  <div className="absolute bottom-4 left-4 bg-[#102D4B]/95 text-white backdrop-blur-md border border-[#00AEEF]/40 p-3.5 rounded-2xl shadow-xl flex items-center gap-3 max-w-[260px] sm:max-w-[300px]">
-                    <div className="w-10 h-10 rounded-xl bg-[#00AEEF]/10 flex items-center justify-center flex-shrink-0 text-[#00AEEF]">
-                      <ShieldCheck className="w-5 h-5 text-[#00AEEF]" />
-                    </div>
-                    <div>
-                      <h4 className="text-xs font-black uppercase tracking-wider text-white">
-                        CLINICAL EXCELLENCE
-                      </h4>
-                      <p className="text-[11px] text-slate-300">
-                        Monograph Validated Formulations
-                      </p>
-                    </div>
-                  </div>
                 </div>
 
-                {/* Precision Corner Accents matching Reference Image 2 */}
+                {/* Precision Corner Accents */}
                 <div className="absolute top-0 right-0 w-12 h-12 border-t-2 border-r-2 border-[#00AEEF] rounded-tr-2xl pointer-events-none" />
                 <div className="absolute bottom-0 left-0 w-12 h-12 border-b-2 border-l-2 border-[#ED1C24] rounded-bl-2xl pointer-events-none" />
               </div>

@@ -112,11 +112,11 @@ export default function ProductCategoryPage() {
           {/* Centered Pill */}
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-[#00AEEF] text-xs font-bold tracking-wide uppercase mb-4 shadow-sm">
             <IconComponent className="w-4 h-4 text-[#00AEEF]" />
-            <span>WHO-GMP Validated Formulation Category</span>
+            <span>WHO-GMP Validated Product Category</span>
           </div>
 
-          {/* Centered Headline */}
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-tight mb-4">
+          {/* Centered Headline - Responsive Mobile Safe */}
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight mb-4 break-words">
             {currentCategory.title}
           </h1>
 
@@ -224,14 +224,14 @@ export default function ProductCategoryPage() {
 
           {/* Counter Display */}
           <div className="text-xs font-bold text-slate-500 text-right flex-shrink-0">
-            Showing <span className="text-[#00AEEF] font-extrabold">{filteredProducts.length}</span> of {categoryProducts.length} Formulations
+            Showing <span className="text-[#00AEEF] font-extrabold">{filteredProducts.length}</span> of {categoryProducts.length} Products
           </div>
         </div>
 
         {/* 
           ======================================================================
           RESPONSIVE PRODUCT CARDS GRID
-          Displaying verified products with crisp packaging on clean white canvas
+          Displaying verified products with crisp packaging on clean transparent canvas
           ======================================================================
         */}
         {filteredProducts.length > 0 ? (
@@ -241,8 +241,8 @@ export default function ProductCategoryPage() {
                 key={product.id}
                 className="group bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#00AEEF]/50 transition-all duration-200 flex flex-col overflow-hidden"
               >
-                {/* Big Crisp Product Image on Pure White Canvas */}
-                <div className="w-full h-52 bg-white p-4 flex items-center justify-center border-b border-slate-100 relative overflow-hidden">
+                {/* Product Packaging Image on Transparent Canvas */}
+                <div className="w-full h-52 bg-transparent p-4 flex items-center justify-center border-b border-slate-100/70 relative overflow-hidden">
                   <img
                     src={product.image}
                     alt={product.name}
@@ -252,9 +252,6 @@ export default function ProductCategoryPage() {
                       e.currentTarget.src = '/assets/products/placeholder-pharmaceutical.svg';
                     }}
                   />
-                  <span className="absolute top-2.5 left-2.5 text-[10px] font-bold text-[#00AEEF] bg-[#00AEEF]/10 px-2 py-0.5 rounded border border-[#00AEEF]/15">
-                    Formulation #{product.page}
-                  </span>
                   <span className="absolute top-2.5 right-2.5 text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded">
                     {product.dosageForm}
                   </span>
@@ -305,7 +302,7 @@ export default function ProductCategoryPage() {
         ) : (
           <div className="bg-white rounded-2xl border border-slate-200 p-12 text-center max-w-lg mx-auto">
             <Package className="w-12 h-12 text-slate-300 mx-auto mb-3" />
-            <h3 className="text-base font-bold text-slate-800 mb-1">No Formulations Matched</h3>
+            <h3 className="text-base font-bold text-slate-800 mb-1">No Products Matched</h3>
             <p className="text-xs text-slate-500 mb-6">
               We couldn't find any products in {currentCategory.title} matching "{inCategorySearch}".
             </p>

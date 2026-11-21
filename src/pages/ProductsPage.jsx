@@ -187,7 +187,7 @@ export default function ProductsPage() {
                             <div className="flex-1 min-w-0">
                               <h4 className="text-xs sm:text-sm font-bold text-slate-900 truncate">{prod.name}</h4>
                               <p className="text-[11px] text-slate-500 truncate">{prod.composition}</p>
-                              <span className="text-[10px] font-semibold text-[#00AEEF]">{prod.pack} • Formulation #{prod.page}</span>
+                              <span className="text-[10px] font-semibold text-[#00AEEF]">{prod.pack}</span>
                             </div>
                             <ArrowRight className="w-4 h-4 text-slate-400 flex-shrink-0" />
                           </div>
@@ -195,7 +195,7 @@ export default function ProductsPage() {
                       </div>
                     ) : (
                       <div className="p-6 text-center text-xs text-slate-500">
-                        No matching formulations found for "{searchQuery}".
+                        No matching products found for "{searchQuery}".
                       </div>
                     )}
                   </div>
@@ -231,7 +231,7 @@ export default function ProductsPage() {
                   <span className="block text-2xl sm:text-3xl font-black text-white">
                     {totalProductsCount}+
                   </span>
-                  <span className="text-xs text-slate-300 font-medium">Total Formulations</span>
+                  <span className="text-xs text-slate-300 font-medium">Total Products</span>
                 </div>
                 <div>
                   <span className="block text-2xl sm:text-3xl font-black text-[#00AEEF]">
@@ -252,35 +252,19 @@ export default function ProductsPage() {
               </div>
             </div>
 
-            {/* Right Column (5 cols): Styled Image Card Full to Container */}
+            {/* Right Column (5 cols): Clean Packaging Line Image - Full to Container without Obstructive Overlays */}
             <div className="lg:col-span-5 flex items-stretch">
-              <div className="relative w-full h-full min-h-[380px] lg:min-h-[460px]">
+              <div className="relative w-full h-full min-h-[360px] sm:min-h-[400px] lg:min-h-[460px]">
                 {/* Subtle back card layer for depth */}
                 <div className="absolute inset-0 bg-[#0C1F33] rounded-3xl transform translate-x-2.5 translate-y-2.5 -z-10 border border-white/10" />
 
-                {/* Main Card with Clinical Reference Image - Full to Container */}
-                <div className="relative w-full h-full min-h-[380px] lg:min-h-[460px] rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl bg-[#0F2842] flex flex-col justify-end group">
+                {/* Main Card with High-Res Cleanroom Packaging Production Image */}
+                <div className="relative w-full h-full min-h-[360px] sm:min-h-[400px] lg:min-h-[460px] rounded-3xl overflow-hidden border-2 border-white/20 shadow-2xl bg-[#0F2842] group">
                   <img
-                    src="/assets/quality/quality_blister_tablets.jpg"
-                    alt="Pharmaceutical Formulations - Blister Packaging and Solid Dosage Forms"
-                    className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    src="/assets/quality/quality_cleanroom_packaging.jpg"
+                    alt="Pharmaceutical Packaging and Quality Inspection Line"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#102D4B]/85 via-[#102D4B]/20 to-black/30" />
-
-                  {/* High-Impact Badge in Bottom-Left */}
-                  <div className="relative z-10 m-4 sm:m-6 bg-[#102D4B]/95 backdrop-blur-md rounded-xl p-3.5 sm:p-4 border border-white/20 shadow-lg flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-lg bg-[#00AEEF]/20 flex items-center justify-center text-[#00AEEF] flex-shrink-0">
-                      <ShieldCheck className="w-5 h-5" />
-                    </div>
-                    <div className="min-w-0">
-                      <div className="text-xs sm:text-sm font-black text-white uppercase tracking-wider truncate">
-                        CLINICAL EXCELLENCE
-                      </div>
-                      <div className="text-xs text-slate-300 font-medium truncate">
-                        Monograph Validated Formulations
-                      </div>
-                    </div>
-                  </div>
 
                   {/* Symmetrical Dual-Color Framing Brackets */}
                   <div className="absolute top-3 right-3 w-7 h-7 border-t-2 border-r-2 border-[#00AEEF] rounded-tr-md pointer-events-none z-10" />
@@ -433,8 +417,8 @@ export default function ProductsPage() {
                   key={prod.id}
                   className="bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#00AEEF]/50 transition-all duration-300 flex flex-col overflow-hidden group"
                 >
-                  {/* Clean 3D Product Box Visual on Pure White Canvas */}
-                  <div className="w-full h-52 bg-white p-4 flex items-center justify-center border-b border-slate-100 relative overflow-hidden">
+                  {/* Clean Product Visual on Transparent Canvas */}
+                  <div className="w-full h-52 bg-transparent p-4 flex items-center justify-center border-b border-slate-100/70 relative overflow-hidden">
                     <img
                       src={prod.image}
                       alt={prod.name}
@@ -444,11 +428,8 @@ export default function ProductsPage() {
                       e.currentTarget.src = '/assets/products/placeholder-pharmaceutical.svg';
                     }}
                     />
-                    <span className="absolute top-2.5 left-2.5 text-[10px] font-bold text-[#00AEEF] bg-[#00AEEF]/10 px-2 py-0.5 rounded border border-[#00AEEF]/20">
-                      Formulation #{prod.page}
-                    </span>
                     <span className="absolute top-2.5 right-2.5 text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded uppercase tracking-wider">
-                      {prod.dosageForm || 'Formulation'}
+                      {prod.dosageForm || 'Product'}
                     </span>
                   </div>
 

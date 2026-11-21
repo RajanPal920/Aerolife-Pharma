@@ -108,9 +108,22 @@ export default function Footer() {
                 >
                   <span className="flex items-center gap-1.5">
                     <FileText className="w-3.5 h-3.5 text-[#ED1C24]" />
-                    <span>Product Catalog</span>
+                    <span>View Product Catalog</span>
                   </span>
                   <span className="text-[9px] font-bold bg-red-500/20 text-red-300 px-1.5 py-0.5 rounded">PDF</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/documents/CATLOP.pdf"
+                  download="Aerolife_Pharma_Product_Catalog.pdf"
+                  className="hover:text-[#00AEEF] transition-colors flex items-center justify-between group text-xs text-slate-300"
+                >
+                  <span className="flex items-center gap-1.5">
+                    <FileText className="w-3.5 h-3.5 text-[#00AEEF]" />
+                    <span>Download Catalog</span>
+                  </span>
+                  <span className="text-[9px] font-bold bg-cyan-500/20 text-cyan-300 px-1.5 py-0.5 rounded">Download</span>
                 </a>
               </li>
               <li>

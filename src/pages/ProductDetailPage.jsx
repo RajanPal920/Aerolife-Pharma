@@ -119,10 +119,10 @@ export default function ProductDetailPage() {
             
             {/* 
               LEFT COLUMN (lg:col-span-5):
-              Big, Clean Product Packaging Image on Pure White Background
+              Clean Product Packaging Image on Transparent Canvas
             */}
             <div className="lg:col-span-5 flex flex-col items-center">
-              <div className="w-full aspect-[4/3] bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 flex items-center justify-center relative shadow-inner overflow-hidden group">
+              <div className="w-full aspect-[4/3] bg-transparent rounded-2xl border border-slate-200/80 p-6 sm:p-8 flex items-center justify-center relative shadow-inner overflow-hidden group">
                 <img
                   src={product.image}
                   alt={product.name}
@@ -133,10 +133,10 @@ export default function ProductDetailPage() {
                 }}
                 />
 
-                {/* Verified Formulation Badge */}
+                {/* Verified Product Badge */}
                 <div className="absolute top-3 left-3 bg-[#00AEEF]/10 border border-[#00AEEF]/20 text-[#00AEEF] px-2.5 py-1 rounded-lg text-[11px] font-bold flex items-center gap-1.5">
                   <FileText className="w-3.5 h-3.5" />
-                  <span>Verified Formulation</span>
+                  <span>Verified Product</span>
                 </div>
 
                 {/* WHO-GMP Stamp */}
@@ -347,7 +347,7 @@ export default function ProductDetailPage() {
                   key={rel.id}
                   className="bg-white rounded-2xl border border-slate-200 shadow-sm hover:shadow-lg transition-all duration-200 flex flex-col overflow-hidden group"
                 >
-                  <div className="w-full h-44 bg-white p-4 flex items-center justify-center border-b border-slate-100 relative">
+                  <div className="w-full h-44 bg-transparent p-4 flex items-center justify-center border-b border-slate-100/70 relative">
                     <img
                       src={rel.image}
                       alt={rel.name}

@@ -307,16 +307,6 @@ export default function CertificatesPage() {
                 <span>Download TM Certificate</span>
               </a>
 
-              <a
-                href="/documents/CATLOP.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-bold text-slate-700 hover:text-[#ED1C24] bg-white border border-slate-200 hover:border-[#ED1C24]/50 shadow-xs transition-all duration-200 active:scale-98"
-              >
-                <FileBadge className="w-4 h-4 text-[#ED1C24]" />
-                <span>View Product Catalog (PDF)</span>
-              </a>
-
               <Link
                 to="/quote"
                 className="inline-flex items-center gap-1.5 px-4 py-3 text-xs sm:text-sm font-bold text-slate-600 hover:text-[#00AEEF] transition-colors ml-auto"

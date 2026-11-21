@@ -13,19 +13,19 @@ export default function FloatingContactButtons() {
       className="fixed bottom-6 right-5 sm:right-6 z-50 flex flex-col items-end gap-3.5 pointer-events-auto"
       aria-label="Floating quick contact buttons"
     >
-      {/* 1. Direct Call Floating Button - Enlarged & Borderless */}
+      {/* 1. Direct Call Floating Button - Light Cyan Blue */}
       <div className="relative flex items-center">
         {showTooltip === 'call' && (
-          <div className="mr-3 px-3.5 py-1.5 rounded-xl bg-[#102D4B] text-white text-xs font-bold shadow-2xl whitespace-nowrap animate-in fade-in zoom-in-95 pointer-events-none">
+          <div className="mr-3 px-3.5 py-1.5 rounded-xl bg-[#00AEEF] text-white text-xs font-bold shadow-2xl whitespace-nowrap animate-in fade-in zoom-in-95 pointer-events-none">
             Call +91 {phone}
-            <div className="absolute right-[-4px] top-1/2 -translate-y-1/2 w-2 h-2 bg-[#102D4B] rotate-45" />
+            <div className="absolute right-[-4px] top-1/2 -translate-y-1/2 w-2 h-2 bg-[#00AEEF] rotate-45" />
           </div>
         )}
         <a
           href={telUrl}
           onMouseEnter={() => setShowTooltip('call')}
           onMouseLeave={() => setShowTooltip('')}
-          className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#102D4B] hover:bg-[#00AEEF] text-white shadow-2xl hover:shadow-cyan-500/40 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 focus:outline-none cursor-pointer"
+          className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#00AEEF] hover:bg-[#0097D1] text-white shadow-2xl hover:shadow-cyan-400/50 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 focus:outline-none cursor-pointer"
           aria-label={`Direct Call to Aero Life Pharma at +91 ${phone}`}
         >
           <PhoneCall className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
