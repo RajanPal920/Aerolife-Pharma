@@ -286,21 +286,43 @@ export default function CertificatesPage() {
               </div>
             </div>
 
-            <div className="flex flex-wrap items-center gap-4 pt-4 border-t border-slate-100">
-              <Link
-                to="/quote"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#00AEEF] hover:bg-[#0097D1] shadow-md transition-colors"
+            <div className="flex flex-wrap items-center gap-3 pt-5 border-t border-slate-150">
+              <a
+                href="/documents/aerolife-pharma-tm-reg.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-bold text-white bg-[#00AEEF] hover:bg-[#0097D1] shadow-md shadow-cyan-500/25 transition-all duration-200 active:scale-98"
               >
-                <span>Request Trademark & Dossier Copy</span>
-                <ArrowRight className="w-4 h-4" />
-              </Link>
+                <FileText className="w-4 h-4" />
+                <span>View Certificate (PDF)</span>
+                <ExternalLink className="w-3.5 h-3.5 text-white/80" />
+              </a>
+
+              <a
+                href="/documents/aerolife-pharma-tm-reg.pdf"
+                download="Aerolife_Pharma_TradeMark_Registration_Class_5.pdf"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-bold text-[#102D4B] bg-slate-100 hover:bg-slate-200 border border-slate-200 transition-all duration-200 active:scale-98"
+              >
+                <Award className="w-4 h-4 text-[#00AEEF]" />
+                <span>Download TM Certificate</span>
+              </a>
+
+              <a
+                href="/documents/CATLOP.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl text-xs sm:text-sm font-bold text-slate-700 hover:text-[#ED1C24] bg-white border border-slate-200 hover:border-[#ED1C24]/50 shadow-xs transition-all duration-200 active:scale-98"
+              >
+                <FileBadge className="w-4 h-4 text-[#ED1C24]" />
+                <span>View Product Catalog (PDF)</span>
+              </a>
 
               <Link
-                to="/quality"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-slate-700 hover:text-[#102D4B] bg-slate-100 hover:bg-slate-200 transition-colors"
+                to="/quote"
+                className="inline-flex items-center gap-1.5 px-4 py-3 text-xs sm:text-sm font-bold text-slate-600 hover:text-[#00AEEF] transition-colors ml-auto"
               >
-                <span>View Quality Approach</span>
-                <ArrowRight className="w-4 h-4 text-[#00AEEF]" />
+                <span>Request Commercial Dossier</span>
+                <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
 

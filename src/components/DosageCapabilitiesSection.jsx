@@ -28,7 +28,7 @@ const NINE_DOSAGE_CATEGORIES = [
     name: 'Oral Liquids & Syrups',
     count: '20 Formulations',
     mainProduct: 'AEROLIV SYRUP',
-    image: '/assets/products/aeroliv_syrup.jpg',
+    image: '/assets/products/aeroliv-syrup.jpg',
     desc: 'Cough syrups, bronchodilator expectorants, appetite tonics & pediatric suspensions in sealed amber PET bottles.',
     badge: 'AMBER PET BOTTLES',
     link: '/products/oral-liquids-syrups'
@@ -48,7 +48,7 @@ const NINE_DOSAGE_CATEGORIES = [
     name: 'Creams, Gels & Ointments',
     count: '6 Formulations',
     mainProduct: 'LULIAERO CREAM',
-    image: '/assets/products/luliaero_cream.jpg',
+    image: '/assets/products/luliaero-cream.jpg',
     desc: 'Topical antifungal creams, pain relief gels & antiseptic ointments in lami tubes and tamper-evident jars.',
     badge: 'DERMA & TOPICALS',
     link: '/products/creams-gels-ointments'
@@ -58,7 +58,7 @@ const NINE_DOSAGE_CATEGORIES = [
     name: 'Nutraceuticals & Dietary Powders',
     count: '8 Formulations',
     mainProduct: 'AERO PROTEIN DHA',
-    image: '/assets/products/aero_protein.jpg',
+    image: '/assets/products/aero-protein-powder-vanilla-flavour.jpg',
     desc: 'Protein supplements with DHA, maternal nutrition formulas & kids growth tonics in 200g sealed tins.',
     badge: '200G SEALED TINS',
     link: '/products/nutraceuticals-dry-powders'
@@ -68,7 +68,7 @@ const NINE_DOSAGE_CATEGORIES = [
     name: 'Ophthalmic & Ear Drops',
     count: '6 Formulations',
     mainProduct: 'MOXI AERO-D EYE DROPS',
-    image: '/assets/products/moxi_aero_d.jpg',
+    image: '/assets/products/moxi-aero-d-eye-drops.jpg',
     desc: 'Sterile ophthalmic antibacterial and anti-inflammatory eye and ear drops packed in Class 100 cleanrooms.',
     badge: 'STERILE 5ML & 10ML',
     link: '/products/ophthalmic-ear-drops'
@@ -88,7 +88,7 @@ const NINE_DOSAGE_CATEGORIES = [
     name: 'Ayurvedic & Personal Care',
     count: '3 Formulations',
     mainProduct: 'KESH AERO AYURVEDIC OIL',
-    image: '/assets/products/kesh_aero.jpg',
+    image: '/assets/products/kesh-aero-ayurvedic-oil.jpg',
     desc: '100% natural herbal hair oils, medicated antifungal soaps, piles capsules & dermatological face wash gels.',
     badge: 'HERBAL & MEDICATED',
     link: '/products/ophthalmic-ear-drops'

@@ -11,7 +11,9 @@ import {
   Sparkles,
   Layers,
   CheckCircle2,
-  FileText
+  FileText,
+  Award,
+  FileCheck2
 } from 'lucide-react';
 import { menuCategories } from '../data/menuProducts';
 
@@ -47,6 +49,27 @@ export default function Navbar({ onNavigate }) {
       return false;
     }
   });
+
+  const [isDocsDropdownOpen, setIsDocsDropdownOpen] = useState(false);
+  const docsDropdownRef = useRef(null);
+  const docsLeaveTimeoutRef = useRef(null);
+
+  const handleOpenDocsDropdown = () => {
+    if (docsLeaveTimeoutRef.current) {
+      clearTimeout(docsLeaveTimeoutRef.current);
+      docsLeaveTimeoutRef.current = null;
+    }
+    setIsDocsDropdownOpen(true);
+  };
+
+  const handleCloseDocsDropdown = () => {
+    if (docsLeaveTimeoutRef.current) {
+      clearTimeout(docsLeaveTimeoutRef.current);
+    }
+    docsLeaveTimeoutRef.current = setTimeout(() => {
+      setIsDocsDropdownOpen(false);
+    }, 180);
+  };
 
   const [isMobileProductsOpen, setIsMobileProductsOpen] = useState(() => {
     try {
@@ -86,6 +109,7 @@ export default function Navbar({ onNavigate }) {
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setIsProductsDropdownOpen(false);
+    setIsDocsDropdownOpen(false);
   }, [pathname, location.search]);
 
   // Total formulation count across all categories
@@ -617,15 +641,35 @@ export default function Navbar({ onNavigate }) {
             )}
           </Link>
 
-          {/* Certificates */}
-          <Link
-            to="/certificates"
-            className={`group relative h-11 text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex flex-col items-center justify-center ${currentTab === 'certificates'
-              ? 'text-[#00AEEF]'
-              : 'text-slate-800 hover:text-[#00AEEF]'
-              }`}
+          {/* Certificates & Documents Dropdown */}
+          <div
+            className="relative h-11 flex flex-col items-center justify-center"
+            ref={docsDropdownRef}
+            onMouseEnter={handleOpenDocsDropdown}
+            onMouseLeave={handleCloseDocsDropdown}
+            onFocus={handleOpenDocsDropdown}
+            onBlur={(e) => {
+              if (!docsDropdownRef.current?.contains(e.relatedTarget)) {
+                handleCloseDocsDropdown();
+              }
+            }}
           >
-            <span>Certificates</span>
+            <Link
+              to="/certificates"
+              onClick={() => setIsDocsDropdownOpen(false)}
+              className={`group relative text-[15px] xl:text-[16px] font-semibold tracking-wide transition-colors duration-200 flex items-center gap-1 focus:outline-none ${currentTab === 'certificates' || isDocsDropdownOpen
+                ? 'text-[#00AEEF]'
+                : 'text-slate-800 hover:text-[#00AEEF]'
+                }`}
+              aria-expanded={isDocsDropdownOpen}
+              aria-haspopup="true"
+            >
+              <span>Certificates</span>
+              <ChevronDown
+                className={`w-4 h-4 transition-transform duration-200 ${isDocsDropdownOpen ? 'rotate-180 text-[#00AEEF]' : 'text-slate-400 group-hover:text-[#00AEEF]'
+                  }`}
+              />
+            </Link>
             {currentTab === 'certificates' ? (
               <span
                 className="w-6 h-[3px] bg-[#00AEEF] rounded-full mt-1 transition-all duration-200"
@@ -637,7 +681,76 @@ export default function Navbar({ onNavigate }) {
                 aria-hidden="true"
               />
             )}
-          </Link>
+
+            {isDocsDropdownOpen && (
+              <div
+                className="absolute top-[calc(100%+8px)] left-1/2 -translate-x-1/2 w-80 bg-white rounded-2xl shadow-xl border border-slate-200/90 p-3 z-[70] animate-in fade-in slide-in-from-top-2 duration-150"
+                onMouseEnter={handleOpenDocsDropdown}
+                onMouseLeave={handleCloseDocsDropdown}
+              >
+                <div className="absolute -top-3 left-0 right-0 h-4 bg-transparent pointer-events-auto" aria-hidden="true" />
+                
+                <div className="px-3 py-2 border-b border-slate-100 mb-2">
+                  <span className="text-[11px] font-extrabold text-[#102D4B] uppercase tracking-wider block">Corporate Credentials</span>
+                  <span className="text-[10px] text-slate-500">Government of India & Regulatory Standards</span>
+                </div>
+
+                <div className="space-y-1">
+                  <Link
+                    to="/certificates"
+                    onClick={() => setIsDocsDropdownOpen(false)}
+                    className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-slate-50 transition-colors group"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-[#00AEEF]/10 flex items-center justify-center text-[#00AEEF] flex-shrink-0 mt-0.5">
+                      <Award className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <div className="text-xs font-bold text-slate-800 group-hover:text-[#00AEEF] transition-colors">
+                        Certificates & Governance
+                      </div>
+                      <div className="text-[10.5px] text-slate-500">Schedule M, COA protocols & compliance</div>
+                    </div>
+                  </Link>
+
+                  <a
+                    href="/documents/aerolife-pharma-tm-reg.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-sky-50/60 transition-colors group"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <FileCheck2 className="w-4 h-4" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-xs font-bold text-slate-800 group-hover:text-emerald-700 transition-colors flex items-center justify-between">
+                        <span>Trade Mark Reg (Class 5)</span>
+                        <span className="text-[9px] font-extrabold bg-emerald-100 text-emerald-800 px-1.5 py-0.5 rounded">PDF</span>
+                      </div>
+                      <div className="text-[10.5px] text-slate-500">Govt of India Form RG-2 • No. 4665534</div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="/documents/CATLOP.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-2.5 p-2 rounded-xl hover:bg-sky-50/60 transition-colors group"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-[#ED1C24]/10 text-[#ED1C24] flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <FileText className="w-4 h-4" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-xs font-bold text-slate-800 group-hover:text-[#ED1C24] transition-colors flex items-center justify-between">
+                        <span>Official Product Catalog</span>
+                        <span className="text-[9px] font-extrabold bg-red-100 text-[#ED1C24] px-1.5 py-0.5 rounded">PDF</span>
+                      </div>
+                      <div className="text-[10.5px] text-slate-500">Complete 84 Formulation Monograph (57 MB)</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            )}
+          </div>
 
           {/* Contact */}
           <Link
@@ -833,17 +946,45 @@ export default function Navbar({ onNavigate }) {
                   {currentTab === 'quality' && <span className="w-2 h-2 rounded-full bg-[#00AEEF]" />}
                 </Link>
 
-                <Link
-                  to="/certificates"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`px-3 py-2.5 rounded-lg text-sm font-semibold transition-colors flex items-center justify-between ${currentTab === 'certificates'
-                    ? 'bg-[#F0F9FF] text-[#00AEEF]'
-                    : 'text-slate-700 hover:bg-slate-50'
-                    }`}
-                >
-                  <span>Certificates</span>
-                  {currentTab === 'certificates' && <span className="w-2 h-2 rounded-full bg-[#00AEEF]" />}
-                </Link>
+                <div className="border border-slate-150 rounded-xl overflow-hidden my-1">
+                  <Link
+                    to="/certificates"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`px-3 py-2.5 text-sm font-semibold transition-colors flex items-center justify-between ${currentTab === 'certificates'
+                      ? 'bg-[#F0F9FF] text-[#00AEEF]'
+                      : 'text-slate-700 hover:bg-slate-50'
+                      }`}
+                  >
+                    <span>Certificates & Governance</span>
+                    {currentTab === 'certificates' && <span className="w-2 h-2 rounded-full bg-[#00AEEF]" />}
+                  </Link>
+                  <div className="bg-slate-50 p-2 border-t border-slate-100 space-y-1">
+                    <a
+                      href="/documents/aerolife-pharma-tm-reg.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs font-semibold text-slate-700 hover:text-emerald-700 hover:bg-emerald-50 transition-colors"
+                    >
+                      <span className="flex items-center gap-1.5">
+                        <FileCheck2 className="w-3.5 h-3.5 text-emerald-600" />
+                        <span>Trademark Reg (Class 5)</span>
+                      </span>
+                      <span className="text-[9px] font-bold bg-emerald-100 text-emerald-800 px-1.5 py-0.2 rounded">PDF</span>
+                    </a>
+                    <a
+                      href="/documents/CATLOP.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-between px-2.5 py-1.5 rounded-lg text-xs font-semibold text-slate-700 hover:text-[#ED1C24] hover:bg-red-50 transition-colors"
+                    >
+                      <span className="flex items-center gap-1.5">
+                        <FileText className="w-3.5 h-3.5 text-[#ED1C24]" />
+                        <span>Official Product Catalog</span>
+                      </span>
+                      <span className="text-[9px] font-bold bg-red-100 text-[#ED1C24] px-1.5 py-0.2 rounded">PDF</span>
+                    </a>
+                  </div>
+                </div>
 
                 <Link
                   to="/contact"

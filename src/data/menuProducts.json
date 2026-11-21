@@ -11,7 +11,7 @@
         "composition": "Aceclofenac, Paracetamol & Serratiopeptidase Tablets",
         "page": 2,
         "categoryId": "tablets",
-        "image": "/assets/products/aeromark-sp-tablets.jpg"
+        "image": "/assets/products/aeromark-sp.jpg"
       },
       {
         "name": "AEROMARK-P TABLETS",
@@ -19,7 +19,7 @@
         "composition": "Aceclofenac & Paracetamol Tablets IP",
         "page": 2,
         "categoryId": "tablets",
-        "image": "/assets/products/aeromark-p-tablets.jpg"
+        "image": "/assets/products/aeromark-p.jpg"
       },
       {
         "name": "CLAVAERO-CV 625 TABLETS (10 x 6)",
@@ -27,7 +27,7 @@
         "composition": "Amoxycillin & Potassium Clavulanate Tablets I.P.",
         "page": 3,
         "categoryId": "tablets",
-        "image": "/assets/products/clavaero-cv-625-tablets-10-x-6.jpg"
+        "image": "/assets/products/clavaero-cv-625.jpg"
       },
       {
         "name": "CLAVAERO-CV 625 TABLETS (1 x 10)",
@@ -275,7 +275,7 @@
         "composition": "Itraconazole Capsules 200 mg",
         "page": 17,
         "categoryId": "capsules",
-        "image": "/assets/products/itraero-200-capsules.jpg"
+        "image": "/assets/products/itraero-200.jpg"
       },
       {
         "name": "OMEFIST 20 Capsules",
@@ -291,7 +291,7 @@
         "composition": "Omeprazole Domperidone Capsules IP",
         "page": 18,
         "categoryId": "capsules",
-        "image": "/assets/products/omefist-d-capsules.jpg"
+        "image": "/assets/products/omefist-d.jpg"
       },
       {
         "name": "RAIKA - DSR Capsules",
@@ -307,7 +307,7 @@
         "composition": "Amoxycillin Capsules I.P.",
         "page": 19,
         "categoryId": "capsules",
-        "image": "/assets/products/aeromox-500-capsules.jpg"
+        "image": "/assets/products/aeromox-500.jpg"
       },
       {
         "name": "EVAERO - 400 Capsules",
@@ -411,7 +411,7 @@
         "composition": "Lactic Acid Bacillus, Niacinamide, Folic Acid, Pyridoxine & Zinc Dry Syrup",
         "page": 28,
         "categoryId": "syrups",
-        "image": "/assets/products/aerofol-z-dry-syrup.jpg"
+        "image": "/assets/products/aerofol-z.jpg"
       },
       {
         "name": "Levoflak-M Syrup",
@@ -651,7 +651,7 @@
         "composition": "Dextrose with Vitamin C & Mineral Powder",
         "page": 24,
         "categoryId": "powders",
-        "image": "/assets/products/aerovita-z-instant-energy-drink-booster.jpg"
+        "image": "/assets/products/aerovita-z.jpg"
       },
       {
         "name": "AEROVIT ORS Powder",

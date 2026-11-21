@@ -199,6 +199,29 @@ export default function ProductsPage() {
                 )}
               </div>
 
+              {/* Official Product Catalog Actions (View & Download) */}
+              <div className="flex flex-wrap items-center gap-3 mb-8">
+                <a
+                  href="/documents/CATLOP.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl bg-[#00AEEF] hover:bg-[#0097D1] text-white text-xs sm:text-sm font-bold shadow-lg shadow-cyan-500/25 transition-all duration-200 active:scale-98"
+                >
+                  <FileText className="w-4 h-4" />
+                  <span>View Product Catalog (PDF)</span>
+                  <ExternalLink className="w-3.5 h-3.5 text-white/80" />
+                </a>
+
+                <a
+                  href="/documents/CATLOP.pdf"
+                  download="Aerolife_Pharma_Product_Catalog.pdf"
+                  className="inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-white/20 text-xs sm:text-sm font-bold backdrop-blur-xs transition-all duration-200 active:scale-98"
+                >
+                  <Package className="w-4 h-4 text-[#00AEEF]" />
+                  <span>Download Catalog (57.5 MB)</span>
+                </a>
+              </div>
+
               {/* Quick Metrics Bar with Solid Numbers */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 pt-6 border-t border-white/10">
                 <div>
@@ -410,7 +433,7 @@ export default function ProductsPage() {
                       src={prod.image}
                       alt={prod.name}
                       className="max-h-full max-w-full object-contain filter drop-shadow-md group-hover:scale-108 transition-transform duration-300"
-                      onError={(e) => { e.currentTarget.src = '/assets/products/clavaero-cv-625-tablets-10-x-6.jpg'; }}
+                      onError={(e) => { e.currentTarget.src = '/assets/products/clavaero-cv-625.jpg'; }}
                     />
                     <span className="absolute top-2.5 left-2.5 text-[10px] font-bold text-[#00AEEF] bg-[#00AEEF]/10 px-2 py-0.5 rounded border border-[#00AEEF]/20">
                       Formulation #{prod.page}

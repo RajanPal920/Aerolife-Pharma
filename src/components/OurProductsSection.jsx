@@ -12,7 +12,6 @@ const FEATURED_PRODUCTS = [
     dosageForm: 'TABLETS',
     composition: 'Amoxycillin & Potassium Clavulanate Tablets I.P.',
     pack: '10 × 6 Tablets',
-    mrp: '₹122.98',
     image: '/assets/products/clavaero-cv-625.jpg',
     badge: 'Antibiotic'
   },
@@ -25,7 +24,6 @@ const FEATURED_PRODUCTS = [
     dosageForm: 'TABLETS',
     composition: 'Aceclofenac, Paracetamol & Serratiopeptidase Tablets',
     pack: '10 × 10 Tablets',
-    mrp: '₹90.00',
     image: '/assets/products/aeromark-sp.jpg',
     badge: 'Analgesic & NSAID'
   },
@@ -38,7 +36,6 @@ const FEATURED_PRODUCTS = [
     dosageForm: 'CAPSULES',
     composition: 'Amoxycillin Capsules I.P. 500 mg',
     pack: '20 × 10 Capsules',
-    mrp: '₹82.32',
     image: '/assets/products/aeromox-500.jpg',
     badge: 'Antibacterial'
   },
@@ -51,7 +48,6 @@ const FEATURED_PRODUCTS = [
     dosageForm: 'CAPSULES',
     composition: 'Itraconazole Capsules 200 mg',
     pack: '10 × 1 × 10 Capsules',
-    mrp: '₹190.00',
     image: '/assets/products/itraero-200.jpg',
     badge: 'Anti-Fungal'
   },
@@ -64,7 +60,6 @@ const FEATURED_PRODUCTS = [
     dosageForm: 'CAPSULES',
     composition: 'Omeprazole & Domperidone Capsules IP',
     pack: '20 × 15 Capsules',
-    mrp: '₹110.00',
     image: '/assets/products/omefist-d.jpg',
     badge: 'Gastro Care'
   },
@@ -77,7 +72,6 @@ const FEATURED_PRODUCTS = [
     dosageForm: 'DRY SYRUP',
     composition: 'Lactic Acid Bacillus, Niacinamide, Folic Acid & Zinc Dry Syrup',
     pack: '60 ml (Orange Flavour)',
-    mrp: '₹80.00',
     image: '/assets/products/aerofol-z.jpg',
     badge: 'Probiotic & Vitamins'
   },
@@ -90,7 +84,6 @@ const FEATURED_PRODUCTS = [
     dosageForm: 'TABLETS',
     composition: 'Aceclofenac & Paracetamol Tablets IP',
     pack: '20 × 10 Tablets',
-    mrp: '₹70.00',
     image: '/assets/products/aeromark-p.jpg',
     badge: 'Pain Relief'
   },
@@ -103,7 +96,6 @@ const FEATURED_PRODUCTS = [
     dosageForm: 'ENERGY BOOSTER',
     composition: 'Dextrose with Vitamin C & Zinc Instant Energy Drink Powder',
     pack: '105 gm / 200 g (Orange)',
-    mrp: '₹60.00',
     image: '/assets/products/aerovita-z.jpg',
     badge: 'Immunity Booster'
   }

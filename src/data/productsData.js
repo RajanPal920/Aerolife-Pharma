@@ -16,7 +16,7 @@ export const CATEGORIES = [
     "title": "Tablets & Caplets",
     "shortDesc": "Analgesics, broad-spectrum antibiotics, NSAIDs, antipyretics & calcium formulations",
     "description": "Comprehensive range of solid dosage forms manufactured under stringent WHO-GMP guidelines, including dispersible, film-coated, sustained-release, and bilayer tablets.",
-    "flagshipImage": "/assets/products/aeromark-sp-tablets.jpg",
+    "flagshipImage": "/assets/products/aeromark-sp.jpg",
     "icon": "Pill",
     "products": [
       {
@@ -1397,7 +1397,7 @@ export const ALL_PRODUCTS = [
     "strength": "Aceclofenac 100 mg + Paracetamol 325 mg + Serratiopeptidase 15 mg",
     "pack": "10 x 10 TABLETS",
     "page": 2,
-    "image": "/assets/products/aeromark-sp-tablets.jpg",
+    "image": "/assets/products/aeromark-sp.jpg",
     "isFlagship": true,
     "description": "AEROMARK-SP TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac, Paracetamol & Serratiopeptidase Tablets. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
     "therapeuticCategory": "Analgesic, Anti-Inflammatory & Anti-Edematous"
@@ -1412,7 +1412,7 @@ export const ALL_PRODUCTS = [
     "strength": "Aceclofenac 100 mg + Paracetamol 325 mg",
     "pack": "20 x 10 TABLETS",
     "page": 2,
-    "image": "/assets/products/aeromark-p-tablets.jpg",
+    "image": "/assets/products/aeromark-p.jpg",
     "isFlagship": true,
     "description": "AEROMARK-P TABLETS is a WHO-GMP certified pharmaceutical formulation featuring Aceclofenac & Paracetamol Tablets IP. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
     "therapeuticCategory": "NSAID & Antipyretic Analgesic"
@@ -1427,7 +1427,7 @@ export const ALL_PRODUCTS = [
     "strength": "Amoxycillin 500 mg + Potassium Clavulanate 125 mg (625 mg)",
     "pack": "10 x 6 TABLETS",
     "page": 3,
-    "image": "/assets/products/clavaero-cv-625-tablets-10-x-6.jpg",
+    "image": "/assets/products/clavaero-cv-625.jpg",
     "isFlagship": true,
     "description": "CLAVAERO-CV 625 TABLETS (10 x 6) is a WHO-GMP certified pharmaceutical formulation featuring Amoxycillin & Potassium Clavulanate Tablets I.P.. Formulated under stringent clinical standards for therapeutic efficacy and optimal patient outcomes.",
     "therapeuticCategory": "Broad-Spectrum Penicillin Antibiotic"

@@ -10,7 +10,8 @@ import {
   CheckCircle2,
   FileCheck2,
   Clock,
-  MessageCircle
+  MessageCircle,
+  FileText
 } from 'lucide-react';
 
 export default function Footer() {
@@ -97,6 +98,34 @@ export default function Footer() {
                   <span className="text-[#00AEEF] group-hover:translate-x-1 transition-transform">›</span>
                   <span>Contact</span>
                 </Link>
+              </li>
+              <li className="pt-2 border-t border-slate-700/60 mt-2">
+                <a
+                  href="/documents/CATLOP.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#00AEEF] transition-colors flex items-center justify-between group text-xs text-slate-300"
+                >
+                  <span className="flex items-center gap-1.5">
+                    <FileText className="w-3.5 h-3.5 text-[#ED1C24]" />
+                    <span>Product Catalog</span>
+                  </span>
+                  <span className="text-[9px] font-bold bg-red-500/20 text-red-300 px-1.5 py-0.5 rounded">PDF</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/documents/aerolife-pharma-tm-reg.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#00AEEF] transition-colors flex items-center justify-between group text-xs text-slate-300"
+                >
+                  <span className="flex items-center gap-1.5">
+                    <Award className="w-3.5 h-3.5 text-[#00AEEF]" />
+                    <span>Trademark Reg (Class 5)</span>
+                  </span>
+                  <span className="text-[9px] font-bold bg-cyan-500/20 text-cyan-300 px-1.5 py-0.5 rounded">Govt</span>
+                </a>
               </li>
             </ul>
           </div>

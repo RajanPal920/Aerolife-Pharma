@@ -73,7 +73,7 @@ export default function QualityPage() {
       dosage: 'Tablet',
       boxType: 'Duplex Printed Mono-Carton',
       pack: '10 x 6 Alu-Alu Tablets',
-      image: '/assets/products/clavaero-cv-625-tablets-10-x-6.jpg',
+      image: '/assets/products/clavaero-cv-625.jpg',
       category: 'Antibiotic Therapy',
       barrier: 'Cold-Form Alu-Alu Moisture Shield'
     },
@@ -84,7 +84,7 @@ export default function QualityPage() {
       dosage: 'Tablet',
       boxType: 'Protective Outer Carton',
       pack: '10 x 10 Blister Tablets',
-      image: '/assets/products/aeromark-sp-tablets.jpg',
+      image: '/assets/products/aeromark-sp.jpg',
       category: 'Analgesic & NSAID',
       barrier: 'Blister Packaging with Tamper Seal'
     },
@@ -95,7 +95,7 @@ export default function QualityPage() {
       dosage: 'Capsule',
       boxType: 'Hard-Shell Blister Carton',
       pack: '10 x 1 x 4 Capsules',
-      image: '/assets/products/itraero-200-capsules.jpg',
+      image: '/assets/products/itraero-200.jpg',
       category: 'Antifungal Therapy',
       barrier: 'High-Density Blister Pack'
     },
