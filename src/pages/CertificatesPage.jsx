@@ -239,7 +239,7 @@ export default function CertificatesPage() {
             <div className="pt-4 text-[11px] text-slate-600 leading-relaxed">
               <strong className="text-[#102D4B] block mb-0.5">Registered Proprietor:</strong>
               <span>Ruparam Raika, Trading as: Aerolife Pharma</span>
-              <span className="block text-slate-500 mt-1">Shop No. 8, Laxmi Appt., Near Hanuman Mandir, Waliv, Vasai (E), Palghar - 401 208, Maharashtra, India.</span>
+              <span className="block text-slate-500 mt-1">Ground Floor, Shop No. 08, Laxmi Appartment-5482/8, Parmatma Nagar, Walvi, Vasai East, Thane, Maharashtra - 401208</span>
             </div>
 
           </div>

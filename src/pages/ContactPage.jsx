@@ -260,7 +260,7 @@ export default function ContactPage({ isQuoteMode = false }) {
                 Registered Office
               </h3>
               <p className="text-xs sm:text-sm font-bold text-[#102D4B] leading-snug">
-                Shop No. 8, Laxmi Appt., Near Hanuman Mandir, Waliv, Vasai (E), Palghar - 401 208, Maharashtra, India.
+                Ground Floor, Shop No. 08, Laxmi Appartment-5482/8, Parmatma Nagar, Walvi, Vasai East, Thane, Maharashtra - 401208
               </p>
             </div>
             <div className="mt-4 pt-3 border-t border-slate-100 text-[10px] font-bold text-slate-500">
@@ -616,7 +616,7 @@ export default function ContactPage({ isQuoteMode = false }) {
                   <MapPin className="w-4 h-4 text-[#ED1C24] flex-shrink-0 mt-0.5" />
                   <div>
                     <strong className="text-white block">Registered Address:</strong>
-                    <span>Shop No. 8, Laxmi Appt., Near Hanuman Mandir, Waliv, Vasai (E), Palghar - 401 208, Maharashtra, India.</span>
+                    <span>Ground Floor, Shop No. 08, Laxmi Appartment-5482/8, Parmatma Nagar, Walvi, Vasai East, Thane, Maharashtra - 401208</span>
                   </div>
                 </div>
 
@@ -636,11 +636,11 @@ export default function ContactPage({ isQuoteMode = false }) {
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4 text-[#00AEEF]" />
                   <span className="text-xs font-bold uppercase tracking-wider text-[#102D4B]">
-                    Vasai (E), Palghar Location
+                    Vasai East, Thane Location
                   </span>
                 </div>
                 <a
-                  href="https://maps.google.com/?q=Shop+No.+8,+Laxmi+Appt.,+Near+Hanuman+Mandir,+Waliv,+Vasai+(E),+Palghar+-+401+208,+Maharashtra,+India"
+                  href="https://maps.google.com/?q=Vasai+East+Thane+Maharashtra+401208"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[11px] font-bold text-[#00AEEF] hover:underline inline-flex items-center gap-1"
@@ -654,7 +654,7 @@ export default function ContactPage({ isQuoteMode = false }) {
               <div className="w-full h-56 rounded-2xl overflow-hidden border border-slate-200 relative bg-slate-100">
                 <iframe
                   title="Aerolife Pharma Location Map"
-                  src="https://maps.google.com/maps?q=Shop%20No.%208%2C%20Laxmi%20Appt.%2C%20Near%20Hanuman%20Mandir%2C%20Waliv%2C%20Vasai%20(E)%2C%20Palghar%20-%20401%20208%2C%20Maharashtra%2C%20India&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=Vasai%20East%2C%20Thane%2C%20Maharashtra%20401208&t=&z=14&ie=UTF8&iwloc=&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
