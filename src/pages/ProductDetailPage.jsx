@@ -139,10 +139,10 @@ export default function ProductDetailPage() {
                   <span>Verified Product</span>
                 </div>
 
-                {/* WHO-GMP Stamp */}
+                {/* Catalog Monograph Stamp */}
                 <div className="absolute top-3 right-3 bg-slate-100 border border-slate-200 text-slate-700 px-2.5 py-1 rounded-lg text-[10px] font-bold flex items-center gap-1">
                   <ShieldCheck className="w-3.5 h-3.5 text-[#00AEEF]" />
-                  <span>WHO-GMP Validated</span>
+                  <span>Catalog Verified</span>
                 </div>
 
                 <div className="absolute bottom-3 right-3 text-[10px] font-semibold text-slate-400 bg-white/90 px-2 py-0.5 rounded shadow-xs border border-slate-100">
@@ -216,8 +216,8 @@ export default function ProductDetailPage() {
                     <span className="text-xs font-bold text-slate-800 uppercase tracking-wider">
                       Product Monograph &amp; Specifications
                     </span>
-                    <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
-                      WHO-GMP Validated
+                    <span className="text-[10px] font-bold text-sky-700 bg-sky-50 px-2 py-0.5 rounded border border-sky-200">
+                      Catalog Verified
                     </span>
                   </div>
                   <div className="divide-y divide-slate-100 text-xs">
@@ -246,7 +246,7 @@ export default function ProductDetailPage() {
                     <div className="grid grid-cols-3 p-3">
                       <span className="font-semibold text-slate-500">Quality Standard:</span>
                       <span className="col-span-2 font-bold text-slate-900">
-                        WHO-GMP Compliant • Batch Analytical Testing (IP / BP Standards)
+                        Official Monograph Specifications • Batch Analytical Standards
                       </span>
                     </div>
                     <div className="grid grid-cols-3 p-3">
