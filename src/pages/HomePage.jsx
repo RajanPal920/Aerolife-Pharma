@@ -30,8 +30,8 @@ export default function HomePage() {
       {/* 1. Main Hero Slider */}
       <HeroSlider onActionClick={handleHeroAction} />
 
-      {/* 2. Flagship Formulations Live Marquee (Authentic Aero Life Red Strip) */}
-      <ProductMarquee onProductClick={(prod) => navigate(`/products?search=${encodeURIComponent(prod.name)}`)} />
+      {/* 2. Flagship Formulations Live Marquee (Authentic Aero Life Red Strip - 7 Genuine Catalog Products) */}
+      <ProductMarquee onProductClick={(prod) => navigate(`/products/${prod.categorySlug}/${prod.slug}`)} />
 
       {/* 3. About Aerolife Pharma (Under Marquee - Authentic Details from TM REG & CATLOP) */}
       <AboutSection />
