@@ -305,14 +305,10 @@ export default function ProductCategoryPage() {
             {filteredProducts.map((product) => (
               <div
                 key={product.id}
-                className="group bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#00AEEF]/50 transition-all duration-200 flex flex-col overflow-hidden"
+                className="group bg-white rounded-2xl border border-[#00AEEF]/50 hover:border-[#00AEEF] shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden"
               >
                 {/* Product Packaging Image on Clean Soft Neutral Studio Stage */}
-                <div className="w-full h-52 sm:h-56 bg-gradient-to-b from-[#F8FAFC] via-[#F8FAFC]/90 to-[#F1F5F9]/80 p-4 sm:p-5 flex items-center justify-center border-b border-slate-100/90 relative overflow-hidden group/canvas">
-                  <div 
-                    className="absolute inset-x-8 bottom-2 h-7 bg-radial from-slate-200/40 via-slate-100/20 to-transparent blur-xs pointer-events-none"
-                    aria-hidden="true" 
-                  />
+                <div className="w-full h-52 sm:h-56 bg-[#EAE8F2] p-4 sm:p-5 flex items-center justify-center border-b border-slate-100 relative overflow-hidden group/canvas">
                   <img
                     src={product.image}
                     alt={product.name}
@@ -323,9 +319,15 @@ export default function ProductCategoryPage() {
                       e.currentTarget.src = '/assets/products/placeholder-pharmaceutical.svg';
                     }}
                   />
-                  <span className="absolute top-2.5 right-2.5 text-[10px] font-extrabold text-slate-700 bg-white/95 border border-slate-200/90 px-2.5 py-0.5 rounded-full uppercase tracking-wider backdrop-blur-xs shadow-xs z-20">
+                  <span className="absolute top-2.5 right-2.5 text-[10px] font-extrabold text-slate-800 bg-[#F1F5F9]/95 border border-slate-200 px-2.5 py-0.5 rounded-full uppercase tracking-wider backdrop-blur-xs shadow-xs z-20">
                     {product.dosageForm}
                   </span>
+
+                  {product.page && (
+                    <span className="absolute bottom-2.5 left-3 text-[10px] font-bold text-slate-500 bg-white/95 border border-slate-200/90 px-2 py-0.5 rounded shadow-xs z-20">
+                      Page {product.page}
+                    </span>
+                  )}
 
                   {product.imagePending && (
                     <div className="absolute inset-0 bg-slate-900/65 backdrop-blur-xs flex flex-col items-center justify-center p-4 text-center z-30">
@@ -339,20 +341,20 @@ export default function ProductCategoryPage() {
                 {/* Product Information Body */}
                 <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
                   <div>
-                    {/* Brand Name */}
-                    <h3 className="text-base font-bold text-slate-900 group-hover:text-[#00AEEF] transition-colors leading-snug line-clamp-1 mb-1.5">
+                    {/* Brand Name in bold cyan matching reference */}
+                    <h3 className="text-base font-black text-[#00AEEF] hover:text-[#0097D1] transition-colors leading-snug line-clamp-1 mb-1.5">
                       {product.name}
                     </h3>
 
                     {/* Active Pharmaceutical Composition */}
-                    <p className="text-xs text-slate-600 leading-relaxed line-clamp-2 mb-3 min-h-[32px]">
+                    <p className="text-xs font-semibold text-slate-700 leading-relaxed line-clamp-2 mb-3 min-h-[32px]">
                       {product.composition}
                     </p>
 
                     {/* Packaging Specification Badge */}
-                    <div className="inline-flex items-center gap-1.5 text-[11px] font-semibold text-slate-700 bg-slate-50 border border-slate-200/80 px-2.5 py-1 rounded-lg">
+                    <div className="inline-flex items-center gap-1.5 text-[11px] font-bold text-slate-800 bg-slate-50 border border-slate-200 px-3 py-1 rounded-lg">
                       <Package className="w-3.5 h-3.5 text-[#00AEEF]" />
-                      <span>Pack: {product.pack}</span>
+                      <span>Pack: <strong className="text-slate-900">{product.pack}</strong></span>
                     </div>
                   </div>
 
@@ -360,18 +362,17 @@ export default function ProductCategoryPage() {
                   <div className="mt-4 pt-3.5 border-t border-slate-100 flex items-center justify-between gap-2">
                     <Link
                       to={`/products/${currentCategory.slug}/${product.slug}`}
-                      className="inline-flex items-center gap-1.5 text-xs font-bold text-[#00AEEF] hover:text-[#0097D1] transition-colors group-hover:translate-x-0.5 duration-150"
+                      className="inline-flex items-center gap-1 text-xs font-extrabold text-[#00AEEF] hover:text-[#0097D1] transition-all group-hover:translate-x-0.5"
                     >
-                      <span>View Details</span>
-                      <ChevronRight className="w-4 h-4" />
+                      <span>VIEW DETAILS</span>
+                      <ChevronRight className="w-3.5 h-3.5" />
                     </Link>
 
                     <Link
                       to={`/quote?product=${encodeURIComponent(product.name)}`}
-                      className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-[#ED1C24] hover:bg-[#D9161D] shadow-xs transition-colors"
+                      className="text-xs font-bold text-[#ED1C24] hover:underline"
                     >
-                      <span>Quote</span>
-                      <ArrowRight className="w-3 h-3" />
+                      Enquire Now
                     </Link>
                   </div>
                 </div>
