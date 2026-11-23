@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useRef } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Link, useNavigate, useSearchParams } from 'react-router-dom';
 import {
   CATEGORIES,
@@ -26,7 +26,9 @@ import {
   HelpCircle,
   Filter,
   X,
-  Compass
+  Compass,
+  Activity,
+  HeartPulse
 } from 'lucide-react';
 import PartnershipBannerSection from '../components/PartnershipBannerSection';
 
@@ -37,7 +39,9 @@ const ICON_MAP = {
   Baby: Baby,
   ShieldCheck: ShieldCheck,
   Sparkles: Sparkles,
-  Eye: Eye
+  Eye: Eye,
+  Activity: Activity,
+  HeartPulse: HeartPulse
 };
 
 export default function ProductsPage() {
@@ -52,7 +56,7 @@ export default function ProductsPage() {
   const phone = '7045147453';
   const whatsappUrl = `https://wa.me/91${phone}?text=Hi%20Aerolife%20Pharma,%20I%20am%20interested%20in%20your%20products%20and%20commercial%20quotation.`;
 
-  // Total products count
+  // Total verified products count
   const totalProductsCount = ALL_PRODUCTS.length;
 
   // Scroll to section if specified in URL hash or search params
@@ -127,15 +131,15 @@ export default function ProductsPage() {
   const faqs = [
     {
       q: 'What pharmaceutical formulations does Aerolife Pharma offer?',
-      a: 'Aerolife Pharma offers 84 verified commercial products across 7 core dosage forms: Tablets & Caplets (31 products), Hard & Softgel Capsules (10 products), Oral Liquids & Syrups (20 products), Pediatric Dry Syrups with sterile water (3 products), Creams, Gels & Ointments (6 products), Nutraceuticals & Dry Powders (8 products), and Ophthalmic/Ear Drops (6 products). All products are verified against our official commercial monograph catalog (CATLOP.pdf).'
+      a: 'Aerolife Pharma offers 84 verified commercial products across distinct dosage forms: Tablets & Caplets (31 products), Hard & Softgel Capsules (10 products), Oral Liquids & Syrups (20 products), Pediatric Dry Syrups with sterile water (3 products), Eye Drops & Ear Drops (2 products), Creams, Gels & Ointments (6 products), Nutraceuticals & Dry Powders (8 products), Bandages & Medical Supplies (1 product), and Derma/Specialized Healthcare (3 products). All products are verified against our official commercial monograph catalog (CATLOP.pdf).'
+    },
+    {
+      q: 'How does Aerolife Pharma ensure high visibility and quality standards for all packaging?',
+      a: 'All our commercial preparations are sealed in pharmaceutical grade primary packaging—including Alu-Alu blister foils, PVC/PVDC packs, tamper-evident amber PET bottles, dry syrup glass vials with sterile water ampoules, hermetic laminated tubes, and dietary powder tins. All batch monographs strictly follow Indian Pharmacopoeia (IP) and British Pharmacopoeia (BP) monographs.'
     },
     {
       q: 'Are all products available for nationwide supply and PCD franchise?',
       a: 'Yes. All 84 formulations are produced under stringent WHO-GMP guidelines and are readily available for PCD pharma franchise distribution, commercial hospital supply, and institutional procurement with exclusive district-wise monopoly rights.'
-    },
-    {
-      q: 'What packaging standards are used for Aerolife Pharma products?',
-      a: 'Our formulations are packed using industry-leading packaging materials including high-barrier Alu-Alu blister foils, PVC/PVDC blisters, pharmaceutical amber PET bottles with measuring caps, dry syrups with sterile water for injection, leak-resistant laminated tubes, and airtight hermetically sealed 200g dietary powder tins.'
     },
     {
       q: 'How can distributors, hospitals, or PCD franchise partners place an order?',
@@ -160,7 +164,7 @@ export default function ProductsPage() {
           className="absolute -top-10 left-1/2 -translate-x-1/2 text-[120px] sm:text-[180px] lg:text-[240px] font-black text-white/[0.04] select-none pointer-events-none uppercase tracking-tighter leading-none z-10"
           aria-hidden="true"
         >
-          CATALOG
+          PRODUCTS
         </div>
 
         {/* Brand Accent Line */}
@@ -219,7 +223,7 @@ export default function ProductsPage() {
                 </span>
                 <button
                   onClick={clearSearch}
-                  className="text-[#00AEEF] hover:underline"
+                  className="text-[#00AEEF] hover:underline cursor-pointer"
                 >
                   Show all 84 products
                 </button>
@@ -330,7 +334,7 @@ export default function ProductsPage() {
 
       {/* 
         ========================================================================
-        3. CONTINUOUS PRODUCT SHOWCASE (All 7 Product Sections on One Page)
+        3. CONTINUOUS PRODUCT SHOWCASE (All Verified Sections on One Page)
         Every product appears exactly once in its verified dosage section
         ========================================================================
       */}
@@ -355,7 +359,7 @@ export default function ProductsPage() {
 
             <button
               onClick={clearSearch}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-[#ED1C24] bg-white border border-[#ED1C24]/30 hover:bg-red-50 transition-colors self-start sm:self-auto"
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold text-[#ED1C24] bg-white border border-[#ED1C24]/30 hover:bg-red-50 transition-colors self-start sm:self-auto cursor-pointer"
             >
               <X className="w-3.5 h-3.5" />
               <span>Clear Filter (Show All 84 Products)</span>
@@ -363,7 +367,7 @@ export default function ProductsPage() {
           </div>
         )}
 
-        {/* 7 Vertically Stacked Product Sections */}
+        {/* Vertically Stacked Product Sections */}
         <div className="space-y-16 sm:space-y-20 lg:space-y-24">
           {filteredCategories.map((cat, sectionIdx) => {
             const IconComponent = ICON_MAP[cat.icon] || Pill;
@@ -424,18 +428,26 @@ export default function ProductsPage() {
                   {cat.products.map((prod) => (
                     <article
                       key={prod.id}
-                      className="bg-white rounded-2xl border border-slate-200 shadow-xs hover:shadow-xl hover:border-[#00AEEF]/60 transition-all duration-300 flex flex-col overflow-hidden group"
+                      className="bg-white rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-xl hover:border-[#00AEEF]/60 transition-all duration-300 flex flex-col overflow-hidden group"
                     >
                       {/* 
-                        Product Image Canvas
-                        Pure white background (#FFFFFF) with object-contain as requested
+                        Product Image Stage:
+                        Subtle neutral studio backdrop (slate-50/70) with soft pedestal gradient
+                        Ensures white bottles, cartons, tubes, and blisters POP with clear edge definition!
                       */}
-                      <div className="relative w-full h-52 sm:h-56 bg-white p-4 flex items-center justify-center border-b border-slate-100 overflow-hidden">
+                      <div className="relative w-full h-56 sm:h-60 bg-gradient-to-b from-[#F8FAFC] via-[#F8FAFC]/90 to-[#F1F5F9]/80 p-4 sm:p-5 flex items-center justify-center border-b border-slate-100/90 overflow-hidden group/canvas">
+                        {/* Soft pedestal shadow to ground bottles and packaging */}
+                        <div 
+                          className="absolute inset-x-8 bottom-2 h-7 bg-radial from-slate-200/40 via-slate-100/20 to-transparent blur-xs pointer-events-none"
+                          aria-hidden="true" 
+                        />
+
+                        {/* Genuine Packaging Product Image */}
                         <img
                           src={prod.image}
                           alt={prod.name}
                           loading="lazy"
-                          className="max-h-full max-w-full object-contain filter drop-shadow-xs transition-transform duration-300 group-hover:scale-105"
+                          className="max-h-full max-w-full object-contain filter drop-shadow-xs transition-transform duration-300 group-hover:scale-105 relative z-10"
                           onError={(e) => {
                             e.currentTarget.onerror = null;
                             e.currentTarget.src = '/assets/products/placeholder-pharmaceutical.svg';
@@ -443,15 +455,24 @@ export default function ProductsPage() {
                         />
 
                         {/* Dosage Form Badge in Top Right */}
-                        <span className="absolute top-3 right-3 text-[10px] font-extrabold text-slate-600 bg-slate-100/90 border border-slate-200/80 px-2.5 py-0.5 rounded-full uppercase tracking-wider backdrop-blur-xs shadow-xs">
+                        <span className="absolute top-3 right-3 text-[10px] font-extrabold text-slate-700 bg-white/95 border border-slate-200/90 px-2.5 py-0.5 rounded-full uppercase tracking-wider backdrop-blur-xs shadow-xs z-20">
                           {prod.dosageForm || 'Product'}
                         </span>
 
                         {/* Catalog Page Reference Tag */}
                         {prod.page && (
-                          <span className="absolute bottom-2.5 left-3 text-[10px] font-semibold text-slate-400 bg-white/90 border border-slate-100 px-2 py-0.5 rounded shadow-xs">
+                          <span className="absolute bottom-2.5 left-3 text-[10px] font-semibold text-slate-500 bg-white/90 border border-slate-200/80 px-2 py-0.5 rounded shadow-xs z-20">
                             Page {prod.page}
                           </span>
+                        )}
+
+                        {/* Pending Verification Notice (if official packaging image is scheduled for studio re-shoot) */}
+                        {prod.imagePending && (
+                          <div className="absolute inset-0 bg-slate-900/65 backdrop-blur-xs flex flex-col items-center justify-center p-4 text-center z-30">
+                            <Package className="w-8 h-8 text-amber-300 mb-1" />
+                            <span className="text-xs font-bold text-white leading-tight">Packaging Photograph</span>
+                            <span className="text-[10px] text-amber-200 font-semibold mt-0.5">Physical Sample Verification In Progress</span>
+                          </div>
                         )}
                       </div>
 

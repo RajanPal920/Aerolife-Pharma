@@ -1360,79 +1360,16 @@ export const CATEGORIES = [
     "aliases": [
       "drops",
       "ophthalmic-ear-drops",
-      "personal-drops",
-      "healthcare"
+      "eye-drops",
+      "ear-drops",
+      "ophthalmic"
     ],
-    "title": "Ophthalmic & Ear Drops",
-    "shortDesc": "Sterile ophthalmic solutions, therapeutic ear drops, medicated soaps & personal healthcare",
-    "description": "Aseptically prepared sterile drops with balanced physiological pH and isotonicity, accompanied by specialized therapeutic personal health preparations.",
+    "title": "Eye Drops & Ear Drops",
+    "shortDesc": "Sterile ophthalmic solutions & therapeutic ear drops in aseptically sealed dropper vials",
+    "description": "Aseptically prepared sterile drops with balanced physiological pH and isotonicity for ophthalmic and otic administration.",
     "flagshipImage": "/assets/products/moxi-aero-d-eye-drops.jpg",
     "icon": "Eye",
     "products": [
-      {
-        "id": "aerosilix-face-wash",
-        "slug": "aerosilix-face-wash",
-        "name": "Aerosilix Face Wash",
-        "category": "drops",
-        "composition": "Glycolic Acid, Salicylic Acid & Vitamin E Acetate Gel",
-        "dosageForm": "Face Wash",
-        "strength": "Glycolic Acid 1% + Salicylic Acid 2% + Vitamin E Acetate Gentle Gel Base",
-        "pack": "75gm",
-        "page": 16,
-        "image": "/assets/products/aerosilix-face-wash.jpg",
-        "imagePending": false,
-        "isFlagship": false,
-        "description": "Aerosilix Face Wash features Glycolic Acid, Salicylic Acid & Vitamin E Acetate Gel. Available in standard commercial packaging as listed in the official catalog.",
-        "therapeuticCategory": "Dermatological Exfoliating, Anti-Acne & Deep Cleansing Face Wash"
-      },
-      {
-        "id": "cotton-crepe-bandage-with-fast-edges",
-        "slug": "cotton-crepe-bandage-with-fast-edges",
-        "name": "Cotton Crepe Bandage (With Fast Edges)",
-        "category": "drops",
-        "composition": "Cotton Crepe Bandage B.P.C. Flesh Coloured Elastic",
-        "dosageForm": "Medical Supply",
-        "strength": "100% Pure Woven Cotton with Non-Fraying Fast Edges (B.P.C. Standard - 4 Metre)",
-        "pack": "Length 4 Mtr.",
-        "page": 36,
-        "image": "/assets/products/cotton-crepe-bandage-with-fast-edges.jpg",
-        "imagePending": false,
-        "isFlagship": false,
-        "description": "Cotton Crepe Bandage (With Fast Edges) features Cotton Crepe Bandage B.P.C. Flesh Coloured Elastic. Available in standard commercial packaging as listed in the official catalog.",
-        "therapeuticCategory": "Orthopedic Support & Compression Bandage"
-      },
-      {
-        "id": "kesh-aero-ayurvedic-oil",
-        "slug": "kesh-aero-ayurvedic-oil",
-        "name": "Kesh Aero Ayurvedic Oil",
-        "category": "drops",
-        "composition": "Ayurvedic Hair Oil (100% Natural Product)",
-        "dosageForm": "Herbal Oil",
-        "strength": "Bhringraj, Amla, Brahmi, Neem, Sesame Oil & Classical Ayurvedic Herb Extracts",
-        "pack": "100 ml",
-        "page": 39,
-        "image": "/assets/products/kesh-aero-ayurvedic-oil.jpg",
-        "imagePending": false,
-        "isFlagship": false,
-        "description": "Kesh Aero Ayurvedic Oil features Ayurvedic Hair Oil (100% Natural Product). Available in standard commercial packaging as listed in the official catalog.",
-        "therapeuticCategory": "100% Natural Ayurvedic Anti-Hairfall & Scalp Nourishment Therapy"
-      },
-      {
-        "id": "ketaero-soap",
-        "slug": "ketaero-soap",
-        "name": "KETAERO Soap",
-        "category": "drops",
-        "composition": "Ketoconazole 2% w/w Soap (Anti-Fungal Medicated Soap)",
-        "dosageForm": "Medicated Soap",
-        "strength": "Ketoconazole 2% w/w in Grade 1 Moisturizing Soap Base",
-        "pack": "75 gm",
-        "page": 39,
-        "image": "/assets/products/ketaero-soap.jpg",
-        "imagePending": false,
-        "isFlagship": false,
-        "description": "KETAERO Soap features Ketoconazole 2% w/w Soap (Anti-Fungal Medicated Soap). Available in standard commercial packaging as listed in the official catalog.",
-        "therapeuticCategory": "Medicated Antifungal & Anti-Dandruff Body Cleansing Soap"
-      },
       {
         "id": "moxi-aero-d-eye-drops",
         "slug": "moxi-aero-d-eye-drops",
@@ -1460,13 +1397,115 @@ export const CATEGORIES = [
         "pack": "10 ml",
         "page": 40,
         "image": "/assets/products/cefi-aero-d-eye-ear-drops.jpg",
-        "imagePending": false,
-        "isFlagship": true,
+        "imagePending": true,
+        "isFlagship": false,
         "description": "Cefi Aero D Eye & Ear Drops features Ciprofloxacin & Dexamethasone Eye/Ear Drops. Available in standard commercial packaging as listed in the official catalog.",
         "therapeuticCategory": "Ophthalmic & Otic Broad-Spectrum Antibiotic / Steroid Suspension"
       }
     ],
-    "count": 6
+    "count": 2
+  },
+  {
+    "id": "bandages",
+    "slug": "bandages-medical-supplies",
+    "aliases": [
+      "bandages",
+      "bandages-medical-supplies",
+      "medical-supplies",
+      "bandage"
+    ],
+    "title": "Bandages & Medical Supplies",
+    "shortDesc": "Hospital-grade compression bandages, orthopedic wraps & surgical medical supplies",
+    "description": "Orthopedic support and compression bandages manufactured to B.P.C. standards with non-fraying fast edges.",
+    "flagshipImage": "/assets/products/cotton-crepe-bandage-with-fast-edges.jpg",
+    "icon": "ShieldCheck",
+    "products": [
+      {
+        "id": "cotton-crepe-bandage-with-fast-edges",
+        "slug": "cotton-crepe-bandage-with-fast-edges",
+        "name": "Cotton Crepe Bandage (With Fast Edges)",
+        "category": "bandages",
+        "composition": "Cotton Crepe Bandage B.P.C. Flesh Coloured Elastic",
+        "dosageForm": "Medical Supply",
+        "strength": "100% Pure Woven Cotton with Non-Fraying Fast Edges (B.P.C. Standard - 4 Metre)",
+        "pack": "Length 4 Mtr.",
+        "page": 36,
+        "image": "/assets/products/cotton-crepe-bandage-with-fast-edges.jpg",
+        "imagePending": false,
+        "isFlagship": true,
+        "description": "Cotton Crepe Bandage (With Fast Edges) features Cotton Crepe Bandage B.P.C. Flesh Coloured Elastic. Available in standard commercial packaging as listed in the official catalog.",
+        "therapeuticCategory": "Orthopedic Support & Compression Bandage"
+      }
+    ],
+    "count": 1
+  },
+  {
+    "id": "derma-care",
+    "slug": "derma-personal-care",
+    "aliases": [
+      "derma-care",
+      "derma-personal-care",
+      "personal-care",
+      "derma",
+      "soaps",
+      "face-wash"
+    ],
+    "title": "Derma, Personal Care & Specialized Healthcare",
+    "shortDesc": "Dermatological face washes, medicated antifungal soaps & classical ayurvedic hair oils",
+    "description": "Targeted dermatological formulations including therapeutic exfoliating face washes, antifungal cleansing soaps, and Ayurvedic scalp therapies.",
+    "flagshipImage": "/assets/products/aerosilix-face-wash.jpg",
+    "icon": "Sparkles",
+    "products": [
+      {
+        "id": "aerosilix-face-wash",
+        "slug": "aerosilix-face-wash",
+        "name": "Aerosilix Face Wash",
+        "category": "derma-care",
+        "composition": "Glycolic Acid, Salicylic Acid & Vitamin E Acetate Gel",
+        "dosageForm": "Face Wash",
+        "strength": "Glycolic Acid 1% + Salicylic Acid 2% + Vitamin E Acetate Gentle Gel Base",
+        "pack": "75gm",
+        "page": 16,
+        "image": "/assets/products/aerosilix-face-wash.jpg",
+        "imagePending": false,
+        "isFlagship": true,
+        "description": "Aerosilix Face Wash features Glycolic Acid, Salicylic Acid & Vitamin E Acetate Gel. Available in standard commercial packaging as listed in the official catalog.",
+        "therapeuticCategory": "Dermatological Exfoliating, Anti-Acne & Deep Cleansing Face Wash"
+      },
+      {
+        "id": "kesh-aero-ayurvedic-oil",
+        "slug": "kesh-aero-ayurvedic-oil",
+        "name": "Kesh Aero Ayurvedic Oil",
+        "category": "derma-care",
+        "composition": "Ayurvedic Hair Oil (100% Natural Product)",
+        "dosageForm": "Herbal Oil",
+        "strength": "Bhringraj, Amla, Brahmi, Neem, Sesame Oil & Classical Ayurvedic Herb Extracts",
+        "pack": "100 ml",
+        "page": 39,
+        "image": "/assets/products/kesh-aero-ayurvedic-oil.jpg",
+        "imagePending": false,
+        "isFlagship": false,
+        "description": "Kesh Aero Ayurvedic Oil features Ayurvedic Hair Oil (100% Natural Product). Available in standard commercial packaging as listed in the official catalog.",
+        "therapeuticCategory": "100% Natural Ayurvedic Anti-Hairfall & Scalp Nourishment Therapy"
+      },
+      {
+        "id": "ketaero-soap",
+        "slug": "ketaero-soap",
+        "name": "KETAERO Soap",
+        "category": "derma-care",
+        "composition": "Ketoconazole 2% w/w Soap (Anti-Fungal Medicated Soap)",
+        "dosageForm": "Medicated Soap",
+        "strength": "Ketoconazole 2% w/w in Grade 1 Moisturizing Soap Base",
+        "pack": "75 gm",
+        "page": 39,
+        "image": "/assets/products/ketaero-soap.jpg",
+        "imagePending": false,
+        "isFlagship": false,
+        "description": "KETAERO Soap features Ketoconazole 2% w/w Soap (Anti-Fungal Medicated Soap). Available in standard commercial packaging as listed in the official catalog.",
+        "therapeuticCategory": "Medicated Antifungal & Anti-Dandruff Body Cleansing Soap"
+      }
+    ],
+    "count": 3
   }
 ];
 

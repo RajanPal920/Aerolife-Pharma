@@ -11,7 +11,9 @@ const CATEGORY_NAMES = {
   'dry-syrups': 'Pediatric Products',
   creams: 'Creams, Gels & Ointments',
   powders: 'Nutraceutical Products',
-  drops: 'Eye & Ear Drops'
+  drops: 'Eye & Ear Drops',
+  bandages: 'Bandages & Medical Supplies',
+  'derma-care': 'Derma & Personal Care'
 };
 
 export const menuCategories = CATEGORIES.map(cat => ({

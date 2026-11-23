@@ -119,25 +119,37 @@ export default function ProductDetailPage() {
             
             {/* 
               LEFT COLUMN (lg:col-span-5):
-              Clean Product Packaging Image on Pure White Canvas
+              Clean Product Packaging Image on Soft Neutral Studio Stage
             */}
             <div className="lg:col-span-5 flex flex-col items-center">
-              <div className="w-full aspect-[4/3] bg-white rounded-2xl border border-slate-200/80 p-6 sm:p-8 flex items-center justify-center relative shadow-inner overflow-hidden group">
+              <div className="w-full aspect-[4/3] bg-gradient-to-b from-[#F8FAFC] via-[#F8FAFC]/90 to-[#F1F5F9]/80 rounded-2xl border border-slate-200/80 p-6 sm:p-8 flex items-center justify-center relative shadow-inner overflow-hidden group">
+                <div 
+                  className="absolute inset-x-12 bottom-3 h-8 bg-radial from-slate-200/40 via-slate-100/20 to-transparent blur-xs pointer-events-none"
+                  aria-hidden="true" 
+                />
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-108"
+                  className="max-h-full max-w-full object-contain filter drop-shadow-xs transition-transform duration-300 group-hover:scale-105 relative z-10"
                   onError={(e) => {
-                  e.currentTarget.onerror = null;
-                  e.currentTarget.src = '/assets/products/placeholder-pharmaceutical.svg';
-                }}
+                    e.currentTarget.onerror = null;
+                    e.currentTarget.src = '/assets/products/placeholder-pharmaceutical.svg';
+                  }}
                 />
 
                 {/* Verified Product Badge */}
-                <div className="absolute top-3 left-3 bg-[#00AEEF]/10 border border-[#00AEEF]/20 text-[#00AEEF] px-2.5 py-1 rounded-lg text-[11px] font-bold flex items-center gap-1.5">
+                <div className="absolute top-3 left-3 bg-[#00AEEF]/10 border border-[#00AEEF]/20 text-[#00AEEF] px-2.5 py-1 rounded-lg text-[11px] font-bold flex items-center gap-1.5 z-20">
                   <FileText className="w-3.5 h-3.5" />
                   <span>Verified Product</span>
                 </div>
+
+                {product.imagePending && (
+                  <div className="absolute inset-0 bg-slate-900/65 backdrop-blur-xs flex flex-col items-center justify-center p-6 text-center z-30">
+                    <Package className="w-10 h-10 text-amber-300 mb-2" />
+                    <span className="text-sm font-bold text-white leading-tight">Packaging Photograph</span>
+                    <span className="text-xs text-amber-200 font-semibold mt-1">Physical Sample Verification In Progress</span>
+                  </div>
+                )}
 
                 {/* Catalog Monograph Stamp */}
                 <div className="absolute top-3 right-3 bg-slate-100 border border-slate-200 text-slate-700 px-2.5 py-1 rounded-lg text-[10px] font-bold flex items-center gap-1">

@@ -24,6 +24,8 @@ import {
   ShieldCheck,
   Sparkles,
   Eye,
+  Activity,
+  HeartPulse,
   ExternalLink
 } from 'lucide-react';
 import PartnershipBannerSection from '../components/PartnershipBannerSection';
@@ -35,7 +37,9 @@ const ICON_MAP = {
   Baby: Baby,
   ShieldCheck: ShieldCheck,
   Sparkles: Sparkles,
-  Eye: Eye
+  Eye: Eye,
+  Activity: Activity,
+  HeartPulse: HeartPulse
 };
 
 export default function ProductCategoryPage() {
@@ -303,21 +307,33 @@ export default function ProductCategoryPage() {
                 key={product.id}
                 className="group bg-white rounded-2xl border border-slate-200/90 shadow-sm hover:shadow-xl hover:border-[#00AEEF]/50 transition-all duration-200 flex flex-col overflow-hidden"
               >
-                {/* Product Packaging Image on Clean White Canvas (Seamless matching Aeromark-P) */}
-                <div className="w-full h-48 sm:h-52 bg-white p-4 flex items-center justify-center border-b border-slate-100/70 relative overflow-hidden">
+                {/* Product Packaging Image on Clean Soft Neutral Studio Stage */}
+                <div className="w-full h-52 sm:h-56 bg-gradient-to-b from-[#F8FAFC] via-[#F8FAFC]/90 to-[#F1F5F9]/80 p-4 sm:p-5 flex items-center justify-center border-b border-slate-100/90 relative overflow-hidden group/canvas">
+                  <div 
+                    className="absolute inset-x-8 bottom-2 h-7 bg-radial from-slate-200/40 via-slate-100/20 to-transparent blur-xs pointer-events-none"
+                    aria-hidden="true" 
+                  />
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+                    className="max-h-full max-w-full object-contain filter drop-shadow-xs transition-transform duration-300 group-hover:scale-105 relative z-10"
                     loading="lazy"
                     onError={(e) => {
                       e.currentTarget.onerror = null;
                       e.currentTarget.src = '/assets/products/placeholder-pharmaceutical.svg';
                     }}
                   />
-                  <span className="absolute top-2.5 right-2.5 text-[10px] font-bold text-slate-600 bg-slate-100 border border-slate-200/60 px-2 py-0.5 rounded-md">
+                  <span className="absolute top-2.5 right-2.5 text-[10px] font-extrabold text-slate-700 bg-white/95 border border-slate-200/90 px-2.5 py-0.5 rounded-full uppercase tracking-wider backdrop-blur-xs shadow-xs z-20">
                     {product.dosageForm}
                   </span>
+
+                  {product.imagePending && (
+                    <div className="absolute inset-0 bg-slate-900/65 backdrop-blur-xs flex flex-col items-center justify-center p-4 text-center z-30">
+                      <Package className="w-8 h-8 text-amber-300 mb-1" />
+                      <span className="text-xs font-bold text-white leading-tight">Packaging Photograph</span>
+                      <span className="text-[10px] text-amber-200 font-semibold mt-0.5">Physical Sample Verification In Progress</span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Product Information Body */}
