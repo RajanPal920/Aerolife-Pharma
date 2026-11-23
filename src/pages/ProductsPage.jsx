@@ -458,15 +458,6 @@ export default function ProductsPage() {
                             Page {prod.page}
                           </span>
                         )}
-
-                        {/* Pending Verification Notice */}
-                        {prod.imagePending && (
-                          <div className="absolute inset-0 bg-slate-900/65 backdrop-blur-xs flex flex-col items-center justify-center p-4 text-center z-30">
-                            <Package className="w-8 h-8 text-amber-300 mb-1" />
-                            <span className="text-xs font-bold text-white leading-tight">Packaging Photograph</span>
-                            <span className="text-[10px] text-amber-200 font-semibold mt-0.5">Physical Sample Verification In Progress</span>
-                          </div>
-                        )}
                       </div>
 
                       {/* Product Content Body matching reference card style */}

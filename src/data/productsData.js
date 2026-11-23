@@ -1397,7 +1397,7 @@ export const CATEGORIES = [
         "pack": "10 ml",
         "page": 40,
         "image": "/assets/products/cefi-aero-d-eye-ear-drops.jpg",
-        "imagePending": true,
+        "imagePending": false,
         "isFlagship": false,
         "description": "Cefi Aero D Eye & Ear Drops features Ciprofloxacin & Dexamethasone Eye/Ear Drops. Available in standard commercial packaging as listed in the official catalog.",
         "therapeuticCategory": "Ophthalmic & Otic Broad-Spectrum Antibiotic / Steroid Suspension"

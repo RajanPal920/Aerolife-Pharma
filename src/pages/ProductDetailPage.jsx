@@ -143,14 +143,6 @@ export default function ProductDetailPage() {
                   <span>Verified Product</span>
                 </div>
 
-                {product.imagePending && (
-                  <div className="absolute inset-0 bg-slate-900/65 backdrop-blur-xs flex flex-col items-center justify-center p-6 text-center z-30">
-                    <Package className="w-10 h-10 text-amber-300 mb-2" />
-                    <span className="text-sm font-bold text-white leading-tight">Packaging Photograph</span>
-                    <span className="text-xs text-amber-200 font-semibold mt-1">Physical Sample Verification In Progress</span>
-                  </div>
-                )}
-
                 {/* Catalog Monograph Stamp */}
                 <div className="absolute top-3 right-3 bg-slate-100 border border-slate-200 text-slate-700 px-2.5 py-1 rounded-lg text-[10px] font-bold flex items-center gap-1">
                   <ShieldCheck className="w-3.5 h-3.5 text-[#00AEEF]" />
